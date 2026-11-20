@@ -1,0 +1,8 @@
+assets/*.wav
+assets/*.mp3
+assets/*.m4a
+assets/voice/
+renders/
+snapshots/
+.hyperframes/
+node_modules/
