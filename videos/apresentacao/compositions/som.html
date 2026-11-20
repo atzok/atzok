@@ -1,0 +1,44 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #000; overflow: hidden; }
+    #so-label { position: absolute; left: 130px; top: 330px; font-family: "Space Mono", monospace; font-weight: 700;
+      font-size: 30px; letter-spacing: 0.18em; color: #bc6d21; text-transform: uppercase; }
+    .so-g { position: absolute; left: 130px; font-family: Inter, sans-serif; font-weight: 900; font-size: 112px;
+      line-height: 1; letter-spacing: -0.035em; color: #fff; text-transform: uppercase; }
+    #so-g1 { top: 400px; } #so-g2 { top: 514px; } #so-g3 { top: 628px; } #so-g4 { top: 742px; }
+    #so-refs { position: absolute; left: 130px; top: 920px; width: 640px; font-family: Inter, sans-serif;
+      font-weight: 400; font-size: 40px; line-height: 1.3; color: #fff; }
+    #so-refs b { color: #bc6d21; font-weight: 700; }
+  </style>
+  <div id="root" data-composition-id="som" data-width="1080" data-height="1920">
+    <div id="so-label" class="clip" data-start="0" data-duration="9.366" data-track-index="1">O som</div>
+    <div id="so-g1" class="so-g clip" data-start="0" data-duration="9.366" data-track-index="2">Breakbeat</div>
+    <div id="so-g2" class="so-g clip" data-start="0" data-duration="9.366" data-track-index="3">Downtempo</div>
+    <div id="so-g3" class="so-g clip" data-start="0" data-duration="9.366" data-track-index="4">Trip hop</div>
+    <div id="so-g4" class="so-g clip" data-start="0" data-duration="9.366" data-track-index="5">House</div>
+    <div id="so-refs" class="clip" data-start="0" data-duration="9.366" data-track-index="6">
+      samples vocais picotados,<br />com <b>jazz, soul</b> e<br /><b>música brasileira</b>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const B = 60 / 89.6, bt = (k) => Math.round(k * B * 30) / 30;
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#so-label", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0);
+      const ids = ["#so-g1", "#so-g2", "#so-g3", "#so-g4"];
+      ids.forEach((id, i) => {
+        const t = bt(1 + i * 2);
+        // whip in from the left, land sharp on the beat
+        tl.fromTo(id, { opacity: 0, x: -120, filter: "blur(14px)" },
+          { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.3, ease: "expo.out" }, t);
+        if (i > 0) tl.to(ids[i - 1], { color: "#5e5e5e", duration: 0.2 }, t);
+      });
+      tl.to("#so-g4", { color: "#5e5e5e", duration: 0.3 }, bt(10));
+      tl.fromTo("#so-refs", { opacity: 0, filter: "blur(8px)" },
+        { opacity: 1, filter: "blur(0px)", duration: 0.2 }, bt(10));
+      tl.to(["#so-label", ...ids, "#so-refs"],
+        { opacity: 0, filter: "blur(8px)", duration: 0.16, stagger: 0.025, ease: "power2.in" }, 9.0);
+      window.__timelines["som"] = tl;
+    })();
+  </script>
+</template>

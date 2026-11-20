@@ -1,0 +1,46 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #000; overflow: hidden; }
+    #la-paper { position: absolute; inset: 0; background: #fff; transform-origin: 50% 100%; }
+    #la-label { position: absolute; left: 130px; top: 330px; font-family: "Space Mono", monospace; font-weight: 700;
+      font-size: 30px; letter-spacing: 0.18em; color: #7e406e; text-transform: uppercase; }
+    .la-meta { position: absolute; left: 130px; font-family: "Space Mono", monospace; font-weight: 700;
+      font-size: 28px; letter-spacing: 0.1em; color: #5e5e5e; text-transform: uppercase; }
+    .la-big { position: absolute; left: 130px; font-family: Inter, sans-serif; font-weight: 900; font-size: 120px;
+      line-height: 0.9; letter-spacing: -0.035em; color: #000; text-transform: uppercase; }
+    #la-m1 { top: 410px; } #la-t1 { top: 452px; }
+    #la-m2 { top: 760px; } #la-t2 { top: 802px; }
+    #la-logo { position: absolute; left: 130px; top: 1080px; width: 200px; height: auto; }
+  </style>
+  <div id="root" data-composition-id="lancamentos" data-width="1080" data-height="1920">
+    <div id="la-paper" class="clip" data-start="0" data-duration="10.034" data-track-index="1"></div>
+    <div id="la-label" class="clip" data-start="0" data-duration="10.034" data-track-index="2">Lançamentos</div>
+    <div id="la-m1" class="la-meta clip" data-start="0" data-duration="10.034" data-track-index="3">Álbum · fita K7 · DSRPTV recs</div>
+    <div id="la-t1" class="la-big clip" data-start="0" data-duration="10.034" data-track-index="4">L4 /<br />Amarela</div>
+    <div id="la-m2" class="la-meta clip" data-start="0" data-duration="10.034" data-track-index="5">EP · Bliss Records</div>
+    <div id="la-t2" class="la-big clip" data-start="0" data-duration="10.034" data-track-index="6">Desejos<br />gelados</div>
+    <img id="la-logo" class="clip" src="assets/wordmark-preto.png" alt="Ätzøk"
+      data-start="0" data-duration="10.034" data-track-index="7" />
+  </div>
+  <script>
+    (function () {
+      const B = 60 / 89.6, bt = (k) => Math.round(k * B * 30) / 30;
+      const tl = gsap.timeline({ paused: true });
+      // colour flood: the paper rises over the black ground
+      tl.fromTo("#la-paper", { scaleY: 0 }, { scaleY: 1, duration: 0.4, ease: "power2.inOut" }, 0);
+      tl.fromTo("#la-label", { opacity: 0 }, { opacity: 1, duration: 0.2 }, bt(1));
+      tl.fromTo("#la-m1", { opacity: 0 }, { opacity: 1, duration: 0.2 }, bt(2));
+      tl.fromTo("#la-t1", { opacity: 0, y: 30, filter: "blur(8px)" },
+        { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, bt(2));
+      tl.fromTo("#la-m2", { opacity: 0 }, { opacity: 1, duration: 0.2 }, bt(7));
+      tl.fromTo("#la-t2", { opacity: 0, filter: "blur(10px)" },
+        { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, bt(7));
+      tl.fromTo("#la-logo", { opacity: 0, rotation: -6 }, { opacity: 1, rotation: -3, duration: 0.3, ease: "expo.out" }, bt(10));
+      // exit: the black returns from the top
+      tl.to("#la-paper", { scaleY: 0, transformOrigin: "50% 0%", duration: 0.3, ease: "power3.in" }, 9.7);
+      tl.to(["#la-label", "#la-m1", "#la-t1", "#la-m2", "#la-t2", "#la-logo"],
+        { opacity: 0, duration: 0.15, ease: "power2.in" }, 9.7);
+      window.__timelines["lancamentos"] = tl;
+    })();
+  </script>
+</template>

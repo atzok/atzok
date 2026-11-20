@@ -1,0 +1,38 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #000; overflow: hidden; }
+    #bo-logo { position: absolute; left: 130px; top: 320px; width: 560px; height: auto; }
+    #bo-ask { position: absolute; left: 130px; top: 840px; font-family: Inter, sans-serif; font-weight: 900; font-size: 54px;
+      line-height: 1; letter-spacing: -0.025em; color: #fff; text-transform: uppercase; }
+    .bo-mono { position: absolute; left: 130px; font-family: "Space Mono", monospace; font-weight: 700; text-transform: none; }
+    #bo-label { top: 990px; font-size: 30px; letter-spacing: 0.18em; color: #bc6d21; text-transform: uppercase; }
+    #bo-handle { position: absolute; left: 130px; top: 1030px; font-family: Inter, sans-serif; font-weight: 900; font-size: 112px;
+      line-height: 1; letter-spacing: -0.04em; color: #fff; }
+    #bo-mail { top: 1160px; font-size: 34px; color: #fff; }
+  </style>
+  <div id="root" data-composition-id="booking" data-width="1080" data-height="1920">
+    <img id="bo-logo" class="clip" src="assets/wordmark-branco.png" alt="Ätzøk"
+      data-start="0" data-duration="13.067" data-track-index="1" />
+    <div id="bo-ask" class="clip" data-start="0" data-duration="13.067" data-track-index="2">Quer o Ätzøk<br />na sua pista?</div>
+    <div id="bo-label" class="bo-mono clip" data-start="0" data-duration="13.067" data-track-index="3">Booking</div>
+    <div id="bo-handle" class="clip" data-start="0" data-duration="13.067" data-track-index="4">@_atzok</div>
+    <div id="bo-mail" class="bo-mono clip" data-start="0" data-duration="13.067" data-track-index="5">djatzok@gmail.com</div>
+  </div>
+  <script>
+    (function () {
+      const B = 60 / 89.6, bt = (k) => Math.round(k * B * 30) / 30;
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#bo-logo", { opacity: 0, scale: 1.08, filter: "contrast(1.6) blur(4px)" },
+        { opacity: 1, scale: 1, filter: "contrast(1) blur(0px)", duration: 0.7, ease: "expo.out" }, 0);
+      tl.fromTo("#bo-ask", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18 }, bt(2));
+      tl.fromTo("#bo-label", { opacity: 0 }, { opacity: 1, duration: 0.2 }, bt(6));
+      tl.fromTo("#bo-handle", { opacity: 0, x: -60, filter: "blur(12px)" },
+        { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, bt(6));
+      tl.fromTo("#bo-mail", { opacity: 0 }, { opacity: 1, duration: 0.25 }, bt(8));
+      // photocopy flicker on the logo on two downbeats, then everything holds still to the end
+      tl.fromTo("#bo-logo", { opacity: 1 }, { opacity: 0.55, duration: 0.034, yoyo: true, repeat: 1 }, bt(12));
+      tl.fromTo("#bo-logo", { opacity: 1 }, { opacity: 0.55, duration: 0.034, yoyo: true, repeat: 1 }, bt(16));
+      window.__timelines["booking"] = tl;
+    })();
+  </script>
+</template>

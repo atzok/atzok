@@ -1,15 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html
+  lang="pt-BR"
+>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1920, height=1080" />
+    <meta name="viewport" content="width=1080, height=1920" />
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
     <style>
-      /* Placeholders: replace all three with the film's own palette and display face. */
       :root {
-        --ground: #000;
+        --ground: #000000;
         --ink: #ffffff;
-        --font-display: sans-serif;
+        --ember: #bc6d21;
       }
       * {
         margin: 0;
@@ -18,25 +19,16 @@
       }
       html,
       body {
-        margin: 0;
-        width: 1920px;
-        height: 1080px;
+        width: 1080px;
+        height: 1920px;
         overflow: hidden;
         background: var(--ground);
       }
       #root {
+        position: relative;
         width: 100%;
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: var(--font-display);
-      }
-      #title {
-        color: var(--ink);
-        font-size: 72px;
-        font-weight: 600;
-        letter-spacing: -0.03em;
+        background: var(--ground);
       }
     </style>
   </head>
@@ -45,17 +37,36 @@
       id="root"
       data-composition-id="main"
       data-start="0"
-      data-duration="10"
-      data-width="1920"
-      data-height="1080"
+      data-duration="60"
+      data-width="1080"
+      data-height="1920"
     >
-      <h1 id="title" class="clip" data-start="0" data-duration="10" data-track-index="0">Title</h1>
+      <div id="abertura" data-composition-id="abertura" data-composition-src="compositions/abertura.html"
+        data-start="0" data-duration="4.067" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="bio" data-composition-id="bio" data-composition-src="compositions/bio.html"
+        data-start="4.067" data-duration="9.4" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="som" data-composition-id="som" data-composition-src="compositions/som.html"
+        data-start="13.467" data-duration="9.366" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="lancamentos" data-composition-id="lancamentos" data-composition-src="compositions/lancamentos.html"
+        data-start="22.833" data-duration="10.034" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="palcos" data-composition-id="palcos" data-composition-src="compositions/palcos.html"
+        data-start="32.867" data-duration="14.066" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="booking" data-composition-id="booking" data-composition-src="compositions/booking.html"
+        data-start="46.933" data-duration="13.067" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+
+      <audio id="musica" class="clip" src="assets/tripeddhopedd.wav"
+        data-start="0" data-duration="60" data-track-index="3"
+        data-volume="0.9" data-fade-out="2.5"></audio>
     </div>
     <script>
-      const tl = gsap.timeline({ paused: true });
-      // Example: tl.fromTo("#title", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 0);
-      window.__timelines["main"] = tl;
-      tl.seek(0);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
     </script>
   </body>
 </html>
