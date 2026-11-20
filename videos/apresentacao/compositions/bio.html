@@ -5,39 +5,44 @@
       font-size: 30px; letter-spacing: 0.18em; text-transform: uppercase; }
     .bi-big { position: absolute; left: 130px; font-family: Inter, sans-serif; font-weight: 900; color: #fff;
       line-height: 0.88; letter-spacing: -0.035em; text-transform: uppercase; }
-    #bi-name { top: 330px; color: #bc6d21; }
-    #bi-12 { top: 400px; font-size: 168px; }
-    #bi-pista { top: 556px; font-size: 128px; }
-    #bi-desde { top: 850px; font-family: Inter, sans-serif; font-weight: 400; font-size: 40px; color: #9a9a9a; left: 130px; position: absolute; }
-    #bi-voodoo { top: 910px; font-size: 92px; color: #fff; }
-    #bi-rule { position: absolute; left: 130px; top: 1040px; width: 520px; height: 8px; background: #bc6d21; transform-origin: 0 50%; }
+    #bi-name { top: 330px; font-size: 64px; }
+    #bi-role { top: 405px; color: #bc6d21; }
+    #bi-zona { top: 450px; color: #9a9a9a; }
+    #bi-12 { top: 560px; font-size: 168px; }
+    #bi-pista { top: 712px; font-size: 128px; }
+    #bi-desde { position: absolute; top: 890px; left: 130px; font-family: Inter, sans-serif; font-weight: 400;
+      font-size: 40px; color: #9a9a9a; }
+    #bi-voodoo { top: 945px; font-size: 92px; }
+    #bi-rule { position: absolute; left: 130px; top: 1065px; width: 520px; height: 8px; background: #bc6d21; transform-origin: 0 50%; }
   </style>
   <div id="root" data-composition-id="bio" data-width="1080" data-height="1920">
-    <div id="bi-name" class="bi-mono clip" data-start="0" data-duration="9.4" data-track-index="1">Caio Costa · DJ e produtor</div>
-    <div id="bi-12" class="bi-big clip" data-start="0" data-duration="9.4" data-track-index="2">12 anos</div>
-    <div id="bi-pista" class="bi-big clip" data-start="0" data-duration="9.4" data-track-index="3">de pista</div>
-    <div id="bi-desde" class="clip" data-start="0" data-duration="9.4" data-track-index="4">desde os tempos do</div>
-    <div id="bi-voodoo" class="bi-big clip" data-start="0" data-duration="9.4" data-track-index="5">Voodoohop</div>
-    <div id="bi-rule" class="clip" data-start="0" data-duration="9.4" data-track-index="6"></div>
+    <div id="bi-name" class="bi-big clip" data-start="0" data-duration="9.4" data-track-index="1">Caio Costa</div>
+    <div id="bi-role" class="bi-mono clip" data-start="0" data-duration="9.4" data-track-index="2">DJ e produtor</div>
+    <div id="bi-zona" class="bi-mono clip" data-start="0" data-duration="9.4" data-track-index="3">Zona Oeste · São Paulo</div>
+    <div id="bi-12" class="bi-big clip" data-start="0" data-duration="9.4" data-track-index="4">12 anos</div>
+    <div id="bi-pista" class="bi-big clip" data-start="0" data-duration="9.4" data-track-index="5">de pista</div>
+    <div id="bi-desde" class="clip" data-start="0" data-duration="9.4" data-track-index="6">desde os tempos do</div>
+    <div id="bi-voodoo" class="bi-big clip" data-start="0" data-duration="9.4" data-track-index="7">Voodoohop</div>
+    <div id="bi-rule" class="clip" data-start="0" data-duration="9.4" data-track-index="8"></div>
   </div>
   <script>
     (function () {
-      const B = 60 / 89.6, bt = (k) => Math.round(k * B * 30) / 30;
+      // times follow the narration's words (scene starts at 4.067 s in the film)
       const tl = gsap.timeline({ paused: true });
       const inBlur = (sel, t) => tl.fromTo(sel, { opacity: 0, filter: "blur(8px)" },
         { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power2.out" }, t);
-      inBlur("#bi-name", 0);
+      inBlur("#bi-name", 0.3);   // "Caio Costa"
+      inBlur("#bi-role", 1.1);   // "DJ e produtor"
+      inBlur("#bi-zona", 2.4);   // "Zona Oeste"
       tl.fromTo("#bi-12", { opacity: 0, scale: 1.12, transformOrigin: "0% 50%" },
-        { opacity: 1, scale: 1, duration: 0.45, ease: "expo.out" }, bt(1));
-      inBlur("#bi-pista", bt(2));
-      inBlur("#bi-desde", bt(5));
+        { opacity: 1, scale: 1, duration: 0.45, ease: "expo.out" }, 4.68); // "Doze"
+      inBlur("#bi-pista", 5.5);  // "pista"
+      inBlur("#bi-desde", 6.2);
       tl.fromTo("#bi-voodoo", { opacity: 0, x: -40, filter: "blur(10px)" },
-        { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.35, ease: "expo.out" }, bt(6));
-      tl.fromTo("#bi-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, bt(8));
-      tl.to("#bi-12", { color: "#bc6d21", duration: 0.2 }, bt(11));
-      // exit: blur out just before the cut
-      tl.to(["#bi-name", "#bi-12", "#bi-pista", "#bi-desde", "#bi-voodoo", "#bi-rule"],
-        { opacity: 0, filter: "blur(8px)", duration: 0.18, stagger: 0.03, ease: "power2.in" }, 9.0);
+        { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.35, ease: "expo.out" }, 7.1); // "Voodoohop"
+      tl.fromTo("#bi-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 7.6);
+      tl.to(["#bi-name", "#bi-role", "#bi-zona", "#bi-12", "#bi-pista", "#bi-desde", "#bi-voodoo", "#bi-rule"],
+        { opacity: 0, filter: "blur(8px)", duration: 0.16, stagger: 0.025, ease: "power2.in" }, 9.0);
       window.__timelines["bio"] = tl;
     })();
   </script>

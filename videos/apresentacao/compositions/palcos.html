@@ -9,9 +9,9 @@
     #pa-n1 { top: 392px; } #pa-n2 { top: 470px; } #pa-n3 { top: 548px; } #pa-n4 { top: 626px; } #pa-n5 { top: 704px; }
     #pa-rule { position: absolute; left: 130px; top: 820px; width: 520px; height: 8px; background: #bc6d21; transform-origin: 0 50%; }
     #pa-virada { top: 860px; color: #fff; font-size: 28px; }
-    #pa-up { position: absolute; left: 130px; top: 906px; font-family: Inter, sans-serif; font-weight: 900; font-size: 118px;
+    #pa-up { position: absolute; left: 130px; top: 906px; font-family: Inter, sans-serif; font-weight: 900; font-size: 106px;
       line-height: 0.9; letter-spacing: -0.04em; color: #fff; text-transform: uppercase; }
-    #pa-date { top: 1135px; }
+    #pa-date { top: 1115px; }
   </style>
   <div id="root" data-composition-id="palcos" data-width="1080" data-height="1920">
     <div id="pa-label" class="pa-mono clip" data-start="0" data-duration="14.066" data-track-index="1">Já tocou em</div>
@@ -34,14 +34,16 @@
       names.forEach((id, i) => {
         // one stage per beat, like a flyer lineup being stamped
         tl.fromTo(id, { opacity: 0, filter: "blur(6px)" },
-          { opacity: 1, filter: "blur(0px)", duration: 0.13 }, bt(2 + i * 2));
+          { opacity: 1, filter: "blur(0px)", duration: 0.13 }, [1.4, 2.42, 3.22, 4.32, 5.14][i]); // narration words
       });
-      tl.to(names, { color: "#5e5e5e", duration: 0.3 }, bt(13));
-      tl.fromTo("#pa-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power3.out" }, bt(13));
-      tl.fromTo("#pa-virada", { opacity: 0 }, { opacity: 1, duration: 0.2 }, bt(14));
+      tl.to(names, { color: "#5e5e5e", duration: 0.3 }, 7.24);
+      tl.fromTo("#pa-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power3.out" }, 7.24);
+      tl.fromTo("#pa-virada", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 7.3);
       tl.fromTo("#pa-up", { opacity: 0, scale: 1.15, transformOrigin: "0% 50%", filter: "blur(12px)" },
-        { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, bt(15));
-      tl.fromTo("#pa-date", { opacity: 0 }, { opacity: 1, duration: 0.2 }, bt(17));
+        { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, 8.1);
+      tl.fromTo("#pa-date", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 9.0);
+      // photocopy flicker on the payoff while the music opens back up
+      [10.75, 12.09].forEach((t) => tl.fromTo("#pa-up", { opacity: 1 }, { opacity: 0.55, duration: 0.034, yoyo: true, repeat: 1 }, t));
       tl.to(["#pa-label", ...names, "#pa-rule", "#pa-virada", "#pa-up", "#pa-date"],
         { opacity: 0, filter: "blur(8px)", duration: 0.16, stagger: 0.02, ease: "power2.in" }, 13.66);
       window.__timelines["palcos"] = tl;

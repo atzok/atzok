@@ -28,14 +28,15 @@
       const tl = gsap.timeline({ paused: true });
       // colour flood: the paper rises over the black ground
       tl.fromTo("#la-paper", { scaleY: 0 }, { scaleY: 1, duration: 0.4, ease: "power2.inOut" }, 0);
-      tl.fromTo("#la-label", { opacity: 0 }, { opacity: 1, duration: 0.2 }, bt(1));
-      tl.fromTo("#la-m1", { opacity: 0 }, { opacity: 1, duration: 0.2 }, bt(2));
+      tl.fromTo("#la-label", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.45);
+      tl.fromTo("#la-m1", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 1.44);
       tl.fromTo("#la-t1", { opacity: 0, y: 30, filter: "blur(8px)" },
-        { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, bt(2));
-      tl.fromTo("#la-m2", { opacity: 0 }, { opacity: 1, duration: 0.2 }, bt(7));
+        { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 1.44);
+      tl.fromTo("#la-m2", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 6.3);
       tl.fromTo("#la-t2", { opacity: 0, filter: "blur(10px)" },
-        { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, bt(7));
-      tl.fromTo("#la-logo", { opacity: 0, rotation: -6 }, { opacity: 1, rotation: -3, duration: 0.3, ease: "expo.out" }, bt(10));
+        { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 6.3);
+      tl.fromTo("#la-logo", { opacity: 0, rotation: -6 }, { opacity: 1, rotation: -3, duration: 0.3, ease: "expo.out" }, 8.3);
+      tl.to("#la-m1", { color: "#7e406e", duration: 0.2 }, 4.3); // "Disruptive Records"
       // exit: the black returns from the top
       tl.to("#la-paper", { scaleY: 0, transformOrigin: "50% 0%", duration: 0.3, ease: "power3.in" }, 9.7);
       tl.to(["#la-label", "#la-m1", "#la-t1", "#la-m2", "#la-t2", "#la-logo"],
