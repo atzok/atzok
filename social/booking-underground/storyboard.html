@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Booking underground — storyboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root { --surface:#000; --raised:#141414; --ink:#fff; --muted:#9a9a9a; --dim:#5e5e5e; --ember:#bc6d21; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #222; font-family: Inter, sans-serif; display: flex; flex-wrap: wrap; gap: 40px; padding: 40px; }
+  .f { position: relative; width: 1080px; height: 1920px; background: var(--surface); color: var(--ink); overflow: hidden; flex: none; }
+  .mono { font-family: "Space Mono", monospace; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; font-size: 28px; }
+  .k { position: absolute; left: 130px; top: 300px; color: var(--ember); }
+  .h { position: absolute; left: 130px; width: 760px; font-weight: 900; text-transform: uppercase; letter-spacing: -.04em; line-height: .97; }
+  .xl { font-size: 168px; } .l { font-size: 120px; } .m { font-size: 92px; }
+  .em { color: var(--ember); }
+  .b { position: absolute; left: 130px; width: 740px; font-size: 40px; line-height: 1.3; color: var(--muted); }
+  .b b { color: var(--ink); }
+  .rule { position: absolute; left: 130px; width: 120px; height: 8px; background: var(--ember); }
+  .prog { position: absolute; left: 130px; width: 758px; top: 1330px; height: 4px; background: #1c1c1c; }
+  .prog i { display: block; height: 100%; background: var(--dim); }
+  .tc { position: absolute; left: 130px; top: 1360px; color: var(--dim); font-size: 24px; }
+  .list { position: absolute; left: 130px; width: 758px; list-style: none; }
+  .list li { display: flex; gap: 24px; align-items: baseline; padding: 20px 0; border-top: 2px solid #262626; font-size: 38px; font-weight: 700; }
+  .list .n { font-family: "Space Mono", monospace; font-size: 24px; color: var(--ember); min-width: 44px; }
+  .strike { position: relative; color: var(--dim); }
+  .strike::after { content: ""; position: absolute; left: -6px; right: -6px; top: 46%; height: 10px; background: var(--ember); }
+</style>
+</head>
+<body>
+
+<!-- F1 0:00 gancho -->
+<section class="f" id="f1">
+  <div class="k mono">Booking · cena underground</div>
+  <div class="h" style="top:400px; font-size:140px">O booking<br>não<br><span class="em">funciona.</span></div>
+  <div class="b" style="top:1010px; color:#fff; font-size:46px">Ou a gente que não deixa?</div>
+  <div class="prog"><i style="width:4%"></i></div><div class="tc mono">00:00</div>
+</section>
+
+<!-- F2 0:05 DJ -->
+<section class="f" id="f2">
+  <div class="k mono">Lado do DJ</div>
+  <div class="h l" style="top:400px">Cuida<br>de <span class="em">tudo.</span></div>
+  <div class="rule" style="top:680px"></div>
+  <div class="b" style="top:740px">Calote. Set às 6h com a pista vazia. <b>Só ele cuida dele.</b></div>
+  <div class="prog"><i style="width:12%"></i></div><div class="tc mono">00:05</div>
+</section>
+
+<!-- F3 0:12 contratante -->
+<section class="f" id="f3">
+  <div class="k mono">Lado de quem contrata</div>
+  <div class="h" style="top:390px; font-size:300px; letter-spacing:-.06em">20<span class="em">%</span></div>
+  <div class="h m" style="top:700px">Caro e<br>burocrático.</div>
+  <div class="b" style="top:920px">Até 20% de comissão num cachê que mal cabe na planilha. E o risco da festa é do produtor.</div>
+  <div class="prog"><i style="width:24%"></i></div><div class="tc mono">00:12</div>
+</section>
+
+<!-- F4 0:20 cachê encolhe -->
+<section class="f" id="f4">
+  <div class="k mono">O resultado</div>
+  <div class="h l" style="top:400px">O <span class="strike">cachê</span><br>encolhe.</div>
+  <ul class="list" style="top:720px">
+    <li><span class="n">—</span>Horário trocado</li>
+    <li><span class="n">—</span>Volta sem transporte</li>
+    <li><span class="n">—</span>“Acerto na segunda”</li>
+  </ul>
+  <div class="prog"><i style="width:36%"></i></div><div class="tc mono">00:20</div>
+</section>
+
+<!-- F5 0:27 vitrine -->
+<section class="f" id="f5">
+  <div class="k mono">O custo invisível</div>
+  <div class="b" style="top:400px; font-family:'Space Mono',monospace; font-size:34px; color:var(--dim); line-height:1.6">e-mail · rider · cobrança<br>flyer · logística · planilha</div>
+  <div class="h l" style="top:640px">O set é a<br><span class="em">vitrine.</span></div>
+  <div class="prog"><i style="width:48%"></i></div><div class="tc mono">00:27</div>
+</section>
+
+<!-- F6 0:35 uma página -->
+<section class="f" id="f6">
+  <div class="k mono">Proposta</div>
+  <div class="h m" style="top:380px">Uma página<br><span class="em">resolve.</span></div>
+  <ul class="list" style="top:600px">
+    <li><span class="n">01</span>Data, horário, cachê</li>
+    <li><span class="n">02</span>Prazo do Pix e sinal</li>
+    <li><span class="n">03</span>Transporte</li>
+    <li><span class="n">04</span>Contato no dia</li>
+  </ul>
+  <div class="b" style="top:1130px; font-size:34px">Confirmou no zap, guardou o print.</div>
+  <div class="prog"><i style="width:60%"></i></div><div class="tc mono">00:35</div>
+</section>
+
+<!-- F7 0:42 piso + coletivo -->
+<section class="f" id="f7">
+  <div class="k mono">Dividir o risco</div>
+  <div class="h l" style="top:400px">Piso<br><span class="em">+</span> bônus.</div>
+  <div class="rule" style="top:680px"></div>
+  <div class="h m" style="top:740px; color:var(--muted)">Booking em<br>coletivo.</div>
+  <div class="b" style="top:960px">4 a 6 DJs, uma pessoa de produção, custo rateado.</div>
+  <div class="prog"><i style="width:72%"></i></div><div class="tc mono">00:42</div>
+</section>
+
+<!-- F8 0:48 frase -->
+<section class="f" id="f8">
+  <div class="h xl" style="top:520px">Sinal pago,<br>set<br><span class="em">pensado.</span></div>
+  <div class="prog"><i style="width:84%"></i></div><div class="tc mono">00:48</div>
+</section>
+
+<!-- F9 0:55 CTA -->
+<section class="f" id="f9">
+  <div class="k mono">Sua vez</div>
+  <div class="h m" style="top:400px">Já fechou data<br>sem nada por<br><span class="em">escrito?</span></div>
+  <img src="assets/wordmark-branco.png" alt="Ätzøk" style="position:absolute; left:130px; top:860px; width:360px">
+  <div class="mono" style="position:absolute; left:130px; top:1190px; color:#fff; font-size:34px; letter-spacing:.06em; text-transform:none">Comenta · @_atzok</div>
+  <div class="prog"><i style="width:100%"></i></div><div class="tc mono">00:55</div>
+</section>
+
+</body>
+</html>
