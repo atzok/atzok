@@ -218,6 +218,13 @@
       "skillPath": "skills/social/SKILL.md",
       "computedHash": "d4e3f754e4f6a1ef99a79f038656f53ae7d560492f06c6be075b400c614b20d4"
     },
+    "stop-slop": {
+      "source": "hardikpandya/stop-slop",
+      "commit": "8da1f030185bdfe8471220585162991eaeb970e9",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "02a5b429945020ed8a5ed4024d57384258c2596f09ab42c3e7498a8a43ec1c36"
+    },
     "style-sampling": {
       "source": "heygen-com/hyperframes",
       "commit": "d6411daacfd7c1a7702522b7992b87039e18ac59",
