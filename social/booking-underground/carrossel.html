@@ -3,149 +3,249 @@
 <head>
 <meta charset="utf-8">
 <title>Booking underground — carrossel</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Caveat:wght@600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  :root { --surface:#000; --raised:#141414; --ink:#fff; --muted:#9a9a9a; --dim:#5e5e5e; --ember:#bc6d21; }
+  :root { --paper:#eae3d2; --sheet:#f6f2e8; --ink:#141210; --soft:#5a534a; --ember:#bc6d21; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #222; font-family: Inter, sans-serif; display: flex; flex-direction: column; gap: 40px; padding: 40px; align-items: center; }
-  .card { position: relative; width: 1080px; height: 1350px; background: var(--surface); color: var(--ink); overflow: hidden; flex: none; }
-  .mono { font-family: "Space Mono", monospace; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; font-size: 26px; }
-  .top { position: absolute; left: 96px; right: 96px; top: 96px; display: flex; justify-content: space-between; }
-  .kick { color: var(--ember); }
-  .count { color: var(--dim); }
-  .foot { position: absolute; left: 96px; right: 96px; bottom: 88px; display: flex; justify-content: space-between; align-items: flex-end; }
-  .foot img { height: 84px; width: auto; }
-  .foot .mono { color: var(--muted); font-size: 24px; }
-  .h { position: absolute; left: 96px; right: 96px; font-weight: 900; text-transform: uppercase; letter-spacing: -.035em; line-height: .98; }
-  .xl { font-size: 150px; }
-  .l { font-size: 112px; }
-  .m { font-size: 92px; }
-  .em { color: var(--ember); }
-  .body { position: absolute; left: 96px; right: 140px; font-size: 40px; line-height: 1.32; color: var(--muted); font-weight: 400; }
-  .body b { color: var(--ink); font-weight: 700; }
-  .rule { position: absolute; left: 96px; width: 120px; height: 8px; background: var(--ember); }
-  .list { position: absolute; left: 96px; right: 96px; list-style: none; }
-  .list li { display: flex; gap: 28px; align-items: baseline; padding: 22px 0; border-top: 2px solid #262626; font-size: 40px; font-weight: 700; }
-  .list li:last-child { border-bottom: 2px solid #262626; }
-  .list .n { font-family: "Space Mono", monospace; font-size: 24px; color: var(--ember); letter-spacing: .1em; min-width: 48px; }
-  .q { position: absolute; left: 96px; right: 96px; }
-  .q p { font-size: 50px; font-weight: 800; line-height: 1.1; letter-spacing: -.02em; padding: 30px 0; border-top: 2px solid #262626; }
-  .q p span { display: block; font-family: "Space Mono", monospace; font-size: 24px; color: var(--dim); letter-spacing: .18em; font-weight: 700; margin-bottom: 12px; }
-  .split { position: absolute; left: 96px; right: 96px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-  .block { background: var(--raised); border-radius: 8px; padding: 40px 36px; min-height: 470px; }
-  .block .mono { color: var(--ember); font-size: 22px; }
-  .block h3 { font-size: 58px; font-weight: 900; text-transform: uppercase; letter-spacing: -.03em; line-height: .92; margin: 22px 0 26px; }
-  .block p { font-size: 32px; line-height: 1.32; color: var(--muted); }
+  body { background: #777; font-family: Inter, sans-serif; display: flex; flex-direction: column; gap: 40px; padding: 40px; align-items: center; }
+  .card { position: relative; width: 1080px; height: 1350px; background: var(--paper) url(assets/papel-4x5.jpg); color: var(--ink); overflow: hidden; flex: none; }
+  /* textura do papel por cima da tinta: impressão em papel reciclado */
+  .card::after { content: ""; position: absolute; inset: 0; background: url(assets/papel-4x5.jpg); mix-blend-mode: multiply; opacity: .55; pointer-events: none; z-index: 50; }
+
+  /* marcas de corte e cabeçalho */
+  .crop { position: absolute; width: 34px; height: 34px; border-color: var(--ink); border-style: solid; border-width: 0; z-index: 5; }
+  .crop.tl { left: 40px; top: 40px; border-left-width: 3px; border-top-width: 3px; }
+  .crop.tr { right: 40px; top: 40px; border-right-width: 3px; border-top-width: 3px; }
+  .crop.bl { left: 40px; bottom: 40px; border-left-width: 3px; border-bottom-width: 3px; }
+  .crop.br { right: 40px; bottom: 40px; border-right-width: 3px; border-bottom-width: 3px; }
+  .mono { font-family: "Space Mono", monospace; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; }
+  .head { position: absolute; left: 96px; right: 96px; top: 84px; display: flex; justify-content: space-between; align-items: center; font-size: 22px; }
+  .tag { background: var(--ink); color: var(--paper); padding: 6px 12px 5px; }
+  .tag.or { background: var(--ember); color: var(--ink); }
+
+  .h { position: absolute; left: 92px; right: 92px; font-weight: 900; letter-spacing: -.055em; line-height: .9; }
+  .h .or { color: var(--ember); }
+  .serif { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400; letter-spacing: -.01em; }
+  .hand { font-family: Caveat, cursive; font-weight: 700; }
+  .body { position: absolute; left: 96px; font-size: 34px; line-height: 1.32; font-weight: 500; }
+  .body b { font-weight: 800; }
+
+  .foot { position: absolute; left: 96px; right: 96px; bottom: 80px; display: flex; justify-content: space-between; align-items: flex-end; z-index: 6; }
+  .foot img { height: 78px; }
+  .foot .hand { font-size: 46px; line-height: 1; }
+
+  /* fita adesiva */
+  .tape { position: absolute; width: 170px; height: 46px; background: rgba(246,242,232,.72); box-shadow: 0 1px 2px rgba(0,0,0,.12);
+    clip-path: polygon(2% 8%, 10% 0, 22% 10%, 35% 2%, 50% 9%, 64% 0, 78% 8%, 90% 1%, 100% 10%, 98% 92%, 88% 100%, 74% 91%, 60% 100%, 45% 92%, 30% 100%, 15% 91%, 0 100%); z-index: 8; }
+  .sheet { position: absolute; background: var(--sheet); box-shadow: 0 2px 0 rgba(0,0,0,.05), 0 18px 30px -18px rgba(0,0,0,.35); }
+  .stamp { position: absolute; border: 7px solid var(--ember); color: var(--ember); font-family: "Space Mono", monospace; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .12em; padding: 10px 22px 6px; mix-blend-mode: multiply; opacity: .92; z-index: 9;
+    -webkit-mask-image: url(assets/mancha-preta.png), linear-gradient(#000,#000); -webkit-mask-composite: xor; mask-composite: exclude; -webkit-mask-size: 260px; mask-size: 260px; }
+  .burst { position: absolute; display: flex; align-items: center; justify-content: center; text-align: center; }
+  .pill { display: inline-block; border-radius: 999px; padding: 8px 26px 10px; }
+  svg.draw { position: absolute; overflow: visible; fill: none; stroke: var(--ink); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+  .dot-or { position: absolute; background: url(assets/mancha-laranja.png) center/contain no-repeat; mix-blend-mode: multiply; }
+  .dot-ink { position: absolute; background: url(assets/mancha-preta.png) center/contain no-repeat; mix-blend-mode: multiply; }
 </style>
 </head>
 <body>
 
-<!-- 01 capa -->
+<!-- 01 · capa -->
 <section class="card" id="c01">
-  <div class="top mono"><span class="kick">Booking · cena underground</span><span class="count">01/10</span></div>
-  <div class="h xl" style="top:330px">O booking<br>não<br><span class="em">funciona.</span></div>
-  <div class="body" style="top:900px; font-size:46px; color:#fff">Ou a gente que não deixa funcionar?</div>
-  <div class="foot"><img src="assets/wordmark-branco.png" alt="Ätzøk"><span class="mono">Arrasta →</span></div>
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="head mono"><span class="tag">papo reto sobre a cena</span><span>01/10</span></div>
+  <div class="h" style="top:230px; font-size:178px">o booking<br><span class="or">não<br>funciona!?</span></div>
+  <div class="serif" style="position:absolute; left:96px; top:790px; font-size:60px; line-height:1.02; width:560px">ou a gente que não deixa funcionar?</div>
+  <div style="position:absolute; left:560px; top:720px; width:700px; height:700px">
+    <div style="position:absolute; inset:34%; border-radius:50%; background:var(--ember)"></div>
+    <img src="assets/vinil.png" style="position:absolute; inset:0; width:100%">
+    <div style="position:absolute; left:50%; top:50%; width:22px; height:22px; margin:-11px; border-radius:50%; background:var(--paper)"></div>
+  </div>
+  <div class="burst" data-n="16" style="left:880px; top:800px; width:200px; height:200px; background:var(--ember); color:var(--ink); transform:rotate(-12deg); z-index:7">
+    <span class="mono" style="font-size:22px; line-height:1.25">parte<br><b style="font-size:54px; letter-spacing:0">1</b></span></div>
+  <div class="foot"><img src="assets/wordmark-preto.png" alt="Ätzøk"><span class="hand" style="position:absolute; left:250px; bottom:0">arrasta →</span></div>
 </section>
 
-<!-- 02 DJ -->
+<!-- 02 · lado do DJ -->
 <section class="card" id="c02">
-  <div class="top mono"><span class="kick">Lado do DJ</span><span class="count">02/10</span></div>
-  <div class="h l" style="top:300px">O DJ quer<br>cuidar de<br><span class="em">tudo.</span></div>
-  <div class="rule" style="top:740px"></div>
-  <div class="body" style="top:800px">Já levou calote. Já tocou às 6h com a pista vazia. Aprendeu que <b>só ele cuida dele</b>, e isso virou desculpa para nunca delegar.</div>
-  <div class="foot"><img src="assets/wordmark-branco.png" alt="Ätzøk"><span class="mono">→</span></div>
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="head mono"><span class="tag">lado do DJ</span><span>02/10</span></div>
+  <div class="h" style="top:190px; font-size:120px">a gente quer<br>cuidar de <span class="or">tudo</span></div>
+  <div class="sheet" style="left:118px; top:480px; width:560px; height:560px; transform:rotate(-3deg);
+    background:repeating-linear-gradient(transparent 0 63px, #c9d3da 63px 65px) 0 92px / 100% 100% no-repeat, var(--sheet);">
+    <div style="position:absolute; left:70px; top:0; bottom:0; width:3px; background:var(--ember); opacity:.6"></div>
+    <div class="hand" style="position:absolute; left:96px; top:22px; font-size:56px">hoje:</div>
+    <div class="hand" style="position:absolute; left:96px; top:104px; font-size:44px; line-height:65px">
+      ☑ responder o direct<br>☑ fechar a data<br>☑ cobrar a de sexta<br>☑ atualizar o rider<br>☑ fazer o flyer<br><span style="color:var(--ember)">☐ pesquisar música</span></div>
+  </div>
+  <i class="tape" style="left:310px; top:456px; transform:rotate(4deg)"></i>
+  <svg class="draw" style="left:690px; top:830px; stroke:var(--ember)" width="200" height="160"><path d="M150 20 C 170 90, 110 140, 20 120 M20 120 l 30 -24 M20 120 l 32 18"/></svg>
+  <div class="hand" style="position:absolute; left:740px; top:740px; font-size:62px; color:var(--ember); transform:rotate(-6deg)">e o set??</div>
+  <div class="body" style="top:1080px; width:820px">Parte disso é medo. Quem já levou calote ou tocou às 6h pra pista vazia aprende a não confiar em ninguém.</div>
+  <div class="foot" style="justify-content:flex-end"><span class="hand">→</span></div>
 </section>
 
-<!-- 03 contratante -->
+<!-- 03 · lado de quem contrata -->
 <section class="card" id="c03">
-  <div class="top mono"><span class="kick">Lado de quem contrata</span><span class="count">03/10</span></div>
-  <div class="h l" style="top:300px">Caro e<br><span class="em">burocrático.</span></div>
-  <div class="rule" style="top:560px"></div>
-  <div class="body" style="top:620px">O risco da festa é do produtor. <b>Comissão de 15 a 20%</b> sobre um cachê que mal cabe na planilha. Contrato de quatro páginas para uma data fechada em dez dias.</div>
-  <div class="foot"><img src="assets/wordmark-branco.png" alt="Ätzøk"><span class="mono">→</span></div>
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="head mono"><span class="tag">lado de quem contrata</span><span>03/10</span></div>
+  <div class="h" style="top:190px; font-size:112px">pra quem contrata,<br>é caro e<br><span class="or">burocrático</span></div>
+  <div class="burst" data-n="22" style="left:610px; top:560px; width:380px; height:380px; background:var(--ember); transform:rotate(8deg)">
+    <div><div style="font-weight:900; font-size:92px; letter-spacing:-.05em; line-height:.9">15 a<br>20%</div><div class="serif" style="font-size:40px">de comissão</div></div></div>
+  <div class="stamp" style="left:96px; top:660px; font-size:46px; transform:rotate(-7deg)">burocracia</div>
+  <div class="body" style="top:810px; width:480px; font-size:32px; padding-top:60px">E tem razão em parte. Se chove ou a festa não vende, quem paga a conta é o produtor.</div>
+  <div class="body" style="top:1090px; width:860px; font-size:32px">Comissão em cima de um cachê que mal fecha a planilha pesa. E ninguém quer contrato de quatro páginas pra uma data fechada em dez dias.</div>
+  <div class="foot" style="justify-content:flex-end"><span class="hand">→</span></div>
 </section>
 
-<!-- 04 cachê encolhe -->
+<!-- 04 · o cachê encolhe -->
 <section class="card" id="c04">
-  <div class="top mono"><span class="kick">O resultado</span><span class="count">04/10</span></div>
-  <div class="h l" style="top:300px">No meio,<br>o cachê<br><span class="em">encolhe.</span></div>
-  <ul class="list" style="top:700px">
-    <li><span class="n">—</span>Horário trocado em cima da hora</li>
-    <li><span class="n">—</span>Volta sem transporte</li>
-    <li><span class="n">—</span>“Acerto na segunda”</li>
-    <li><span class="n">—</span>Consumação no lugar de dinheiro</li>
-  </ul>
-  <div class="foot"><img src="assets/wordmark-branco.png" alt="Ätzøk"><span class="mono">→</span></div>
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="head mono"><span class="tag">no fim das contas</span><span>04/10</span></div>
+  <div class="h" style="top:190px; font-size:112px">o cachê encolhe<br>e o cuidado <span class="or">some</span></div>
+  <div class="sheet receipt" style="left:250px; top:470px; width:580px; height:700px; transform:rotate(2.5deg); padding:46px 44px; font-family:'Space Mono',monospace; font-size:25px; line-height:1.55">
+    <div style="text-align:center; font-weight:700; letter-spacing:.2em">*** FESTA DE SÁBADO ***</div>
+    <div style="text-align:center; font-size:20px; color:var(--soft)">cupom não fiscal</div>
+    <div style="border-top:3px dashed var(--ink); margin:22px 0 16px"></div>
+    <div style="display:flex; justify-content:space-between; font-weight:700"><span>CACHÊ COMBINADO</span><span>R$ ___</span></div>
+    <div style="display:flex; justify-content:space-between"><span>horário trocado</span><span>−</span></div>
+    <div style="display:flex; justify-content:space-between"><span>volta por conta própria</span><span>−</span></div>
+    <div style="display:flex; justify-content:space-between"><span>"acerto na segunda"</span><span>−</span></div>
+    <div style="display:flex; justify-content:space-between"><span>consumação no lugar</span><span>−</span></div>
+    <div style="border-top:3px dashed var(--ink); margin:16px 0"></div>
+    <div style="display:flex; justify-content:space-between; font-weight:700; font-size:34px"><span>SOBROU</span><span style="color:var(--ember)">???</span></div>
+    <div style="text-align:center; margin-top:34px; font-size:21px; color:var(--soft)">obrigado pela visibilidade<br>volte sempre</div>
+    <div style="height:70px; margin-top:22px; background:repeating-linear-gradient(90deg, var(--ink) 0 3px, transparent 3px 7px, var(--ink) 7px 12px, transparent 12px 14px, var(--ink) 14px 15px, transparent 15px 20px)"></div>
+  </div>
+  <i class="tape" style="left:440px; top:448px; transform:rotate(-3deg)"></i>
+  <div class="foot" style="justify-content:flex-end"><span class="hand">→</span></div>
 </section>
 
-<!-- 05 tempo -->
+<!-- 05 · tempo -->
 <section class="card" id="c05">
-  <div class="top mono"><span class="kick">O custo invisível</span><span class="count">05/10</span></div>
-  <div class="h m" style="top:300px">Quem cuida<br>da carreira<br>não cuida<br>do <span class="em">set.</span></div>
-  <div class="body" style="top:780px">E-mail, rider, cobrança, flyer, logística. O tempo de pesquisa e estúdio vira planilha.</div>
-  <div class="body" style="top:960px; color:#fff; font-weight:700">E o set é a vitrine.</div>
-  <div class="foot"><img src="assets/wordmark-branco.png" alt="Ätzøk"><span class="mono">→</span></div>
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="head mono"><span class="tag">o que ninguém vê</span><span>05/10</span></div>
+  <div class="h" style="top:190px; font-size:130px">e o tempo<br>pro <span class="or">som!?</span></div>
+  <div style="position:absolute; left:300px; top:470px; width:600px; height:600px">
+    <img src="assets/vinil-laranja.png" style="position:absolute; inset:0; width:100%; -webkit-mask:conic-gradient(from -20deg, #000 0 290deg, transparent 290deg)">
+    <img src="assets/vinil.png" style="position:absolute; inset:0; width:100%; -webkit-mask:conic-gradient(from -20deg, transparent 0 290deg, #000 290deg)">
+    <div style="position:absolute; inset:34%; border-radius:50%; border:4px solid var(--ink)"></div>
+  </div>
+  <div class="hand" style="position:absolute; left:96px; top:520px; font-size:58px; color:var(--ember); transform:rotate(-5deg)">a música</div>
+  <svg class="draw" style="left:150px; top:590px; stroke:var(--ember)" width="200" height="120"><path d="M10 10 C 40 80, 110 100, 180 90 M180 90 l -30 -22 M180 90 l -26 24"/></svg>
+  <div class="hand" style="position:absolute; left:770px; top:470px; font-size:58px; transform:rotate(6deg)">o corre</div>
+  <svg class="draw" style="left:700px; top:530px" width="120" height="120"><path d="M90 10 C 80 60, 50 80, 15 95 M15 95 l 34 2 M15 95 l 16 -28"/></svg>
+  <div class="body" style="top:1080px; width:880px; font-size:32px">Cada hora cobrando, mandando e-mail e resolvendo logística é uma hora a menos pesquisando música. E o set é a nossa vitrine. <b>É ele que traz a próxima data.</b></div>
+  <div class="foot" style="justify-content:flex-end"><span class="hand">→</span></div>
 </section>
 
-<!-- 06 autocrítica -->
+<!-- 06 · autocrítica -->
 <section class="card" id="c06">
-  <div class="top mono"><span class="kick">Autocrítica</span><span class="count">06/10</span></div>
-  <div class="h l" style="top:300px">A gente<br>também<br><span class="em">erra.</span></div>
-  <ul class="list" style="top:700px">
-    <li><span class="n">—</span>Press kit de 2019</li>
-    <li><span class="n">—</span>Rider nunca atualizado</li>
-    <li><span class="n">—</span>E-mail respondido em três dias</li>
-  </ul>
-  <div class="body" style="top:1040px; color:#fff; font-weight:700">Quem toca de graça paga a conta de todos.</div>
-  <div class="foot"><img src="assets/wordmark-branco.png" alt="Ätzøk"><span class="mono">→</span></div>
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="head mono"><span class="tag or">autocrítica</span><span>06/10</span></div>
+  <div class="h" style="top:190px; font-size:104px">mas a culpa<br>não é só de quem<br><span class="or">contrata</span></div>
+  <div class="sheet" style="left:110px; top:560px; padding:26px 34px; transform:rotate(-4deg); font-size:40px; font-weight:800">press kit de 2019</div>
+  <i class="tape" style="left:150px; top:542px; width:120px; transform:rotate(-12deg)"></i>
+  <div class="sheet" style="left:420px; top:670px; padding:26px 34px; transform:rotate(3deg); max-width:560px; font-size:40px; font-weight:800">rider que nunca foi atualizado</div>
+  <i class="tape" style="left:820px; top:652px; width:120px; transform:rotate(10deg)"></i>
+  <div class="sheet" style="left:150px; top:790px; padding:26px 34px; transform:rotate(-1.5deg); font-size:40px; font-weight:800">mensagem respondida 3 dias depois</div>
+  <i class="tape" style="left:420px; top:774px; width:120px; transform:rotate(-4deg)"></i>
+  <div class="dot-or" style="left:640px; top:820px; width:520px; height:520px"></div>
+  <div class="serif" style="position:absolute; left:96px; top:950px; width:820px; font-size:54px; line-height:1.04">e toda vez que alguém toca de graça “pela vitrine”, fica mais difícil pra todo mundo cobrar o justo.</div>
+  <div class="foot" style="justify-content:flex-end"><span class="hand">→</span></div>
 </section>
 
-<!-- 07 uma página -->
+<!-- 07 · uma página -->
 <section class="card" id="c07">
-  <div class="top mono"><span class="kick">Proposta 1</span><span class="count">07/10</span></div>
-  <div class="h m" style="top:260px">Uma página<br><span class="em">resolve.</span></div>
-  <ul class="list" style="top:480px">
-    <li><span class="n">01</span>Data, horário e duração do set</li>
-    <li><span class="n">02</span>Cachê, Pix e prazo</li>
-    <li><span class="n">03</span>Sinal e regra de cancelamento</li>
-    <li><span class="n">04</span>Transporte de ida e volta</li>
-    <li><span class="n">05</span>Equipamento confirmado</li>
-    <li><span class="n">06</span>Um contato responsável no dia</li>
-  </ul>
-  <div class="body" style="top:1110px; font-size:34px">Confirmou no zap, guardou o print.</div>
-  <div class="foot"><img src="assets/wordmark-branco.png" alt="Ätzøk"><span class="mono">→</span></div>
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="head mono"><span class="tag">ideia 1</span><span>07/10</span></div>
+  <div class="h" style="top:190px; font-size:92px">e se tudo coubesse<br>numa <span class="or">página?</span></div>
+  <div class="sheet" style="left:96px; top:460px; width:640px; height:700px; transform:rotate(-2deg); padding:44px 46px">
+    <div class="mono" style="font-size:24px; display:flex; justify-content:space-between"><span>acordo de data</span><span style="color:var(--ember)">nº 001</span></div>
+    <div style="border-top:4px solid var(--ink); margin:18px 0 6px"></div>
+    <div class="fields" style="font-size:27px; font-weight:600">
+      <p>data e horário do set</p><p>cachê e prazo do pix</p><p>sinal e regra de cancelamento</p><p>transporte de ida e volta</p><p>equipamento confirmado</p><p>quem é o contato no dia</p>
+    </div>
+    <div class="mono" style="position:absolute; left:46px; right:46px; bottom:40px; font-size:18px; display:flex; justify-content:space-between; color:var(--soft)"><span>___________ DJ</span><span>___________ festa</span></div>
+  </div>
+  <i class="tape" style="left:330px; top:440px; transform:rotate(3deg)"></i>
+  <div class="hand" style="position:absolute; left:770px; top:700px; width:240px; font-size:54px; line-height:.95; color:var(--ember); transform:rotate(-4deg)">manda no zap e guarda o print</div>
+  <svg class="draw" style="left:740px; top:880px; stroke:var(--ember)" width="140" height="140"><path d="M70 10 C 90 60, 70 100, 15 120 M15 120 l 34 4 M15 120 l 14 -30"/></svg>
+  <div class="serif" style="position:absolute; left:96px; top:1185px; font-size:42px">sem advogado, sem PDF de dez páginas.</div>
+  <div class="foot" style="justify-content:flex-end"><span class="hand">→</span></div>
 </section>
 
-<!-- 08 risco e trabalho -->
+<!-- 08 · dividir -->
 <section class="card" id="c08">
-  <div class="top mono"><span class="kick">Proposta 2 e 3</span><span class="count">08/10</span></div>
-  <div class="h m" style="top:260px">Dividir o risco.<br>Dividir o <span class="em">corre.</span></div>
-  <div class="split" style="top:560px">
-    <div class="block"><span class="mono">Piso + bônus</span><h3>Cachê com chão</h3><p>Piso garantido mesmo se a festa flopar. Acima do público combinado, uma parte da porta.</p></div>
-    <div class="block"><span class="mono">Booking em coletivo</span><h3>Um corre, seis DJs</h3><p>De 4 a 6 artistas dividindo uma pessoa de produção. Custo rateado, mais força na negociação.</p></div>
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="head mono"><span class="tag">ideias 2 e 3</span><span>08/10</span></div>
+  <div class="h" style="top:190px; font-size:120px">dividir o risco.<br><span class="or">e o corre.</span></div>
+  <div class="sheet" style="left:96px; top:470px; width:430px; height:460px; padding:40px 36px; transform:rotate(-1.5deg)">
+    <span class="pill mono" style="background:var(--ember); font-size:20px">piso + bônus</span>
+    <p style="font-size:30px; line-height:1.3; font-weight:500; margin-top:28px">Um cachê mínimo garantido, mesmo se a festa flopar. Passou do público combinado? <b>Entra uma parte da porta.</b></p>
   </div>
-  <div class="foot"><img src="assets/wordmark-branco.png" alt="Ätzøk"><span class="mono">→</span></div>
+  <div class="sheet" style="left:556px; top:490px; width:430px; height:460px; padding:40px 36px; transform:rotate(1.5deg)">
+    <span class="pill mono" style="background:var(--ink); color:var(--paper); font-size:20px">booking em coletivo</span>
+    <p style="font-size:30px; line-height:1.3; font-weight:500; margin-top:28px">Quatro, cinco DJs dividindo uma pessoa pra cuidar das datas. <b>Sai mais barato e a gente negocia junto.</b></p>
+  </div>
+  <i class="tape" style="left:230px; top:452px; width:140px; transform:rotate(-6deg)"></i>
+  <i class="tape" style="left:700px; top:470px; width:140px; transform:rotate(5deg)"></i>
+  <div class="tabs" style="position:absolute; left:96px; right:96px; top:990px; height:200px; display:flex; border-top:3px dashed var(--ink)">
+    <span>acordo</span><span>sinal</span><span>piso</span><span>coletivo</span><span>respeito</span><span>pix</span>
+  </div>
+  <div class="foot" style="justify-content:flex-end"><span class="hand">→</span></div>
 </section>
 
-<!-- 09 frase -->
+<!-- 09 · frase -->
 <section class="card" id="c09">
-  <div class="top mono"><span class="kick">Resumo</span><span class="count">09/10</span></div>
-  <div class="h xl" style="top:420px">Sinal pago,<br>set <span class="em">pensado.</span></div>
-  <div class="foot"><img src="assets/wordmark-branco.png" alt="Ätzøk"><span class="mono">→</span></div>
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="head mono"><span class="tag">resumindo</span><span>09/10</span></div>
+  <div class="dot-or" style="left:200px; top:260px; width:900px; height:900px"></div>
+  <div class="h" style="top:350px; font-size:196px; line-height:.86">sinal<br>pago,<br>set<br><span style="font-family:'Instrument Serif',serif; font-style:italic; font-weight:400; letter-spacing:-.02em">pensado.</span></div>
+  <div class="mono" style="position:absolute; left:96px; top:1120px; font-size:28px">✶ simples assim ✶</div>
+  <div class="foot" style="justify-content:flex-end"><span class="hand">→</span></div>
 </section>
 
-<!-- 10 perguntas -->
+<!-- 10 · perguntas -->
 <section class="card" id="c10">
-  <div class="top mono"><span class="kick">Sua vez</span><span class="count">10/10</span></div>
-  <div class="h l" style="top:260px">E aí,<br><span class="em">cena?</span></div>
-  <div class="q" style="top:540px">
-    <p><span>01</span>Já fechou data sem nada por escrito?</p>
-    <p><span>02</span>O que não pode faltar no seu acordo?</p>
-    <p><span>03</span>Quem paga a conta da burocracia?</p>
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="head mono"><span class="tag or">sua vez</span><span>10/10</span></div>
+  <div class="h" style="top:190px; font-size:120px">e aí, como<br>funciona na<br>sua <span class="or">cena?</span></div>
+  <div class="qs" style="position:absolute; left:96px; right:96px; top:610px">
+    <p><span class="mono">01</span>você já fechou data sem nada por escrito?</p>
+    <p><span class="mono">02</span>o que não pode faltar no seu acordo?</p>
+    <p><span class="mono">03</span>e o público, tem culpa nisso!?</p>
   </div>
-  <div class="foot"><img src="assets/wordmark-branco.png" alt="Ätzøk"><span class="mono">Comenta · @_atzok</span></div>
+  <div class="hand" style="position:absolute; left:560px; top:1010px; font-size:46px; color:var(--ember); transform:rotate(-4deg)">↑ essa fica pro próximo post</div>
+  <div class="foot"><img src="assets/wordmark-preto.png" alt="Ätzøk"><span class="mono" style="font-size:24px">comenta aí · @_atzok</span></div>
 </section>
 
+<style>
+  .fields p { padding: 20px 0 10px; border-bottom: 2px solid #bdb5a5; position: relative; }
+  .fields p::before { content: "☐  "; color: var(--ember); }
+  .tabs span { flex: 1; border-right: 3px dashed var(--ink); writing-mode: vertical-rl; transform: rotate(180deg); display: flex; align-items: center; justify-content: flex-start;
+    padding: 16px 0; font-family: "Space Mono", monospace; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: 24px; }
+  .tabs span:first-child { border-left: 0; }
+  .tabs span:nth-child(5) { color: var(--ember); }
+  .qs p { display: flex; gap: 26px; align-items: baseline; padding: 26px 0; border-top: 3px solid var(--ink); font-size: 46px; font-weight: 800; letter-spacing: -.03em; line-height: 1.08; }
+  .qs p:last-child { border-bottom: 3px solid var(--ink); }
+  .qs .mono { font-size: 22px; color: var(--ember); min-width: 40px; }
+</style>
+<script>
+  // estrelas (starburst) e borda serrilhada do cupom: só geometria, sem animação
+  document.querySelectorAll('.burst').forEach(el => {
+    const n = +el.dataset.n || 16, pts = [];
+    for (let i = 0; i < n * 2; i++) {
+      const a = Math.PI * i / n, r = i % 2 ? 40 : 50;
+      pts.push(`${50 + r * Math.cos(a)}% ${50 + r * Math.sin(a)}%`);
+    }
+    el.style.clipPath = `polygon(${pts.join(',')})`;
+  });
+  document.querySelectorAll('.receipt').forEach(el => {
+    const pts = ['0 0', '100% 0'];
+    for (let i = 20; i >= 0; i--) pts.push(`${i * 5}% ${i % 2 ? 98 : 100}%`);
+    el.style.clipPath = `polygon(${pts.join(',')})`;
+  });
+</script>
 </body>
 </html>

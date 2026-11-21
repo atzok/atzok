@@ -13,18 +13,18 @@ Tom: provocação + perguntas. O papel do público fica para o próximo post.
 
 Convergência: um acordo de uma página, sinal antecipado, piso + bônus e booking em coletivo.
 
-## Carrossel
+## Carrossel (v2: papel reciclado, tinta preta e laranja)
 
-1. **O booking não funciona.** Ou a gente que não deixa funcionar?
-2. **O DJ quer cuidar de tudo.** Já levou calote, já tocou às 6h com a pista vazia. Aprendeu que só ele cuida dele, e isso virou desculpa para nunca delegar.
-3. **O contratante acha caro e burocrático.** O risco da festa é dele. Comissão de 15 a 20% sobre um cachê que mal cabe na planilha. Contrato de quatro páginas para uma data fechada em dez dias.
-4. **No meio, o cachê encolhe.** E o cuidado some: horário trocado em cima da hora, volta sem transporte, "acerto na segunda", consumação no lugar de dinheiro.
-5. **Quem cuida da carreira não cuida do set.** E-mail, rider, cobrança, flyer, logística. O tempo de pesquisa e estúdio vira planilha. E o set é a vitrine.
-6. **A gente também erra.** Press kit de 2019. Rider que nunca foi atualizado. E-mail respondido em três dias. Quem toca de graça paga a conta de todos.
-7. **Uma página resolve.** Checklist do acordo mínimo. Confirmou no WhatsApp, guardou o print.
-8. **Dividir o risco, dividir o trabalho.** Piso garantido + bônus na porta. Booking em coletivo de 4 a 6 DJs.
-9. **Sinal pago, set pensado.**
-10. **E aí, cena?** Três perguntas para os comentários.
+1. **o booking não funciona!?** ou a gente que não deixa funcionar?
+2. **a gente quer cuidar de tudo.** Lista do dia (direct, data, cobrança, rider, flyer) e a única coisa sem marcar é "pesquisar música". "e o set??" Parte disso é medo. Quem já levou calote ou tocou às 6h pra pista vazia aprende a não confiar em ninguém.
+3. **pra quem contrata, é caro e burocrático.** E tem razão em parte. Se chove ou a festa não vende, quem paga a conta é o produtor. Comissão em cima de um cachê que mal fecha a planilha pesa. E ninguém quer contrato de quatro páginas pra uma data fechada em dez dias.
+4. **o cachê encolhe e o cuidado some.** Cupom da festa: cachê combinado, menos horário trocado, volta por conta própria, "acerto na segunda", consumação no lugar. Sobrou: ???
+5. **e o tempo pro som!?** Cada hora cobrando, mandando e-mail e resolvendo logística é uma hora a menos pesquisando música. E o set é a nossa vitrine. É ele que traz a próxima data.
+6. **mas a culpa não é só de quem contrata.** Press kit de 2019, rider que nunca foi atualizado, mensagem respondida 3 dias depois. E toda vez que alguém toca de graça "pela vitrine", fica mais difícil pra todo mundo cobrar o justo.
+7. **e se tudo coubesse numa página?** Acordo de data: horário, cachê e prazo do pix, sinal e cancelamento, transporte, equipamento, contato no dia. Manda no zap e guarda o print. Sem advogado, sem PDF de dez páginas.
+8. **dividir o risco. e o corre.** Piso + bônus: um cachê mínimo garantido, mesmo se a festa flopar; passou do público combinado, entra uma parte da porta. Booking em coletivo: quatro, cinco DJs dividindo uma pessoa pra cuidar das datas.
+9. **sinal pago, set pensado.** Simples assim.
+10. **e aí, como funciona na sua cena?** Você já fechou data sem nada por escrito? O que não pode faltar no seu acordo? E o público, tem culpa nisso!? (essa fica pro próximo post)
 
 ## Narração (60 s, ~150 palavras)
 
