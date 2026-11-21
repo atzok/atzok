@@ -1,0 +1,1 @@
+[{ "check": "copy-headings", "target": "h2#disco-h", "reason": "The page is in Portuguese: Discografia, Formatos, Agenda and Booking are section nouns; the checker's section-noun list reads English only." }]

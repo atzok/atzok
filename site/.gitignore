@@ -1,0 +1,9 @@
+shots/
+img/orig/
+img/*-1000.jpg
+img/*-1200.jpg
+img/*-400.png
+.taste-skill/*
+!.taste-skill/waivers.json
+!.taste-skill/history.json
+!.taste-skill/layout-history.json

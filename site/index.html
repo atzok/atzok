@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="pt-BR" data-type="service" data-radius="soft" data-buttons="tonal" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ätzøk: DJ e produtor de downtempo em São Paulo</title>
+<meta name="description" content="Caio Costa toca como Ätzøk há 12 anos: breakbeat, trip hop, house e downtempo. Discografia, formatos de show, agenda e booking.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ätzøk: DJ e produtor de downtempo em São Paulo">
+<meta property="og:description" content="Breakbeat, trip hop, house e downtempo da Zona Oeste de São Paulo. Agenda e booking.">
+<meta property="og:image" content="share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/wordmark-preto-150.webp" type="image/webp">
+<meta name="theme-color" content="#ece7dc">
+<!-- <link rel="canonical" href="https://[domínio do Ätzøk]/"> -->
+<meta name="site-kind" content="other">
+<meta name="page-type" content="service">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400..700&family=Red+Hat+Text:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<style>
+:root {
+  --p-bg: #ece7dc; --p-surface: #e2dccf; --p-ink: #111111; --p-muted: #615f5c;
+  --p-accent: #bc6d21; --p-accent-ink: #111111; --p-action: #bc6d21; --p-action-ink: #111111;
+  --p-inv-bg: #111111; --p-inv-surface: #1d1d1c; --p-inv-ink: #ece7dc; --p-inv-muted: #908d87;
+  --p-inv-accent: #bc6d21; --p-inv-accent-ink: #111111; --p-inv-action: #bc6d21; --p-inv-action-ink: #111111;
+  --font-display: "Red Hat Display", system-ui, sans-serif;
+  --font-text: "Red Hat Text", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.025em;
+  --display-tracking-xl: -0.035em;
+}
+</style>
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="assets/moments/moments.js">
+<link rel="modulepreload" href="assets/moments/lib.js">
+<link rel="modulepreload" href="assets/moments/pinned-chapters/moment.js">
+<!-- page CSS: the client's wordmark in the nav and the footer, and the agenda's photograph pair -->
+<style>
+  .nav__logo img { display: block; height: 40px; width: auto; }
+  .closing .nav__logo img { height: 56px; }
+  #booking .frame--fill { align-self: stretch; height: auto; min-height: 320px; }
+  @media (min-width: 640px) and (max-width: 1023px) {
+    #discografia .frame--photo { aspect-ratio: 4 / 3 !important; }
+    #agenda .frame--photo { aspect-ratio: 16 / 9 !important; }
+    #formatos:not(.is-live) .mo-pc__visual > img { max-height: 26svh; }
+  }
+  @media (min-width: 640px) and (max-width: 1023px) { #booking .frame--fill { min-height: 440px; } }
+  .rows .rows__name small { display: block; font-weight: 400; color: var(--muted); font-size: var(--t-body); }
+</style>
+</head>
+<body>
+<!-- type: service
+     deal: hero split (re-dealt: photo needs a 1920px landscape, the client's photographs are portraits and 1300px live shots),
+           nav nav-mega, close close-type, footer footer-columns (re-dealt from footer-visit: a DJ has no door),
+           rhythm surface-pairs, buttons tonal, mark: the client's own wordmark replaces the dealt initial
+     palette: the client's own colours (start.mjs brand): press-kit paper #ece7dc, ink #111, the logo's ember #bc6d21
+     type: red-hat (the first deal, source-serif, clashes with the graffiti wordmark and the brand's heavy grotesk)
+     moments: pinned-chapters in #formatos -->
+
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Pular para o conteúdo</a>
+    <a class="nav__logo" href="#top" aria-label="Ätzøk, início"><img src="img/wordmark-preto-150.webp" alt="Ätzøk" width="150" height="123"></a>
+    <nav class="nav__links" aria-label="Principal">
+      <div class="nav__item">
+        <a class="nav__link" href="#discografia">Discografia <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav__menu">
+          <div class="wrap grid">
+            <div class="menu-col span-3">
+              <p class="t-label">Ouvir</p>
+              <a href="https://soundcloud.com/atzokdj">SoundCloud<span>Mixes e faixas</span></a>
+              <a href="https://djatzok.bandcamp.com">Bandcamp<span>Álbum, EP e colaboração</span></a>
+              <a href="https://open.spotify.com/search/Atzok">Spotify<span>Os lançamentos em streaming</span></a>
+            </div>
+            <a class="menu-card span-3 start-10" href="#formatos">
+              <div class="panel"><img width="1000" height="1508" decoding="async" class="frame__img" src="img/duo-ember-640.webp" srcset="img/duo-ember-640.webp 640w, img/duo-ember-1000.webp 1000w" sizes="302px" alt="Ätzøk de óculos escuros acendendo um cigarro, em tom laranja" loading="lazy"></div>
+              <span class="t-card">Hanky Panky ao vivo</span>
+              <span class="t-small muted">O projeto em dupla com Boreu</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav__item"><a class="nav__link" href="#formatos">Formatos</a></div>
+      <div class="nav__item"><a class="nav__link" href="#agenda">Agenda</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="#booking">Pedir orçamento</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero--split" data-enter aria-labelledby="hero-h">
+    <div class="wrap"><div class="hero-text grid hero__grid">
+      <div class="hero__text span-5">
+        <p class="hero__kicker"><span class="dot" aria-hidden="true"></span>27 de dezembro no Universo Paralelo</p>
+        <h1 id="hero-h">DJ e produtor de downtempo em São Paulo</h1>
+        <p class="hero__lead">Caio Costa toca como Ätzøk há 12 anos: breakbeat, trip hop e house com samples vocais picotados, da pista cheia ao chillout.</p>
+        <div class="btn-row"><a class="btn btn--primary" href="#booking">Pedir orçamento<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--secondary" href="#formatos">Ver os formatos</a></div>
+      </div>
+      <div class="hero__media span-6 start-7">
+        <img decoding="async" src="img/hero-640.webp" srcset="img/hero-640.webp 640w, img/hero-1000.webp 1000w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 92vw, 628px" alt="Ätzøk de camisa jeans e boné, em pé diante de uma cortina, foto em preto e branco" style="--ly-pos: 50% 30%" fetchpriority="high" width="1000" height="1508" data-source="client" data-subject="retrato do artista">
+        <div class="ly-float">
+          <div class="ly-float__row"><span class="ly-live">Próxima data</span><span>27.12</span></div>
+          <div class="ly-float__title">Universo Paralelo, Chillout Stage</div>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section" id="discografia" aria-labelledby="disco-h">
+    <div class="wrap grid grid--top">
+      <div class="span-5">
+        <div class="section-head">
+          <h2 id="disco-h">Discografia</h2>
+          <p>Um álbum em fita K7, um EP e uma colaboração. As próximas faixas estão em fase de master.</p>
+        </div>
+        <ul class="rows">
+          <li><span class="rows__name">L4 / Amarela<small>Álbum em fita K7, DSRPTV recs</small></span><span class="rows__value">DSRPTV041</span></li>
+          <li><span class="rows__name">Desejos Gelados<small>EP, Bliss Records</small></span><span class="rows__value">BLISS030</span></li>
+          <li><span class="rows__name">Jazzy<small>Tha_Guts e Ätzøk, DSRPTV recs</small></span><span class="rows__value">DSRPTV003</span></li>
+        </ul>
+        <p><a class="link" href="https://djatzok.bandcamp.com">Ouvir no Bandcamp</a></p>
+      </div>
+      <div class="frame frame--photo span-6 start-7" style="aspect-ratio: 1 / 1">
+        <img decoding="async" class="frame__img" src="img/poltrona-640.webp" srcset="img/poltrona-640.webp 640w, img/poltrona-1000.webp 1000w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 92vw, 628px" alt="Ätzøk sentado numa poltrona de couro na sala, foto em preto e branco" loading="lazy" width="1000" height="1508" data-source="client" data-subject="retrato do artista em casa">
+      </div>
+    </div>
+  </section>
+
+  <!-- pinned-chapters (moments.md): two screens, three formats, a title, two lines and one photograph each -->
+  <section class="section ground-surface" id="formatos" style="--h: 2" data-moment="pinned-chapters" aria-labelledby="formatos-h">
+    <div class="wrap mo-pc__grid">
+      <div class="mo-pc__text">
+        <h2 id="formatos-h">Três formatos de show</h2>
+        <ol class="mo-pc__steps">
+          <li class="mo-pc__step">
+            <h3>Set de pista</h3>
+            <p>Breakbeat e house com samples vocais picotados, para a pista cheia da Desistência Clubber.</p>
+            <figure class="mo-pc__visual"><img decoding="async" loading="lazy" src="img/live1-640.webp" srcset="img/live1-640.webp 640w, img/live1-1000.webp 1000w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 92vw, 628px" alt="Ätzøk de fone tocando na mesa de som, numa parede cheia de cartazes" width="1200" height="900" data-source="client" data-subject="set ao vivo"></figure>
+          </li>
+          <li class="mo-pc__step">
+            <h3>Long set</h3>
+            <p>Horas de downtempo e trip hop com jazz e soul, como nas noites do Luci Bar.</p>
+            <figure class="mo-pc__visual"><img decoding="async" loading="lazy" src="img/live3-640.webp" srcset="img/live3-640.webp 640w, img/live3-1000.webp 1000w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 92vw, 628px" alt="Ätzøk atrás de um laptop no balcão de um bar, durante um set" width="1200" height="800" data-source="client" data-subject="long set num bar"></figure>
+          </li>
+          <li class="mo-pc__step">
+            <h3>Hanky Panky, com Boreu</h3>
+            <p>Projeto ao vivo em dupla, com o show da Veneno Live gravado no YouTube.</p>
+            <figure class="mo-pc__visual"><img decoding="async" loading="lazy" src="img/duo-ember-640.webp" srcset="img/duo-ember-640.webp 640w, img/duo-ember-1000.webp 1000w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 92vw, 628px" alt="Ätzøk de óculos escuros acendendo um cigarro, em tom laranja" width="1000" height="1508" data-source="client" data-subject="retrato do projeto Hanky Panky"></figure>
+          </li>
+        </ol>
+      </div>
+      <div class="mo-pc__visuals frame"></div>
+    </div>
+  </section>
+
+  <section class="section" id="agenda" aria-labelledby="agenda-h">
+    <div class="wrap grid grid--top">
+      <div class="span-5">
+        <div class="section-head">
+          <h2 id="agenda-h">Agenda de dezembro e janeiro</h2>
+          <p>Já tocou no Mamba Negra, VOODOOHOP, Veludo Festival, Casa Torta e na Virada Cultural.</p>
+        </div>
+        <ul class="rows">
+          <li><span class="rows__name">A anunciar<small>Hanky Panky</small></span><span class="rows__value">4 dez</span></li>
+          <li><span class="rows__name">Luci Bar<small>Long set</small></span><span class="rows__value">9 dez</span></li>
+          <li><span class="rows__name">Lhama Takeover<small>Hanky Panky</small></span><span class="rows__value">18 dez</span></li>
+          <li><span class="rows__name">Universo Paralelo<small>Chillout Stage</small></span><span class="rows__value">27 dez</span></li>
+          <li><span class="rows__name">Bahia<small>Local a anunciar</small></span><span class="rows__value">11 jan</span></li>
+        </ul>
+      </div>
+      <div class="frame frame--photo span-6 start-7" style="aspect-ratio: 1 / 1">
+        <img decoding="async" class="frame__img" src="img/janela-640.webp" srcset="img/janela-640.webp 640w, img/janela-1000.webp 1000w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 92vw, 628px" alt="Ätzøk de óculos escuros sentado perto de uma janela" loading="lazy" width="1000" height="1508" style="object-position: 50% 30%" data-source="client" data-subject="retrato do artista"></div>
+    </div>
+  </section>
+
+  <section class="section ground-surface" id="booking" aria-labelledby="booking-h">
+    <div class="wrap grid grid--top">
+      <div class="span-5">
+        <div class="section-head">
+          <h2 id="booking-h">Booking e orçamento</h2>
+          <p>Mande a data, a cidade e o formato. O booking é feito pela Lhama Bookings ou direto com o Caio, em <a class="link" href="mailto:djatzok@gmail.com">djatzok@gmail.com</a>.</p>
+        </div>
+        <form class="form" action="mailto:djatzok@gmail.com" method="post" enctype="text/plain" data-endpoint="" novalidate>
+          <div class="field"><label for="f-name">Nome</label>
+            <input id="f-name" name="nome" type="text" autocomplete="name" required aria-describedby="f-name-err">
+            <p class="field__error" id="f-name-err" hidden>Escreva o seu nome ou o da produtora.</p></div>
+          <div class="field"><label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-err">
+            <p class="field__error" id="f-email-err" hidden>Escreva um email com @, como nome@exemplo.com.</p></div>
+          <div class="field"><label for="f-date">Data do show</label>
+            <input id="f-date" name="data" type="text" autocomplete="off" required aria-describedby="f-date-err">
+            <p class="field__error" id="f-date-err" hidden>Escreva o dia do show.</p></div>
+          <div class="field"><label for="f-place">Cidade e local</label>
+            <input id="f-place" name="local" type="text" autocomplete="off" required aria-describedby="f-place-err">
+            <p class="field__error" id="f-place-err" hidden>Escreva a cidade e o nome do lugar.</p></div>
+          <div class="field"><label for="f-format">Formato</label>
+            <input id="f-format" name="formato" type="text" autocomplete="off" aria-describedby="f-format-err">
+            <p class="field__error" id="f-format-err" hidden>Escreva set de pista, long set ou Hanky Panky.</p></div>
+          <div class="btn-row"><button class="btn btn--primary" type="submit">Pedir orçamento</button></div>
+          <p class="form__status" role="status" data-form-status></p>
+          <p class="t-small">O pedido abre no seu app de email, já endereçado ao Caio.</p>
+        </form>
+      </div>
+      <div class="frame frame--photo frame--fill span-6 start-7">
+        <img decoding="async" class="frame__img" src="img/duo-plum-640.webp" srcset="img/duo-plum-640.webp 640w, img/duo-plum-1000.webp 1000w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 92vw, 628px" alt="Ätzøk sentado ao lado de uma planta, em tom ameixa" loading="lazy" width="1000" height="1508" style="object-position: 50% 30%" data-source="client" data-subject="retrato do artista"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--type">
+      <div class="section-head">
+        <h2 id="close-h">Ätzøk na sua festa</h2>
+        <p>Set de pista, long set ou Hanky Panky, em São Paulo e fora.</p>
+      </div>
+      <a class="btn btn--primary btn--xl btn--wide" href="#booking">Pedir orçamento<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo" href="#top" aria-label="Ätzøk, voltar ao início"><img src="img/wordmark-preto-150.webp" alt="Ätzøk" width="150" height="123" loading="lazy"></a>
+          <p class="footer__lede">DJ e produtor da Zona Oeste de São Paulo.</p>
+        </div>
+        <div class="span-2 footer__col"><h3>Página</h3><ul><li><a href="#discografia">Discografia</a></li><li><a href="#formatos">Formatos</a></li><li><a href="#agenda">Agenda</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Ouvir</h3><ul><li><a href="https://soundcloud.com/atzokdj">SoundCloud</a></li><li><a href="https://djatzok.bandcamp.com">Bandcamp</a></li><li><a href="https://open.spotify.com/search/Atzok">Spotify</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Redes</h3><ul><li><a href="https://instagram.com/_atzok">Instagram</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Booking</h3><ul><li>Lhama Bookings</li><li><a href="mailto:djatzok@gmail.com">Email do Caio</a></li></ul></div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 Ätzøk</span>
+        <span class="t-small">Retratos de Augusto Maravilha</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+</body>
+</html>
