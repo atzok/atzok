@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>ÄTZØK Agenda — keyframe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=block" rel="stylesheet">
+<style>
+  :root {
+    --paper: #171717;     /* papel preto do pôster, levemente acinzentado */
+    --green: #2BAE4C;     /* verde riso */
+    --pink:  #EE3C98;     /* rosa fluor riso */
+    --past:  #5E5E5E;     /* item passado (regra da marca) */
+  }
+  html, body { margin: 0; background: #000; }
+  #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--paper);
+    font-family: Inter, sans-serif; }
+
+  /* dobras do pôster: 1 vertical + 2 horizontais, sombra suave como papel vincado */
+  .fold-v { position: absolute; top: 0; bottom: 0; left: 540px; width: 40px; margin-left: -20px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.035) 48%, rgba(0,0,0,.35) 50%, rgba(255,255,255,.03) 52%, transparent); }
+  .fold-h { position: absolute; left: 0; right: 0; height: 40px; margin-top: -20px;
+    background: linear-gradient(180deg, transparent, rgba(255,255,255,.035) 48%, rgba(0,0,0,.35) 50%, rgba(255,255,255,.03) 52%, transparent); }
+  #fold-h1 { top: 640px; } #fold-h2 { top: 1280px; }
+
+  #dither { position: absolute; left: 600px; top: 64px; width: 400px; height: 273px;
+    background: url(../assets/dither-pink.png) center/cover; image-rendering: pixelated; }
+
+  .big { position: absolute; left: 124px; font-weight: 800; font-size: 176px; line-height: .86;
+    letter-spacing: -.045em; text-transform: uppercase; white-space: nowrap; }
+  #title  { top: 300px; color: var(--green); }
+  #agenda { top: 452px; color: var(--pink); }
+
+  .mono { font-family: "Space Mono", monospace; font-weight: 700; font-size: 28px; letter-spacing: .14em;
+    text-transform: uppercase; }
+  #kicker { position: absolute; left: 130px; top: 626px; color: var(--green); }
+
+  .row { position: absolute; left: 130px; width: 758px; height: 100px; }
+  .row .d { position: absolute; left: 0; top: -4px; font-weight: 800; font-size: 62px; letter-spacing: -.04em;
+    color: var(--pink); line-height: 1; }
+  .row .v { position: absolute; left: 212px; top: 0; font-weight: 800; font-size: 46px; letter-spacing: -.03em;
+    color: var(--pink); line-height: 1; text-transform: uppercase; white-space: nowrap; }
+  .row .x { position: absolute; left: 212px; top: 56px; color: var(--green); }
+  #r0 { top: 720px; } #r1 { top: 826px; } #r2 { top: 932px; } #r3 { top: 1038px; } #r4 { top: 1144px; }
+
+  /* data que já passou: cinza + risco verde atravessando a linha */
+  #r0 .d, #r0 .v, #r0 .x { color: var(--past); }
+  #r0 .strike { position: absolute; left: -8px; top: 22px; width: 774px; height: 12px; background: var(--green);
+    transform: rotate(-1.2deg); transform-origin: 0 50%; }
+
+  #contour { position: absolute; left: 60px; top: 1236px; width: 960px; height: 640px; }
+
+  #grain { position: absolute; inset: 0; background: url(../assets/grain.png); mix-blend-mode: normal; opacity: .55; pointer-events: none; }
+</style>
+</head>
+<body>
+<div id="root">
+  <div id="dither"></div>
+  <div id="title" class="big">Ätzøk</div>
+  <div id="agenda" class="big">Agenda</div>
+  <div id="kicker" class="mono">Nov 26 → Jan 27 ✶ Datas</div>
+
+  <div id="r0" class="row"><div class="d">15.11</div><div class="v">Desistência Clubber</div><div class="x mono">Já foi</div><div class="strike"></div></div>
+  <div id="r1" class="row"><div class="d">09.12</div><div class="v">Luci Bar</div><div class="x mono">Long Set</div></div>
+  <div id="r2" class="row"><div class="d">18.12</div><div class="v">Lhama Takeover</div><div class="x mono">Hanky Panky</div></div>
+  <div id="r3" class="row"><div class="d">27.12</div><div class="v">Universo Paralelo</div><div class="x mono">Chillout Stage</div></div>
+  <div id="r4" class="row"><div class="d">11.01</div><div class="v">Festa no Barco</div><div class="x mono">Lhama Bookings · Bahia</div></div>
+
+  <img id="contour" src="../assets/contour.svg" alt="">
+
+  <div class="fold-v"></div><div id="fold-h1" class="fold-h"></div><div id="fold-h2" class="fold-h"></div>
+  <div id="grain"></div>
+</div>
+</body>
+</html>
