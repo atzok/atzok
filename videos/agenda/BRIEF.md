@@ -19,7 +19,7 @@ Um cartaz de clube impresso em risograph, dobrado em quatro e colado num poste, 
 | Papel | `#171717` + grão (`assets/grain.png`) + 3 vincos (1 vertical em x 540, 2 horizontais em y 640/1280) |
 | Tinta 1 | Verde riso `#2BAE4C`: nome ÄTZØK, kicker, detalhes mono, risco, curvas de nível |
 | Tinta 2 | Rosa flúor `#EE3C98`: "AGENDA", datas, nomes das festas, bloco de retícula |
-| Passado | `#5E5E5E` + risco verde de 12 px (regra da marca para item passado) |
+| Passado | `#707070` + risco verde de 12 px (cinza da marca clareado para passar contraste 3:1 no papel `#171717`) |
 | Display | **Anton** (`assets/fonts/Anton.ttf`), caixa alta, 226 px, entrelinha 0.8, linhas coladas como no pôster; a barra do Ø invade o AGENDA de propósito (sobreposição de tinta) |
 | Lista | Data Inter 800 62 px · Festa Inter 800 46 px · Detalhe Space Mono 700 28 px, tracking 0.14em |
 | Safe area | Todo texto em x 130–888, y 288–1248. Abaixo de 1248 só decoração (curvas de nível) |
@@ -53,16 +53,14 @@ O movimento é **de impressão, não de interface**. Nada desliza, nada "faz bou
 
 | Tempo | Ação |
 |---|---|
-| 0.0–0.6 | Papel preto, grão vivo. Os vincos aparecem como luz rasante passando pela dobra. |
-| 0.6–1.2 | O bloco de retícula rosa "imprime" de cima para baixo em faixas de 6 px (scanline de impressora). |
-| 1.2–2.0 | **ÄTZØK** bate em verde com o registro desalinhado e encaixa. Flicker #1. |
-| 2.0–2.6 | **AGENDA** bate em rosa, mesmo gesto, 4 frames mais seco. |
-| 2.6–3.0 | O kicker mono digita letra a letra (2 frames por caractere). |
+| 0.0 | Frame 0 já é a capa/gancho: **ÄTZØK** verde + retícula rosa viva na tela (nunca abrir em preto no Reels). |
+| 0.4 | **AGENDA** bate em rosa com a tinta verde fora de registro, que encaixa em 2 frames. Flicker #1 em 1.0. |
+| 1.2–2.7 | O kicker mono digita letra a letra (2 frames por caractere). |
 | 3.0–4.2 | **15.11** entra normal em rosa, segura 0.4 s e então o **risco verde corta da esquerda para a direita** (0.3 s, `power3.out`). A linha desbota para cinza `#5E5E5E` junto com o risco. Esse é o momento de humor do vídeo: a data foi, ficou para trás. |
 | 4.2–9.0 | 09.12 → 18.12 → 27.12 → 11.01, uma a cada ~1.2 s, na batida: a data carimba, a festa carimba 3 frames depois e o detalhe mono digita. |
 | 9.0–11.0 | As curvas de nível se desenham de baixo para cima e a borda serrilhada fecha a composição. |
 | 11.0–13.5 | Respiro: o pôster inteiro parado, só grão e retícula vivos. Flicker #2 no 11.01 (o destaque: a única data de 2027, o barco). |
-| 13.5–15.0 | Saída: a tinta "some" na ordem inversa em blocos (2 frames cada) até sobrar o papel preto = frame 0, para o loop. |
+| 13.6–15.0 | Saída: curvas descem, a tinta some na ordem inversa em blocos (2 frames cada) até sobrar ÄTZØK + retícula = frame 0, para o loop. |
 
 ## Critérios de aprovação
 
