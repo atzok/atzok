@@ -20,6 +20,12 @@
         ],
         "createdAt": "2026-11-21T03:46:59.344Z",
         "reason": "assistant triage: page ground is light #ece7dc, the hex is not in the source and the rendered scans do not flag it; comes from unused kit CSS"
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-11-21T19:07:14.474Z",
+        "reason": "repo design system (docs/figma-design-system-rules.md): Inter 800/900 is the mandated display face for HyperFrames video scenes, since only bundled fonts resolve"
       }
     ]
   }
