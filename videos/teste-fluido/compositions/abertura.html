@@ -1,0 +1,103 @@
+<template>
+  <style>
+    @font-face { font-family: "Bagel Fat One"; src: url("assets/fonts/bagelfatone.woff2") format("woff2"); }
+    @font-face { font-family: "Permanent Marker"; src: url("assets/fonts/permanentmarker.woff2") format("woff2"); }
+    #root { position: absolute; inset: 0; overflow: hidden; background: var(--color-lilac, #cdbaf0); }
+    #ab-svg { position: absolute; width: 0; height: 0; }
+
+    /* lava lamp: solid pink blobs merged by a goo filter */
+    #ab-lava { position: absolute; inset: 0; filter: url(#ab-goo); }
+    .ab-b { position: absolute; border-radius: 50%; background: var(--color-pink, #ff5aa8); }
+    #ab-b1 { width: 420px; height: 420px; left: -60px; top: 1640px; }
+    #ab-b2 { width: 300px; height: 300px; left: 380px; top: 1760px; }
+    #ab-b3 { width: 360px; height: 360px; left: 760px; top: 1600px; }
+    #ab-b4 { width: 180px; height: 180px; left: 260px; top: 1500px; }
+    #ab-b5 { width: 140px; height: 140px; left: 700px; top: 1420px; }
+    #ab-flood { width: 900px; height: 900px; left: 90px; top: 2100px; }
+
+    /* the tag: wordmark used as a mask so it prints in plum ink */
+    #ab-logo-wrap { position: absolute; left: 90px; top: 250px; width: 900px; height: 740px; filter: url(#ab-melt); }
+    #ab-logo { position: absolute; inset: 0; background: var(--color-plum, #2b0a3d);
+      -webkit-mask: url("assets/wordmark-preto.png") center / contain no-repeat;
+      mask: url("assets/wordmark-preto.png") center / contain no-repeat; }
+
+    #ab-role { position: absolute; left: 90px; top: 1080px; font-family: "Bagel Fat One", sans-serif;
+      font-size: 150px; line-height: 0.92; color: var(--color-plum, #2b0a3d); filter: url(#ab-boil); }
+    .ab-l { display: inline-block; transform-origin: 50% 100%; }
+    #ab-city { position: absolute; left: 100px; top: 1400px; font-family: "Permanent Marker", sans-serif;
+      font-size: 56px; color: var(--color-plum, #2b0a3d); transform: rotate(-4deg); transform-origin: 0 50%; }
+    #ab-city span { display: inline-block; }
+  </style>
+  <div id="root" data-composition-id="abertura" data-width="1080" data-height="1920">
+    <svg id="ab-svg" aria-hidden="true">
+      <defs>
+        <filter id="ab-goo" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="22" result="b" />
+          <feColorMatrix in="b" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 26 -11" />
+        </filter>
+        <filter id="ab-melt" x="-10%" y="-10%" width="120%" height="130%">
+          <feTurbulence id="ab-melt-t" type="fractalNoise" baseFrequency="0.006 0.028" numOctaves="2" seed="3" result="n" />
+          <feDisplacementMap id="ab-melt-d" in="SourceGraphic" in2="n" scale="0" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+        <filter id="ab-boil" x="-5%" y="-10%" width="110%" height="120%">
+          <feTurbulence id="ab-boil-t" type="fractalNoise" baseFrequency="0.03" numOctaves="1" seed="1" result="n" />
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </defs>
+    </svg>
+
+    <div id="ab-lava" class="clip" data-start="0" data-duration="4.5" data-track-index="1">
+      <div id="ab-b1" class="ab-b"></div><div id="ab-b2" class="ab-b"></div><div id="ab-b3" class="ab-b"></div>
+      <div id="ab-b4" class="ab-b"></div><div id="ab-b5" class="ab-b"></div><div id="ab-flood" class="ab-b"></div>
+    </div>
+    <div id="ab-logo-wrap" class="clip" data-start="0" data-duration="4.5" data-track-index="2">
+      <div id="ab-logo" role="img" aria-label="Ätzøk"></div>
+    </div>
+    <div id="ab-role" class="clip" data-start="0" data-duration="4.5" data-track-index="3"
+      data-layout-allow-overflow><span class="ab-word">DJ &amp;</span><br /><span class="ab-word">PRODUTOR</span></div>
+    <div id="ab-city" class="clip" data-start="0" data-duration="4.5" data-track-index="4">zona oeste · são paulo</div>
+  </div>
+  <script>
+    (function () {
+      // split words into letters once, deterministically
+      document.querySelectorAll("#ab-role .ab-word").forEach((w) => {
+        w.innerHTML = [...w.textContent].map((c) => c === " " ? " " : `<span class="ab-l">${c === "&" ? "&amp;" : c}</span>`).join("");
+      });
+      const tl = gsap.timeline({ paused: true });
+
+      // lava lamp drifts the whole scene
+      tl.fromTo("#ab-b1", { y: 0, x: 0 }, { y: -260, x: 60, duration: 3.62, ease: "sine.inOut" }, 0);
+      tl.fromTo("#ab-b2", { y: 0 }, { y: -120, duration: 3.62, ease: "sine.inOut" }, 0);
+      tl.fromTo("#ab-b3", { y: 0, x: 0 }, { y: -320, x: -80, duration: 3.62, ease: "sine.inOut" }, 0);
+      tl.fromTo("#ab-b4", { y: 0, x: 0, scale: 0.6 }, { y: -560, x: 120, scale: 1, duration: 4.5, ease: "sine.inOut" }, 0);
+      tl.fromTo("#ab-b5", { y: 0, x: 0 }, { y: 200, x: -60, duration: 4.5, ease: "sine.inOut" }, 0);
+
+      // the tag melts into place: heavy liquid warp settling, painted top-down like a fresh drip
+      tl.fromTo("#ab-melt-d", { attr: { scale: 120 } }, { attr: { scale: 0 }, duration: 1.6, ease: "power3.out" }, 0);
+      tl.fromTo("#ab-logo", { clipPath: "inset(0% 0% 45% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 1.3, ease: "power2.out" }, 0);
+      tl.fromTo("#ab-logo-wrap", { scaleY: 1.12, transformOrigin: "50% 0%" }, { scaleY: 1, duration: 1.6, ease: "elastic.out(1, 0.45)" }, 0);
+
+      // letters drop in with squash and stretch
+      gsap.utils.toArray("#ab-role .ab-l").forEach((el, i) => {
+        const t = 1.2 + i * 0.055;
+        tl.fromTo(el, { y: -420, scaleY: 1.5, scaleX: 0.75, opacity: 0 },
+          { y: 0, scaleY: 1.5, scaleX: 0.75, opacity: 1, duration: 0.28, ease: "power2.in" }, t);
+        tl.to(el, { scaleY: 0.62, scaleX: 1.3, duration: 0.07, ease: "power1.out" }, t + 0.28);
+        tl.to(el, { scaleY: 1, scaleX: 1, duration: 0.6, ease: "elastic.out(1.1, 0.35)" }, t + 0.35);
+      });
+
+      // marker note written in
+      tl.fromTo("#ab-city", { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.7, ease: "power1.inOut" }, 2.1);
+
+      // hand-drawn boil on the type: noise seed stepped at 12 fps
+      for (let k = 0, t = 0; t < 4.5; k++, t = k / 12) tl.set("#ab-boil-t", { attr: { seed: (k % 4) + 1 } }, t);
+
+      // exit: a pink blob swells up and floods the frame (next scene's ground)
+      tl.to("#ab-flood", { y: -1900, scale: 4.2, duration: 0.85, ease: "power2.in" }, 3.62);
+      tl.to("#ab-b1", { scale: 2.2, y: -760, duration: 0.85, ease: "power2.in" }, 3.62);
+      tl.to("#ab-b2", { scale: 2.2, y: -620, duration: 0.85, ease: "power2.in" }, 3.62);
+      tl.to("#ab-b3", { scale: 2.2, y: -820, duration: 0.85, ease: "power2.in" }, 3.62);
+      window.__timelines["abertura"] = tl;
+    })();
+  </script>
+</template>

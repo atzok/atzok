@@ -1,0 +1,95 @@
+<template>
+  <style>
+    @font-face { font-family: "Bagel Fat One"; src: url("assets/fonts/bagelfatone.woff2") format("woff2"); }
+    @font-face { font-family: "Permanent Marker"; src: url("assets/fonts/permanentmarker.woff2") format("woff2"); }
+    #root { position: absolute; inset: 0; overflow: hidden; background: var(--color-paper, #f3efe6); }
+    #pa-svg { position: absolute; width: 0; height: 0; }
+    .pa-marker { position: absolute; font-family: "Permanent Marker", sans-serif; font-size: 56px;
+      color: var(--color-cobalt, #2238d6); transform: rotate(-3deg); transform-origin: 0 50%; filter: url(#pa-boil); }
+    #pa-label { left: 90px; top: 170px; }
+    #pa-list { position: absolute; left: 90px; top: 270px; font-family: "Bagel Fat One", sans-serif; font-size: 96px;
+      line-height: 1.12; color: var(--color-cobalt, #2238d6); filter: url(#pa-boil); }
+    .pa-row { display: block; white-space: nowrap; }
+    .pa-l { display: inline-block; }
+    #pa-virada { left: 90px; top: 960px; }
+
+    /* cobalt ink puddle the headliner sits in */
+    #pa-pool { position: absolute; inset: 0; filter: url(#pa-goo); }
+    .pa-b { position: absolute; border-radius: 50%; background: var(--color-cobalt, #2238d6); }
+    #pa-b1 { width: 760px; height: 760px; left: 40px; top: 1060px; }
+    #pa-b2 { width: 520px; height: 520px; left: 520px; top: 1180px; }
+    #pa-b3 { width: 440px; height: 440px; left: 120px; top: 1420px; }
+    #pa-b4 { width: 220px; height: 220px; left: 820px; top: 1600px; }
+    #pa-b5 { width: 120px; height: 120px; left: 60px; top: 1020px; }
+
+    #pa-up { position: absolute; left: 110px; top: 1180px; font-family: "Bagel Fat One", sans-serif; font-size: 172px;
+      line-height: 0.95; color: var(--color-paper, #f3efe6); filter: url(#pa-melt); }
+    #pa-date { position: absolute; left: 120px; top: 1600px; font-family: "Permanent Marker", sans-serif; font-size: 60px;
+      color: var(--color-pink, #ff5aa8); transform: rotate(-4deg); transform-origin: 0 50%; filter: url(#pa-boil); }
+  </style>
+  <div id="root" data-composition-id="palcos" data-width="1080" data-height="1920">
+    <svg id="pa-svg" aria-hidden="true">
+      <defs>
+        <filter id="pa-goo" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="24" result="b" />
+          <feColorMatrix in="b" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 26 -11" />
+        </filter>
+        <filter id="pa-boil" x="-5%" y="-10%" width="110%" height="120%">
+          <feTurbulence id="pa-boil-t" type="fractalNoise" baseFrequency="0.03" numOctaves="1" seed="1" result="n" />
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+        <filter id="pa-melt" x="-10%" y="-15%" width="120%" height="140%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.006 0.03" numOctaves="2" seed="11" result="n" />
+          <feDisplacementMap id="pa-melt-d" in="SourceGraphic" in2="n" scale="0" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </defs>
+    </svg>
+
+    <div id="pa-label" class="pa-marker clip" data-start="0" data-duration="5" data-track-index="1">já tocou em</div>
+    <div id="pa-list" class="clip" data-start="0" data-duration="5" data-track-index="2">
+      <span class="pa-row">Mamba Negra</span><span class="pa-row">Voodoohop</span><span class="pa-row">Veludo Festival</span><span class="pa-row">Casa Torta</span><span class="pa-row">Virada Cultural</span>
+    </div>
+    <div id="pa-virada" class="pa-marker clip" data-start="0" data-duration="5" data-track-index="3">e na virada do ano…</div>
+    <div id="pa-pool" class="clip" data-start="0" data-duration="5" data-track-index="4">
+      <div id="pa-b1" class="pa-b"></div><div id="pa-b2" class="pa-b"></div><div id="pa-b3" class="pa-b"></div>
+      <div id="pa-b4" class="pa-b"></div><div id="pa-b5" class="pa-b"></div>
+    </div>
+    <div id="pa-up" class="clip" data-start="0" data-duration="5" data-track-index="5">Universo<br />Paralelo</div>
+    <div id="pa-date" class="clip" data-start="0" data-duration="5" data-track-index="6">27.12 · chillout stage</div>
+  </div>
+  <script>
+    (function () {
+      document.querySelectorAll("#pa-list .pa-row").forEach((w) => {
+        w.innerHTML = [...w.textContent].map((c) => c === " " ? " " : `<span class="pa-l">${c}</span>`).join("");
+      });
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#pa-label", { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.5, ease: "power1.inOut" }, 0.15);
+
+      // each stage name rides in on a wave: letters rise in a travelling sine, then settle with a wobble
+      gsap.utils.toArray("#pa-list .pa-row").forEach((row, r) => {
+        gsap.utils.toArray(row.querySelectorAll(".pa-l")).forEach((el, i) => {
+          const t = 0.35 + r * 0.24 + i * 0.022;
+          tl.fromTo(el, { y: 90 + 40 * Math.sin(i * 0.8), opacity: 0, rotation: -14 * Math.cos(i * 0.6) },
+            { y: 0, opacity: 1, rotation: 0, duration: 0.7, ease: "elastic.out(1, 0.5)" }, t);
+        });
+      });
+
+      tl.fromTo("#pa-virada", { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.6, ease: "power1.inOut" }, 1.75);
+
+      // ink pool spills out from one point, blobs merging
+      const pool = [["#pa-b5", 1.9], ["#pa-b1", 2.0], ["#pa-b3", 2.12], ["#pa-b2", 2.22], ["#pa-b4", 2.34]];
+      pool.forEach(([id, t]) => tl.fromTo(id, { scale: 0 }, { scale: 1, duration: 0.9, ease: "elastic.out(1, 0.55)" }, t));
+      tl.to("#pa-b2", { x: -30, y: 40, duration: 2.4, ease: "sine.inOut" }, 2.6);
+      tl.to("#pa-b4", { x: -60, y: -50, duration: 2.4, ease: "sine.inOut" }, 2.6);
+      tl.to("#pa-b5", { x: 80, y: 60, duration: 2.4, ease: "sine.inOut" }, 2.6);
+
+      // headliner surfaces out of the ink
+      tl.fromTo("#pa-melt-d", { attr: { scale: 200 } }, { attr: { scale: 0 }, duration: 1.3, ease: "power3.out" }, 2.4);
+      tl.fromTo("#pa-up", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 2.4);
+      tl.fromTo("#pa-date", { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.6, ease: "power1.inOut" }, 2.9);
+
+      for (let k = 0, t = 0; t < 5; k++, t = k / 12) tl.set("#pa-boil-t", { attr: { seed: (k % 4) + 1 } }, t);
+      window.__timelines["palcos"] = tl;
+    })();
+  </script>
+</template>
