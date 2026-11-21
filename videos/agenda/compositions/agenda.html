@@ -9,6 +9,7 @@
     .ag-fold-h { position: absolute; left: 0; right: 0; height: 40px;
       background: linear-gradient(180deg, transparent, rgba(255,255,255,.035) 48%, rgba(0,0,0,.35) 50%, rgba(255,255,255,.03) 52%, transparent); }
     #ag-fold-h1 { top: 620px; } #ag-fold-h2 { top: 1260px; }
+    #ag-sheet { position: absolute; inset: 0; }
     #ag-grain { position: absolute; inset: 0; }
     #ag-grain-in { position: absolute; inset: 0; background: url("assets/grain.png") 0 0 / 1080px 1920px repeat; opacity: .55; }
 
@@ -22,6 +23,7 @@
     #ag-title { top: 264px; color: #2bae4c; }
     #ag-agenda, #ag-ghost { top: 476px; }
     #ag-agenda { color: #ee3c98; }
+    #ag-agenda-in, .ag-row .d, .ag-row .v { text-shadow: 0px 0px 0px rgba(43,174,76,0); }
     #ag-ghost { color: #2bae4c; }
 
     .ag-mono { font-family: "Space Mono", monospace; font-weight: 700; font-size: 28px; letter-spacing: .14em;
@@ -42,6 +44,7 @@
   </style>
 
   <div id="root" data-composition-id="agenda" data-width="1080" data-height="1920" data-hold="pôster completo em respiro (brief: 11–13.5 s), só grão e retícula vivos">
+    <div id="ag-sheet">
     <div id="ag-dither" class="clip" data-start="0" data-duration="15" data-track-index="1" data-layout-ignore><div id="ag-dither-in"></div></div>
 
     <div id="ag-title" class="ag-big clip" data-start="0" data-duration="15" data-track-index="2" data-layout-allow-overlap><div id="ag-title-in">Ätzøk</div></div>
@@ -70,6 +73,7 @@
     </div>
 
     <div class="ag-fold-v"></div><div id="ag-fold-h1" class="ag-fold-h"></div><div id="ag-fold-h2" class="ag-fold-h"></div>
+    </div>
     <div id="ag-grain" class="clip" data-start="0" data-duration="15" data-track-index="12" data-layout-ignore><div id="ag-grain-in"></div></div>
   </div>
 
@@ -79,10 +83,24 @@
       const tl = gsap.timeline({ paused: true });
       const late = { immediateRender: false };
 
-      // carimbo: tinta bate em 1 frame e o corpo assenta de 1.06 → 1
+      const G = "43,174,76", P = "238,60,152";      // verde e rosa riso, em rgb
+      const sh = (x, y, c, a) => `${x}px ${y}px 0px rgba(${c},${a})`;
+
+      // CAMADA SECUNDÁRIA · prensa: o papel afunda em 1 frame quando a tinta bate e volta em 6
+      const press = (t, amp = 3) => {
+        tl.to("#ag-sheet", { y: amp, duration: F, ease: "none" }, t);
+        tl.to("#ag-sheet", { y: 0, duration: 6 * F, ease: "power2.out" }, t + F);
+      };
+      // carimbo: tinta bate em 1 frame e o corpo assenta de 1.06 → 1 (papel: sem overshoot)
       const stamp = (sel, t) => {
         tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: F, ease: "none" }, t);
         tl.fromTo(sel, { scale: 1.06 }, { scale: 1, duration: 0.25, ease: "expo.out" }, t);
+      };
+      // registro desalinhado: a outra tinta chega deslocada e encaixa em 2 frames
+      const misreg = (sel, t, c) => {
+        tl.fromTo(sel, { textShadow: sh(10, -7, c, 1) },
+          { textShadow: sh(0, 0, c, 1), duration: 2 * F, ease: "steps(2)" }, t + F);
+        tl.to(sel, { textShadow: sh(0, 0, c, 0), duration: F, ease: "none" }, t + 3 * F);
       };
       // máquina de escrever: revela 1 caractere por passo (fonte mono)
       const type = (sel, t, chars, perChar) => {
@@ -92,12 +110,16 @@
       // flicker de fotocópia: 2 frames a 0.55
       const flicker = (sel, t) => tl.fromTo(sel, { opacity: 1 },
         { opacity: 0.55, duration: F, yoyo: true, repeat: 1, ease: "none", ...late }, t);
-      // saída em blocos: some em 1 frame
-      const off = (sel, t) => tl.fromTo(sel, { opacity: 1 }, { opacity: 0, duration: F, ease: "none", ...late }, t);
+      // saída: as tintas se separam (sombra verde escorrega) e o bloco some acelerando, 4 frames
+      const lift = (wrap, inks, t) => {
+        if (inks) tl.to(inks, { textShadow: sh(-9, 6, G, 0.9), duration: 3 * F, ease: "power3.in" }, t);
+        tl.to(wrap, { opacity: 0, duration: 3 * F, ease: "power3.in" }, t + F);
+      };
 
       // 0.00 · frame 0 já é o gancho: ÄTZØK + retícula na tela
       // 0.40 · AGENDA bate em rosa com a tinta verde fora de registro, que encaixa em 2 frames
       stamp("#ag-agenda-in", 0.4);
+      press(0.4, 4);
       tl.fromTo("#ag-ghost-in", { opacity: 0, x: 12, y: -8 }, { opacity: 0.9, duration: F, ease: "none" }, 0.4);
       tl.to("#ag-ghost-in", { x: 0, y: 0, duration: 2 * F, ease: "steps(2)" }, 0.4 + F);
       tl.to("#ag-ghost-in", { opacity: 0, duration: F, ease: "none" }, 0.4 + 3 * F);
@@ -106,17 +128,19 @@
       // 1.20 · kicker digita
       type("#ag-kicker-in", 1.2, 23, 2 * F);
 
-      // 2.30 · 15.11 entra normal… e é riscada
+      // datas: data carimba (+prensa) → festa 3 frames depois → detalhe digita
       const rows = ["#ag-r0", "#ag-r1", "#ag-r2", "#ag-r3", "#ag-r4"];
       tl.fromTo("#ag-r0 .s", { scaleX: 0, rotation: -1.2, transformOrigin: "0% 50%" },
         { scaleX: 0, rotation: -1.2, duration: F }, 0);
       const row = (id, t, chars) => {
-        stamp(`${id} .d`, t);
-        stamp(`${id} .v`, t + 3 * F);
+        stamp(`${id} .d`, t); misreg(`${id} .d`, t, G); press(t, 3);
+        stamp(`${id} .v`, t + 3 * F); misreg(`${id} .v`, t + 3 * F, G);
         type(`${id} .x`, t + 0.3, chars, F);
       };
+      // 2.30 · 15.11 entra normal… segura (antecipação) … e o marcador risca
       row("#ag-r0", 2.3, 6);
       tl.to("#ag-r0 .s", { scaleX: 1, duration: 0.3, ease: "power3.out" }, 3.1);
+      press(3.1, 2);
       tl.to(["#ag-r0 .d", "#ag-r0 .v", "#ag-r0 .x"], { color: "#707070", duration: 0.3, ease: "power2.out" }, 3.15);
 
       // 4.0 → 7.6 · uma data a cada 1.2 s
@@ -129,13 +153,21 @@
       tl.fromTo("#ag-contour-in", { clipPath: "inset(100% 0 0 0)" },
         { clipPath: "inset(0% 0 0 0)", duration: 1.6, ease: "steps(32)" }, 9.0);
 
-      flicker("#ag-r4", 10.9);                                           // flicker #2: o barco, a data de 2027
+      // 10.9 · o barco (única data de 2027) ganha o registro desalinhado de novo + flicker #2
+      tl.fromTo("#ag-r4 .d, #ag-r4 .v", { textShadow: sh(0, 0, G, 0) },
+        { textShadow: sh(8, -6, G, 1), duration: F, ease: "none", ...late }, 10.9);
+      tl.to("#ag-r4 .d, #ag-r4 .v", { textShadow: sh(0, 0, G, 0), duration: 3 * F, ease: "steps(3)" }, 10.9 + 2 * F);
+      flicker("#ag-r4", 10.9);
       flicker(rows.slice(1).concat(["#ag-title-in", "#ag-agenda-in"]), 12.4); // flicker #3
 
-      // 13.6 · a tinta sai em blocos, na ordem inversa, até sobrar o frame 0 (loop)
+      // 13.6 · saída: curvas descem, a tinta se separa e some em cascata inversa → frame 0 (loop)
       tl.to("#ag-contour-in", { clipPath: "inset(100% 0 0 0)", duration: 0.3, ease: "steps(8)" }, 13.6);
-      ["#ag-r4", "#ag-r3", "#ag-r2", "#ag-r1", "#ag-r0", "#ag-kicker-in", "#ag-agenda-in"]
-        .forEach((sel, i) => off(sel, 13.95 + i * 2 * F));
+      ["#ag-r4", "#ag-r3", "#ag-r2", "#ag-r1", "#ag-r0"].forEach((id, i) =>
+        lift(id, `${id} .d, ${id} .v`, 13.9 + i * 2 * F));
+      lift("#ag-kicker-in", null, 13.9 + 10 * F);
+      tl.to("#ag-agenda-in", { textShadow: sh(-9, 6, G, 0.9), duration: 3 * F, ease: "power3.in" }, 13.9 + 12 * F);
+      tl.to("#ag-agenda-in", { opacity: 0, duration: 3 * F, ease: "power3.in", ...late }, 13.9 + 13 * F);
+      press(13.9 + 13 * F, -2);   // o papel "solta" quando a última tinta sai
 
       // textura viva: retícula a cada 4 frames, grão a cada 2 frames (offsets fixos, determinísticos)
       let seed = 1557;
