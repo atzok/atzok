@@ -22,7 +22,7 @@ Um cartaz de clube impresso em risograph, dobrado em quatro e colado num poste, 
 | Passado | `#5E5E5E` + risco verde de 12 px (regra da marca para item passado) |
 | Display | **Anton** (`assets/fonts/Anton.ttf`), caixa alta, 226 px, entrelinha 0.8, linhas coladas como no pôster; a barra do Ø invade o AGENDA de propósito (sobreposição de tinta) |
 | Lista | Data Inter 800 62 px · Festa Inter 800 46 px · Detalhe Space Mono 700 28 px, tracking 0.14em |
-| Safe area | Agenda em x 130–888, y 288–1248. Curvas de nível em y 1252–1504 (caixa fechada) e rodapé rosa Inter 800 50 px em y 1530 |
+| Safe area | Todo texto em x 130–888, y 288–1248. Abaixo de 1248 só decoração (curvas de nível) |
 | Proibido | Gradiente, glow, sombra projetada, 3D, emoji, transições de template (zoom-blur, slide genérico), qualquer cor fora das duas tintas |
 
 ## Conteúdo (textos exatos)
@@ -37,8 +37,6 @@ DEZ 26 → JAN 27 ✶ DATAS
 18.12  LHAMA TAKEOVER        HANKY PANKY
 27.12  UNIVERSO PARALELO     CHILLOUT STAGE
 11.01  FESTA NO BARCO        LHAMA BOOKINGS · BAHIA
-
-BOOKINGS: LHAMA BOOKINGS                     ← rodapé em rosa, abaixo das curvas de nível
 ```
 
 ## Linguagem de movimento
@@ -62,7 +60,7 @@ O movimento é **de impressão, não de interface**. Nada desliza, nada "faz bou
 | 2.6–3.0 | O kicker mono digita letra a letra (2 frames por caractere). |
 | 3.0–4.2 | **15.11** entra normal em rosa, segura 0.4 s e então o **risco verde corta da esquerda para a direita** (0.3 s, `power3.out`). A linha desbota para cinza `#5E5E5E` junto com o risco. Esse é o momento de humor do vídeo: a data foi, ficou para trás. |
 | 4.2–9.0 | 09.12 → 18.12 → 27.12 → 11.01, uma a cada ~1.2 s, na batida: a data carimba, a festa carimba 3 frames depois e o detalhe mono digita. |
-| 9.0–11.0 | As curvas de nível se desenham de baixo para cima e a borda serrilhada fecha a composição. Em seguida o rodapé **BOOKINGS: LHAMA BOOKINGS** carimba em rosa. |
+| 9.0–11.0 | As curvas de nível se desenham de baixo para cima e a borda serrilhada fecha a composição. |
 | 11.0–13.5 | Respiro: o pôster inteiro parado, só grão e retícula vivos. Flicker #2 no 11.01 (o destaque: a única data de 2027, o barco). |
 | 13.5–15.0 | Saída: a tinta "some" na ordem inversa em blocos (2 frames cada) até sobrar o papel preto = frame 0, para o loop. |
 

@@ -58,12 +58,7 @@
   #r0 .strike { position: absolute; left: -8px; top: 22px; width: 774px; height: 12px; background: var(--green);
     transform: rotate(-1.2deg); transform-origin: 0 50%; }
 
-  /* campo de curvas de nível encurtado para abrir espaço ao rodapé, como no pôster */
-  #contourbox { position: absolute; left: 60px; top: 1252px; width: 960px; height: 252px; overflow: hidden;
-    border-bottom: 2.2px solid var(--green); }
-  #contour { position: absolute; left: 0; top: -14px; width: 960px; height: 640px; }
-  #footer { position: absolute; left: 130px; top: 1530px; font-weight: 800; font-size: 50px; letter-spacing: -.03em;
-    line-height: 1; color: var(--pink); text-transform: uppercase; white-space: nowrap; }
+  #contour { position: absolute; left: 60px; top: 1236px; width: 960px; height: 640px; }
 
   #grain { position: absolute; inset: 0; background: url(../assets/grain.png); mix-blend-mode: normal; opacity: .55; pointer-events: none; }
 </style>
@@ -81,8 +76,7 @@
   <div id="r3" class="row"><div class="d">27.12</div><div class="v">Universo Paralelo</div><div class="x mono">Chillout Stage</div></div>
   <div id="r4" class="row"><div class="d">11.01</div><div class="v">Festa no Barco</div><div class="x mono">Lhama Bookings · Bahia</div></div>
 
-  <div id="contourbox"><img id="contour" src="../assets/contour.svg" alt=""></div>
-  <div id="footer">Bookings: Lhama Bookings</div>
+  <img id="contour" src="../assets/contour.svg" alt="">
 
   <div class="fold-v"></div><div id="fold-h1" class="fold-h"></div><div id="fold-h2" class="fold-h"></div>
   <div id="grain"></div>
