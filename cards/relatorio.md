@@ -27,7 +27,14 @@ Pontos para conferir:
 - **Textura**: só uma granulação leve de papel. Tirei as manchas de xerox, as listras de toner, a retícula, a fita e o papel rasgado.
 - **Uma cor de destaque por card**: o amarelo aparece num único elemento por card ("quem?" na capa, a data, a citação, o risco dos clubes, o ponteiro do rádio, o número ou as palavras-chave).
 - **Ritmo**: o card 5 inverte as cores (papel claro, texto preto) para quebrar a sequência no meio. O card 8 é só o número.
-- **Texto**: segui a skill `voz-atzok` (que está na branch `claude/confident-knuth-0jsaa1`). Sem travessão, sem moral no fim de cada card, e opinião só no card 9, tirada do seu briefing. A frase do card 6 ("o som da pista virou trilha de carro roubado") é comentário editorial meu; se não soar como você, eu corto.
+- **Texto (versão 3)**: a versão anterior só repetia as notícias e soava como IA. Antes de reescrever, perguntei a sua opinião em 4 pontos:
+  - **Detroit** e **Helsing**: você preferiu deixar sem opinião. Esses cards ficaram só no fato.
+  - **"O público segue marcas e DJs"**: "vejo, e é foda". Virou o bloco assinado do card 5.
+  - **GTA e IA**: GTA tudo bem, IA não. Virou os blocos assinados dos cards 6 e 7.
+  - A opinião aparece num bloco com o logo e uma borda amarela, separado da notícia.
+  - Saíram as frases que eu tinha inventado, como a do "carro roubado".
+  - O card 9 agora amarra as notícias: Detroit é memória; Berlim, os clubes e o GTA são capital; o Deezer é máquina.
+  - Os textos dos blocos usam as opções que você marcou, que eu mesmo escrevi. Se quiser, troca pelas suas palavras.
 - **Legibilidade**: o texto de apoio tem 38px (uns 14px na tela do celular). O kicker tem 26px e o rodapé 22px. Revisei os 10 PNGs no tamanho real: nenhum texto vazando e nenhum acento colidindo. O `render.js` confere automaticamente se o conteúdo estoura o card ou se dois blocos ficam colados.
 
 ## Como regerar
