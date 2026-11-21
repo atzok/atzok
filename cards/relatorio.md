@@ -13,21 +13,22 @@ Pontos para conferir:
 
 ## Placeholders e o que trocar
 - **Logo**: usei o **wordmark pichado real** (`videos/apresentacao/assets/wordmark-branco.png`, copiado para `cards/src/img/`). Não é placeholder. Se existir uma versão vetorial ou em amarelo, dá pra trocar.
-- **Fontes**: são provisórias, porque a fonte oficial ainda não foi definida e não existe `./assets/fonts`. Escolhi três do Google Fonts e salvei os arquivos em `cards/src/fonts/`:
-  - **Anton**: títulos (condensada e pesada, com cara de lambe-lambe).
-  - **Big Shoulders Stencil Display 900**: números (90 mil, 97%) e o carimbo, puxando pro estêncil.
-  - **Space Mono 400/700**: kicker, corpo e rodapé. Já aparece nas peças web do Ätzøk.
+- **Fontes**: são provisórias, porque a fonte oficial ainda não foi definida e não existe `./assets/fonts`. Escolhi duas do Google Fonts e salvei os arquivos em `cards/src/fonts/`:
+  - **Archivo** (variável, condensada a 62%, peso 800–900): títulos e números. Grotesca condensada e pesada, com acentos bem desenhados e vários pesos.
+  - **Archivo** em largura normal, peso 400–500: texto de apoio.
+  - **Space Mono 400/700**: kicker, rótulos e rodapé. Já aparece nas peças web do Ätzøk.
 - **Fotos**: nenhuma, o carrossel é só tipográfico. Uma foto de pista xerocada na capa ou no card 2 cairia bem, se você tiver.
 - **Cor de destaque**: `#F2E300`. O design system do repositório (`docs/figma-design-system-rules.md`) usa ember (`#BC6D21`) como destaque, mas o briefing pediu amarelo ácido (L4/AMARELA). Se o amarelo virar oficial, vale registrar como token.
 
 ## Decisões de design
-- **Grid fixo**: 1080×1350, margem de 88px. O kicker com a paginação ("02/10 · DETROIT") fica sempre no mesmo lugar, no topo. A assinatura (logo + @_atzok) e o "arrasta →" ficam sempre no rodapé, acima de um fio.
-- **Textura**: granulação e manchas de fotocópia (ruído SVG), listras de toner nas laterais, retícula e, na capa, tira de papel rasgado com fita adesiva.
-- **Escorridos**: gerados por script, saindo só das letras da última linha de cada título. O comprimento para antes do próximo bloco de texto, com 28px de folga. O `render.js` confere se algum escorrido passa por cima de texto e se algo sai da área segura.
-- **Uma cor de destaque por card**: o amarelo aparece num único elemento por card (tira da capa, data, carimbo, risco dos clubes, número ou palavras-chave).
+**Versão 2 (minimalista).** A primeira versão (estilo zine, com escorridos gerados por script) foi reprovada. Os escorridos pareciam palitos e o conjunto ficou carregado. Nesta versão:
+- **Grid fixo**: 1080×1350, margem de 96px. No topo, o kicker com a paginação ("02/10 · DETROIT") e um dado à direita, acima de um fio. No rodapé, também acima de um fio, a assinatura (logo + @_atzok) e o "arrasta →". O título fica sempre no alto e o texto de apoio sempre embaixo.
+- **Sem escorridos gerados**: a única tinta que escorre é a do próprio logo pichado, no rodapé de todos os cards e grande no card 10.
+- **Textura**: só uma granulação leve de papel. Tirei as manchas de xerox, as listras de toner, a retícula, a fita e o papel rasgado.
+- **Uma cor de destaque por card**: o amarelo aparece num único elemento por card ("quem?" na capa, a data, a citação, o risco dos clubes, o ponteiro do rádio, o número ou as palavras-chave).
 - **Ritmo**: o card 5 inverte as cores (papel claro, texto preto) para quebrar a sequência no meio. O card 8 é só o número.
 - **Texto**: segui a skill `voz-atzok` (que está na branch `claude/confident-knuth-0jsaa1`). Sem travessão, sem moral no fim de cada card, e opinião só no card 9, tirada do seu briefing. A frase do card 6 ("o som da pista virou trilha de carro roubado") é comentário editorial meu; se não soar como você, eu corto.
-- **Legibilidade**: o corpo de texto tem 35px (uns 12–13px na tela do celular). Kicker e rodapé têm 25–28px. Revisei os 10 PNGs no tamanho real: nenhum texto vazando, nenhum acento colidindo e nenhum escorrido cobrindo letra.
+- **Legibilidade**: o texto de apoio tem 38px (uns 14px na tela do celular). O kicker tem 26px e o rodapé 22px. Revisei os 10 PNGs no tamanho real: nenhum texto vazando e nenhum acento colidindo. O `render.js` confere automaticamente se o conteúdo estoura o card ou se dois blocos ficam colados.
 
 ## Como regerar
 ```

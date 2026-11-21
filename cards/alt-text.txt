@@ -1,19 +1,19 @@
-Card 1: Capa do carrossel. Fundo preto com textura de papel xerocado. Título em letras brancas condensadas: "A pista", e numa tira de papel amarelo rasgado, em preto: "é de quem?". Tinta amarela escorre da tira. Embaixo: "5 notícias de novembro que disputam o futuro do techno". Rodapé com o logo pichado do Ätzøk, @_atzok e "arrasta".
+Card 1: Capa do carrossel. Fundo preto. Título em letras brancas condensadas em três linhas: "A pista é de quem?", com "quem?" em amarelo. Embaixo: "5 notícias de novembro que disputam o futuro do techno". Rodapé com o logo pichado do Ätzøk, @_atzok e "arrasta".
 
-Card 2: Detroit. Título branco: "O luto virou programação", com tinta escorrendo das letras. Texto: Juan Atkins morreu em 1º de novembro; em semanas, a agenda virou tributo. Lista: DJ Bone em Amsterdam; Robert Hood e Kenny Larkin em Buenos Aires; EPM, 25 anos.
+Card 2: Detroit. Título branco: "O luto virou programação". Texto: Juan Atkins morreu em 1º de novembro; em semanas, a agenda virou tributo. Lista: DJ Bone em Amsterdam; Robert Hood e Kenny Larkin em Buenos Aires; EPM, 25 anos.
 
-Card 3: Berlim. Título: "O templo alugado". Texto: o Kraftwerk Berlin, ligado ao Tresor, recebeu o lançamento de uma IA militar da Helsing e depois pediu desculpas. Carimbo amarelo inclinado: "grave erro de julgamento".
+Card 3: Berlim. Título: "O templo alugado". Texto: o Kraftwerk Berlin, ligado ao Tresor, recebeu o lançamento de uma IA militar da Helsing e depois pediu desculpas. O espaço chamou o caso de "grave erro de julgamento", frase destacada em amarelo.
 
-Card 4: Europa. Título: "O mapa encolhe". Texto: três clubes fechando as portas. Lista com os nomes riscados em amarelo: Tresor.West, Dortmund; Pulse 22, Praga; TILLATEC, Amsterdam.
+Card 4: Europa. Título: "O mapa encolhe". Texto: três clubes fechando as portas. Lista com os nomes riscados por um traço amarelo: Tresor.West, Dortmund; Pulse 22, Praga; TILLATEC, Amsterdam.
 
 Card 5: Card só de texto, fundo branco-sujo. Frase grande em preto: "O público segue marcas e DJs, não gêneros", com "marcas" e "e DJs" marcados em amarelo. Legenda pequena: o motivo do fechamento do Tresor.West.
 
-Card 6: GTA VI e Miami. Título: "O underground licenciado". Desenho de um dial de rádio com o ponteiro amarelo em "CircoLoco Records Radio". Texto: a rádio da CircoLoco Records entrou no GTA VI, com festa do jogo em Miami; o som da pista virou trilha de carro roubado.
+Card 6: GTA VI e Miami. Título: "O underground licenciado". Desenho simples de um dial de rádio com o ponteiro amarelo em "CircoLoco Records Radio". Texto: a rádio da CircoLoco Records entrou no GTA VI, com festa do jogo em Miami; o som da pista virou trilha de carro roubado.
 
-Card 7: Streaming. Título: "A enxurrada". Ao fundo, nomes de arquivos de áudio repetidos em cinza bem apagado. Em amarelo, enorme: "90 mil", faixas de IA por dia no Deezer. Texto: elas ficam com só 1 a 3% das execuções, e o SoundCloud já reagiu.
+Card 7: Streaming. Título: "A enxurrada". Em amarelo, enorme: "90 mil", faixas de IA por dia no Deezer. Texto: elas ficam com só 1 a 3% das execuções, e o SoundCloud já reagiu.
 
-Card 8: Número gigante em amarelo, em fonte estêncil: "97%", com tinta escorrendo. Embaixo, em branco: "das execuções ainda vão para música feita por gente".
+Card 8: Número gigante em amarelo, "97%". Embaixo, em branco: "das execuções ainda vão para música feita por gente".
 
 Card 9: O fio. Três palavras empilhadas em branco: "Memória × Capital × Máquina". Texto: novembro puxou a pista pra três lados; da cabine e da operação, o que fica de pé é comunidade, curadoria e presença física (destacado em amarelo).
 
-Card 10: Fechamento. Título: "Juan ensinou a todos nós." Logo pichado grande do Ätzøk, branco com escorridos. Chamada: "Comenta qual faixa de Detroit te formou." Rodapé: @_atzok em amarelo e Lhama Bookings.
+Card 10: Fechamento. Título: "Juan ensinou a todos nós." Logo pichado do Ätzøk em branco. Chamada: "Comenta qual faixa de Detroit te formou." Rodapé: @_atzok em amarelo e "booking · Lhama Bookings".
