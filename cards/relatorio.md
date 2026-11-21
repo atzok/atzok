@@ -36,4 +36,4 @@ cd cards/src && node render.js && python3 contact.py
 O texto se edita direto em `cards/src/cards.html`.
 
 ## Não publicado
-Nada foi postado nem agendado em nenhuma rede. Os arquivos também não foram commitados no git.
+Nada foi postado nem agendado em nenhuma rede. Os arquivos estão só na branch `claude/youthful-tesla-9k7yfz`.
