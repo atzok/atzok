@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-11-21T23:52:08.927Z",
+        "reason": "Brand design system: docs/figma-design-system-rules.md sets Inter 900 as the Ätzøk display face"
+      }
+    ]
+  }
+}
