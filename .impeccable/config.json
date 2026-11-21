@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "site/index.html"
+        ],
+        "createdAt": "2026-11-21T03:46:59.338Z",
+        "reason": "assistant triage: rendered scans at 1440 and 390 do not flag it; kit .rows li has padding-block via a CSS variable the file scan cannot resolve"
+      },
+      {
+        "rule": "radial-halo",
+        "value": "*",
+        "files": [
+          "site/index.html"
+        ],
+        "createdAt": "2026-11-21T03:46:59.344Z",
+        "reason": "assistant triage: page ground is light #ece7dc, the hex is not in the source and the rendered scans do not flag it; comes from unused kit CSS"
+      }
+    ]
+  }
+}
