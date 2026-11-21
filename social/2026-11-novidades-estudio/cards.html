@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--surface:#000;--raised:#141414;--ink:#fff;--muted:#9a9a9a;--ember:#bc6d21;--line:#262626}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#333;font-family:Inter,sans-serif}
+.card{width:1080px;height:1350px;background:var(--surface);color:var(--ink);position:relative;overflow:hidden;padding:80px 84px 72px;display:flex;flex-direction:column;margin-bottom:40px}
+/* textura de xerox */
+.card::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.13;mix-blend-mode:screen;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='3'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.6 -.55'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.top{display:flex;justify-content:space-between;align-items:center;font-family:'Space Mono',monospace;font-weight:700;font-size:24px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
+.top b{color:var(--ink)}
+.mark{height:96px;width:auto;display:block}
+.kicker{font-family:'Space Mono',monospace;font-weight:700;font-size:26px;letter-spacing:.18em;text-transform:uppercase;color:var(--ember);margin-top:48px}
+h1,h2{font-family:Inter,sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:-.035em;line-height:1.02}
+h1{font-size:124px;margin-top:24px}
+h2{font-size:104px;margin-top:24px}
+.em{color:var(--ember)}
+.body{font-size:38px;line-height:1.34;color:#d6d6d6;margin-top:40px}
+.body strong{color:var(--ink)}
+.facts{margin-top:40px;border-top:2px solid var(--line)}
+.facts div{display:grid;grid-template-columns:44px 1fr;padding:20px 0;border-bottom:2px solid var(--line);font-size:33px;line-height:1.3;color:#d6d6d6}
+.facts div::before{content:"✶";color:var(--muted);font-size:26px;padding-top:4px}
+.facts strong{color:var(--ink)}
+/* a voz do Ätzøk */
+.take{margin-top:auto;position:relative;background:var(--ember);color:#000;padding:44px 44px 40px;transform:rotate(-1.4deg);margin-left:6px;margin-right:6px}
+.take::before{content:"";position:absolute;inset:0;opacity:.35;mix-blend-mode:multiply;pointer-events:none;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1.4 -.5'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.take::after{content:"";position:absolute;top:-22px;left:50%;width:170px;height:44px;margin-left:-85px;background:rgba(235,230,215,.82);transform:rotate(2.5deg)}
+.take label{display:block;position:relative}
+.take label img{height:74px;width:auto;display:block}
+.take p{position:relative;font-size:42px;line-height:1.18;font-weight:900;letter-spacing:-.02em;color:#000;margin-top:16px}
+.take p::before{content:"“";}
+.take p::after{content:"”";}
+.foot{margin-top:28px;display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:22px;color:var(--muted);letter-spacing:.06em}
+.foot .go{color:var(--ink);font-weight:700}
+.index{margin-top:44px;border-top:2px solid var(--line)}
+.index div{display:flex;gap:26px;align-items:baseline;padding:14px 0;border-bottom:2px solid var(--line);font-size:34px;font-weight:700}
+.index i{font-style:normal;font-family:'Space Mono',monospace;color:var(--ember);font-size:26px;min-width:48px}
+.g{display:grid;grid-template-columns:310px 1fr;align-items:center;padding:8px 0;border-bottom:2px solid var(--line)}
+.g b{font-weight:900;font-size:70px;letter-spacing:-.04em;line-height:1}
+.g div{font-size:32px;font-weight:700;line-height:1.2}
+.g div span{display:block;font-weight:400;font-size:27px;color:var(--muted);margin-top:4px}
+.g.hi b,.g.hi div{color:var(--ember)}
+.note{font-size:24px;color:var(--muted);margin-top:16px;font-family:'Space Mono',monospace;line-height:1.4}
+.stack{font-weight:900;text-transform:uppercase;font-size:80px;letter-spacing:-.035em;line-height:1;margin-top:36px}
+.stack span{display:block}
+.stack .dim{color:var(--muted)}
+.big-mark{width:560px;margin:60px auto 0;display:block}
+.center{text-align:center}
+</style></head><body>
+
+<!-- 01 CAPA -->
+<section class="card" id="c1">
+  <div class="top"><img class="mark" src="wordmark-branco.png" alt="Ätzøk"><span><b>01</b> / 09</span></div>
+  <div class="kicker">Notas de estúdio ✶ nov 2026</div>
+  <h1>O que mudou<br>no estúdio<br><span class="em">esse mês</span></h1>
+  <p class="body">O que saiu esse mês pra quem produz, e <strong>o que eu achei</strong>.</p>
+  <div class="index">
+    <div><i>01</i><span>Ableton Live 13</span></div>
+    <div><i>02</i><span>Logic Pro 13</span></div>
+    <div><i>03</i><span>Splice Create</span></div>
+    <div><i>04</i><span>Plugins grátis</span></div>
+    <div><i>05</i><span>Os estilos que estão subindo</span></div>
+  </div>
+  <div class="foot" style="margin-top:auto"><span>@_atzok</span><span class="go">arrasta →</span></div>
+</section>
+
+<!-- 02 ABLETON -->
+<section class="card" id="c2">
+  <div class="top"><span>01 ✶ DAW</span><span><b>02</b> / 09</span></div>
+  <div class="kicker">Em teste desde 10/11</div>
+  <h2>Ableton<br>Live 13</h2>
+  <div class="facts">
+    <div><span>Nova versão em <strong>beta</strong>: qualquer um já pode testar.</span></div>
+    <div><span><strong>Afina e edita voz (Melodyne) direto na faixa</strong>, sem exportar o áudio antes.</span></div>
+    <div><span>Sequenciador e sintetizador de bateria novos. <strong>Zero IA.</strong></span></div>
+  </div>
+  <div class="take"><label><img src="wordmark-preto.png" alt="Ätzøk"></label><p>Uso Ableton, então esse beta eu vou testar. Como picoto muito vocal, é a primeira parte que vou abrir.</p></div>
+  <div class="foot"><span>fonte: MusicRadar</span><span class="go">→</span></div>
+</section>
+
+<!-- 03 LOGIC -->
+<section class="card" id="c3">
+  <div class="top"><span>02 ✶ DAW</span><span><b>03</b> / 09</span></div>
+  <div class="kicker">Lançado em 28/10</div>
+  <h2>Logic<br>Pro 13</h2>
+  <div class="facts">
+    <div><span>Nova versão da DAW da Apple (só pra Mac).</span></div>
+    <div><span>Ganhou um <strong>assistente de IA</strong> que executa coisas na sessão.</span></div>
+    <div><span>Um dos recursos novos mais importantes <strong>só funciona com assinatura</strong>.</span></div>
+  </div>
+  <div class="take"><label><img src="wordmark-preto.png" alt="Ätzøk"></label><p>Não curto IA dentro da DAW.</p></div>
+  <div class="foot"><span>fonte: MusicRadar</span><span class="go">→</span></div>
+</section>
+
+<!-- 04 SPLICE -->
+<section class="card" id="c4">
+  <div class="top"><span>03 ✶ DAW nova</span><span><b>04</b> / 09</span></div>
+  <div class="kicker">Grátis ✶ beta desde 5/11</div>
+  <h2>Splice<br>Create</h2>
+  <div class="facts">
+    <div><span>Uma <strong>DAW grátis</strong> feita pela Splice, o maior site de samples.</span></div>
+    <div><span>Você testa qualquer sample e <strong>só gasta crédito quando exporta</strong>.</span></div>
+    <div><span>Dá pra dar comandos por voz pra uma IA.</span></div>
+  </div>
+  <div class="foot" style="margin-top:auto"><span>fonte: MusicRadar</span><span class="go">→</span></div>
+</section>
+
+<!-- 05 PLUGINS -->
+<section class="card" id="c5">
+  <div class="top"><span>04 ✶ R$0</span><span><b>05</b> / 09</span></div>
+  <div class="kicker">Plugins grátis</div>
+  <h2>Plugin<br><span class="em">de graça</span></h2>
+  <div class="facts">
+    <div><span><strong>Shrub</strong>: uma versão simplificada do Serum, um dos synths mais usados do mundo. Mac, Windows e Linux.</span></div>
+    <div><span><strong>Waves, dia 27/11</strong>: o plugin grátis da Black Friday. As licenças acabam rápido.</span></div>
+  </div>
+  <div class="take"><label><img src="wordmark-preto.png" alt="Ätzøk"></label><p>Plugin grátis eu pego sempre. Dia 27 tô de olho na Waves.</p></div>
+  <div class="foot"><span>fonte: MusicRadar</span><span class="go">→</span></div>
+</section>
+
+<!-- 06 ESTILOS -->
+<section class="card" id="c6">
+  <div class="top"><span>05 ✶ Dados Splice</span><span><b>06</b> / 09</span></div>
+  <div class="kicker">O que os produtores buscam</div>
+  <h2 style="font-size:88px">Os estilos<br>que subiram</h2>
+  <div style="margin-top:28px;border-top:2px solid var(--line)">
+    <div class="g"><b>+160%</b><div>Speed garage<span>garage inglês dos anos 90</span></div></div>
+    <div class="g"><b>+68%</b><div>Hard dance<span>rápido e pesado</span></div></div>
+    <div class="g hi"><b>+38%</b><div>French house<span style="color:var(--ember)">house em cima de sample de disco</span></div></div>
+    <div class="g"><b>+27%</b><div>Hard techno<span>techno acelerado</span></div></div>
+  </div>
+  <p class="note" style="margin-top:12px">crescimento nas buscas da Splice ✶ set/25 a ago/26</p>
+  <div class="take" style="margin-top:44px"><label><img src="wordmark-preto.png" alt="Ätzøk"></label><p>Sample de disco é o meu processo também.</p></div>
+  <div class="foot"><span>fonte: Splice / EDM.com</span><span class="go">→</span></div>
+</section>
+
+<!-- 07 RÓTULO -->
+<section class="card" id="c7">
+  <div class="top"><span>Na prática</span><span><b>07</b> / 09</span></div>
+  <div class="kicker">Previsão da Splice pra 2027</div>
+  <h2>Rótulo com<br><span class="em">nome</span></h2>
+  <p class="body">A Splice acha que em 2027 os produtores vão buscar <strong>estilos cada vez mais específicos</strong>, e menos “EDM”.</p>
+  <p class="body" style="margin-top:28px">Quando me perguntam o que eu toco, respondo:</p>
+  <div class="stack">
+    <span>Breakbeat</span><span>Trip hop</span><span>Downtempo</span><span>House</span>
+    <span class="dim" style="font-size:40px;letter-spacing:.01em;margin-top:12px;text-transform:none;font-weight:700">com jazz, soul e música brasileira picotados</span>
+  </div>
+  <div class="foot" style="margin-top:auto"><span>e você, como chama o seu som?</span><span class="go">→</span></div>
+</section>
+
+<!-- 08 CONCLUSÃO -->
+<section class="card" id="c8">
+  <div class="top"><span>Pra fechar</span><span><b>08</b> / 09</span></div>
+  <div class="kicker">O que eu vou fazer</div>
+  <h1 style="font-size:124px;margin-top:32px">Meu<br>novembro<br><span class="em">no estúdio</span></h1>
+  <div class="index" style="margin-top:56px">
+    <div><i>01</i><span>Testar o Live 13, começando pela edição de vocal na faixa</span></div>
+    <div><i>02</i><span>Pegar o plugin da Waves no dia 27</span></div>
+    <div><i>03</i><span>Deixar a IA fora da minha DAW</span></div>
+  </div>
+  <div class="foot" style="margin-top:auto"><span>@_atzok</span><span class="go">→</span></div>
+</section>
+
+<!-- 09 CTA -->
+<section class="card" id="c9">
+  <div class="top"><span>Sua vez</span><span><b>09</b> / 09</span></div>
+  <h2 style="margin-top:72px">E você,<br>vai testar <span class="em">qual?</span></h2>
+  <div class="index">
+    <div><i>A</i><span>Ableton Live 13</span></div>
+    <div><i>B</i><span>Logic Pro 13</span></div>
+    <div><i>C</i><span>Splice Create</span></div>
+  </div>
+  <p class="body">Comenta a letra. E salva pra lembrar do <strong>dia 27</strong>.</p>
+  <img class="big-mark" style="width:360px;margin-top:auto" src="wordmark-branco.png" alt="Ätzøk">
+  <div class="foot" style="justify-content:center"><span class="go">@_atzok</span></div>
+</section>
+</body></html>
