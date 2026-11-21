@@ -6,6 +6,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=block" rel="stylesheet">
 <style>
+  @font-face { font-family: "Anton"; src: url(../assets/fonts/Anton.ttf); }
+  @font-face { font-family: "Archivo Black"; src: url(../assets/fonts/ArchivoBlack.ttf); }
   :root {
     --paper: #171717;     /* papel preto do pôster, levemente acinzentado */
     --green: #2BAE4C;     /* verde riso */
@@ -30,6 +32,13 @@
     letter-spacing: -.045em; text-transform: uppercase; white-space: nowrap; }
   #title  { top: 300px; color: var(--green); }
   #agenda { top: 452px; color: var(--pink); }
+  /* variante A: Anton condensada, corpo enorme */
+  .t-anton .big { font-family: Anton, sans-serif; font-weight: 400; font-size: 226px; line-height: .8; letter-spacing: -.005em; }
+  .t-anton #title { top: 264px; } .t-anton #agenda { top: 476px; }
+  .t-anton #kicker { top: 680px; } .t-anton .row .x { top: 52px; }
+  /* variante B: Archivo Black, larga e pesada */
+  .t-archivo .big { font-family: "Archivo Black", sans-serif; font-weight: 400; font-size: 168px; line-height: .86; letter-spacing: -.05em; }
+  .t-archivo #title { top: 296px; } .t-archivo #agenda { top: 446px; }
 
   .mono { font-family: "Space Mono", monospace; font-weight: 700; font-size: 28px; letter-spacing: .14em;
     text-transform: uppercase; }
@@ -42,6 +51,7 @@
     color: var(--pink); line-height: 1; text-transform: uppercase; white-space: nowrap; }
   .row .x { position: absolute; left: 212px; top: 56px; color: var(--green); }
   #r0 { top: 720px; } #r1 { top: 826px; } #r2 { top: 932px; } #r3 { top: 1038px; } #r4 { top: 1144px; }
+  .t-anton #r0 { top: 750px; } .t-anton #r1 { top: 848px; } .t-anton #r2 { top: 946px; } .t-anton #r3 { top: 1044px; } .t-anton #r4 { top: 1142px; }
 
   /* data que já passou: cinza + risco verde atravessando a linha */
   #r0 .d, #r0 .v, #r0 .x { color: var(--past); }
@@ -58,7 +68,7 @@
   <div id="dither"></div>
   <div id="title" class="big">Ätzøk</div>
   <div id="agenda" class="big">Agenda</div>
-  <div id="kicker" class="mono">Nov 26 → Jan 27 ✶ Datas</div>
+  <div id="kicker" class="mono">Dez 26 → Jan 27 ✶ Datas</div>
 
   <div id="r0" class="row"><div class="d">15.11</div><div class="v">Desistência Clubber</div><div class="x mono">Já foi</div><div class="strike"></div></div>
   <div id="r1" class="row"><div class="d">09.12</div><div class="v">Luci Bar</div><div class="x mono">Long Set</div></div>

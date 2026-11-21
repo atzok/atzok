@@ -1,6 +1,6 @@
-# ÄTZØK — Agenda Nov 26 → Jan 27 · Brief de direção de arte
+# ÄTZØK — Agenda Dez 26 → Jan 27 · Brief de direção de arte
 
-> Prompt de direção para o vídeo motion da agenda. Frame-chave aprovado: `design/keyframe-v2.png`.
+> Prompt de direção para o vídeo motion da agenda. Frame-chave: `design/keyframe-v3-anton.png` (título) · lista igual à v2.
 
 ## O pedido, em uma frase
 
@@ -20,7 +20,7 @@ Um cartaz de clube impresso em risograph, dobrado em quatro e colado num poste, 
 | Tinta 1 | Verde riso `#2BAE4C`: nome ÄTZØK, kicker, detalhes mono, risco, curvas de nível |
 | Tinta 2 | Rosa flúor `#EE3C98`: "AGENDA", datas, nomes das festas, bloco de retícula |
 | Passado | `#5E5E5E` + risco verde de 12 px (regra da marca para item passado) |
-| Display | Inter 800, caixa alta, tracking −0.045em, entrelinha 0.86 (176 px) |
+| Display | **Anton** (`assets/fonts/Anton.ttf`), caixa alta, 226 px, entrelinha 0.8, linhas coladas como no pôster; a barra do Ø invade o AGENDA de propósito (sobreposição de tinta) |
 | Lista | Data Inter 800 62 px · Festa Inter 800 46 px · Detalhe Space Mono 700 28 px, tracking 0.14em |
 | Safe area | Todo texto em x 130–888, y 288–1248. Abaixo de 1248 só decoração (curvas de nível) |
 | Proibido | Gradiente, glow, sombra projetada, 3D, emoji, transições de template (zoom-blur, slide genérico), qualquer cor fora das duas tintas |
@@ -30,7 +30,7 @@ Um cartaz de clube impresso em risograph, dobrado em quatro e colado num poste, 
 ```
 ÄTZØK
 AGENDA
-NOV 26 → JAN 27 ✶ DATAS
+DEZ 26 → JAN 27 ✶ DATAS
 
 15.11  DESISTÊNCIA CLUBBER   JÁ FOI            ← riscada (já passou)
 09.12  LUCI BAR              LONG SET
