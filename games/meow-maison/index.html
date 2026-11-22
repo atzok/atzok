@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#050203" />
+  <title>MEOW Maison: A Última Rodada</title>
+</head>
+<body data-mode="title">
+  <div id="app"></div>
+
+  <!-- capa -->
+  <section class="screen title-screen" aria-label="Início">
+    <div class="title-block">
+      <p class="kicker">MEOW Maison apresenta</p>
+      <h1>A última<br />rodada</h1>
+      <p class="pitch">A casa fecha às cinco. Cumpra a comanda inteira sem ser expulso e o drink é por nossa conta.</p>
+      <button id="enter" class="btn-primary">Entrar na fila</button>
+      <p class="record">Recorde da semana <b>4:12</b> &nbsp;/&nbsp; 7 pessoas zeraram</p>
+    </div>
+  </section>
+
+  <!-- HUD -->
+  <section id="hud" class="screen hud" aria-label="Jogo">
+    <aside class="tab" aria-label="Comanda">
+      <header><span>Comanda</span><span>nº 0427</span></header>
+      <ol>
+        <li class="done">Pagar a entrada no caixa</li>
+        <li class="done">Deixar o casaco na chapelaria</li>
+        <li class="now">Achar a pulseira perdida na pista</li>
+        <li>Levar o pedido do DJ ao bar vermelho</li>
+        <li>Convencer a gerente</li>
+      </ol>
+      <footer>5 itens &nbsp;·&nbsp; 2 pagos</footer>
+    </aside>
+
+    <div class="clock-wrap">
+      <div id="clock" class="clock">02:47</div>
+      <div class="clock-note">a casa fecha às 05:00</div>
+    </div>
+
+    <div id="eye" class="eye" data-level="low" aria-label="Suspeita dos seguranças">
+      <svg viewBox="0 0 120 60" width="104" height="52" aria-hidden="true">
+        <defs><clipPath id="almond"><path d="M4 30 Q60 -14 116 30 Q60 74 4 30Z" /></clipPath></defs>
+        <g clip-path="url(#almond)">
+          <rect x="0" y="0" width="120" height="60" class="sclera" />
+          <g transform="translate(60 30)"><g id="eye-fill" transform="scale(1 .4)"><ellipse rx="10" ry="30" class="pupil" /></g></g>
+        </g>
+        <path d="M4 30 Q60 -14 116 30 Q60 74 4 30Z" class="lid" />
+      </svg>
+      <span>suspeita</span>
+    </div>
+
+    <div id="stick" class="stick" aria-hidden="true"><span></span></div>
+    <div class="actions">
+      <button class="act act-dance">Dançar</button>
+      <button class="act act-main">Pegar</button>
+    </div>
+    <p class="keys">WASD para andar &nbsp;·&nbsp; Espaço para pegar &nbsp;·&nbsp; Shift para se misturar na pista</p>
+  </section>
+
+  <!-- diálogo -->
+  <section class="screen talk" aria-label="Conversa">
+    <div class="dialog">
+      <p class="who">Brutus <small>segurança da pista</small></p>
+      <p class="line">Sem pulseira não tem pista, gatinho. E eu vi você rondando o bar duas vezes.</p>
+      <div class="choices">
+        <button data-choice="show">Mostrar a pulseira</button>
+        <button data-choice="bluff" class="risky">Dizer que é amigo do DJ <em>arriscado</em></button>
+        <button data-choice="leave" class="quiet">Sair de fininho</button>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
