@@ -13,18 +13,21 @@ Tom: provocação + perguntas. O papel do público fica para o próximo post.
 
 Convergência: um acordo de uma página, sinal antecipado, piso + bônus e booking em coletivo.
 
-## Carrossel (v2: papel reciclado, tinta preta e laranja)
+## Carrossel (v3: 11 cards, narrador em primeira pessoa)
 
-1. **o booking não funciona!?** ou a gente que não deixa funcionar?
-2. **a gente quer cuidar de tudo.** Lista do dia (direct, data, cobrança, rider, flyer) e a única coisa sem marcar é "pesquisar música". "e o set??" Parte disso é medo. Quem já levou calote ou tocou às 6h pra pista vazia aprende a não confiar em ninguém.
-3. **pra quem contrata, é caro e burocrático.** E tem razão em parte. Se chove ou a festa não vende, quem paga a conta é o produtor. Comissão em cima de um cachê que mal fecha a planilha pesa. E ninguém quer contrato de quatro páginas pra uma data fechada em dez dias.
-4. **o cachê encolhe e o cuidado some.** Cupom da festa: cachê combinado, menos horário trocado, volta por conta própria, "acerto na segunda", consumação no lugar. Sobrou: ???
-5. **e o tempo pro som!?** Cada hora cobrando, mandando e-mail e resolvendo logística é uma hora a menos pesquisando música. E o set é a nossa vitrine. É ele que traz a próxima data.
-6. **mas a culpa não é só de quem contrata.** Press kit de 2019, rider que nunca foi atualizado, mensagem respondida 3 dias depois. E toda vez que alguém toca de graça "pela vitrine", fica mais difícil pra todo mundo cobrar o justo.
-7. **e se tudo coubesse numa página?** Acordo de data: horário, cachê e prazo do pix, sinal e cancelamento, transporte, equipamento, contato no dia. Manda no zap e guarda o print. Sem advogado, sem PDF de dez páginas.
-8. **dividir o risco. e o corre.** Piso + bônus: um cachê mínimo garantido, mesmo se a festa flopar; passou do público combinado, entra uma parte da porta. Booking em coletivo: quatro, cinco DJs dividindo uma pessoa pra cuidar das datas.
-9. **sinal pago, set pensado.** Simples assim.
-10. **e aí, como funciona na sua cena?** Você já fechou data sem nada por escrito? O que não pode faltar no seu acordo? E o público, tem culpa nisso!? (essa fica pro próximo post)
+Fio: o que eu vivo → por que eu faço assim → o outro lado → no que dá → minha parte da culpa → o que eu proponho → pergunta pra cena.
+
+1. **o booking não funciona!?** Seguinte, vou contar como isso funciona do meu lado.
+2. **hoje eu faço tudo sozinho.** Lista da semana: responder o direct, fechar a data, cobrar o cachê, atualizar o rider, fazer o flyer. Pesquisar música ficou pra depois. Quando vejo, a semana acabou e eu não ouvi um disco novo.
+3. **e não é porque eu gosto.** Já levei calote. Já toquei às 6h com a pista vazia. Depois disso, fica difícil deixar alguém cuidar das minhas datas.
+4. **quem contrata também tá apertado.** Se a festa não vende, o prejuízo é do produtor. Aí pagar comissão de agência em cima do cachê parece caro. E contrato de quatro páginas parece burocracia.
+5. **no meio disso, o cachê encolhe.** Cupom: cachê combinado, menos horário mudou, volta por minha conta, "acerto na segunda", consumação no lugar. Sobrou: ???
+6. **e quem mais perde é o som.** Cada hora que eu passo cobrando e resolvendo logística é uma hora a menos pesquisando música. E é o set que traz a próxima data.
+7. **mas a gente também erra.** Press kit de 2019, rider desatualizado, mensagem respondida 3 dias depois. E quando alguém toca de graça "pela vitrine", fica mais difícil pra todo mundo cobrar o justo.
+8. **o que eu acho que dá pra fazer.** Acordo de uma página: data e horário, cachê e prazo do pix, sinal e cancelamento, transporte, equipamento, contato no dia. Manda no zap e guarda o print.
+9. **e dá pra dividir o risco.** Piso + bônus: cachê mínimo garantido, mesmo se a festa flopar; se bombar, entra uma parte da porta. Booking em coletivo: quatro, cinco DJs dividindo uma pessoa pra cuidar das datas.
+10. **sinal pago, set pensado.** Com o combinado claro, eu volto a cuidar do que importa: a música.
+11. **e aí, como é na sua cena?** Já fechou data sem nada por escrito? O que não pode faltar no seu acordo? E o público, tem culpa nisso!? Essa fica pro próximo post.
 
 ## Narração (60 s, ~150 palavras)
 
