@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Capas de Destaques</title><link rel="stylesheet" href="../base/estilo.css">
+<style>
+  /* O Instagram mostra só o círculo central: o símbolo fica dentro de ~600px no meio. */
+  .capa{display:flex;align-items:center;justify-content:center}
+  .disco{width:620px;height:620px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+         font-weight:800;letter-spacing:-.06em;line-height:1}
+</style>
+</head>
+<body>
+
+<section class="story capa" id="capa-noticias" style="background:var(--bg)">
+  <div class="disco" style="background:var(--laranja);color:var(--tinta);font-size:420px">!</div>
+</section>
+
+<section class="story capa" id="capa-ciencia" style="background:var(--laranja)">
+  <div class="disco" style="background:var(--bg);color:var(--creme);font-size:230px">CBD</div>
+</section>
+
+<section class="story capa" id="capa-historia" style="background:var(--lilas)">
+  <div class="disco" style="background:var(--laranja);color:var(--tinta);font-size:210px">2014</div>
+</section>
+
+<section class="story capa" id="capa-acesso" style="background:var(--salvia)">
+  <div class="disco" style="background:var(--bg);color:var(--laranja);font-size:300px">→</div>
+</section>
+
+<section class="story capa" id="capa-associacoes" style="background:var(--bg)">
+  <div class="disco" style="background:var(--creme)">
+    <svg class="leafsolid" data-fill="#E86D3C" viewBox="-120 -120 240 180" style="width:420px;height:420px"></svg>
+  </div>
+</section>
+
+<script src="../base/decor.js"></script>
+<script>
+document.querySelectorAll(".leafsolid").forEach(s=>{const g=document.createElementNS(NS,"g");leaf(g,s.dataset.fill);s.appendChild(g);});
+</script>
+</body>
+</html>

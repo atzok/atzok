@@ -12,3 +12,7 @@ Rules:
 ## Figma designs
 
 Before turning a Figma design into code, read `docs/figma-design-system-rules.md` (brand tokens, scene format, safe areas, assets).
+
+## Instagram (cannabis medicinal)
+
+Before creating any Instagram post, story or highlight cover, read `instagram-cannabis/GUIA-DE-ESTILO.md` (tone of voice, palette, fonts, shared `base/` styles, render with `node instagram-cannabis/render.js <folder>`).

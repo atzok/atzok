@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,600&display=swap");
+
+/* Paleta do perfil — ver GUIA-DE-ESTILO.md */
+:root{
+  --bg:#304E3C; --musgo:#3C5B37; --mata:#4E6F59; --laranja:#E86D3C;
+  --salvia:#B9C6AF; --creme:#F5E7D6; --lilas:#C8B2F0; --tinta:#1E3227;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#111;display:flex;flex-direction:column;align-items:center;gap:40px;padding:40px 0;
+     font-family:"Bricolage Grotesque",sans-serif}
+
+/* Formatos */
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;color:var(--creme)}   /* feed 4:5 */
+.story{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--creme)}   /* stories e capas 9:16 */
+
+/* Textura de papel/grão */
+.grain::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .9 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>")}
+
+/* Tipografia */
+h1,h2{font-weight:800;letter-spacing:-0.045em;line-height:.88;text-transform:lowercase}
+.sigla{text-transform:none}
+.serif{font-family:Fraunces,serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
+.corpo{font-size:46px;font-weight:600;letter-spacing:-.02em;line-height:1.12}
+mark{background:var(--laranja);color:var(--tinta);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+/* Componentes */
+.pill{display:inline-block;background:var(--laranja);color:var(--tinta);border:3px solid var(--tinta);
+      border-radius:999px;padding:10px 30px;font-family:Fraunces,serif;font-style:italic;font-size:34px}
+.abs{position:absolute}
+.torn{position:absolute}
+.handle{position:absolute;bottom:52px;left:72px;font-size:28px;font-weight:600;opacity:.85;letter-spacing:-.01em}
+.num{position:absolute;bottom:52px;right:72px;font-size:28px;font-weight:600;opacity:.85}
+.fonte{position:absolute;bottom:100px;left:72px;right:72px;font-family:Fraunces,serif;font-style:italic;font-size:26px;opacity:.8}
+.linha{display:flex;gap:28px;align-items:baseline;border-top:3px solid var(--mata);padding-top:20px}
+.linha b{white-space:nowrap;font-size:40px;font-weight:800;color:var(--laranja);min-width:150px}
+.linha span{font-size:36px;font-weight:600;letter-spacing:-.02em;line-height:1.15}
