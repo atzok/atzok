@@ -1,0 +1,10 @@
+l1 | O booking não funciona!? Seguinte, vou contar como isso funciona do meu lado. | O búkin não funciona? Seguinte, vou contar como isso funciona do meu lado.
+l2 | Hoje eu faço tudo sozinho. Respondo direct, fecho data, cobro cachê, faço flyer. Quando vejo, a semana acabou e eu não ouvi um disco novo. | Hoje eu faço tudo sozinho. Respondo dirét, fecho data, cobro cachê, faço fláier. Quando vejo, a semana acabou, e eu não ouvi um disco novo.
+l3 | E não é porque eu gosto. Já levei calote. Já toquei às seis da manhã com a pista vazia. | E não é porque eu gosto. Já levei calote. Já toquei às seis da manhã, com a pista vazia.
+l4 | Do outro lado, quem contrata também tá apertado. Se a festa não vende, o prejuízo é do produtor. Aí comissão de agência parece cara, e contrato parece burocracia. | Do outro lado, quem contrata também tá apertado. Se a festa não vende, o prejuízo é do produtor. Aí, comissão de agência parece cara, e contrato parece burocracia.
+l5 | No meio disso, o cachê encolhe. E quem mais perde é o som. | No meio disso, o cachê encolhe. E quem mais perde, é o som.
+l6 | Mas a gente também erra. Press kit velho, rider desatualizado, mensagem respondida três dias depois. | Mas a gente também erra. Prés quit velho, ráider desatualizado, mensagem respondida três dias depois.
+l7 | O que eu acho que dá pra fazer? Um acordo de uma página. Data, cachê, prazo do pix, sinal, transporte. Manda no zap e guarda o print. | O que eu acho que dá pra fazer? Um acordo de uma página. Data, cachê, prazo do pix, sinal, transporte. Manda no zap, e guarda o print.
+l8 | E dá pra dividir o risco: piso garantido com bônus na porta, e booking em coletivo. | E dá pra dividir o risco. Piso garantido, com bônus na porta. E búkin em coletivo.
+l9 | Sinal pago, set pensado. | Sinal pago. Sét pensado.
+l10 | E aí, como é na sua cena? Comenta aí. | E aí, como é na sua cena? Comenta aí.

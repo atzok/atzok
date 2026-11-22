@@ -1,0 +1,59 @@
+<template>
+  <style>
+    @font-face { font-family: "Instrument Serif"; font-style: italic; font-weight: 400; src: url('assets/fonts/instrument-serif-italic.woff2') format('woff2'); }
+    @font-face { font-family: "Caveat"; font-weight: 700; src: url('assets/fonts/caveat-700.woff2') format('woff2'); }
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    .all { position: absolute; inset: 0; }
+    .mono { font-family: "Space Mono", monospace; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; }
+    .tag { position: absolute; left: 130px; top: 300px; font-size: 28px; background: #141210; color: #eae3d2; padding: 10px 16px 9px; }
+    .tag.or { background: #bc6d21; color: #141210; }
+    .num { position: absolute; left: 760px; top: 310px; width: 120px; text-align: right; font-size: 28px; color: #141210; }
+    .h { position: absolute; left: 130px; width: 760px; font-family: Inter, sans-serif; font-weight: 900; letter-spacing: -.055em; line-height: .92; color: #141210; }
+    .or { color: #a65c16; }
+    .w { display: inline-block; }
+    .serif { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400; }
+    .hand { font-family: "Caveat", cursive; font-weight: 700; }
+    .body { position: absolute; left: 130px; width: 720px; font-family: Inter, sans-serif; font-weight: 500; font-size: 38px; line-height: 1.28; color: #141210; }
+    .sheet { position: absolute; background: #f6f2e8; box-shadow: 0 2px 0 rgba(0,0,0,.05), 0 22px 34px -20px rgba(0,0,0,.4); }
+    .tape { position: absolute; width: 170px; height: 46px; background: rgba(246,242,232,.75); box-shadow: 0 1px 2px rgba(0,0,0,.12); clip-path: polygon(2% 8%, 10% 0, 22% 10%, 35% 2%, 50% 9%, 64% 0, 78% 8%, 90% 1%, 100% 10%, 98% 92%, 88% 100%, 74% 91%, 60% 100%, 45% 92%, 30% 100%, 15% 91%, 0 100%); }
+    .stamp { position: absolute; border: 8px solid #bc6d21; color: #a65c16; font-family: "Space Mono", monospace; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; padding: 12px 26px 8px; mix-blend-mode: multiply; }
+    .burst { position: absolute; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .box { display: inline-block; position: relative; width: 34px; height: 34px; border: 4px solid #141210; border-radius: 3px; margin-right: 22px; vertical-align: -4px; }
+    .box svg { position: absolute; left: -6px; top: -16px; overflow: visible; }
+    svg.draw { position: absolute; overflow: visible; }
+    svg path.ln { fill: none; stroke: #141210; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    svg path.ln.or { stroke: #bc6d21; }
+  </style>
+  <div id="root" data-composition-id="som" data-width="1080" data-height="1920">
+    <div id="som-all" class="all clip" data-start="0" data-duration="3.05" data-track-index="1">
+      <div id="som-tag" class="tag mono">o que ninguém vê</div>
+      <div id="som-num" class="num mono">06/11</div>
+      <div id="sm-t" class="h" style="top:380px; font-size:112px"><span class="w">e</span> <span class="w">quem</span> <span class="w">mais</span><br><span class="w">perde</span> <span class="w">é</span> <span class="w">o</span> <span class="w or">som</span></div>
+      <div id="sm-vin" style="position:absolute; left:200px; top:660px; width:640px; height:640px; --a: 0deg">
+        <img src="assets/vinil-laranja.png" style="position:absolute; inset:0; width:100%; -webkit-mask: conic-gradient(from -20deg, #000 0 var(--a), transparent var(--a)); mask: conic-gradient(from -20deg, #000 0 var(--a), transparent var(--a))">
+        <img src="assets/vinil.png" style="position:absolute; inset:0; width:100%; -webkit-mask: conic-gradient(from -20deg, transparent 0 var(--a), #000 var(--a)); mask: conic-gradient(from -20deg, transparent 0 var(--a), #000 var(--a))">
+        <div style="position:absolute; inset:34%; border-radius:50%; border:5px solid #141210"></div>
+      </div>
+      <div id="sm-l1" class="hand" style="position:absolute; left:680px; top:640px; font-size:58px; color:#a65c16; transform:rotate(6deg)">o corre</div>
+      <div id="sm-l2" class="hand" style="position:absolute; left:135px; top:680px; font-size:58px; color:#141210; transform:rotate(-5deg)">a música</div>
+      <svg class="draw" style="left:170px; top:750px" width="200" height="130"><path id="sm-a2" class="ln" pathLength="1" style="stroke-dasharray:1" d="M10 10 C 40 80, 110 100, 180 92 M180 92 l -30 -22 M180 92 l -26 24"/></svg>
+
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = "#som-all";
+      tl.fromTo("#som-tag, #som-num", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: .18, ease: "power2.out" }, 0);
+      tl.fromTo("#sm-t .w", { color: "#c9c0ad" }, { color: (i, el) => el.classList.contains("or") ? "#a65c16" : "#141210", duration: .12, stagger: 0.08 }, 0.1);
+      tl.fromTo("#sm-vin", { "--a": "0deg", scale: .85, opacity: 0 }, { "--a": "290deg", scale: 1, opacity: 1, duration: 1.3, ease: "power2.inOut" }, .2);
+      tl.fromTo("#sm-vin", { rotation: 0 }, { rotation: 25, duration: 3.05, ease: "none" }, 0);
+      tl.fromTo("#sm-l1", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: .13, stagger: 0.067, ease: "power2.out" }, 1.0);
+      tl.fromTo("#sm-l2", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: .13, stagger: 0.067, ease: "power2.out" }, 1.6);
+      tl.fromTo("#sm-a2", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.4, ease: "power2.inOut" }, 1.7);
+      tl.to(S, { opacity: 0, filter: "blur(8px)", duration: .2, ease: "power3.in" }, 2.83);
+
+      window.__timelines["som"] = tl;
+    })();
+  </script>
+</template>

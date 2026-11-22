@@ -1,0 +1,54 @@
+<template>
+  <style>
+    @font-face { font-family: "Instrument Serif"; font-style: italic; font-weight: 400; src: url('assets/fonts/instrument-serif-italic.woff2') format('woff2'); }
+    @font-face { font-family: "Caveat"; font-weight: 700; src: url('assets/fonts/caveat-700.woff2') format('woff2'); }
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    .all { position: absolute; inset: 0; }
+    .mono { font-family: "Space Mono", monospace; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; }
+    .tag { position: absolute; left: 130px; top: 300px; font-size: 28px; background: #141210; color: #eae3d2; padding: 10px 16px 9px; }
+    .tag.or { background: #bc6d21; color: #141210; }
+    .num { position: absolute; left: 760px; top: 310px; width: 120px; text-align: right; font-size: 28px; color: #141210; }
+    .h { position: absolute; left: 130px; width: 760px; font-family: Inter, sans-serif; font-weight: 900; letter-spacing: -.055em; line-height: .92; color: #141210; }
+    .or { color: #a65c16; }
+    .w { display: inline-block; }
+    .serif { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400; }
+    .hand { font-family: "Caveat", cursive; font-weight: 700; }
+    .body { position: absolute; left: 130px; width: 720px; font-family: Inter, sans-serif; font-weight: 500; font-size: 38px; line-height: 1.28; color: #141210; }
+    .sheet { position: absolute; background: #f6f2e8; box-shadow: 0 2px 0 rgba(0,0,0,.05), 0 22px 34px -20px rgba(0,0,0,.4); }
+    .tape { position: absolute; width: 170px; height: 46px; background: rgba(246,242,232,.75); box-shadow: 0 1px 2px rgba(0,0,0,.12); clip-path: polygon(2% 8%, 10% 0, 22% 10%, 35% 2%, 50% 9%, 64% 0, 78% 8%, 90% 1%, 100% 10%, 98% 92%, 88% 100%, 74% 91%, 60% 100%, 45% 92%, 30% 100%, 15% 91%, 0 100%); }
+    .stamp { position: absolute; border: 8px solid #bc6d21; color: #a65c16; font-family: "Space Mono", monospace; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; padding: 12px 26px 8px; mix-blend-mode: multiply; }
+    .burst { position: absolute; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .box { display: inline-block; position: relative; width: 34px; height: 34px; border: 4px solid #141210; border-radius: 3px; margin-right: 22px; vertical-align: -4px; }
+    .box svg { position: absolute; left: -6px; top: -16px; overflow: visible; }
+    svg.draw { position: absolute; overflow: visible; }
+    svg path.ln { fill: none; stroke: #141210; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    svg path.ln.or { stroke: #bc6d21; }
+  </style>
+  <div id="root" data-composition-id="erra" data-width="1080" data-height="1920">
+    <div id="erra-all" class="all clip" data-start="0" data-duration="7.0" data-track-index="1">
+      <div id="erra-tag" class="tag mono or">autocrítica</div>
+      <div id="erra-num" class="num mono">07/11</div>
+      <img id="er-dot" src="assets/mancha-laranja.png" style="position:absolute; left:520px; top:900px; width:620px; mix-blend-mode:multiply">
+      <div id="er-t" class="h" style="top:380px; font-size:116px">mas a gente<br>também <span class="or">erra</span></div>
+      <div id="er-a" class="sheet" style="left:130px; top:700px; padding:26px 34px; transform:rotate(-4deg); font-family:Inter; font-size:44px; font-weight:800; line-height:1.1; color:#141210">press kit velho<div class="tape" style="left:30%; top:-24px; width:130px; transform:rotate(8deg)"></div></div>
+      <div id="er-b" class="sheet" style="left:330px; top:840px; padding:26px 34px; transform:rotate(3deg); font-family:Inter; font-size:44px; font-weight:800; line-height:1.1; color:#141210">rider desatualizado<div class="tape" style="left:30%; top:-24px; width:130px; transform:rotate(-6deg)"></div></div>
+      <div id="er-c" class="sheet" style="left:150px; top:990px; padding:26px 34px; transform:rotate(-1.5deg); font-family:Inter; font-size:44px; font-weight:800; line-height:1.1; color:#141210">mensagem respondida<br>3 dias depois<div class="tape" style="left:30%; top:-24px; width:130px; transform:rotate(3.0deg)"></div></div>
+
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = "#erra-all";
+      tl.fromTo("#erra-tag, #erra-num", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: .18, ease: "power2.out" }, 0);
+      tl.fromTo("#er-t", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: .18, ease: "power2.out" }, 0.1);
+      tl.fromTo("#er-dot", { opacity: 0, scale: .6 }, { opacity: 1, scale: 1, duration: .9, ease: "expo.out" }, .3);
+      tl.fromTo("#er-a", { opacity: 0, y: -60, scale: 1.15, rotation: -12 }, { opacity: 1, y: 0, scale: 1, rotation: -4, duration: .45, ease: "back.out(1.4)" }, 1.9);
+      tl.fromTo("#er-b", { opacity: 0, y: -60, scale: 1.15, rotation: 9 }, { opacity: 1, y: 0, scale: 1, rotation: 3, duration: .45, ease: "back.out(1.4)" }, 2.9499999999999997);
+      tl.fromTo("#er-c", { opacity: 0, y: -60, scale: 1.15, rotation: -4.5 }, { opacity: 1, y: 0, scale: 1, rotation: -1.5, duration: .45, ease: "back.out(1.4)" }, 4.25);
+      tl.to(S, { opacity: 0, filter: "blur(8px)", duration: .2, ease: "power3.in" }, 6.78);
+
+      window.__timelines["erra"] = tl;
+    })();
+  </script>
+</template>

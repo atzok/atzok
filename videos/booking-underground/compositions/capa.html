@@ -1,0 +1,58 @@
+<template>
+  <style>
+    @font-face { font-family: "Instrument Serif"; font-style: italic; font-weight: 400; src: url('assets/fonts/instrument-serif-italic.woff2') format('woff2'); }
+    @font-face { font-family: "Caveat"; font-weight: 700; src: url('assets/fonts/caveat-700.woff2') format('woff2'); }
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    .all { position: absolute; inset: 0; }
+    .mono { font-family: "Space Mono", monospace; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; }
+    .tag { position: absolute; left: 130px; top: 300px; font-size: 28px; background: #141210; color: #eae3d2; padding: 10px 16px 9px; }
+    .tag.or { background: #bc6d21; color: #141210; }
+    .num { position: absolute; left: 760px; top: 310px; width: 120px; text-align: right; font-size: 28px; color: #141210; }
+    .h { position: absolute; left: 130px; width: 760px; font-family: Inter, sans-serif; font-weight: 900; letter-spacing: -.055em; line-height: .92; color: #141210; }
+    .or { color: #a65c16; }
+    .w { display: inline-block; }
+    .serif { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400; }
+    .hand { font-family: "Caveat", cursive; font-weight: 700; }
+    .body { position: absolute; left: 130px; width: 720px; font-family: Inter, sans-serif; font-weight: 500; font-size: 38px; line-height: 1.28; color: #141210; }
+    .sheet { position: absolute; background: #f6f2e8; box-shadow: 0 2px 0 rgba(0,0,0,.05), 0 22px 34px -20px rgba(0,0,0,.4); }
+    .tape { position: absolute; width: 170px; height: 46px; background: rgba(246,242,232,.75); box-shadow: 0 1px 2px rgba(0,0,0,.12); clip-path: polygon(2% 8%, 10% 0, 22% 10%, 35% 2%, 50% 9%, 64% 0, 78% 8%, 90% 1%, 100% 10%, 98% 92%, 88% 100%, 74% 91%, 60% 100%, 45% 92%, 30% 100%, 15% 91%, 0 100%); }
+    .stamp { position: absolute; border: 8px solid #bc6d21; color: #a65c16; font-family: "Space Mono", monospace; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; padding: 12px 26px 8px; mix-blend-mode: multiply; }
+    .burst { position: absolute; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .box { display: inline-block; position: relative; width: 34px; height: 34px; border: 4px solid #141210; border-radius: 3px; margin-right: 22px; vertical-align: -4px; }
+    .box svg { position: absolute; left: -6px; top: -16px; overflow: visible; }
+    svg.draw { position: absolute; overflow: visible; }
+    svg path.ln { fill: none; stroke: #141210; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    svg path.ln.or { stroke: #bc6d21; }
+  </style>
+  <div id="root" data-composition-id="capa" data-width="1080" data-height="1920">
+    <div id="capa-all" class="all clip" data-start="0" data-duration="4.85" data-track-index="1">
+      <div id="capa-tag" class="tag mono">papo reto sobre a cena</div>
+      <div id="capa-num" class="num mono">01/11</div>
+      <div id="ca-t" class="h" style="top:370px; font-size:146px">o booking<br><span class="or">não<br>funciona!?</span></div>
+      <div id="ca-sub" class="serif" style="position:absolute; left:130px; top:880px; width:540px; font-size:54px; line-height:1.04; color:#141210"><span class="w">Seguinte,</span> <span class="w">vou</span> <span class="w">contar</span> <span class="w">como</span> <span class="w">isso</span> <span class="w">funciona</span> <span class="w">do</span> <span class="w">meu</span> <span class="w">lado.</span></div>
+      <img id="ca-logo" src="assets/wordmark-preto.png" alt="Ätzøk" style="position:absolute; left:130px; top:1150px; height:84px">
+      <div id="ca-vinil" style="position:absolute; left:560px; top:1000px; width:760px; height:760px">
+        <div style="position:absolute; inset:34%; border-radius:50%; background:#bc6d21"></div>
+        <img src="assets/vinil.png" style="position:absolute; inset:0; width:100%">
+        <div style="position:absolute; left:50%; top:50%; width:24px; height:24px; margin:-12px; border-radius:50%; background:#eae3d2"></div>
+      </div>
+      <div id="ca-burst" class="burst" style="left:690px; top:1010px; width:210px; height:210px; background:#bc6d21; clip-path:polygon(100.00% 50.00%,89.23% 57.80%,96.19% 69.13%,83.26% 72.22%,85.36% 85.36%,72.22% 83.26%,69.13% 96.19%,57.80% 89.23%,50.00% 100.00%,42.20% 89.23%,30.87% 96.19%,27.78% 83.26%,14.64% 85.36%,16.74% 72.22%,3.81% 69.13%,10.77% 57.80%,0.00% 50.00%,10.77% 42.20%,3.81% 30.87%,16.74% 27.78%,14.64% 14.64%,27.78% 16.74%,30.87% 3.81%,42.20% 10.77%,50.00% 0.00%,57.80% 10.77%,69.13% 3.81%,72.22% 16.74%,85.36% 14.64%,83.26% 27.78%,96.19% 30.87%,89.23% 42.20%)">
+        <span class="mono" style="font-size:24px; line-height:1.2; color:#141210">parte<br><b style="font-size:58px; letter-spacing:0">1</b></span></div>
+
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = "#capa-all";
+      tl.fromTo("#ca-vinil", { rotation: 0 }, { rotation: 60, duration: 4.85, ease: "none" }, 0);
+      tl.fromTo("#ca-burst", { scale: 0, rotation: -40 }, { scale: 1, rotation: -12, duration: .5, ease: "back.out(1.6)" }, .7);
+      tl.fromTo("#ca-sub .w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: .13, stagger: 0.07, ease: "power2.out" }, 1.76);
+      tl.to("#ca-vinil", { x: 700, duration: .45, ease: "power3.in" }, 4.35);
+      tl.to("#ca-burst", { x: 700, rotation: 40, duration: .45, ease: "power3.in" }, 4.35);
+      tl.to(S, { opacity: 0, filter: "blur(8px)", duration: .2, ease: "power3.in" }, 4.63);
+
+      window.__timelines["capa"] = tl;
+    })();
+  </script>
+</template>

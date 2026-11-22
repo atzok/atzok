@@ -1,0 +1,65 @@
+<template>
+  <style>
+    @font-face { font-family: "Instrument Serif"; font-style: italic; font-weight: 400; src: url('assets/fonts/instrument-serif-italic.woff2') format('woff2'); }
+    @font-face { font-family: "Caveat"; font-weight: 700; src: url('assets/fonts/caveat-700.woff2') format('woff2'); }
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    .all { position: absolute; inset: 0; }
+    .mono { font-family: "Space Mono", monospace; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; }
+    .tag { position: absolute; left: 130px; top: 300px; font-size: 28px; background: #141210; color: #eae3d2; padding: 10px 16px 9px; }
+    .tag.or { background: #bc6d21; color: #141210; }
+    .num { position: absolute; left: 760px; top: 310px; width: 120px; text-align: right; font-size: 28px; color: #141210; }
+    .h { position: absolute; left: 130px; width: 760px; font-family: Inter, sans-serif; font-weight: 900; letter-spacing: -.055em; line-height: .92; color: #141210; }
+    .or { color: #a65c16; }
+    .w { display: inline-block; }
+    .serif { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400; }
+    .hand { font-family: "Caveat", cursive; font-weight: 700; }
+    .body { position: absolute; left: 130px; width: 720px; font-family: Inter, sans-serif; font-weight: 500; font-size: 38px; line-height: 1.28; color: #141210; }
+    .sheet { position: absolute; background: #f6f2e8; box-shadow: 0 2px 0 rgba(0,0,0,.05), 0 22px 34px -20px rgba(0,0,0,.4); }
+    .tape { position: absolute; width: 170px; height: 46px; background: rgba(246,242,232,.75); box-shadow: 0 1px 2px rgba(0,0,0,.12); clip-path: polygon(2% 8%, 10% 0, 22% 10%, 35% 2%, 50% 9%, 64% 0, 78% 8%, 90% 1%, 100% 10%, 98% 92%, 88% 100%, 74% 91%, 60% 100%, 45% 92%, 30% 100%, 15% 91%, 0 100%); }
+    .stamp { position: absolute; border: 8px solid #bc6d21; color: #a65c16; font-family: "Space Mono", monospace; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; padding: 12px 26px 8px; mix-blend-mode: multiply; }
+    .burst { position: absolute; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .box { display: inline-block; position: relative; width: 34px; height: 34px; border: 4px solid #141210; border-radius: 3px; margin-right: 22px; vertical-align: -4px; }
+    .box svg { position: absolute; left: -6px; top: -16px; overflow: visible; }
+    svg.draw { position: absolute; overflow: visible; }
+    svg path.ln { fill: none; stroke: #141210; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    svg path.ln.or { stroke: #bc6d21; }
+  </style>
+  <div id="root" data-composition-id="gosto" data-width="1080" data-height="1920">
+    <div id="gosto-all" class="all clip" data-start="0" data-duration="5.4" data-track-index="1">
+      <div id="gosto-tag" class="tag mono">por quê</div>
+      <div id="gosto-num" class="num mono">03/11</div>
+      <div id="go-t" class="h" style="top:380px; font-size:116px"><span class="w">e</span> <span class="w">não</span> <span class="w">é</span> <span class="w">porque</span><br><span class="w">eu</span> <span class="w or">gosto</span></div>
+      <div id="go-ticket" class="sheet" style="left:140px; top:680px; width:680px; height:320px; transform:rotate(-2.5deg); display:flex">
+        <div style="flex:1; padding:36px 40px; border-right:4px dashed #bdb5a5">
+          <div class="mono" style="font-size:28px; color:#5a534a">line-up · sábado</div>
+          <div id="go-hora" style="font-family:Inter; font-weight:900; font-size:116px; letter-spacing:-.05em; line-height:1; margin-top:10px; color:#141210; transform-origin:left center">06:00</div>
+          <div class="mono" style="font-size:28px; margin-top:12px; color:#141210">pista: <span style="color:#a65c16">vazia</span></div>
+        </div>
+        <div style="width:200px; padding:36px 24px">
+          <div class="mono" style="font-size:28px; color:#5a534a">cachê</div>
+          <div style="font-family:Inter; font-weight:900; font-size:56px; letter-spacing:-.04em; margin-top:10px; color:#141210">R$ ?</div>
+          <div class="mono" style="font-size:28px; color:#5a534a; margin-top:22px; line-height:1.2">pago:<br>nunca</div>
+        </div>
+      </div>
+      <div id="go-stamp" class="stamp" style="left:300px; top:920px; font-size:70px">calote</div>
+      <div id="go-body" class="body" style="top:1110px; width:660px"><span class="w">já</span> <span class="w">levei</span> <span class="w">calote.</span> <span class="w">já</span> <span class="w">toquei</span> <span class="w">às</span> <span class="w">6h</span> <span class="w">pra</span> <span class="w">pista</span> <span class="w">vazia.</span></div>
+      <div id="go-dip" style="position:absolute; inset:0; background:#141210; opacity:0"></div>
+
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const S = "#gosto-all";
+      tl.fromTo("#gosto-tag, #gosto-num", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: .18, ease: "power2.out" }, 0);
+      tl.fromTo("#go-t .w", { color: "#c9c0ad" }, { color: (i, el) => el.classList.contains("or") ? "#a65c16" : "#141210", duration: .12, stagger: 0.09 }, 0.1);
+      tl.fromTo("#go-ticket", { opacity: 0, y: 220, rotation: 4 }, { opacity: 1, x: 0, y: 0, rotation: -2.5, scale: 1, duration: 0.6, ease: "expo.out" }, 1.2);
+      tl.fromTo("#go-stamp", { opacity: 0, scale: 1.7, rotation: -15 }, { opacity: .95, scale: 1, rotation: -9, duration: .16, ease: "power4.in" }, 1.89);
+      tl.fromTo("#go-hora", { scale: 1 }, { scale: 1.08, duration: .12, yoyo: true, repeat: 1, ease: "power2.out" }, 3.65);
+      tl.fromTo("#go-body .w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: .13, stagger: 0.07, ease: "power2.out" }, 1.5);
+      tl.fromTo("#go-dip", { opacity: 0 }, { opacity: .4, duration: .1 }, 5.3);
+
+      window.__timelines["gosto"] = tl;
+    })();
+  </script>
+</template>
