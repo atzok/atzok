@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Carrossel Cannabis Medicinal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#304E3C; --musgo:#3C5B37; --mata:#4E6F59; --laranja:#E86D3C;
+    --salvia:#B9C6AF; --creme:#F5E7D6; --lilas:#C8B2F0; --tinta:#1E3227;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#111;display:flex;flex-direction:column;align-items:center;gap:40px;padding:40px 0;
+       font-family:"Bricolage Grotesque",sans-serif}
+  .slide{width:1080px;height:1350px;position:relative;overflow:hidden;color:var(--creme)}
+  .grain::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .9 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>")}
+  h1,h2{font-weight:800;letter-spacing:-0.045em;line-height:.88;text-transform:lowercase}
+  .serif{font-family:Fraunces,serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
+  .pill{display:inline-block;background:var(--laranja);color:var(--tinta);border:3px solid var(--tinta);
+        border-radius:999px;padding:10px 30px;font-family:Fraunces,serif;font-style:italic;font-size:34px}
+  .abs{position:absolute}
+  .torn{position:absolute}
+  .handle{position:absolute;bottom:52px;left:72px;font-size:28px;font-weight:600;opacity:.85;letter-spacing:-.01em}
+  .num{position:absolute;bottom:52px;right:72px;font-size:28px;font-weight:600;opacity:.85}
+  .fonte{position:absolute;bottom:100px;left:72px;right:72px;font-family:Fraunces,serif;font-style:italic;font-size:26px;opacity:.8}
+  mark{background:var(--laranja);color:var(--tinta);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+</style>
+</head>
+<body>
+
+<!-- 1 · CAPA -->
+<section class="slide grain" id="s1" style="background:var(--laranja)">
+  <svg class="abs burst" data-points="22" data-inner=".78" style="width:1500px;height:1500px;left:-210px;top:780px" fill="#304E3C"></svg>
+  <div class="abs leafrow" data-color="#304E3C" style="top:56px;left:0;right:0"></div>
+  <div class="abs" style="left:72px;top:170px;right:72px">
+    <span class="pill">perspectiva crítica</span>
+    <h1 style="font-size:150px;color:var(--tinta);margin-top:36px">1 milhão de brasileiros já decidiram.</h1>
+  </div>
+  <div class="torn" style="left:110px;top:1000px;width:860px;padding:40px 56px;background:var(--creme);transform:rotate(-2.5deg);z-index:2">
+    <p class="serif" style="font-size:82px;line-height:1;color:var(--tinta)">falta o Estado <span style="color:var(--laranja);font-weight:600">acompanhar.</span></p>
+  </div>
+  <svg class="abs leaf halftone" style="width:300px;height:300px;right:70px;top:790px;transform:rotate(12deg);z-index:1" data-fill="#304E3C"></svg>
+  <div class="handle" style="color:var(--creme)">@seuperfil</div>
+  <div class="num" style="color:var(--creme)">arrasta →</div>
+</section>
+
+<!-- 2 · NÚMERO -->
+<section class="slide grain" id="s2" style="background:var(--bg)">
+  <div class="abs checker" data-a="#3C5B37" data-b="#C8B2F0" style="left:0;right:0;top:0;height:120px"></div>
+  <div class="abs" style="left:72px;top:210px;right:72px">
+    <span class="pill">os números</span>
+    <h2 style="font-size:300px;color:var(--laranja);margin-top:40px;letter-spacing:-.06em">1,1</h2>
+    <h2 style="font-size:190px;color:var(--laranja);margin-top:-10px">milhão</h2>
+    <p style="font-size:62px;font-weight:800;letter-spacing:-.035em;line-height:1;margin-top:46px;max-width:860px">de pacientes se tratam com cannabis medicinal no Brasil.</p>
+  </div>
+  <div class="torn" style="left:72px;top:1050px;padding:26px 44px;background:var(--salvia);transform:rotate(1.8deg)">
+    <p class="serif" style="font-size:48px;color:var(--tinta)">em 2025 eram 873 mil.</p>
+  </div>
+  <div class="fonte">fonte: 5º Anuário Kaya Mind, nov. 2026</div>
+  <div class="handle">@seuperfil</div><div class="num">2/7</div>
+</section>
+
+<!-- 3 · PREÇO -->
+<section class="slide grain" id="s3" style="background:var(--salvia);color:var(--tinta)">
+  <div class="abs" style="left:72px;top:110px;right:72px">
+    <h2 style="font-size:132px">quem cobra menos é quem mais <span style="color:var(--laranja)">apanha.</span></h2>
+    <p class="serif" style="font-size:44px;margin-top:34px">preço médio do frasco de cannabis medicinal</p>
+  </div>
+  <div class="abs" style="left:72px;right:72px;top:690px">
+    <div style="display:flex;align-items:flex-end;gap:48px;height:440px">
+      <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%">
+        <p style="font-size:84px;font-weight:800;letter-spacing:-.04em">R$ 650</p>
+        <div class="torn" style="position:relative;height:300px;background:var(--bg);margin-top:14px"></div>
+        <p class="serif" style="font-size:40px;margin-top:16px">farmácia</p>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%">
+        <p style="font-size:84px;font-weight:800;letter-spacing:-.04em;color:var(--laranja)">R$ 352</p>
+        <div class="torn" style="position:relative;height:162px;background:var(--laranja);margin-top:14px"></div>
+        <p class="serif" style="font-size:40px;margin-top:16px">associação de pacientes</p>
+      </div>
+    </div>
+  </div>
+  <div class="fonte" style="bottom:100px">as associações atendem 248 mil pessoas e vivem sob risco jurídico. fonte: Kaya Mind 2026</div>
+  <div class="handle">@seuperfil</div><div class="num">3/7</div>
+</section>
+
+<!-- 4 · MÉDICOS -->
+<section class="slide grain" id="s4" style="background:var(--laranja);color:var(--tinta)">
+  <svg class="abs burst" data-points="18" data-inner=".74" style="width:900px;height:900px;right:-260px;top:-260px" fill="#C8B2F0"></svg>
+  <div class="abs" style="left:72px;top:150px;right:72px">
+    <span class="pill" style="background:var(--creme)">a medicina já mudou</span>
+    <h2 style="font-size:138px;margin-top:40px">o médico de família já entendeu.</h2>
+  </div>
+  <div class="torn" style="left:72px;right:72px;top:720px;padding:56px 64px;background:var(--bg);color:var(--creme)">
+    <p style="font-size:210px;font-weight:800;letter-spacing:-.06em;line-height:.85;color:var(--laranja)">68,9%</p>
+    <p style="font-size:50px;font-weight:800;letter-spacing:-.03em;line-height:1.02;margin-top:24px">das receitas de cannabis importada já vêm de clínicos gerais.</p>
+    <p class="serif" style="font-size:42px;margin-top:20px;color:var(--salvia)">em 2023 eram 35,6%.</p>
+  </div>
+  <div class="handle">@seuperfil</div><div class="num">4/7</div>
+</section>
+
+<!-- 5 · JUSTIÇA -->
+<section class="slide grain" id="s5" style="background:var(--tinta)">
+  <div class="abs" style="left:72px;top:130px;right:72px">
+    <h2 style="font-size:150px">presos por produzir <span style="color:var(--laranja)">remédio.</span></h2>
+    <p class="serif" style="font-size:50px;line-height:1.25;margin-top:44px;max-width:900px">no julgamento de outubro, o ministro Alexandre de Moraes <mark>alertou para a prisão de médicos e dirigentes de associações</mark> de cannabis medicinal.</p>
+  </div>
+  <div class="abs" style="left:72px;right:72px;top:840px;display:grid;gap:22px">
+    <div style="display:flex;gap:28px;align-items:baseline;border-top:3px solid var(--mata);padding-top:20px">
+      <span style="font-size:40px;font-weight:800;color:var(--laranja);width:120px">mar</span>
+      <span style="font-size:36px;font-weight:600;letter-spacing:-.02em">STJ nega salvo-conduto coletivo a associação</span></div>
+    <div style="display:flex;gap:28px;align-items:baseline;border-top:3px solid var(--mata);padding-top:20px">
+      <span style="font-size:40px;font-weight:800;color:var(--laranja);width:120px">mai</span>
+      <span style="font-size:36px;font-weight:600;letter-spacing:-.02em">STJ: "não há direito fundamental de cultivar"</span></div>
+    <div style="display:flex;gap:28px;align-items:baseline;border-top:3px solid var(--mata);padding-top:20px">
+      <span style="font-size:40px;font-weight:800;color:var(--laranja);width:120px">out</span>
+      <span style="font-size:36px;font-weight:600;letter-spacing:-.02em">STF nega recurso, sem julgar o mérito</span></div>
+  </div>
+  <div class="fonte">fontes: Migalhas, Conjur</div>
+  <div class="handle">@seuperfil</div><div class="num">5/7</div>
+</section>
+
+<!-- 6 · CONGRESSO -->
+<section class="slide grain" id="s6" style="background:var(--bg)">
+  <div class="abs checker" data-a="#E86D3C" data-b="#304E3C" style="left:0;right:0;bottom:0;height:300px"></div>
+  <div class="abs" style="left:72px;top:130px;right:72px">
+    <span class="pill">enquanto isso, em brasília</span>
+    <h2 style="font-size:180px;margin-top:40px;text-transform:none">PL 399:</h2>
+    <h2 style="font-size:130px;color:var(--laranja)">11 anos na gaveta.</h2>
+    <p style="font-size:46px;font-weight:600;letter-spacing:-.02em;line-height:1.12;margin-top:44px;max-width:880px">aprovado em comissão em 2021, o projeto ainda espera votação no plenário da Câmara.</p>
+  </div>
+  <div class="torn" style="left:72px;right:140px;top:770px;padding:32px 46px;background:var(--creme);color:var(--tinta);transform:rotate(-1.5deg)">
+    <p class="serif" style="font-size:42px;line-height:1.15">a Anvisa só criou regras de cultivo em 2026 porque o STJ mandou.</p>
+  </div>
+  <div class="handle" style="color:var(--creme);bottom:332px">@seuperfil</div><div class="num" style="bottom:332px">6/7</div>
+</section>
+
+<!-- 7 · CTA -->
+<section class="slide grain" id="s7" style="background:var(--laranja);color:var(--tinta)">
+  <svg class="abs burst" data-points="24" data-inner=".8" style="width:1120px;height:1120px;left:-20px;top:60px" fill="#304E3C"></svg>
+  <div class="abs" style="left:170px;right:170px;top:330px;text-align:center;color:var(--creme)">
+    <h2 style="font-size:132px">defenda o acesso, gostoso demais!</h2>
+    <p class="serif" style="font-size:46px;line-height:1.2;margin-top:40px;color:var(--salvia)">cannabis medicinal no SUS, nas associações e na agricultura familiar.</p>
+  </div>
+    <div class="abs" style="left:0;right:0;bottom:110px;text-align:center;font-size:38px;font-weight:800;letter-spacing:-.02em">salva · compartilha · manda pra quem precisa</div>
+  <div class="handle" style="bottom:40px">@seuperfil</div><div class="num" style="bottom:40px">7/7</div>
+</section>
+
+<script>
+const NS="http://www.w3.org/2000/svg";
+// starburst
+document.querySelectorAll(".burst").forEach(s=>{
+  const n=+s.dataset.points, r2=+s.dataset.inner; s.setAttribute("viewBox","-100 -100 200 200");
+  let p=[]; for(let i=0;i<n*2;i++){const a=Math.PI*i/n, r=i%2?100*r2:100; p.push((Math.cos(a)*r).toFixed(2)+","+(Math.sin(a)*r).toFixed(2));}
+  const pg=document.createElementNS(NS,"polygon"); pg.setAttribute("points",p.join(" ")); s.appendChild(pg);
+});
+// torn paper edges
+let seed=7; const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647};
+document.querySelectorAll(".torn").forEach(el=>{
+  const pts=[], step=2.2, j=1.1;
+  for(let x=0;x<=100;x+=step)pts.push(`${x}% ${rnd()*j*1.6}%`);
+  for(let y=0;y<=100;y+=step*1.6)pts.push(`${100-rnd()*j}% ${y}%`);
+  for(let x=100;x>=0;x-=step)pts.push(`${x}% ${100-rnd()*j*1.6}%`);
+  for(let y=100;y>=0;y-=step*1.6)pts.push(`${rnd()*j}% ${y}%`);
+  el.style.clipPath=`polygon(${pts.join(",")})`;
+});
+// leaf path builder
+function leaf(g,fill,leaflets=7){
+  const L=[[-88,.42],[-58,.72],[-28,.92],[0,1],[28,.92],[58,.72],[88,.42]].slice((7-leaflets)/2,7-(7-leaflets)/2);
+  L.forEach(([ang,s])=>{const p=document.createElementNS(NS,"path");
+    p.setAttribute("d","M0,0 C 14,-28 13,-72 0,-110 C -13,-72 -14,-28 0,0 Z");
+    p.setAttribute("transform",`rotate(${ang}) scale(${s})`); p.setAttribute("fill",fill); g.appendChild(p);});
+  const st=document.createElementNS(NS,"path"); st.setAttribute("d","M-2,0 L2,0 L1,40 L-1,40 Z"); st.setAttribute("fill",fill); g.appendChild(st);
+}
+// halftone leaf
+document.querySelectorAll(".leaf").forEach(s=>{
+  s.setAttribute("viewBox","-120 -120 240 180");
+  s.innerHTML=`<defs><pattern id="ht" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="2.5" cy="2.5" r="1.9" fill="${s.dataset.fill}"/></pattern></defs>`;
+  const g=document.createElementNS(NS,"g"); leaf(g,"url(#ht)"); s.appendChild(g);
+  const g2=document.createElementNS(NS,"g"); g2.setAttribute("transform","translate(4,4)"); g2.setAttribute("opacity",".0"); s.appendChild(g2);
+});
+// leaf rows (pattern from reference)
+document.querySelectorAll(".leafrow").forEach(el=>{
+  const c=el.dataset.color, svg=document.createElementNS(NS,"svg");
+  svg.setAttribute("viewBox","0 0 1080 120"); svg.setAttribute("width","1080"); svg.setAttribute("height","120");
+  for(let i=0;i<16;i++){const g=document.createElementNS(NS,"g");
+    const x=20+i*70, y=i%2?95:55; g.setAttribute("transform",`translate(${x},${y}) scale(.3)`); leaf(g,c,5); svg.appendChild(g);}
+  el.appendChild(svg);
+});
+// checker stripes
+document.querySelectorAll(".checker").forEach(el=>{
+  const a=el.dataset.a,b=el.dataset.b;
+  el.style.background=`repeating-linear-gradient(90deg,${a} 0 90px,${b} 90px 180px)`;
+  el.style.maskImage="none";
+  el.innerHTML=`<div style="position:absolute;inset:50% 0 0 0;background:repeating-linear-gradient(90deg,${b} 0 90px,${a} 90px 180px)"></div>`;
+});
+</script>
+</body>
+</html>
