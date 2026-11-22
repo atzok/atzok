@@ -20,6 +20,12 @@
         ],
         "createdAt": "2026-11-21T03:46:59.344Z",
         "reason": "assistant triage: page ground is light #ece7dc, the hex is not in the source and the rendered scans do not flag it; comes from unused kit CSS"
+      },
+      {
+        "rule": "overused-font",
+        "value": "fraunces",
+        "createdAt": "2026-11-22T02:23:25.640Z",
+        "reason": "Claude: Fraunces italic is the profile's documented comment face in instagram-cannabis/GUIA-DE-ESTILO.md, chosen to match the user's reference image; user approved the resulting look"
       }
     ]
   }
