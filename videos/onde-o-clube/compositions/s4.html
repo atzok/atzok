@@ -1,0 +1,101 @@
+<template>
+  <style>
+    @font-face { font-family: Adca; src: url('assets/fonts/Adca.ttf'); }
+    @font-face { font-family: LhMono; src: url('assets/fonts/DMMono-Regular.ttf'); }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #F4EFE2; color: #151515; font-family: Adca; }
+    #root .grain { position: absolute; inset: 0; z-index: 40; pointer-events: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .45  0 0 0 0 .4  0 0 0 .55 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>");
+      opacity: .22; mix-blend-mode: multiply; }
+    #root .mono { font-family: LhMono; text-transform: uppercase; letter-spacing: .16em; font-size: 24px; }
+    #root .abs { position: absolute; }
+    #root .hd { position: absolute; left: 120px; width: 780px; top: 300px; height: 40px; display: flex;
+      justify-content: space-between; align-items: center; z-index: 6; }
+    #root .hd .t { display: flex; align-items: center; gap: 14px; }
+    #root .hd .dot { width: 18px; height: 18px; border-radius: 50%; background: #EE69DA; border: 3px solid currentColor; }
+    #root .cnt { display: flex; gap: .5em; }
+    #root .roll { display: inline-block; height: 1.25em; overflow: hidden; vertical-align: top; }
+    #root .roll span { display: block; line-height: 1.25em; }
+    #root .rule { position: absolute; left: 120px; width: 780px; top: 352px; height: 4px; background: currentColor; transform-origin: 0 50%; z-index: 6; }
+    #root .big { position: absolute; left: 120px; white-space: nowrap; text-transform: uppercase; line-height: .86; }
+    #root .reg { color: #6A75F2; text-shadow: .045em .045em 0 #EE69DA; }
+    #root .w { display: inline-block; }
+    #root .band { position: absolute; left: 0; width: 1080px; background-size: auto 100%; background-repeat: repeat-x; }
+    #root .b-azul { background-image: url('assets/img/fundo-azul.jpg'); }
+    #root .b-amar { background-image: url('assets/img/fundo-amarelo.jpg'); }
+    #root .wipe { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; z-index: 30; }
+    
+    #s4-loc { left: 120px; top: 392px; color: #6A75F2; }
+    #s4-t1 { top: 448px; font-size: 88px; }
+    #s4-t2 { top: 534px; font-size: 118px; }
+    #s4-spine { left: 131px; top: 720px; width: 5px; height: 410px; background: #151515; transform-origin: 50% 0; }
+    #root .row { position: absolute; left: 120px; height: 82px; display: flex; align-items: baseline; gap: 24px; white-space: nowrap; }
+    #root .row i { position: absolute; left: 0; top: 18px; width: 27px; height: 27px; border-radius: 50%; background: #F4EFE2; border: 5px solid #151515; }
+    #root .row .n { margin-left: 56px; font-size: 46px; color: rgba(21,21,21,.42); }
+    #root .row .a { font-size: 38px; color: #EE69DA; }
+    #root .row.hot .n { color: #EE69DA; font-size: 56px; }
+    #root .row.hot i { background: #EE69DA; }
+    #root .row.mid .n { color: #6A75F2; font-size: 56px; text-shadow: .04em .04em 0 #EE69DA; }
+    #root .row.mid i { background: #6A75F2; }
+    #s4-win { top: 0; height: 1920px; z-index: 20; background-size: auto 100%; background-repeat: repeat-x;
+      clip-path: inset(0px 0px 0px 0px round 0px 0px 0px 0px); }
+    #s4-ring { left: 683px; top: 693px; width: 284px; height: 487px; border: 7px solid #151515; border-bottom: 7px solid #151515;
+      border-radius: 142.0px 142.0px 0 0; z-index: 22; }
+    #s4-headw { left: 690px; top: 700px; width: 270px; height: 480px; overflow: hidden; border-radius: 135.0px 135.0px 0 0; z-index: 21; }
+    #s4-head { position: absolute; left: 22px; top: 70px; width: 250px; }
+    #s4-r2 { left: 120px; width: 780px; top: 1190px; height: 4px; background: #151515; transform-origin: 0 50%; }
+    #s4-foot { left: 120px; top: 1206px; font-size: 22px; letter-spacing: .08em; }
+    #s4-iris { background: #EDF06F; clip-path: circle(0px at 840px 900px); }
+
+  </style>
+  <div id="root" data-composition-id="s4" data-width="1080" data-height="1920">
+    <div id="s4-stage" class="clip" data-start="0" data-duration="5.8" data-track-index="1" data-layout-allow-overflow data-layout-allow-overlap style="position:absolute;inset:0">
+
+    <div id="s4-hd" class="hd mono">
+      <span id="s4-hdt" class="t"><i id="s4-hdd" class="dot"></i>Onde o clube encontra a rave</span>
+      <span class="cnt"><span class="roll"><span id="s4-roll"><span>3</span><span>4</span></span></span><span>/ 6</span></span>
+    </div>
+    <div id="s4-rule" class="rule"></div>
+      <div id="s4-loc" class="mono abs">Pulsar — Ipoema, MG</div>
+      <div id="s4-t1" class="big"><span class="w">O</span> <span class="w">psy</span> <span class="w">mais</span> <span class="w">perto</span></div>
+      <div id="s4-t2" class="big reg">Do techno</div>
+      <div id="s4-spine" class="abs"></div>
+      <div id="s4-row0" class="row hot" style="top:690px"><i id="s4-dot0"></i><span class="n">Techno</span><span class="a">o clube</span></div><div id="s4-row1" class="row mid" style="top:772px"><i id="s4-dot1"></i><span class="n">Prog dark</span><span class="a">a ponte</span></div><div id="s4-row2" class="row " style="top:854px"><i id="s4-dot2"></i><span class="n">Forest</span></div><div id="s4-row3" class="row " style="top:936px"><i id="s4-dot3"></i><span class="n">Dark psy</span></div><div id="s4-row4" class="row " style="top:1018px"><i id="s4-dot4"></i><span class="n">Hi-tech</span></div><div id="s4-row5" class="row " style="top:1100px"><i id="s4-dot5"></i><span class="n">Psycore</span></div>
+      <div id="s4-win" class="band b-azul"></div>
+      <div id="s4-headw" class="abs"><img id="s4-head" src="assets/img/head.png" alt="Lhama"></div>
+      <div id="s4-ring" class="abs"></div>
+      <div id="s4-r2" class="abs"></div>
+      <div id="s4-foot" class="mono abs">Pista principal do Pulsar, em Cachoeira Alta</div>
+      <div id="s4-iris" class="wipe"></div>
+      <div class="grain" data-layout-ignore></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+
+      // entry: the full-screen swamp pattern shrinks into the arch window
+      tl.fromTo("#s4-win", {clipPath: "inset(0px 0px 0px 0px round 0px 0px 0px 0px)"}, {clipPath: "inset(700px 120px 740px 690px round 135.0px 135.0px 0px 0px)", duration: 0.75, ease: "expo.inOut"}, 0.05);
+      tl.fromTo("#s4-win", {backgroundPositionX: -360}, {backgroundPositionX: -620, duration: 5.8, ease: "none"}, 0);
+      tl.fromTo("#s4-ring", {opacity: 0, scale: 1.08, transformOrigin: "50% 100%"}, {opacity: 1, scale: 1, duration: 0.4, ease: "expo.out"}, 0.62);
+      tl.fromTo("#s4-head", {y: 420}, {y: 0, duration: 0.9, ease: "expo.out"}, 0.85);
+      tl.fromTo("#s4-rule", {scaleX: 0}, {scaleX: 1, duration: 0.7, ease: "expo.out"}, 0.4);
+      tl.fromTo("#s4-hdt", {opacity: 0, x: -24}, {opacity: 1, x: 0, duration: 0.5, ease: "expo.out"}, 0.45);
+      tl.fromTo("#s4-hdd", {scale: 0}, {scale: 1, duration: 0.45, ease: "back.out(2.2)"}, 0.55);
+      tl.fromTo("#s4-roll", {yPercent: 0}, {yPercent: -50, duration: 0.55, ease: "expo.inOut"}, 0.65);
+      tl.fromTo("#s4-loc", {opacity: 0, x: -30}, {opacity: 1, x: 0, duration: 0.5, ease: "expo.out"}, 0.55);
+      tl.fromTo("#s4-t1 .w", {opacity: 0, filter: "blur(8px)"}, {opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out", stagger: 0.08}, 0.65);
+      tl.fromTo("#s4-t2", {opacity: 0, y: 60, textShadow: "0em 0em 0 #EE69DA"}, {opacity: 1, y: 0, textShadow: ".045em .045em 0 #EE69DA", duration: 0.6, ease: "expo.out"}, 0.95);
+      // the scale: spine draws down, each genre lands on it
+      tl.fromTo("#s4-spine", {scaleY: 0}, {scaleY: 1, duration: 1.0, ease: "power2.inOut"}, 1.3);
+      tl.fromTo("#s4-dot0", {scale: 0}, {scale: 1, duration: 0.35, ease: "back.out(2.6)"}, 1.30);tl.fromTo("#s4-dot1", {scale: 0}, {scale: 1, duration: 0.35, ease: "back.out(2.6)"}, 1.46);tl.fromTo("#s4-dot2", {scale: 0}, {scale: 1, duration: 0.35, ease: "back.out(2.6)"}, 1.62);tl.fromTo("#s4-dot3", {scale: 0}, {scale: 1, duration: 0.35, ease: "back.out(2.6)"}, 1.78);tl.fromTo("#s4-dot4", {scale: 0}, {scale: 1, duration: 0.35, ease: "back.out(2.6)"}, 1.94);tl.fromTo("#s4-dot5", {scale: 0}, {scale: 1, duration: 0.35, ease: "back.out(2.6)"}, 2.10);
+      tl.fromTo("#s4-row0 .n", {opacity: 0, x: -40}, {opacity: 1, x: 0, duration: 0.5, ease: "expo.out"}, 1.36);tl.fromTo("#s4-row1 .n", {opacity: 0, x: -40}, {opacity: 1, x: 0, duration: 0.5, ease: "expo.out"}, 1.52);tl.fromTo("#s4-row2 .n", {opacity: 0, x: -40}, {opacity: 1, x: 0, duration: 0.5, ease: "expo.out"}, 1.68);tl.fromTo("#s4-row3 .n", {opacity: 0, x: -40}, {opacity: 1, x: 0, duration: 0.5, ease: "expo.out"}, 1.84);tl.fromTo("#s4-row4 .n", {opacity: 0, x: -40}, {opacity: 1, x: 0, duration: 0.5, ease: "expo.out"}, 2.00);tl.fromTo("#s4-row5 .n", {opacity: 0, x: -40}, {opacity: 1, x: 0, duration: 0.5, ease: "expo.out"}, 2.16);
+      tl.fromTo("#s4-row0 .a", {opacity: 0, y: 14}, {opacity: 1, y: 0, duration: 0.4, ease: "expo.out"}, 2.5);
+      tl.fromTo("#s4-row1 .a", {opacity: 0, y: 14}, {opacity: 1, y: 0, duration: 0.4, ease: "expo.out"}, 2.7);
+      tl.fromTo("#s4-row1 .n", {scale: 1}, {scale: 1.08, duration: 0.2, yoyo: true, repeat: 1, ease: "power2.out", transformOrigin: "0% 70%"}, 2.75);
+      tl.fromTo("#s4-r2", {scaleX: 0}, {scaleX: 1, duration: 0.6, ease: "expo.out"}, 2.2);
+      tl.fromTo("#s4-foot", {opacity: 0}, {opacity: 1, duration: 0.4}, 2.4);
+      // exit: yellow iris from the llama
+      tl.fromTo("#s4-iris", {clipPath: "circle(0px at 840px 900px)"}, {clipPath: "circle(2300px at 840px 900px)", duration: 0.6, ease: "power3.in"}, 5.15);
+      window.__timelines["s4"] = tl;
+    })();
+  </script>
+</template>

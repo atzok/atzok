@@ -1,0 +1,1 @@
+{"detail":{"type":"authentication_error","code":"unauthorized","message":"authorization header must contain a valid bearer token","status":"invalid_authorization_header","request_id":"823caa5be464a15929d36e8c7b0d1731"}}
