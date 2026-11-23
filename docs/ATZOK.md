@@ -7,21 +7,21 @@ seções; decisões e novidades vão no diário.
 ## Quem é
 
 - **Ätzøk** (pronúncia: "Atizóc") é o projeto de **Caio Costa**, DJ e produtor da Zona Oeste de São Paulo.
-- Na pista desde 2013, desde os tempos da VOODOOHOP. (Na bio, usar "desde 2013", não "12 anos".)
+- Na pista desde 2013, desde os tempos da VOODOOHOP. (Na bio, não citar tempo de carreira.)
 - Som: breakbeat, trip hop, house e downtempo, com samples vocais picotados, jazz, soul, rock e música brasileira. Da pista cheia ao chillout.
 - Retratos oficiais: Augusto Maravilha.
 
 ## Bio
 
-### Bio atual (2026-11-23, v4 com correções do Caio; formato do press kit de 2023)
+### Bio atual (2026-11-23, v5 com correções do Caio; formato do press kit de 2023)
 
-Caio Costa, a.k.a. Ätzøk, é DJ e produtor da Zona Oeste de São Paulo. Na pista desde 2013, sua trajetória começa a tomar forma quando o coletivo VOODOOHOP passa a impulsionar os núcleos de agito cultural que tomavam as ruas da capital. De lá para cá, tocou na Mamba Negra, no Veludo Festival, na Casa Torta, no Galpão Quina e na Virada Cultural, e fecha 2026 no Chillout Stage do Universo Paralelo.
+Caio Costa, a.k.a. Ätzøk, é DJ e produtor da Zona Oeste de São Paulo. Sua trajetória começa a tomar forma quando o coletivo VOODOOHOP passa a impulsionar os núcleos de agito cultural que tomavam as ruas da capital. De lá para cá, tocou na Mamba Negra, no Veludo Festival, na Casa Torta, no Galpão Quina e na Virada Cultural, e fecha 2026 no Chillout Stage do Universo Paralelo.
 
 Pesquisador musical assíduo, constrói sets experimentais e de estilo próprio, que ora agitam a pista, ora se voltam para a abstração e a viagem do downtempo e do trip hop. Essa versatilidade cabe em qualquer ocasião: da sala de casa, de meias, ao jantar num listening bar, até o peak time de um pistão ou aquele after, seja qual for o horário.
 
 Na produção, lançou o álbum L4 / Amarela, em fita K7, pela DSRPTV recs, o EP Desejos Gelados, pela Bliss Records, e o EP Jazzy, em colaboração com Tha_Guts, também pela DSRPTV recs. Na pista, se apresenta em três formatos: set de pista, long set e Hanky Panky, DJ set em dupla com Boreu.
 
-**Versão curta (Instagram, flyer):** Ätzøk é Caio Costa, DJ e produtor da Zona Oeste de SP. Na pista desde 2013, vindo da VOODOOHOP, vai da pista agitada à viagem do downtempo e do trip hop. Álbum L4 / Amarela (DSRPTV recs), EP Desejos Gelados (Bliss Records) e EP Jazzy, com Tha_Guts (DSRPTV recs).
+**Versão curta (Instagram, flyer):** Ätzøk é Caio Costa, DJ e produtor da Zona Oeste de SP. Vindo da VOODOOHOP, vai da pista agitada à viagem do downtempo e do trip hop. Álbum L4 / Amarela (DSRPTV recs), EP Desejos Gelados (Bliss Records) e EP Jazzy, com Tha_Guts (DSRPTV recs).
 
 ### Bio antiga (Press Kit 2023, PDF no Drive, pasta "ÄTZØK - PRESS KIT")
 
@@ -90,7 +90,8 @@ Mamba Negra, VOODOOHOP, Veludo Festival, Casa Torta, Virada Cultural, Universo P
 - Criado este caderno central (`docs/ATZOK.md`): tudo sobre o Ätzøk passa a ser registrado aqui.
 - Conteúdo inicial reunido do site, do roteiro do vídeo e das regras de design já no repo.
 - Bio nova escrita a partir da bio do Press Kit 2023 (Drive): mesmo formato em terceira pessoa e mesmos dois parágrafos de abertura, atualizada com 12 anos de pista, palcos recentes, discografia atual e os três formatos. Versão curta incluída. Aguardando revisão do Caio.
-- Bio v4 com correções do Caio: "desde 2013" no lugar de "12 anos de pista"; sem "synths suaves e melódicos"; Hanky Panky com Boreu é DJ set em dupla, não live; sem menção às faixas em master; "Jazzy" é um EP em colaboração com Tha_Guts.
+- Bio v5 com correções do Caio: "desde 2013" no lugar de "12 anos de pista"; sem "synths suaves e melódicos"; Hanky Panky com Boreu é DJ set em dupla, não live; sem menção às faixas em master; "Jazzy" é um EP em colaboração com Tha_Guts.
 - Pendência: o site (`site/index.html`) ainda descreve Hanky Panky como "projeto ao vivo em dupla" e a colaboração como "Jazzy Tha_Guts e Ätzøk".
 - Bio v3: segundo parágrafo reescrito. Sai a frase de jazz/soul/house; entra "pesquisador musical assíduo" e a versatilidade (da sala de casa de meias e do listening bar ao peak time num pistão ou no after). Alternativa B do parágrafo enviada no chat, aguardando escolha.
 - Bio v4: sem "breakbeats" e "samples vocais picotados" no segundo parágrafo e na versão curta.
+- Bio v5: sem "desde 2013" (nem "12 anos"); a bio não cita tempo de carreira.
