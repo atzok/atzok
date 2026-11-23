@@ -11,6 +11,15 @@
         ],
         "createdAt": "2026-11-23T18:26:12.290Z",
         "reason": "Mockups copiam o tratamento das artes de referência da Lhama enviadas pelo usuário (título amarelo com contorno, texto creme em pílula rosa); o contorno garante a leitura"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "docs/lhama/formas/aplicacoes.html"
+        ],
+        "createdAt": "2026-11-23T18:26:51.437Z",
+        "reason": "Barras de marca-texto justas ao texto copiam a referência 04 da Lhama (post 'Sabia que as lhamas…') enviada pelo usuário"
       }
     ]
   }
