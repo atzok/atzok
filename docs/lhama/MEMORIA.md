@@ -190,6 +190,16 @@ As três opções:
 2. **Chama:** close abstrato das velas, recoloridas em tons de noite. "SAIDEIRA" gigante na vertical e o texto "a última do ano, com quem ficou até o fim".
 3. **A invertido:** o A triangular da Adca virado de cabeça pra baixo com haste vira a taça em "SAIDEIRA". A textura da água vem rosa e vinho embaixo, e as informações num cartão creme.
 
+**Rodada 8, refs novas.** O usuário mandou mais 3 referências:
+- `referencias/08-glow-nuclear-blunt.jpg`: tipo verde em brilho com eco de movimento.
+- `09-duotone-intended.jpg`: foto em duotone roxo e verde dentro de uma moldura, globo com o nome e código de barras.
+- `10-halftone-tropic-session.jpg`: tipo gigante em retícula grossa amarela sobre preto, explosão de luz em spray no centro e tags contornadas.
+
+**Direção que essas refs apontam:** fundo escuro, UMA tinta luminosa, tipo como imagem e informação pequena e técnica. Tudo é renderizado em `noite.py`, sem HTML.
+1. **Amarelo:** "SAIDEIRA" e "LHAMA TAKEOVER" em retícula grossa amarela, explosão de luz no meio, tags 18.12 e 22H, seta e Carmem Bar.
+2. **Rosa:** brilho rosa com eco de movimento, como numa tela de TV, e as informações empilhadas.
+3. **Velas:** a foto das velas em duotone lavanda e menta dentro de uma moldura, "SAIDEIRA" em lavanda, o globo com "LHAMA TAKEOVER", o código de barras "LT-1812" e as informações nos cantos.
+
 **Arquivos:** `docs/lhama/flyers/takeover-1812/flyer.html`, da rodada 1. Pra renderizar: `node docs/lhama/flyers/render_flyer.js <flyer.html> <formas-png> <saida> <escala>`, com as formas geradas em 1000 px.
 
 ## 6. Outras ideias e anotações soltas
