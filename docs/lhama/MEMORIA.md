@@ -148,7 +148,15 @@ Arquivos da pasta ID VISUAL: os logos `LHAMA-CT`, `-CCT`, `-P` e `-PB`; a cabeç
 2. **Cartaz Bad Lhama:** manchas rasgadas vinho sobre lavanda, letras creme gigantes com contorno rosa, data em grotesca fina, pílulas rosa e cabeça da lhama.
 3. **Lhama clean (versão B):** papel creme, título "Confra da Lhama", grade quando / que horas / onde, lhama no arco nascendo da faixa de ondas e mini-topos-confete.
 
-**Arquivos:** `docs/lhama/flyers/takeover-1812/flyer.html`. Pra renderizar: `node docs/lhama/flyers/render_flyer.js <flyer.html> <formas-png> <saida> <escala>`, com as formas geradas em 1000 px.
+**Rodada 1 reprovada** ("nenhum ficou bom"). Motivos apontados pelo usuário: sem ideia central (parecia colagem de formas da biblioteca), tipografia e hierarquia confusas, muito igual ao que já tinha sido feito e cores e clima errados (não passava confraternização). **Lição: flyer de festa precisa de UM conceito forte, e não só de aplicar o kit.**
+
+**Rodada 2, conceito "brinde e pista"** (escolhido pelo usuário junto com "foto + intervenção"). Paleta quente de noite, com vinho, ameixa, rosa e amarelo, e hierarquia fixa: chamada, título, data e hora, local, endereço, logo. Arquivo `takeover-1812/flyer-v2.html`.
+1. **Disco Lhama:** bola espelhada com feixes de luz, serpentinas e confete, fundo ameixa.
+2. **Tim-tim:** duas lhamas brindando, copos com respingo, sol listrado amarelo sobre rosa.
+3. **Última pista:** a data gigante "18 / 12" é a imagem, com serpentinas passando pelos números e uma bola pequena.
+- O caminho "foto + intervenção" depende de o usuário mandar fotos (do Carmem ou de festas anteriores).
+
+**Arquivos:** `docs/lhama/flyers/takeover-1812/flyer.html`, da rodada 1. Pra renderizar: `node docs/lhama/flyers/render_flyer.js <flyer.html> <formas-png> <saida> <escala>`, com as formas geradas em 1000 px.
 
 ## 6. Outras ideias e anotações soltas
 
