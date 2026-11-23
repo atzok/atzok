@@ -207,6 +207,16 @@ As três opções:
   2. **Rosa:** a taça em neon no meio.
   3. **Velas:** a foto das velas em duotone dentro de uma taça gigante com contorno menta.
 
+**Rodada 10:**
+- O usuário escolheu a **opção amarela** (tipo em retícula com explosão de luz) e pediu variações com uma **taça mais realista e detalhada**. Também achou feio o efeito de antes, a taça chapada.
+- A nova taça é renderizada de verdade e depois impressa em retícula fina. Arquivo: `martini_real.py`.
+- Detalhes da taça: vidro com bordas claras e reflexos, líquido com menisco, azeitona com pimentão, palito, haste e pé.
+
+As três variações:
+1. **t1:** taça grande de frente, com "LHAMA" em cima, "TAKEOVER" embaixo e tags nos cantos.
+2. **t2:** taça inclinada e grande à direita, com o tipo empilhado à esquerda e tags embaixo.
+3. **t3:** duas tintas (amarelo e rosa no líquido, deslocado como erro de registro), com "LHAMA TAKEOVER" numa linha e data grande.
+
 **Arquivos:** `docs/lhama/flyers/takeover-1812/flyer.html`, da rodada 1. Pra renderizar: `node docs/lhama/flyers/render_flyer.js <flyer.html> <formas-png> <saida> <escala>`, com as formas geradas em 1000 px.
 
 ## 6. Outras ideias e anotações soltas
