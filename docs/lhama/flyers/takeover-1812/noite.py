@@ -57,6 +57,26 @@ def stochastic(val, k=1.0, seed=3):
     return (n < np.clip(val * k, 0, 1)).astype(np.float32)
 
 
+def glass_poly(cx, top, rim, depth, stem, foot):
+    return [(cx - rim, top), (cx + rim, top), (cx + 10, top + depth), (cx + 10, top + depth + stem),
+            (cx + foot, top + depth + stem + 18), (cx - foot, top + depth + stem + 18), (cx - 10, top + depth + stem), (cx - 10, top + depth)]
+
+
+def glass_mask(cx, top, rim, depth, stem, foot, outline=0):
+    m = Image.new("L", (W, H), 0); d = ImageDraw.Draw(m)
+    pts = [(x * S, y * S) for x, y in glass_poly(cx, top, rim, depth, stem, foot)]
+    if outline:
+        d.line(pts + [pts[0]], fill=255, width=int(outline * S), joint="curve")
+        ox, oy = cx + rim * 0.38, top + depth * 0.22
+        d.ellipse([(ox - 34) * S, (oy - 30) * S, (ox + 34) * S, (oy + 30) * S], outline=255, width=int(outline * S))
+        d.line([((ox - 20) * S, (oy + 18) * S), ((cx + rim * 0.95) * S, (top - 90) * S)], fill=255, width=int(outline * S))
+    else:
+        d.polygon(pts, fill=255)
+        ox, oy = cx + rim * 0.38, top + depth * 0.22
+        d.ellipse([(ox - 34) * S, (oy - 30) * S, (ox + 34) * S, (oy + 30) * S], fill=0)
+    return np.asarray(m).astype(np.float32) / 255
+
+
 def paper(base, k=0.08):
     base = base * (1 + k * rng.standard_normal((H, W, 1)).astype(np.float32))
     return Image.fromarray(np.clip(base, 0, 255).astype(np.uint8))
@@ -85,27 +105,30 @@ def plain(lines, anchor="la"):
 def r1(col=YEL, name="n1"):
     base = np.ones((H, W, 3), np.float32) * NIGHT
     big = font(F_ADCA, 262)
-    title = text_mask([("SAIDEIRA", big, 540, 175)])
+    title = text_mask([("LHAMA", font(F_ADCA, 300), 540, 175)])
     title_soft = blur(title, 5)
     t_dots = screen_dots(title_soft * 1.08, cell=15)
     # explosão de luz no centro, alongada na horizontal, borda em spray
-    cx, cy = 540, 690
+    cx, cy = 540, 600
     r = np.sqrt(((xx / S - cx) / 1.0) ** 2 + ((yy / S - cy) / 0.55) ** 2)
     star = np.exp(-r / 330) * 1.15 + 0.7 * np.exp(-np.abs(yy / S - cy) / 40) * np.exp(-np.abs(xx / S - cx) / 700)
     ang = np.arctan2(yy / S - cy, xx / S - cx)
     star *= 0.8 + 0.35 * np.cos(ang * 8) ** 2
     burst = np.clip(star * 1.35, 0, 1)
     burst_ink = np.maximum(stochastic(burst ** 1.4, 1.15, 5), (burst > 0.82).astype(np.float32))
-    bottom = text_mask([("LHAMA", font(F_ADCA, 230), 540, 1080), ("TAKEOVER", font(F_ADCA, 150), 540, 1245)])
+    bottom = text_mask([("TAKEOVER", font(F_ADCA, 196), 540, 1200)])
     b_dots = screen_dots(blur(bottom, 5) * 1.08, cell=15)
     small = font(F_MONO, 24)
     tags = tag_mask(["18.12", "22H"], 322, 60, small)
     genre = plain([("A ÚLTIMA DO ANO", font(F_MONO, 24), 1020, 356)], "rm")
-    live = tag_mask(["CARMEM BAR"], 880, 772, small) + plain([("RUA SILVA PINTO, 429", font(F_MONO, 22), 1020, 958)], "rm")
+    live = tag_mask(["CARMEM BAR"], 980, 60, small) + plain([("RUA SILVA PINTO, 429", font(F_MONO, 22), 1020, 1006)], "rm")
     arrow = Image.new("L", (W, H), 0); da = ImageDraw.Draw(arrow)
-    da.polygon([(60 * S, 886 * S), (150 * S, 886 * S), (150 * S, 866 * S), (200 * S, 906 * S), (150 * S, 946 * S), (150 * S, 926 * S), (60 * S, 926 * S)], fill=255)
+    da.polygon([(880 * S, 340 * S), (970 * S, 340 * S), (970 * S, 320 * S), (1020 * S, 360 * S), (970 * S, 400 * S), (970 * S, 380 * S), (880 * S, 380 * S)], fill=0)
     arrow = np.asarray(arrow).astype(np.float32) / 255
-    a = np.clip(t_dots + burst_ink + b_dots + tags + genre + live + arrow, 0, 1)
+    gl = glass_mask(540, 470, 250, 260, 230, 130)
+    cut = blur(gl, 3)
+    a = np.clip(t_dots + burst_ink * (1 - cut) + b_dots + tags + genre + live + arrow, 0, 1)
+    a = np.clip(a * (1 - cut) + glass_mask(540, 470, 250, 260, 230, 130, outline=12) + screen_dots(blur(gl, 30) * 0.35, cell=15) * gl, 0, 1)
     base = ink(base, a, col)
     paper(base).save(os.path.join(OUT, name + ".png")); print(name)
 
@@ -114,12 +137,13 @@ def r1(col=YEL, name="n1"):
 def r2(col=PINK, name="n2"):
     base = np.ones((H, W, 3), np.float32) * hx("#0E0B14")
     f1, f2 = font(F_ADCA, 170), font(F_COND, 175)
-    lines = [("LHAMA", f1, 540, 330), ("TAKEOVER", f1, 540, 485), ("A SAIDEIRA", f2, 540, 650),
-             ("18.12 · 22H", f2, 540, 810), ("CARMEM BAR", f2, 540, 970)]
+    lines = [("LHAMA", f1, 540, 330), ("TAKEOVER", f1, 540, 485),
+             ("18.12 · 22H", font(F_COND, 150), 540, 960), ("CARMEM BAR", font(F_COND, 150), 540, 1100)]
     m = text_mask(lines)
+    m = np.clip(m + glass_mask(540, 590, 170, 170, 110, 90, outline=11), 0, 1)
     # eco horizontal (borrão de movimento) nas linhas 1 e 4, como a ref
     echo = np.zeros_like(m)
-    band = ((np.abs(yy / S - 330) < 70) | (np.abs(yy / S - 810) < 75)).astype(np.float32)
+    band = ((np.abs(yy / S - 330) < 70) | (np.abs(yy / S - 960) < 65)).astype(np.float32)
     for dx, w in [(-560, .35), (-280, .5), (280, .5), (560, .35)]:
         sh = np.roll(m * band, int(dx * S), axis=1)
         sh = np.asarray(Image.fromarray((sh * 255).astype(np.uint8)).filter(ImageFilter.BoxBlur(int(10 * S)))).astype(np.float32) / 255
@@ -134,7 +158,7 @@ def r2(col=PINK, name="n2"):
     # barra de "código" no topo (como o bloco listrado da ref)
     bars = ((np.abs(xx / S - 540) < 190) & (np.abs(yy / S - 140) < 50) & ((yy / S).astype(int) % 9 < 5)).astype(np.float32)
     lum = np.clip(lum + blur(bars, 2) * 0.9, 0, 1.4)
-    small = plain([("RUA SILVA PINTO, 429 · BOM RETIRO", font(F_MONO, 22), 540, 1120), ("LHAMA BOOKINGS · A ÚLTIMA DO ANO", font(F_MONO, 22), 540, 1230)], "mm")
+    small = plain([("RUA SILVA PINTO, 429 · BOM RETIRO", font(F_MONO, 22), 540, 1215), ("LHAMA BOOKINGS · A ÚLTIMA DO ANO", font(F_MONO, 22), 540, 1270)], "mm")
     lum = np.clip(lum + blur(small, 1.2) * 0.85, 0, 1.4)
     out = base + (col[None, None] - base * 0.3) * np.clip(lum, 0, 1)[..., None] + 255 * np.clip(lum - 1, 0, 0.4)[..., None]
     paper(out, 0.1).save(os.path.join(OUT, name + ".png")); print(name)
@@ -151,16 +175,16 @@ def r3(name="n3"):
     duo = lo + (hi - lo) * crop[..., None] ** 0.8
     gmask = np.clip((crop - 0.62) * 4, 0, 1)
     duo = duo * (1 - gmask[..., None]) + MINT * gmask[..., None]
-    base[int(fy * S):int((fy + fh) * S), int(fx * S):int((fx + fw) * S)] = duo
-    title = text_mask([("SAIDEIRA", font(F_ADCA, 210), 540, 170)], "mm")
+    full = np.zeros((H, W, 3), np.float32); full[int(fy * S):int((fy + fh) * S), int(fx * S):int((fx + fw) * S)] = duo
+    gm = glass_mask(540, 300, 400, 420, 260, 200)
+    base = base * (1 - gm[..., None]) + full * gm[..., None]
+    ol = glass_mask(540, 300, 400, 420, 260, 200, outline=6)
+    base = ink(base, ol, MINT)
+    title = text_mask([("LHAMA TAKEOVER", font(F_ADCA, 112), 540, 170)], "mm")
     base = ink(base, np.clip(title, 0, 1), LAV)
     # "globo" com o nome, como o logo da ref
     g = Image.new("L", (W, H), 0); dg = ImageDraw.Draw(g)
-    for k in range(3):
-        dg.ellipse([300 * S, (1105 + k * 20) * S, 780 * S, (1235 - k * 20) * S], outline=255, width=int(3 * S))
-    dg.ellipse([440 * S, 1095 * S, 640 * S, 1245 * S], outline=255, width=int(3 * S))
-    dg.rectangle([318 * S, 1146 * S, 762 * S, 1194 * S], fill=0)
-    dg.text((540 * S, 1170 * S), "LHAMA TAKEOVER", font=font(F_ADCA, 46), fill=255, anchor="mm")
+    dg.text((540 * S, 1170 * S), "A ÚLTIMA DO ANO", font=font(F_ADCA, 42), fill=255, anchor="mm")
     g = np.asarray(g).astype(np.float32) / 255
     info = plain([("18.12 · 22H", font(F_ADCA, 44), 64, 1290), ("CARMEM BAR", font(F_MONO, 22), 64, 1150), ("SILVA PINTO, 429", font(F_MONO, 22), 64, 1185)], "lm")
     code = plain([("LT-1812", font(F_MONO, 22), 1016, 1290)], "rm")

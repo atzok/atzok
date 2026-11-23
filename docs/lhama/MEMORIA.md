@@ -200,6 +200,13 @@ As três opções:
 2. **Rosa:** brilho rosa com eco de movimento, como numa tela de TV, e as informações empilhadas.
 3. **Velas:** a foto das velas em duotone lavanda e menta dentro de uma moldura, "SAIDEIRA" em lavanda, o globo com "LHAMA TAKEOVER", o código de barras "LT-1812" e as informações nos cantos.
 
+**Rodada 9:**
+- O mote "saideira" foi **abandonado** a pedido do usuário ("gastou demais nisso, não ficou bom"). O título é só **LHAMA TAKEOVER**.
+- O usuário gosta dos 3 estilos da rodada 8, mas "falta o martini". Por isso a taça entrou nos três (`noite.py`):
+  1. **Amarelo:** a taça em retícula na frente da explosão de luz.
+  2. **Rosa:** a taça em neon no meio.
+  3. **Velas:** a foto das velas em duotone dentro de uma taça gigante com contorno menta.
+
 **Arquivos:** `docs/lhama/flyers/takeover-1812/flyer.html`, da rodada 1. Pra renderizar: `node docs/lhama/flyers/render_flyer.js <flyer.html> <formas-png> <saida> <escala>`, com as formas geradas em 1000 px.
 
 ## 6. Outras ideias e anotações soltas
