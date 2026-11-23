@@ -219,7 +219,30 @@ As três variações:
 
 **Arquivos:** `docs/lhama/flyers/takeover-1812/flyer.html`, da rodada 1. Pra renderizar: `node docs/lhama/flyers/render_flyer.js <flyer.html> <formas-png> <saida> <escala>`, com as formas geradas em 1000 px.
 
-## 6. Outras ideias e anotações soltas
+## 6. Merch "anúncio clássico" (paródia de maço de cigarro dos anos 90), em andamento
+
+**Pedido (2026-11-23):**
+- Brincar com o logo de uma marca de cigarros: palavra em arco e o desenho do animal embaixo, só que com a lhama.
+- Fazer ilustrações no estilo airbrush dos anúncios dos anos 90, com o personagem de smoking branco.
+- As referências estão em `referencias/11` a `14-merch-camel-ref`.
+
+**Decisões pra não copiar marca registrada:**
+- O lettering é o da própria Lhama (Adca em arco), não a fonte deles.
+- A silhueta da lhama foi desenhada do zero.
+- Sem "since 1913" e **sem cigarro**: no lugar entram a taça de martini e o DJ.
+
+**Rascunho em `docs/lhama/merch/lhama-camel/merch.html`:**
+- **l1:** logo amarelo sobre azul-noite.
+- **l2:** logo marrom sobre mostarda, com "Música psicodélica brasileira".
+- **i1:** a cabeça da lhama da marca sobre um smoking branco, com sombra de palmeira e uma taça na mão.
+- **i2:** "LHAMA" em arco sobre céu roxo, a lhama de smoking na cabine de DJ.
+
+**Limitação:**
+- A ilustração airbrush de verdade precisa de um gerador de imagem ou de um ilustrador.
+- O Canva está sem crédito ("credit quota exceeded").
+- No Figma, a conta tem só um assento de visualização, no plano Starter.
+
+## 7. Outras ideias e anotações soltas
 
 - O "COISAS PARA PENSAR" da planilha BOOKINGS: lugares em SP, agenda de dezembro, festas de fim de ano (inclusive de lojas), raves fora de SP no ano que vem.
 - Conversas anteriores relacionadas ao Atzok, que são outras sessões: "DJ booking na cena underground", "Carrossel Instagram Ätzøk", "Agenda motion video", "Conteúdo de produção musical em cards".

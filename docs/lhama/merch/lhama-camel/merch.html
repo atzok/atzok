@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Lhama · merch "anúncio clássico"</title>
+<!-- Homenagem ao formato de logo de cigarro dos anos 90 (palavra em arco + silhueta),
+     com letra e mascote PRÓPRIOS da Lhama. Sem cigarro. -->
+<style>
+@font-face{font-family:Adca;src:url(../../carrossel-onde-o-clube/Adca.ttf)}
+@font-face{font-family:Mono;src:url(../../carrossel-onde-o-clube/DMMono-Regular.ttf)}
+:root{--lav:#6E78E8;--lavd:#3A3F9C;--pink:#E679D3;--yel:#EEE27A;--ochre:#E9AE48;--brown:#8A5A3C;--cream:#F2EAD8;--ink:#151515}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#666;display:flex;gap:40px;padding:40px;align-items:flex-start;flex-wrap:wrap;width:3500px}
+.f{width:1080px;height:1350px;position:relative;overflow:hidden;font-family:Adca}
+.a{position:absolute}
+</style></head><body>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <!-- silhueta da lhama caminhando, de perfil -->
+    <path id="llama" d="M100 205 C92 180 115 160 150 162 C190 158 230 165 262 160 C275 150 280 130 282 110 C284 90 286 72 292 58 C290 44 292 28 298 14 C304 26 305 40 306 50 C310 40 314 26 322 14 C326 30 324 44 322 54 C336 58 350 66 360 78 C366 86 360 96 348 96 C338 96 330 98 326 104 C320 130 316 160 314 185 C312 205 306 222 300 232 C300 260 302 290 300 312 C302 320 306 326 300 330 L284 330 C282 300 280 270 278 246 C274 260 272 290 272 312 C274 322 276 328 270 330 L256 330 C254 300 254 270 252 248 C215 258 170 258 135 250 C132 275 132 300 130 312 C132 322 134 328 128 330 L114 330 C112 300 112 275 112 255 C108 270 104 295 102 312 C104 322 106 328 100 330 L86 330 C86 300 88 270 92 245 C80 238 74 228 78 216 C84 206 96 210 100 205 Z"/>
+    <path id="arc" d="M120 560 Q540 300 960 560"/>
+    <path id="arc2" d="M150 600 Q540 380 930 600"/>
+    <path id="arcTop" d="M110 300 Q540 40 970 300"/>
+  </defs>
+</svg>
+
+<!-- L1 · logo amarelo sobre azul-noite -->
+<section class="f" id="l1" style="background:var(--lavd)">
+  <svg class="a" width="1080" height="1350" viewBox="0 0 1080 1350">
+    <text font-family="Adca" font-size="190" fill="#EEE27A" letter-spacing="4" text-anchor="middle"><textPath href="#arc" startOffset="50%">LHAMA</textPath></text>
+    <text x="540" y="610" font-family="Mono" font-size="26" fill="#EEE27A" letter-spacing="14" text-anchor="middle">BOOKINGS · SÃO PAULO</text>
+    <use href="#llama" fill="#EEE27A" transform="translate(300 640) scale(1.45)"/>
+  </svg>
+</section>
+
+<!-- L2 · logo marrom sobre mostarda (versão "maço clássico") -->
+<section class="f" id="l2" style="background:var(--ochre)">
+  <svg class="a" width="1080" height="1350" viewBox="0 0 1080 1350">
+    <text font-family="Adca" font-size="170" fill="#8A5A3C" stroke="#4d2f1d" stroke-width="5" paint-order="stroke" letter-spacing="4" text-anchor="middle"><textPath href="#arc2" startOffset="50%">LHAMA</textPath></text>
+    <text x="540" y="650" font-family="Mono" font-size="24" fill="#4d2f1d" letter-spacing="14" text-anchor="middle">MÚSICA PSICODÉLICA BRASILEIRA</text>
+    <text x="540" y="690" font-family="Mono" font-size="20" fill="#8A5A3C" letter-spacing="14" text-anchor="middle" opacity=".7">BOOKINGS</text>
+    <use href="#llama" fill="#8A5A3C" stroke="#4d2f1d" stroke-width="5" transform="translate(330 720) scale(1.3)"/>
+  </svg>
+</section>
+
+<!-- I1 · retrato de anúncio: lhama de smoking branco, sombra de palmeira -->
+<section class="f" id="i1" style="background:linear-gradient(160deg,#F7F4FB 0%,#E7E3F5 60%,#C9C4EC 100%)">
+  <svg class="a" width="1080" height="1350" viewBox="0 0 1080 1350">
+    <defs>
+      <linearGradient id="suit" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#ECEAF6"/><stop offset="1" stop-color="#B9B4E0"/></linearGradient>
+      <linearGradient id="suitS" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#9C95D6" stop-opacity=".7"/><stop offset="1" stop-color="#9C95D6" stop-opacity="0"/></linearGradient>
+      <filter id="soft"><feGaussianBlur stdDeviation="14"/></filter>
+      <radialGradient id="shine" cx=".3" cy=".3" r=".7"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#d9b64a"/></radialGradient>
+    </defs>
+    <!-- sombra de palmeira -->
+    <g fill="#8E9BE8" opacity=".55" filter="url(#soft)" transform="translate(760 40) rotate(20)">
+      <path d="M0 0 C120 120 240 200 400 230" stroke="#8E9BE8" stroke-width="10" fill="none"/>
+      <g>
+        <path d="M60 60 L-40 180 L90 80 Z"/><path d="M110 100 L20 250 L140 120 Z"/><path d="M170 140 L100 300 L200 160 Z"/><path d="M230 170 L190 330 L260 185 Z"/><path d="M300 200 L280 340 L320 210 Z"/>
+        <path d="M80 70 L230 -40 L110 90 Z"/><path d="M140 110 L300 20 L170 130 Z"/><path d="M200 150 L360 80 L230 165 Z"/><path d="M270 185 L420 140 L290 200 Z"/>
+      </g>
+    </g>
+    <!-- sombra projetada do corpo -->
+    <path d="M150 1350 L170 760 C190 640 300 600 380 590 L520 600 L480 1350 Z" fill="#7E78C6" opacity=".35" filter="url(#soft)" transform="translate(-60 30)"/>
+    <!-- paletó -->
+    <path d="M230 1350 L250 850 C255 720 330 650 440 625 L540 610 L640 625 C750 650 825 720 830 850 L850 1350 Z" fill="url(#suit)"/>
+    <path d="M760 700 C820 760 835 900 850 1350 L700 1350 Z" fill="url(#suitS)"/>
+    <!-- camisa e lapelas -->
+    <path d="M470 620 L540 612 L610 620 L590 1000 L540 1060 L490 1000 Z" fill="#FBFAFF"/>
+    <path d="M440 625 L540 1060 L400 820 L470 700 Z" fill="#F2F0FA" stroke="#2b2b46" stroke-width="5"/>
+    <path d="M640 625 L540 1060 L680 820 L610 700 Z" fill="#E6E3F3" stroke="#2b2b46" stroke-width="5"/>
+    <line x1="540" y1="700" x2="540" y2="1000" stroke="#d8d6ea" stroke-width="3"/>
+    <circle cx="540" cy="760" r="7" fill="#2b2b46"/><circle cx="540" cy="830" r="7" fill="#2b2b46"/><circle cx="540" cy="900" r="7" fill="#2b2b46"/>
+    <!-- botões dourados -->
+    <g fill="url(#shine)" stroke="#9c7a20" stroke-width="2"><circle cx="460" cy="1110" r="13"/><circle cx="620" cy="1110" r="13"/><circle cx="460" cy="1200" r="13"/><circle cx="620" cy="1200" r="13"/></g>
+    <!-- bolso + lenço rosa -->
+    <path d="M640 900 L740 890" stroke="#2b2b46" stroke-width="4"/><path d="M660 900 L680 862 L700 880 L716 858 L728 892 Z" fill="#E679D3"/>
+    <!-- gravata borboleta -->
+    <path d="M540 640 L470 600 L470 690 Z" fill="#1f1f33"/><path d="M540 640 L610 600 L610 690 Z" fill="#1f1f33"/><rect x="524" y="624" width="32" height="34" rx="8" fill="#2c2c48"/>
+  </svg>
+  <!-- cabeça: o mascote da própria Lhama -->
+  <img class="a" src="../../carrossel-onde-o-clube/img/head.png" style="left:345px;top:20px;width:330px;filter:drop-shadow(12px 18px 16px rgba(80,70,160,.35))">
+  <!-- taça de martini na mão -->
+  <svg class="a" width="1080" height="1350" viewBox="0 0 1080 1350" style="left:0;top:0">
+    <path d="M250 1140 C240 1100 270 1060 310 1060 C350 1060 370 1100 360 1150 Z" fill="#D9A37A"/>
+    <g transform="translate(250 900)">
+      <path d="M0 0 L140 0 L76 80 L76 180 L110 192 L30 192 L64 180 L64 80 Z" fill="#ffffff" fill-opacity=".55" stroke="#2b2b46" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M22 20 L118 20 L76 72 L64 72 Z" fill="#EEE27A" fill-opacity=".85"/>
+      <circle cx="88" cy="38" r="13" fill="#E679D3" stroke="#2b2b46" stroke-width="4"/><line x1="70" y1="58" x2="128" y2="-30" stroke="#2b2b46" stroke-width="4"/>
+    </g>
+  </svg>
+  <div class="a" style="left:60px;bottom:50px;font-family:Mono;font-size:20px;letter-spacing:.2em;color:#4b4690">LHAMA BOOKINGS</div>
+</section>
+
+<!-- I2 · cartaz: LHAMA em arco + lhama na cabine de DJ, céu roxo e palmeiras -->
+<section class="f" id="i2" style="background:linear-gradient(180deg,#6a2f86 0%,#3b3a9a 55%,#25235e 100%)">
+  <svg class="a" width="1080" height="1350" viewBox="0 0 1080 1350">
+    <defs>
+      <linearGradient id="suit2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#E9E6F7"/><stop offset="1" stop-color="#ABA5DD"/></linearGradient>
+      <linearGradient id="deck" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2a3c"/><stop offset="1" stop-color="#0d0d16"/></linearGradient>
+      <filter id="soft2"><feGaussianBlur stdDeviation="6"/></filter>
+    </defs>
+    <!-- palmeiras escuras -->
+    <g fill="#1e5a6e" opacity=".75" filter="url(#soft2)">
+      <path d="M40 620 C80 520 160 470 260 470 C180 500 120 560 90 640 Z"/><path d="M60 600 C40 500 0 450 -40 420 C30 440 80 500 90 590 Z"/><path d="M90 560 C150 520 220 520 280 560 C210 550 150 560 100 600 Z"/>
+      <path d="M1040 640 C1000 540 920 490 820 490 C900 520 960 580 990 660 Z"/><path d="M1010 600 C1050 520 1090 480 1120 460 C1060 480 1020 530 1000 600 Z"/>
+    </g>
+    <text font-family="Adca" font-size="200" fill="#EEE27A" stroke="#3fc4d4" stroke-width="10" paint-order="stroke" letter-spacing="6" text-anchor="middle"><textPath href="#arcTop" startOffset="50%">LHAMA</textPath></text>
+    <!-- corpo de smoking -->
+    <path d="M240 1350 L260 920 C270 820 360 770 460 755 L540 745 L620 755 C720 770 810 820 820 920 L840 1350 Z" fill="url(#suit2)"/>
+    <path d="M490 750 L540 745 L590 750 L575 950 L540 990 L505 950 Z" fill="#fbfaff"/>
+    <path d="M540 770 L475 735 L475 815 Z" fill="#1f1f33"/><path d="M540 770 L605 735 L605 815 Z" fill="#1f1f33"/><rect x="525" y="754" width="30" height="32" rx="8" fill="#2c2c48"/>
+    <!-- braços / mãos nos toca-discos -->
+    <path d="M270 950 C230 1050 250 1120 330 1150 L380 1110 C320 1090 310 1040 330 980 Z" fill="#DCD8F0"/>
+    <path d="M810 950 C850 1050 830 1120 750 1150 L700 1110 C760 1090 770 1040 750 980 Z" fill="#DCD8F0"/>
+    <!-- cabine -->
+    <rect x="60" y="1120" width="960" height="240" fill="url(#deck)"/>
+    <rect x="60" y="1120" width="960" height="10" fill="#3fc4d4" opacity=".6"/>
+    <g transform="translate(160 1150)"><ellipse cx="110" cy="60" rx="110" ry="42" fill="#0b0b12" stroke="#555" stroke-width="3"/><ellipse cx="110" cy="60" rx="34" ry="13" fill="#E679D3"/></g>
+    <g transform="translate(700 1150)"><ellipse cx="110" cy="60" rx="110" ry="42" fill="#0b0b12" stroke="#555" stroke-width="3"/><ellipse cx="110" cy="60" rx="34" ry="13" fill="#EEE27A"/></g>
+    <rect x="455" y="1150" width="170" height="90" rx="8" fill="#1a1a28" stroke="#555" stroke-width="3"/>
+    <g fill="#3fc4d4"><rect x="480" y="1170" width="10" height="50" rx="3"/><rect x="510" y="1180" width="10" height="40" rx="3"/><rect x="560" y="1165" width="10" height="55" rx="3"/><rect x="590" y="1185" width="10" height="35" rx="3"/></g>
+    <path d="M330 1150 C340 1120 380 1110 400 1130 L390 1160 Z" fill="#D9A37A"/><path d="M750 1150 C740 1120 700 1110 680 1130 L690 1160 Z" fill="#D9A37A"/>
+  </svg>
+  <img class="a" src="../../carrossel-onde-o-clube/img/head.png" style="left:370px;top:230px;width:300px;filter:drop-shadow(10px 16px 14px rgba(0,0,0,.45))">
+</section>
+</body></html>
