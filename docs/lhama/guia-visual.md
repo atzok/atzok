@@ -1,6 +1,15 @@
 # Guia visual — posts da Lhama (versão 1, 2026-11-23)
 
-Este guia vem da análise de 4 posts reais da Lhama, que estão em `docs/lhama/referencias/`. Ele vale para a série do Universo Paralello e para os próximos posts. Quando o guia e o carrossel "Onde o clube" discordarem, vale o guia.
+Este guia vem da análise de 4 posts reais da Lhama, que estão em `docs/lhama/referencias/`. Ele vale para a série do Universo Paralello e para os próximos posts.
+
+## Sempre entregar duas opções
+
+Pedido do usuário em 2026-11-23: todo post da Lhama sai em duas versões.
+
+- **Opção A, "Lhama cheia":** segue este guia, com fundo cheio de padrão, grão forte, texto em pílulas e marca-texto, e o mascote usado como brinquedo.
+- **Opção B, "Lhama clean":** segue o sistema do carrossel "Onde o clube", em `docs/lhama/carrossel-onde-o-clube/`. Papel creme com grão leve, cabeçalho em mono com contador, títulos em Adca com a palavra de destaque em lavanda e sombra rosa, faixa de ondas na base, ilustrações da lhama e fundo alternando creme, lavanda, amarelo e preto. O usuário gostou porque "equilibra o clean com a identidade Lhama".
+
+As duas opções têm o mesmo texto e a mesma ordem de cards. Só muda o tratamento visual.
 
 ## As 4 referências
 

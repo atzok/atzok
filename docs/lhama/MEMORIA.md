@@ -45,6 +45,10 @@ Arquivos da pasta ID VISUAL: os logos `LHAMA-CT`, `-CCT`, `-P` e `-PB`; a cabeç
   - ilustrações da lhama no lugar das ilustrações genéricas;
   - cor de fundo alternando por card: creme, lavanda, amarelo, preto.
 - Filosofia escrita: `docs/lhama/carrossel-onde-o-clube/filosofia.md` ("Fanzine Tropodélico").
+- **Regra permanente (2026-11-23):** todo post sai em **duas opções**.
+  - **A, "Lhama cheia":** segue o `guia-visual.md`, baseado nas referências reais.
+  - **B, "Lhama clean":** segue o sistema do carrossel "Onde o clube", que o usuário elogiou por equilibrar o clean com a ID.
+  - As duas têm o mesmo texto; só muda o visual. Os detalhes estão em `docs/lhama/guia-visual.md`.
 
 ## 3. Entregas feitas
 
