@@ -11,6 +11,26 @@ seções; decisões e novidades vão no diário.
 - Som: breakbeat, trip hop, house e downtempo, com samples vocais picotados, jazz, soul, rock e música brasileira. Da pista cheia ao chillout.
 - Retratos oficiais: Augusto Maravilha.
 
+## Bio
+
+### Bio atual (rascunho de 2026-11-23, segue o formato do press kit de 2023)
+
+Caio Costa, a.k.a. Ätzøk, é DJ e produtor da Zona Oeste de São Paulo. São 12 anos de pista, numa trajetória que começa a tomar forma quando o coletivo VOODOOHOP passa a impulsionar os núcleos de agito cultural que tomavam as ruas da capital. De lá para cá, tocou na Mamba Negra, no Veludo Festival, na Casa Torta, no Galpão Quina e na Virada Cultural, e fecha 2026 no Chillout Stage do Universo Paralelo.
+
+Com um estilo marcado por experimentalismo, breakbeats e samples vocais picotados, sua pesquisa eletrônica ora agita a pista, ora se volta para a abstração e a viagem do downtempo e do trip hop. Jazz, soul, house e música brasileira atravessam suas faixas, costurados por synths suaves e melódicos.
+
+Na produção, lançou o álbum L4 / Amarela, em fita K7, pela DSRPTV recs, o EP Desejos Gelados, pela Bliss Records, e uma colaboração com Jazzy Tha_Guts. No palco, se apresenta em três formatos: set de pista, long set e Hanky Panky, projeto ao vivo em dupla com Boreu. As próximas faixas estão em fase de master.
+
+**Versão curta (Instagram, flyer):** Ätzøk é Caio Costa, DJ e produtor da Zona Oeste de SP. 12 anos de pista desde a VOODOOHOP, entre breakbeat, trip hop, house e downtempo com samples vocais picotados. Álbum L4 / Amarela (DSRPTV recs) e EP Desejos Gelados (Bliss Records).
+
+### Bio antiga (Press Kit 2023, PDF no Drive, pasta "ÄTZØK - PRESS KIT")
+
+> Caio Costa A.k.A Ätzøk, é produtor e dj da Zona Oeste de São Paulo. Sua experiência no prolífico cenário musical e cultural da cidade começa a tomar forma quando o coletivo VOODOOHOP passa a impulsionar os núcleos de agitos culturais que tomavam as ruas da capital.
+>
+> Com um estilo marcado por experimentalismo, breakbeats e samples vocais picotados, sua pesquisa eletrônica alternativa hora agita as pistas de dança, hora se volta para a abstração e viagem do downtempo. Em várias de suas tracks, podemos notar também referências do jazz, soul, house e música brasileira, materializando a mistura a partir de synths suaves e melódicos.
+
+Outros dados do kit de 2023: gigs VOODOOHOP, Mamba Negra, Metanol FM, Caldo, SP na Rua, Virada Cultural, Na Manteiga, Casa Torta, Galpão Quina. Mixes: Tijolo Records Mix Series 010, Isso É Muito VOODOOHOP 40, DSRPTV Files 001, Na Manteiga Radio. Lançamentos no Bandcamp: Quarantine Beats Vol. I e II (Senso). Booking na época: Mouff.cc (Mariana Bernardes). Instagram: @_atzok. SoundCloud: atzokdj.
+
 ## Discografia
 
 | Lançamento | Formato | Selo | Catálogo |
@@ -29,7 +49,7 @@ Próximas faixas em fase de master.
 
 ## Palcos onde já tocou
 
-Mamba Negra, VOODOOHOP, Veludo Festival, Casa Torta, Virada Cultural, Universo Paralelo (Chillout Stage).
+Mamba Negra, VOODOOHOP, Veludo Festival, Casa Torta, Virada Cultural, Universo Paralelo (Chillout Stage). Do kit de 2023: Metanol FM, Caldo, SP na Rua, Na Manteiga, Galpão Quina.
 
 ## Agenda (dez 2026 / jan 2027)
 
@@ -44,7 +64,8 @@ Mamba Negra, VOODOOHOP, Veludo Festival, Casa Torta, Virada Cultural, Universo P
 ## Contato e links
 
 - Booking: **Lhama Bookings**, ou direto com o Caio.
-- Instagram: @atzok
+- Instagram: @_atzok (handle do kit de 2023; o vídeo fala "arroba Atizóc", confirmar)
+- SoundCloud: soundcloud.com/atzokdj · Bandcamp: djatzok.bandcamp.com
 - Plataformas: SoundCloud, Bandcamp, Spotify.
 
 ## Marca
@@ -68,3 +89,4 @@ Mamba Negra, VOODOOHOP, Veludo Festival, Casa Torta, Virada Cultural, Universo P
 ### 2026-11-23
 - Criado este caderno central (`docs/ATZOK.md`): tudo sobre o Ätzøk passa a ser registrado aqui.
 - Conteúdo inicial reunido do site, do roteiro do vídeo e das regras de design já no repo.
+- Bio nova escrita a partir da bio do Press Kit 2023 (Drive): mesmo formato em terceira pessoa e mesmos dois parágrafos de abertura, atualizada com 12 anos de pista, palcos recentes, discografia atual e os três formatos. Versão curta incluída. Aguardando revisão do Caio.
