@@ -12,3 +12,7 @@ Rules:
 ## Figma designs
 
 Before turning a Figma design into code, read `docs/figma-design-system-rules.md` (brand tokens, scene format, safe areas, assets).
+
+## Caderno do Ätzøk
+
+`docs/ATZOK.md` is the central notebook for everything about Ätzøk (artist, releases, shows, agenda, brand, decisions). Read it at the start of any Ätzøk conversation, and whenever something new about Ätzøk comes up, update the relevant section and add a dated entry to its "Diário".
