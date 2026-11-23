@@ -179,6 +179,11 @@ As três opções:
 
 **Pesquisa de referência:** cartazes de riso com duas tintas e erro de registro, e o motivo da taça de martini com tipo editorial grande em campo de cor chapada.
 
+**Rodada 6, "a saideira":** o usuário gostou da ideia da 1ª e da 3ª da rodada martini, mas "ainda não ama". Sugeriu o mote "a saideira". Arquivos: `flyer-v6.html` e as funções `s1` a `s3` em `martini.py`.
+1. **"A saideira":** uma taça só com pouca bebida (a última dose), sobre lavanda com o brilho das velas.
+2. **"Bora pra saideira?":** duas taças brindando sobre rosa.
+3. **12 taças, uma por mês:** onze vazias e a de dezembro cheia, com a azeitona. Papel creme, na versão clean.
+
 **Arquivos:** `docs/lhama/flyers/takeover-1812/flyer.html`, da rodada 1. Pra renderizar: `node docs/lhama/flyers/render_flyer.js <flyer.html> <formas-png> <saida> <escala>`, com as formas geradas em 1000 px.
 
 ## 6. Outras ideias e anotações soltas

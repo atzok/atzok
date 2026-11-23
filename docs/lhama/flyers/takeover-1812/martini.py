@@ -80,12 +80,12 @@ def liquid_poly(R, cx, top, rim, depth, level):
     return pts
 
 
-def draw_martini(base, cx, top, rim, depth, stem, foot, tilt, liq_tex, glow=None, olive=PINK, misreg=PINK, level=0.8):
+def draw_martini(base, cx, top, rim, depth, stem, foot, tilt, liq_tex, glow=None, olive=PINK, misreg=PINK, level=0.8, pick=True, lw=9, off_px=16):
     cone, st, ft, R = glass(None, cx, top, rim, depth, stem, foot, tilt)
     # sombra de registro (rosa deslocado) — erro de impressão
     off = Image.new("RGBA", (W, H), (0, 0, 0, 0)); do = ImageDraw.Draw(off)
     for poly in (cone, st, ft):
-        do.polygon([(x + 16 * S, y + 14 * S) for x, y in poly], fill=misreg + (255,))
+        do.polygon([(x + off_px * S, y + off_px * 0.9 * S) for x, y in poly], fill=misreg + (255,))
     base.alpha_composite(off)
     # vidro: creme translúcido
     g = Image.new("RGBA", (W, H), (0, 0, 0, 0)); dg = ImageDraw.Draw(g)
@@ -93,26 +93,30 @@ def draw_martini(base, cx, top, rim, depth, stem, foot, tilt, liq_tex, glow=None
         dg.polygon(poly, fill=CREAM + (235,))
     base.alpha_composite(g)
     # líquido = textura da água
-    lm = mask(lambda d: d.polygon(liquid_poly(R, cx, top, rim, depth, level), fill=255))
-    t, (x0, y0) = tex(liq_tex, (cx - rim - 40, top - 40, cx + rim + 40, top + depth + 40), 1.25, rot=-tilt)
-    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0)); layer.paste(t, (x0, y0))
-    layer.putalpha(ImageChops.multiply(layer.split()[3], lm))
-    base.alpha_composite(layer)
+    if level > 0:
+        lm = mask(lambda d: d.polygon(liquid_poly(R, cx, top, rim, depth, level), fill=255))
+        t, (x0, y0) = tex(liq_tex, (cx - rim - 40, top - 40, cx + rim + 40, top + depth + 40), 1.25, rot=-tilt)
+        layer = Image.new("RGBA", (W, H), (0, 0, 0, 0)); layer.paste(t, (x0, y0))
+        layer.putalpha(ImageChops.multiply(layer.split()[3], lm))
+        base.alpha_composite(layer)
     # contorno nanquim
     ln = Image.new("RGBA", (W, H), (0, 0, 0, 0)); dl = ImageDraw.Draw(ln)
     for poly in (cone, st, ft):
-        dl.line(poly + [poly[0]], fill=INK + (255,), width=int(9 * S), joint="curve")
-    dl.line(liquid_poly(R, cx, top, rim, depth, level)[:12], fill=INK + (255,), width=int(5 * S))
+        dl.line(poly + [poly[0]], fill=INK + (255,), width=int(lw * S), joint="curve")
+    if level > 0:
+        dl.line(liquid_poly(R, cx, top, rim, depth, level)[:12], fill=INK + (255,), width=int(max(3, lw * 0.55) * S))
     # brilho no vidro
     hl = [R(cx - rim * 0.72, top + 30), R(cx - rim * 0.6, top + 30), R(cx - 30, top + depth * 0.78), R(cx - 44, top + depth * 0.78)]
     dl.polygon(hl, fill=(255, 255, 255, 150))
     base.alpha_composite(ln)
+    if not pick:
+        return R
     # palito com azeitona-lhama (rosa com miolo amarelo)
-    p0, p1 = R(cx + rim * 0.15, top + depth * 0.62), R(cx + rim * 0.85, top - 95)
+    p0, p1 = R(cx + rim * 0.15, top + depth * 0.62), R(cx + rim * 0.85, top - rim * 0.3)
     dp = ImageDraw.Draw(base)
     dp.line([p0, p1], fill=INK, width=int(10 * S))
     ox, oy = R(cx + rim * 0.42, top + depth * 0.05)
-    r = 54 * S
+    r = max(22, rim * 0.165) * S
     dp.ellipse([ox - r + 12 * S, oy - r * 0.86 + 12 * S, ox + r + 12 * S, oy + r * 0.86 + 12 * S], fill=misreg)
     dp.ellipse([ox - r, oy - r * 0.86, ox + r, oy + r * 0.86], fill=olive, outline=INK, width=int(8 * S))
     dp.ellipse([ox - r * 0.36, oy - r * 0.3, ox + r * 0.36, oy + r * 0.3], fill=YEL, outline=INK, width=int(5 * S))
@@ -151,3 +155,33 @@ dt = ImageDraw.Draw(b)
 for x1, y1, x2, y2 in [(520, 420, 500, 350), (545, 410, 548, 330), (570, 420, 594, 352)]:
     dt.line([P(x1, y1), P(x2, y2)], fill=INK, width=int(11 * S))
 save(b, "m3.png")
+
+
+# ---------------------------------------------------------------- rodada 6 · a saideira
+# S1 · uma taça só, quase no fim (a última dose), brilho das velas atrás
+b = halftone_flat(LAVD, LAV, 0.22).convert("RGBA")
+t, (x0, y0) = tex(velas, (140, 300, 940, 1140), 1.0)
+halo = Image.new("RGBA", (W, H), (0, 0, 0, 0)); halo.paste(t, (x0, y0))
+hm = mask(lambda d: d.ellipse([P(260, 440), P(820, 1040)], fill=255)).filter(ImageFilter.GaussianBlur(70 * S))
+halo.putalpha(hm); b.alpha_composite(halo)
+draw_martini(b, 540, 470, 320, 320, 250, 180, 0, agua, level=0.38)
+save(b, "s1.png")
+
+# S2 · tim-tim da saideira: duas taças, fundo rosa
+b = halftone_flat(WINE, PINK, 0.12, angle=15).convert("RGBA")
+draw_martini(b, 380, 470, 230, 250, 230, 140, 14, agua, olive=YEL, misreg=WINE, level=0.5)
+draw_martini(b, 700, 470, 230, 250, 230, 140, -14, velas, olive=MINT, misreg=WINE, level=0.5)
+dt = ImageDraw.Draw(b)
+for x1, y1, x2, y2 in [(520, 380, 500, 310), (545, 370, 548, 290), (570, 380, 594, 312)]:
+    dt.line([P(x1, y1), P(x2, y2)], fill=INK, width=int(11 * S))
+save(b, "s2.png")
+
+# S3 · doze taças = doze meses; onze vazias, a de dezembro cheia
+b = Image.new("RGBA", (W, H), CREAM + (255,))
+cols, rows = 4, 3
+for i in range(12):
+    cx = 165 + (i % cols) * 250; top = 330 + (i // cols) * 255
+    full = i == 11
+    draw_martini(b, cx, top, 88, 92, 82, 56, 0, velas if full else agua, olive=PINK, misreg=PINK if full else LAV,
+                 level=0.85 if full else 0, pick=full, lw=6, off_px=8)
+save(b, "s3.png")
