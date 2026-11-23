@@ -242,6 +242,10 @@ As três variações:
 - O Canva está sem crédito ("credit quota exceeded").
 - No Figma, a conta tem só um assento de visualização, no plano Starter.
 
+**Status (2026-11-23): pausado a pedido do usuário ("deixa quieto").**
+- O login no HeyGen foi feito com o e-mail do usuário, mas a geração de imagem exige o plano HyperFrames Pro, que não está ativo.
+- Os prompts das 3 ilustrações (smoking, DJ e lounge) estão no histórico da conversa, caso o projeto seja retomado.
+
 ## 7. Outras ideias e anotações soltas
 
 - O "COISAS PARA PENSAR" da planilha BOOKINGS: lugares em SP, agenda de dezembro, festas de fim de ano (inclusive de lojas), raves fora de SP no ano que vem.
