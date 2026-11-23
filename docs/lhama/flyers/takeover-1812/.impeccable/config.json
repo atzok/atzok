@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "docs/lhama/flyers/takeover-1812/flyer-v4.html"
+        ],
+        "createdAt": "2026-11-23T19:27:17.196Z",
+        "reason": "Rodada descartada pelo usuário; mantida só como histórico"
+      }
+    ]
+  }
+}

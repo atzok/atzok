@@ -161,6 +161,24 @@ Arquivos da pasta ID VISUAL: os logos `LHAMA-CT`, `-CCT`, `-P` e `-PB`; a cabeç
 2. **Água:** "LHAMA TAKE OVER" em creme e as informações em tarjas preta, lima e creme.
 3. **Bola espelhada em retícula:** "Confra na pista" e as informações em tarjas coloridas.
 
+**Rodadas 3 e 4 reprovadas** ("horrível", "tá ruim"):
+- A rodada 3 desenhava imagens novas em retícula, o que o usuário não queria.
+- Na rodada 4, as imagens de referência foram recoloridas (`recolor.py`, que mantém os pontos da retícula), mas faltava conceito.
+
+**Pedido do usuário:** "você é um diretor de arte absurdo, caça referências de flyers, usa as texturas que enviei, dica: **taça de martini**".
+
+**Rodada 5, martini** (`martini.py` e `flyer-v5.html`):
+- **Conceito:** uma taça de martini gigante como imagem central.
+- **Texturas:** o líquido é a textura da água recolorida e o brilho atrás vem das velas recoloridas.
+- **Detalhes:** sombra rosa de registro deslocada, azeitona rosa com miolo amarelo no palito, contorno de nanquim e tipografia editorial grande.
+
+As três opções:
+1. **"LHAMA":** taça frontal sobre lavanda, com o brilho das velas atrás.
+2. **"A última dose do ano":** taça inclinada derramando a água sobre fundo preto.
+3. **"Tim-tim":** duas taças brindando sobre rosa, com o líquido das velas nas duas versões de cor.
+
+**Pesquisa de referência:** cartazes de riso com duas tintas e erro de registro, e o motivo da taça de martini com tipo editorial grande em campo de cor chapada.
+
 **Arquivos:** `docs/lhama/flyers/takeover-1812/flyer.html`, da rodada 1. Pra renderizar: `node docs/lhama/flyers/render_flyer.js <flyer.html> <formas-png> <saida> <escala>`, com as formas geradas em 1000 px.
 
 ## 6. Outras ideias e anotações soltas

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Lhama Takeover 18.12 · v4</title>
+<!-- Rodada 4: as imagens de referência do usuário recoloridas pra paleta Lhama (recolor.py)
+     + informações da festa no sistema tipográfico da Lhama. F/ = pasta com rc-*.png -->
+<style>
+@font-face{font-family:Adca;src:url(../../carrossel-onde-o-clube/Adca.ttf)}
+@font-face{font-family:Mono;src:url(../../carrossel-onde-o-clube/DMMono-Regular.ttf)}
+:root{--lav:#6E78E8;--lavd:#4E57C2;--pink:#E679D3;--yel:#EEE27A;--mint:#B6D4A6;--cream:#F2EAD8;--ink:#151515;--wine:#82004E;--lilac:#C3A6E6}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#666;display:flex;gap:40px;padding:40px;align-items:flex-start}
+.f{width:1080px;height:1350px;position:relative;overflow:hidden;font-family:Adca}
+.a{position:absolute}
+.bg{position:absolute;left:0;width:1080px;height:1620px;object-fit:cover}
+.up{text-transform:uppercase;line-height:.86}
+.yt{color:var(--yel);-webkit-text-stroke:.07em var(--lavd);paint-order:stroke fill;text-shadow:0 .06em 0 var(--pink),0 .11em 0 var(--lilac)}
+.mono{font-family:Mono;text-transform:uppercase;letter-spacing:.16em}
+.pill{display:inline-block;border-radius:999px;padding:14px 32px 10px;font-size:44px;line-height:1;text-transform:uppercase}
+</style></head><body>
+
+<!-- A · ÁGUA: o preto da sombra segura o título -->
+<section class="f" id="d1" style="background:var(--ink)">
+  <img class="bg" src="F/rc-agua.png" style="top:-40px">
+  <div class="a mono" style="right:60px;top:60px;font-size:22px;color:var(--yel);text-align:right">Lhama Bookings<br>apresenta</div>
+  <div class="a up yt" style="right:56px;top:170px;text-align:right;font-size:150px">Lhama<br>Takeover</div>
+  <div class="a" style="right:60px;top:470px"><span class="pill" style="background:var(--pink);color:var(--ink);font-size:36px">a última do ano</span></div>
+  <div class="a" style="left:56px;top:1000px;display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+    <span class="pill" style="background:var(--ink);color:var(--yel);font-size:92px;padding:18px 40px 10px">18.12 · 22h</span>
+    <span class="pill" style="background:var(--cream);color:var(--ink);border:5px solid var(--ink)">Carmem Bar</span>
+    <span class="pill mono" style="background:var(--ink);color:var(--cream);font-size:20px;padding:12px 24px">Rua Silva Pinto, 429 · Bom Retiro</span>
+  </div>
+  <img class="a" src="../../carrossel-onde-o-clube/img/nome-pb.png" style="right:60px;top:1250px;width:150px;filter:invert(1)">
+</section>
+
+<!-- B · VELAS LAVANDA: confra, acende a última -->
+<section class="f" id="d2" style="background:var(--lav)">
+  <img class="bg" src="F/rc-velas.png" style="top:-60px">
+  <div class="a mono" style="left:60px;right:60px;top:56px;display:flex;justify-content:space-between;font-size:22px;color:var(--ink)"><span>Lhama Takeover</span><span>18 · 12</span></div>
+  <div class="a up yt" style="left:0;right:0;top:110px;text-align:center;font-size:132px">A última<br>do ano</div>
+  <div class="a" style="left:0;right:0;top:1060px;text-align:center"><span class="pill" style="background:var(--yel);color:var(--ink);border:5px solid var(--ink);box-shadow:0 8px 0 var(--ink);font-size:40px">confra da Lhama</span></div>
+  <div class="a" style="left:0;right:0;top:1170px;display:flex;justify-content:center;gap:14px">
+    <span class="pill" style="background:var(--cream);color:var(--ink);font-size:46px">18.12</span>
+    <span class="pill" style="background:var(--pink);color:var(--ink);font-size:46px">22h</span>
+    <span class="pill" style="background:var(--cream);color:var(--ink);font-size:46px">Carmem Bar</span>
+  </div>
+  <div class="a mono" style="left:0;right:0;top:1272px;text-align:center;font-size:20px;color:var(--cream)">Rua Silva Pinto, 429 · Bom Retiro</div>
+</section>
+
+<!-- C · VELAS ROSA, versão clean: papel creme + janela -->
+<section class="f" id="d3" style="background:var(--cream)">
+  <div class="a mono" style="left:64px;right:64px;top:60px;display:flex;justify-content:space-between;font-size:21px;padding-bottom:20px;border-bottom:4px solid var(--ink)"><span>Lhama Takeover</span><span>a última do ano</span></div>
+  <div class="a" style="left:64px;top:132px;width:520px;height:900px;border-radius:260px 260px 28px 28px;overflow:hidden;border:6px solid var(--ink)">
+    <img src="F/rc-velas-menta.png" style="width:640px;margin-left:-60px;margin-top:-20px">
+  </div>
+  <div class="a" style="left:630px;top:150px;width:390px">
+    <div class="up" style="font-size:96px;color:var(--ink)">Lhama<br><span style="color:var(--wine);text-shadow:.045em .045em 0 var(--pink)">Take<br>over</span></div>
+    <div style="margin-top:34px;font-size:40px;line-height:1.15;color:var(--wine)">confra de fim de ano. traz quem você ama.</div>
+  </div>
+  <div class="a" style="left:630px;top:700px;width:390px;border-top:4px solid var(--ink);padding-top:20px">
+    <div class="mono" style="font-size:18px;color:var(--wine)">Quando</div><div style="font-size:76px;line-height:1">18.12 · 22h</div>
+    <div class="mono" style="font-size:18px;color:var(--wine);margin-top:24px">Onde</div><div style="font-size:60px;line-height:1">Carmem Bar</div>
+    <div class="mono" style="font-size:18px;margin-top:14px;line-height:1.5">Rua Silva Pinto, 429<br>Bom Retiro · SP</div>
+  </div>
+  <div class="a" style="left:0;top:1090px;width:1080px;height:260px;background:url(../../carrossel-onde-o-clube/img/fundo-azul.jpg) center/auto 100%;border-top:6px solid var(--ink)"></div>
+  <img class="a" src="../../carrossel-onde-o-clube/img/nome-pb.png" style="left:64px;top:1250px;width:160px;filter:invert(1)">
+</section>
+</body></html>
