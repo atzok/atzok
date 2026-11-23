@@ -88,6 +88,12 @@ Arquivos da pasta ID VISUAL: os logos `LHAMA-CT`, `-CCT`, `-P` e `-PB`; a cabeç
 2. Claude analisa o quadro e escreve um guia visual da série, com um modelo de card reaproveitável na ID da Lhama.
 3. A cada post, o usuário manda o texto ou as ideias, e Claude melhora o texto e o design a partir das referências.
 
+**Quadro de referências:**
+- 2026-11-23: o usuário mandou 4 posts reais da Lhama ("O que fazemos?", "Bad Lhama in the Veludo Room", "Badroom", "Sabia que as lhamas não gostam de andar sozinhas?").
+- As imagens estão em `docs/lhama/referencias/`.
+- A análise e as regras da série estão em **`docs/lhama/guia-visual.md`**, que vale mais que o sistema do carrossel "Onde o clube".
+- Resumo da análise: fundo cheio de padrão, grão forte, texto com contorno, texto sobre pílulas e barras de marca-texto, mascote usado como brinquedo (caleidoscópio) e voz com pergunta-gancho.
+
 **Line-up da Lhama no UP:**
 
 | Artista | Pista | Data | Status |
@@ -103,7 +109,7 @@ Arquivos da pasta ID VISUAL: os logos `LHAMA-CT`, `-CCT`, `-P` e `-PB`; a cabeç
 1. Line-up completo da Lhama no UP, com pista e dia.
 2. O que quis dizer com "low".
 3. Datas de publicação da série. Sugestão: até meados de dezembro.
-4. O quadro de referências.
+4. ~~O quadro de referências~~ (recebido).
 
 **Próximo passo de Claude:** pesquisar a história do UP com fontes (edições, local em Pratigi/Ituberá-BA, pistas) e rascunhar o texto do post geral.
 
