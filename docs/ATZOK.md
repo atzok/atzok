@@ -66,5 +66,5 @@ Mamba Negra, VOODOOHOP, Veludo Festival, Casa Torta, Virada Cultural, Universo P
 ## Diário
 
 ### 2026-11-23
-- Criado este caderno central (`docs/ATZOK.md`) : tudo sobre o Ätzøk passa a ser registrado aqui.
+- Criado este caderno central (`docs/ATZOK.md`): tudo sobre o Ätzøk passa a ser registrado aqui.
 - Conteúdo inicial reunido do site, do roteiro do vídeo e das regras de design já no repo.
