@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "docs/lhama/formas/aplicacoes.html"
+        ],
+        "createdAt": "2026-11-23T18:26:12.290Z",
+        "reason": "Mockups copiam o tratamento das artes de referência da Lhama enviadas pelo usuário (título amarelo com contorno, texto creme em pílula rosa); o contorno garante a leitura"
+      }
+    ]
+  }
+}

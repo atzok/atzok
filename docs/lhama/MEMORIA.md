@@ -58,6 +58,12 @@ Arquivos da pasta ID VISUAL: os logos `LHAMA-CT`, `-CCT`, `-P` e `-PB`; a cabeç
 | 2026-11-23 | Mesmo carrossel refeito na ID da Lhama, 2160×2700, com a mesma legenda | Fonte: `docs/lhama/carrossel-onde-o-clube/`. Pra gerar os PNGs: `node render.js out 2` |
 | 2026-11-23 | Reels do carrossel, 1080×1920, 37 s, sem som. HyperFrames, com transições ligando as cenas. | `videos/onde-o-clube/` (edite `gen.py`, rode `python3 gen.py`, renderize). O MP4 não vai pro git. |
 
+| 2026-11-23 | **20 formas da Lhama**, prévia em baixa pra aprovação: topográficas, linhas menta, minhocas 3D, manchas com anéis, rabisco de órbita, pílula e moldura em arco. Vêm da referência `referencias/05-formas-topograficas-minhocas.jpg`. Junto, 3 aplicações: "Quem lhama com a gente?", story "Pra conhecer no UP" e capa "Sabia que o UP…". | Código em `docs/lhama/formas/`. Formas: `python3 gen_formas.py`; PNG: `node render_formas.js <saida> <px>`; grão: `python3 grao.py <in> <out>`; mockups: `node render_aplicacoes.js <pngs> <saida> 0.5`. **Aguardando aprovação.** Depois sai em 4000 px, com e sem grão. |
+
+**Histórico das formas:**
+- Numa conversa paralela, a v1 ficou "horrível" segundo o usuário, porque tinha formas genéricas, estrela, gota e contorno preto.
+- A regra que valeu: seguir só a linguagem das artes (curvas de nível paralelas, minhoca gorda com fio amarelo e camadas deslocadas, manchas com anéis) e tirar as cores dos pixels.
+
 **Pendência do reels:** falta trilha. A ElevenLabs recusa a chave porque o proxy envia `Authorization: Bearer` e ela espera `xi-api-key`. O usuário precisa ajustar o header do segredo em Network secrets. Também pode mandar uma faixa própria.
 
 **Card 5 do carrossel:** a Dona Sinistrus e a Diza aparecem com sets, não com faixas lançadas. O usuário decidiu deixar assim.
