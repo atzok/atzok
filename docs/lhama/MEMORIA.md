@@ -64,6 +64,10 @@ Arquivos da pasta ID VISUAL: os logos `LHAMA-CT`, `-CCT`, `-P` e `-PB`; a cabeç
 
 | 2026-11-23 | **Formas em alta, entregues:** o usuário aprovou tudo ("quero tudo"). São 96 PNGs transparentes, 4000 px, 300 dpi, sem grão, em 4 zips por família, mais `textura-grao-4000px.png` (cinza 50% pra usar no modo Sobrepor, com máscara de corte). Com grão embutido, cada PNG passaria de 10 MB e o pacote de 1 GB, por isso o grão foi separado. | Pra gerar de novo: `node render_formas.js <saida> 4000` |
 
+| 2026-11-23 | **PDF de direcionamento visual**, 18 páginas em 16:9, pra apresentar à dona da Lhama. Páginas: capa, o que é a Lhama, logo, mascote, paleta, tipografia, DNA, linguagens A e B, formas, cores das formas, grão, carrossel, celular, merch pequeno (adesivos, bottons, chaveiro), merch de festival (copo, boné, ecobag), vestir (camiseta, pulseiras), regras e próximos passos. Prévia em baixa enviada. **Aguardando aprovação pra gerar o PDF final.** | `docs/lhama/direcionamento/` (`deck.html`, `prep_merch.py`, `render_deck.js`). A pasta de build precisa das formas em 1000 px, dos adesivos, dos cards, dos frames do reels e dos mockups. |
+
+**OmniRoute:** o usuário pediu pra usar o OmniRoute pra economizar. Ele roda em localhost:20128, mas o único provedor é o Gemini, com a chave desativada, e o host da API do Google dá 403. Por isso os mockups foram feitos em código.
+
 **Formas novas (21 a 30):** mancha rasgada (Bad Lhama); lava do Badroom; argolas-confete; fita de ondas com o padrão LHAMAFUNDO; fita dupla; caleidoscópio de lhamas; mini-topos-confete; minhoca em onda longa; fundo de linhas (É booking); adesivo-blob 3D.
 
 **Paletas:** lavanda, rosa, menta, amarelo, vinho, violeta, grafite. As fitas usam os fundos azul, amarelo e preto.
