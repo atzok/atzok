@@ -20,6 +20,15 @@
         ],
         "createdAt": "2026-11-21T03:46:59.344Z",
         "reason": "assistant triage: page ground is light #ece7dc, the hex is not in the source and the rendered scans do not flag it; comes from unused kit CSS"
+      },
+      {
+        "rule": "overused-font",
+        "value": "helvetica",
+        "files": [
+          "docs/lhama/flyers/takeover-1812/flyer.html"
+        ],
+        "createdAt": "2026-11-23T19:16:13.707Z",
+        "reason": "Opção 2 usa grotesca (Helvetica) de propósito, copiando datas e pílulas do cartaz 'Bad Lhama in the Veludo Room' enviado pelo usuário"
       }
     ]
   }
