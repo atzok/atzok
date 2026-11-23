@@ -184,6 +184,12 @@ As três opções:
 2. **"Bora pra saideira?":** duas taças brindando sobre rosa.
 3. **12 taças, uma por mês:** onze vazias e a de dezembro cheia, com a azeitona. Papel creme, na versão clean.
 
+**Rodada 7, menos literal** (pedido: "não precisa ser tão literal, o design ainda não tá tão bom, você consegue mais"). Arquivo `flyer-v7.html`; as fontes novas (Instrument Serif itálico e Big Shoulders, licença OFL) estão em `flyers/fonts/`.
+- **Princípios:** a textura é a imagem, a taça vira forma, e a tipografia combina Adca com uma serifa itálica, que dá voz de convite.
+1. **Recorte:** a água ocupa o fundo inteiro e a taça é um vazio de papel creme recortado. "a saideira" em serifa itálica e as informações numa grade embaixo.
+2. **Chama:** close abstrato das velas, recoloridas em tons de noite. "SAIDEIRA" gigante na vertical e o texto "a última do ano, com quem ficou até o fim".
+3. **A invertido:** o A triangular da Adca virado de cabeça pra baixo com haste vira a taça em "SAIDEIRA". A textura da água vem rosa e vinho embaixo, e as informações num cartão creme.
+
 **Arquivos:** `docs/lhama/flyers/takeover-1812/flyer.html`, da rodada 1. Pra renderizar: `node docs/lhama/flyers/render_flyer.js <flyer.html> <formas-png> <saida> <escala>`, com as formas geradas em 1000 px.
 
 ## 6. Outras ideias e anotações soltas
