@@ -29,6 +29,15 @@
         ],
         "createdAt": "2026-11-23T19:16:13.707Z",
         "reason": "Opção 2 usa grotesca (Helvetica) de propósito, copiando datas e pílulas do cartaz 'Bad Lhama in the Veludo Room' enviado pelo usuário"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "docs/lhama/flyers/takeover-1812/flyer-v4.html"
+        ],
+        "createdAt": "2026-11-23T19:28:06.301Z",
+        "reason": "Rodada 4 descartada pelo usuário; arquivo mantido só como histórico"
       }
     ]
   }
