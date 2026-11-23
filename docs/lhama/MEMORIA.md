@@ -156,6 +156,11 @@ Arquivos da pasta ID VISUAL: os logos `LHAMA-CT`, `-CCT`, `-P` e `-PB`; a cabeç
 3. **Última pista:** a data gigante "18 / 12" é a imagem, com serpentinas passando pelos números e uma bola pequena.
 - O caminho "foto + intervenção" depende de o usuário mandar fotos (do Carmem ou de festas anteriores).
 
+**Rodada 3, retícula:** o usuário mandou 2 referências de design: `referencias/06-halftone-agua.jpg`, cáusticas de água em azul e lima com sombra preta, e `07-halftone-velas.jpg`, duas velas com chama lima e rosa sobre lilás. É uma estética de risografia e meio-tom, com cores azul `#4038C8`, lima `#C4EE6E`, rosa `#EC80DE`, preto e papel. Em `halftone.py`, as imagens são desenhadas por camadas de tinta e impressas com retícula girada por tinta. Em `flyer-v3.html`, a tipografia é enxuta (Adca e DM Mono) e as informações vão em tarjas.
+1. **Velas:** "a última do ano, vem brindar", com uma faixa preta embaixo pras informações.
+2. **Água:** "LHAMA TAKE OVER" em creme e as informações em tarjas preta, lima e creme.
+3. **Bola espelhada em retícula:** "Confra na pista" e as informações em tarjas coloridas.
+
 **Arquivos:** `docs/lhama/flyers/takeover-1812/flyer.html`, da rodada 1. Pra renderizar: `node docs/lhama/flyers/render_flyer.js <flyer.html> <formas-png> <saida> <escala>`, com as formas geradas em 1000 px.
 
 ## 6. Outras ideias e anotações soltas
