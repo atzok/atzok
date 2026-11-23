@@ -7,21 +7,21 @@ seções; decisões e novidades vão no diário.
 ## Quem é
 
 - **Ätzøk** (pronúncia: "Atizóc") é o projeto de **Caio Costa**, DJ e produtor da Zona Oeste de São Paulo.
-- 12 anos de pista, desde os tempos da VOODOOHOP.
+- Na pista desde 2013, desde os tempos da VOODOOHOP. (Na bio, usar "desde 2013", não "12 anos".)
 - Som: breakbeat, trip hop, house e downtempo, com samples vocais picotados, jazz, soul, rock e música brasileira. Da pista cheia ao chillout.
 - Retratos oficiais: Augusto Maravilha.
 
 ## Bio
 
-### Bio atual (rascunho de 2026-11-23, segue o formato do press kit de 2023)
+### Bio atual (2026-11-23, v2 com correções do Caio; formato do press kit de 2023)
 
-Caio Costa, a.k.a. Ätzøk, é DJ e produtor da Zona Oeste de São Paulo. São 12 anos de pista, numa trajetória que começa a tomar forma quando o coletivo VOODOOHOP passa a impulsionar os núcleos de agito cultural que tomavam as ruas da capital. De lá para cá, tocou na Mamba Negra, no Veludo Festival, na Casa Torta, no Galpão Quina e na Virada Cultural, e fecha 2026 no Chillout Stage do Universo Paralelo.
+Caio Costa, a.k.a. Ätzøk, é DJ e produtor da Zona Oeste de São Paulo. Na pista desde 2013, sua trajetória começa a tomar forma quando o coletivo VOODOOHOP passa a impulsionar os núcleos de agito cultural que tomavam as ruas da capital. De lá para cá, tocou na Mamba Negra, no Veludo Festival, na Casa Torta, no Galpão Quina e na Virada Cultural, e fecha 2026 no Chillout Stage do Universo Paralelo.
 
-Com um estilo marcado por experimentalismo, breakbeats e samples vocais picotados, sua pesquisa eletrônica ora agita a pista, ora se volta para a abstração e a viagem do downtempo e do trip hop. Jazz, soul, house e música brasileira atravessam suas faixas, costurados por synths suaves e melódicos.
+Com um estilo marcado por experimentalismo, breakbeats e samples vocais picotados, sua pesquisa eletrônica ora agita a pista, ora se volta para a abstração e a viagem do downtempo e do trip hop. Jazz, soul, house e música brasileira atravessam suas faixas.
 
-Na produção, lançou o álbum L4 / Amarela, em fita K7, pela DSRPTV recs, o EP Desejos Gelados, pela Bliss Records, e uma colaboração com Jazzy Tha_Guts. No palco, se apresenta em três formatos: set de pista, long set e Hanky Panky, projeto ao vivo em dupla com Boreu. As próximas faixas estão em fase de master.
+Na produção, lançou o álbum L4 / Amarela, em fita K7, pela DSRPTV recs, o EP Desejos Gelados, pela Bliss Records, e o EP Jazzy, em colaboração com Tha_Guts, também pela DSRPTV recs. Na pista, se apresenta em três formatos: set de pista, long set e Hanky Panky, DJ set em dupla com Boreu.
 
-**Versão curta (Instagram, flyer):** Ätzøk é Caio Costa, DJ e produtor da Zona Oeste de SP. 12 anos de pista desde a VOODOOHOP, entre breakbeat, trip hop, house e downtempo com samples vocais picotados. Álbum L4 / Amarela (DSRPTV recs) e EP Desejos Gelados (Bliss Records).
+**Versão curta (Instagram, flyer):** Ätzøk é Caio Costa, DJ e produtor da Zona Oeste de SP. Na pista desde 2013, vindo da VOODOOHOP, entre breakbeat, trip hop, house e downtempo com samples vocais picotados. Álbum L4 / Amarela (DSRPTV recs), EP Desejos Gelados (Bliss Records) e EP Jazzy, com Tha_Guts (DSRPTV recs).
 
 ### Bio antiga (Press Kit 2023, PDF no Drive, pasta "ÄTZØK - PRESS KIT")
 
@@ -37,15 +37,15 @@ Outros dados do kit de 2023: gigs VOODOOHOP, Mamba Negra, Metanol FM, Caldo, SP 
 |---|---|---|---|
 | L4 / Amarela (Linha Quatro Amarela) | Álbum em fita K7 | DSRPTV recs (Disruptive Records) | DSRPTV041 |
 | Desejos Gelados | EP | Bliss Records | BLISS030 |
-| Jazzy Tha_Guts e Ätzøk | Colaboração | DSRPTV recs | DSRPTV003 |
+| Jazzy (Ätzøk e Tha_Guts) | EP em colaboração | DSRPTV recs | DSRPTV003 |
 
-Próximas faixas em fase de master.
+Próximas faixas em fase de master (não mencionar na bio).
 
 ## Formatos de show
 
 1. **Set de pista**: breakbeat e house com vocais picotados (ex.: Desistência Clubber).
 2. **Long set**: horas de downtempo e trip hop com jazz e soul (ex.: Luci Bar).
-3. **Hanky Panky, com Boreu**: projeto ao vivo em dupla; show da Veneno Live gravado no YouTube.
+3. **Hanky Panky, com Boreu**: DJ set em dupla (não é live). Sessão da Veneno Live gravada no YouTube.
 
 ## Palcos onde já tocou
 
@@ -90,3 +90,5 @@ Mamba Negra, VOODOOHOP, Veludo Festival, Casa Torta, Virada Cultural, Universo P
 - Criado este caderno central (`docs/ATZOK.md`): tudo sobre o Ätzøk passa a ser registrado aqui.
 - Conteúdo inicial reunido do site, do roteiro do vídeo e das regras de design já no repo.
 - Bio nova escrita a partir da bio do Press Kit 2023 (Drive): mesmo formato em terceira pessoa e mesmos dois parágrafos de abertura, atualizada com 12 anos de pista, palcos recentes, discografia atual e os três formatos. Versão curta incluída. Aguardando revisão do Caio.
+- Bio v2 com correções do Caio: "desde 2013" no lugar de "12 anos de pista"; sem "synths suaves e melódicos"; Hanky Panky com Boreu é DJ set em dupla, não live; sem menção às faixas em master; "Jazzy" é um EP em colaboração com Tha_Guts.
+- Pendência: o site (`site/index.html`) ainda descreve Hanky Panky como "projeto ao vivo em dupla" e a colaboração como "Jazzy Tha_Guts e Ätzøk".
