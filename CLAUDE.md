@@ -9,6 +9,10 @@ Rules:
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
 - A committed graphify-out/graph.json is rewritten whole on every build, so a large diff to it in a pull request is expected. Do not flag it as churn or suggest skipping the graph rebuild or its hooks.
 
+## Lhama Bookings
+
+Tudo sobre a Lhama Bookings (identidade visual, artistas, entregas, série do Universo Paralello, pendências) está em `docs/lhama/MEMORIA.md`. Leia antes de qualquer trabalho da Lhama e atualize ao fim de cada entrega ou decisão. Dados pessoais e cachês dos artistas não entram no repositório.
+
 ## Figma designs
 
 Before turning a Figma design into code, read `docs/figma-design-system-rules.md` (brand tokens, scene format, safe areas, assets).
