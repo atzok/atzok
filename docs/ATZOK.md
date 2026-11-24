@@ -39,6 +39,19 @@ Outros dados do kit de 2023: gigs VOODOOHOP, Mamba Negra, Metanol FM, Caldo, SP 
 | Desejos Gelados | EP | Bliss Records | BLISS030 |
 | Jazzy (Ätzøk e Tha_Guts) | EP em colaboração | DSRPTV recs | DSRPTV003 |
 
+### Desejos Gelados EP (Bliss Records, BLISS030)
+
+| # | Faixa | BPM (análise) |
+|---|---|---|
+| 01 | Desejos Gelados | 128 |
+| 02 | That's Right | 128 |
+| 03 | Spacial Keys | 85 |
+| 04 | Baile | 124 |
+| 05 | Desejos Gelados (DJ Melted Remix) | 128 |
+| 06 | That's Right (dsrptv soundsystem Remix) | 128 |
+
+Masters em AIFF + capa: zip "Bliss Records - BLISS030- Ätzøk – Desejos Gelados.zip" no Drive (pasta ALBUNS, EPS & SINGLES).
+
 Próximas faixas em fase de master (não mencionar na bio).
 
 ## Formatos de show
@@ -113,3 +126,4 @@ Versão Ätzøk (em construção, `videos/raio-x/`, série **ÄTZØK / RAIO-X**)
 - RAIO-X: modelo montado em `videos/raio-x/` (análise automática de BPM/drop + painel em HyperFrames, cores da marca, fim com wordmark e @_atzok). Testado com áudio sintético. Primeira faixa escolhida: "Atzok goes dub". Falta o arquivo de áudio para gerar o vídeo de verdade.
 - Instagram confirmado: @_atzok (usado no fim do RAIO-X).
 - RAIO-X #1 renderizado: "Goes Dub" (atzok goes dub.wav do Drive), 75 BPM, trecho 147,2 s → 172,8 s da faixa, drop em 160,0 s (compasso 5 de 8). Frases: "O grave some. Só o eco segura." / "Compasso 5: o grave volta." Arquivos do Drive compartilhados por link podem ser baixados direto nesta sessão.
+- RAIO-X do EP Desejos Gelados: as 6 faixas analisadas a partir do zip do Drive; frases conferidas com o volume por compasso de cada trecho; config em `videos/raio-x/faixas/bliss030.json`, gerado com `tools/lote.py`. Modelo ganhou "versão" (remix, no lugar do BPM) e "crédito" no final.

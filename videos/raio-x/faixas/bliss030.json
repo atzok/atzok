@@ -1,0 +1,55 @@
+{
+  "nota": "EP Desejos Gelados (Bliss Records, BLISS030). Áudios: zip do Drive 'Bliss Records - BLISS030- Ätzøk – Desejos Gelados.zip', faixas renomeadas 01.aiff…06.aiff.",
+  "faixas": [
+    {
+      "audio": "01.aiff",
+      "saida": "bliss030-01-desejos-gelados",
+      "titulo": "Desejos Gelados",
+      "frase1": "Oito compassos de agudo fechado.",
+      "frase2": "Compasso 9: abre agudo e grave.",
+      "credito": "Desejos Gelados EP · Bliss Records"
+    },
+    {
+      "audio": "02.aiff",
+      "saida": "bliss030-02-thats-right",
+      "titulo": "That's Right",
+      "frase1": "Corta, volta, corta de novo.",
+      "frase2": "Compasso 9: agora não para.",
+      "credito": "Desejos Gelados EP · Bliss Records"
+    },
+    {
+      "audio": "03.aiff",
+      "saida": "bliss030-03-spacial-keys",
+      "titulo": "Spacial Keys",
+      "frase1": "Quatro compassos sem grave.",
+      "frase2": "Compasso 6: o grave chega pesado.",
+      "credito": "Desejos Gelados EP · Bliss Records"
+    },
+    {
+      "audio": "04.aiff",
+      "saida": "bliss030-04-baile",
+      "titulo": "Baile",
+      "frase1": "Um compasso de respiro e…",
+      "frase2": "Compasso 8: o baile segue.",
+      "credito": "Desejos Gelados EP · Bliss Records"
+    },
+    {
+      "audio": "05.aiff",
+      "saida": "bliss030-05-desejos-gelados-dj-melted-remix",
+      "titulo": "Desejos Gelados",
+      "versao": "DJ Melted Remix",
+      "frase1": "O grave vai sumindo aos poucos.",
+      "frase2": "Compasso 9: o grave volta inteiro.",
+      "credito": "Desejos Gelados EP · Bliss Records"
+    },
+    {
+      "audio": "06.aiff",
+      "saida": "bliss030-06-thats-right-dsrptv-remix",
+      "titulo": "That's Right",
+      "versao": "dsrptv soundsystem rmx",
+      "frase1": "Um compasso de silêncio total.",
+      "frase2": "Compasso 9: o som volta inteiro.",
+      "credito": "Desejos Gelados EP · Bliss Records"
+    }
+  ]
+}
