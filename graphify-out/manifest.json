@@ -6438,9 +6438,9 @@
     "semantic_hash": ""
   },
   "docs/ATZOK.md": {
-    "mtime": 1795452773.22485,
-    "seen": 1795452788.0014124,
-    "ast_hash": "960a3524676a9c729187c7d03c632e5e",
+    "mtime": 1795561731.3798344,
+    "seen": 1795561747.0284505,
+    "ast_hash": "e1487cf6632bfdbfd7c5b80d3f444bba",
     "semantic_hash": ""
   },
   "docs/figma-design-system-rules.md": {
@@ -7857,6 +7857,54 @@
     "mtime": 1795447655.0263715,
     "seen": 1795452788.0016708,
     "ast_hash": "e7e7597bde6612d2ac1a24d5b5590b18",
+    "semantic_hash": ""
+  },
+  "videos/raio-x/hyperframes.json": {
+    "mtime": 1795561479.4232457,
+    "seen": 1795561747.027777,
+    "ast_hash": "7b33c6cb9ecfe380a4657c509ff8af33",
+    "semantic_hash": ""
+  },
+  "videos/raio-x/meta.json": {
+    "mtime": 1795561479.525131,
+    "seen": 1795561747.027779,
+    "ast_hash": "23645c9ceff9d8c4a2f6825024640f42",
+    "semantic_hash": ""
+  },
+  "videos/raio-x/package.json": {
+    "mtime": 1795561479.525131,
+    "seen": 1795561747.0277805,
+    "ast_hash": "ce28e333d352a55191183030ecd938b0",
+    "semantic_hash": ""
+  },
+  "videos/raio-x/tools/analisar.py": {
+    "mtime": 1795561652.8897657,
+    "seen": 1795561747.0277817,
+    "ast_hash": "6f094ed95897922c11513c59d85c3306",
+    "semantic_hash": ""
+  },
+  "videos/raio-x/COMO-USAR.md": {
+    "mtime": 1795561731.3639014,
+    "seen": 1795561747.0285304,
+    "ast_hash": "c236161749dc4be0352cd26e7093a8e5",
+    "semantic_hash": ""
+  },
+  "videos/raio-x/compositions/painel.html": {
+    "mtime": 1795561696.0718994,
+    "seen": 1795561747.0285323,
+    "ast_hash": "7aa2075a3b40420b3cc809342ea6876d",
+    "semantic_hash": ""
+  },
+  "videos/raio-x/index.html": {
+    "mtime": 1795561676.1075165,
+    "seen": 1795561747.028533,
+    "ast_hash": "b2332df803387f2914c1b45ef3a1dd0d",
+    "semantic_hash": ""
+  },
+  "videos/raio-x/assets/wordmark-branco.png": {
+    "mtime": 1795561479.5198865,
+    "seen": 1795561747.0286784,
+    "ast_hash": "720f21b88b33fe368c57ce2a0f850bc9",
     "semantic_hash": ""
   }
 }
