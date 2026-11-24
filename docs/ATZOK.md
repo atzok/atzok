@@ -64,7 +64,7 @@ Mamba Negra, VOODOOHOP, Veludo Festival, Casa Torta, Virada Cultural, Universo P
 ## Contato e links
 
 - Booking: **Lhama Bookings**, ou direto com o Caio.
-- Instagram: @_atzok (handle do kit de 2023; o vídeo fala "arroba Atizóc", confirmar)
+- Instagram: **@_atzok** (confirmado pelo Caio em 2026-11-24)
 - SoundCloud: soundcloud.com/atzokdj · Bandcamp: djatzok.bandcamp.com
 - Plataformas: SoundCloud, Bandcamp, Spotify.
 
@@ -111,3 +111,4 @@ Versão Ätzøk (em construção, `videos/raio-x/`, série **ÄTZØK / RAIO-X**)
 - Bio v6: reescrita com o mesmo conteúdo, em tom mais fluido e menos "de IA" (sem "trajetória toma forma", "ora… ora", "versatilidade cabe em qualquer ocasião").
 - Referências de vídeo recebidas (reels estilo "Signal Notes" do @flitsnl). Formato analisado e anotado em "Ideias de conteúdo". Próximo passo: escolher faixa, trecho de 30 s e nome da série.
 - RAIO-X: modelo montado em `videos/raio-x/` (análise automática de BPM/drop + painel em HyperFrames, cores da marca, fim com wordmark e @_atzok). Testado com áudio sintético. Primeira faixa escolhida: "Atzok goes dub". Falta o arquivo de áudio para gerar o vídeo de verdade.
+- Instagram confirmado: @_atzok (usado no fim do RAIO-X).
