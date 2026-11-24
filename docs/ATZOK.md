@@ -112,3 +112,4 @@ Versão Ätzøk (em construção, `videos/raio-x/`, série **ÄTZØK / RAIO-X**)
 - Referências de vídeo recebidas (reels estilo "Signal Notes" do @flitsnl). Formato analisado e anotado em "Ideias de conteúdo". Próximo passo: escolher faixa, trecho de 30 s e nome da série.
 - RAIO-X: modelo montado em `videos/raio-x/` (análise automática de BPM/drop + painel em HyperFrames, cores da marca, fim com wordmark e @_atzok). Testado com áudio sintético. Primeira faixa escolhida: "Atzok goes dub". Falta o arquivo de áudio para gerar o vídeo de verdade.
 - Instagram confirmado: @_atzok (usado no fim do RAIO-X).
+- RAIO-X #1 renderizado: "Goes Dub" (atzok goes dub.wav do Drive), 75 BPM, trecho 147,2 s → 172,8 s da faixa, drop em 160,0 s (compasso 5 de 8). Frases: "O grave some. Só o eco segura." / "Compasso 5: o grave volta." Arquivos do Drive compartilhados por link podem ser baixados direto nesta sessão.

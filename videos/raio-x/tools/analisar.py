@@ -78,6 +78,17 @@ def achar_drop(mono, compasso):
     return quando, melhor
 
 
+def refinar_drop(mono, aprox, janela=1.0):
+    """Ajusta o drop ao ataque mais forte (subida de volume em 50 ms) perto de `aprox`."""
+    h = int(SR * 0.01)
+    i0, i1 = int(max(0, aprox - janela) * SR), int(min(len(mono) / SR, aprox + janela) * SR)
+    seg = mono[i0:i1]
+    rms = np.sqrt(np.array([np.mean(seg[k:k + h] ** 2) for k in range(0, len(seg) - h, h)]) + 1e-12)
+    db = 20 * np.log10(rms)
+    salto = db[5:] - db[:-5]
+    return (i0 + (int(np.argmax(salto)) + 5) * h) / SR
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("audio")
@@ -95,6 +106,7 @@ def main():
     drop = a.drop
     if drop is None:
         drop, ganho = achar_drop(mono, compasso)
+        drop = refinar_drop(mono, drop)
         print(f"drop encontrado em {drop:.2f}s (grave +{ganho:.1f} dB)")
     inicio = max(0.0, drop - antes * compasso)
     dur = n_comp * compasso

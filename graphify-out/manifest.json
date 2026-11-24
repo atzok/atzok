@@ -6438,9 +6438,9 @@
     "semantic_hash": ""
   },
   "docs/ATZOK.md": {
-    "mtime": 1795561731.3798344,
-    "seen": 1795561747.0284505,
-    "ast_hash": "e1487cf6632bfdbfd7c5b80d3f444bba",
+    "mtime": 1795562040.7465675,
+    "seen": 1795562046.1817756,
+    "ast_hash": "e9eb549d9a8ef7b75968d2c03368fbfe",
     "semantic_hash": ""
   },
   "docs/figma-design-system-rules.md": {
@@ -7878,9 +7878,9 @@
     "semantic_hash": ""
   },
   "videos/raio-x/tools/analisar.py": {
-    "mtime": 1795561652.8897657,
-    "seen": 1795561747.0277817,
-    "ast_hash": "6f094ed95897922c11513c59d85c3306",
+    "mtime": 1795561904.6559117,
+    "seen": 1795562046.18103,
+    "ast_hash": "f94f4cdf6cc440f5841ca2b1e044fbf2",
     "semantic_hash": ""
   },
   "videos/raio-x/COMO-USAR.md": {
@@ -7890,15 +7890,15 @@
     "semantic_hash": ""
   },
   "videos/raio-x/compositions/painel.html": {
-    "mtime": 1795561696.0718994,
-    "seen": 1795561747.0285323,
-    "ast_hash": "7aa2075a3b40420b3cc809342ea6876d",
+    "mtime": 1795561927.2666018,
+    "seen": 1795562046.1826746,
+    "ast_hash": "7b45a78a5d1fc8a84310b5c41e86996e",
     "semantic_hash": ""
   },
   "videos/raio-x/index.html": {
-    "mtime": 1795561676.1075165,
-    "seen": 1795561747.028533,
-    "ast_hash": "b2332df803387f2914c1b45ef3a1dd0d",
+    "mtime": 1795561927.2618344,
+    "seen": 1795562046.1826777,
+    "ast_hash": "10ddb6d2c3678bc2a019a9e83697ea95",
     "semantic_hash": ""
   },
   "videos/raio-x/assets/wordmark-branco.png": {
