@@ -3,6 +3,7 @@
 
 Uso:
   python3 tools/analisar.py <audio> [--bpm 140] [--drop 92.5] [--compassos 8]
+                            [--max 60] [--projeto ../raio-x-bliss030]
 
 - Acha o BPM e o drop (onde o grave volta com mais força) se não forem dados.
 - Corta um trecho com metade dos compassos antes do drop e metade depois,
@@ -95,13 +96,18 @@ def main():
     ap.add_argument("--bpm", type=float)
     ap.add_argument("--drop", type=float, help="segundo do drop na faixa original")
     ap.add_argument("--compassos", type=int, help="total de compassos no vídeo (par)")
+    ap.add_argument("--max", type=float, default=MAX_TRECHO, help="duração máxima do trecho (s)")
+    ap.add_argument("--projeto", help="pasta do projeto HyperFrames (padrão: este)")
     a = ap.parse_args()
+    global RAIZ
+    if a.projeto:
+        RAIZ = Path(a.projeto).resolve()
 
     st = ler_audio(a.audio)
     mono = st.mean(axis=1)
     bpm = a.bpm or estimar_bpm(mono)
     compasso = 4 * 60 / bpm
-    n_comp = a.compassos or max(4, int(MAX_TRECHO // compasso) // 2 * 2)
+    n_comp = a.compassos or max(4, int((a.max + 0.01) // compasso) // 2 * 2)
     antes = n_comp // 2
     drop = a.drop
     if drop is None:
@@ -183,6 +189,13 @@ def main():
     onda = [int(round(np.abs(m[i * passo:(i + 1) * passo]).max() / (np.abs(m).max() + 1e-9) * 100))
             for i in range(colunas)]
 
+    # golpes de grave (bumbos): subidas fortes na faixa 30-120 Hz
+    gr = np.array([10 * np.log10(10 ** (x / 10)) for x in np.array(faixas)[:, 0]], float)
+    golpes, ultimo = [], -99
+    for q in range(2, len(gr)):
+        if gr[q] - gr[q - 2] > 18 and gr[q] > 55 and q - ultimo > 6:
+            golpes.append(q); ultimo = q
+
     q_drop = int(round(drop_rel * FPS))
     q_ref0 = max(0, q_drop - 2 * FPS)
     fantasma = espec[q_ref0:q_drop].mean(axis=0).round().astype(int).tolist() if q_drop > 0 else []
@@ -191,7 +204,7 @@ def main():
         "fps": FPS, "bpm": round(bpm), "compassos": n_comp, "compasso": compasso,
         "duracao": dur, "drop": drop_rel, "dropCompasso": antes + 1,
         "espectro": espec.tolist(), "fantasma": fantasma, "faixas": faixas.tolist(),
-        "estereo": estereo, "onda": onda,
+        "estereo": estereo, "onda": onda, "golpes": golpes,
     }
     js = json.dumps(dados, separators=(",", ":"))
 

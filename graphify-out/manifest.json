@@ -6438,9 +6438,9 @@
     "semantic_hash": ""
   },
   "docs/ATZOK.md": {
-    "mtime": 1795562040.7465675,
-    "seen": 1795562046.1817756,
-    "ast_hash": "e9eb549d9a8ef7b75968d2c03368fbfe",
+    "mtime": 1795562932.215452,
+    "seen": 1795562943.99162,
+    "ast_hash": "a11c078f1f25c662c9ea7edb9c7d7d3b",
     "semantic_hash": ""
   },
   "docs/figma-design-system-rules.md": {
@@ -7878,9 +7878,9 @@
     "semantic_hash": ""
   },
   "videos/raio-x/tools/analisar.py": {
-    "mtime": 1795561904.6559117,
-    "seen": 1795562046.18103,
-    "ast_hash": "f94f4cdf6cc440f5841ca2b1e044fbf2",
+    "mtime": 1795562574.6587646,
+    "seen": 1795562943.9908252,
+    "ast_hash": "cd64ab1b6839d19c70a2244183029bb3",
     "semantic_hash": ""
   },
   "videos/raio-x/COMO-USAR.md": {
@@ -7890,21 +7890,87 @@
     "semantic_hash": ""
   },
   "videos/raio-x/compositions/painel.html": {
-    "mtime": 1795561927.2666018,
-    "seen": 1795562046.1826746,
-    "ast_hash": "7b45a78a5d1fc8a84310b5c41e86996e",
+    "mtime": 1795562469.8020988,
+    "seen": 1795562943.9917164,
+    "ast_hash": "93eb07adb8fbfb30499be67445fc9f25",
     "semantic_hash": ""
   },
   "videos/raio-x/index.html": {
-    "mtime": 1795561927.2618344,
-    "seen": 1795562046.1826777,
-    "ast_hash": "10ddb6d2c3678bc2a019a9e83697ea95",
+    "mtime": 1795562469.803321,
+    "seen": 1795562943.9917176,
+    "ast_hash": "86414b5a717a4d10637ebb44d965debe",
     "semantic_hash": ""
   },
   "videos/raio-x/assets/wordmark-branco.png": {
     "mtime": 1795561479.5198865,
     "seen": 1795561747.0286784,
     "ast_hash": "720f21b88b33fe368c57ce2a0f850bc9",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-bliss030/hyperframes.json": {
+    "mtime": 1795562565.8158853,
+    "seen": 1795562943.9908102,
+    "ast_hash": "7b33c6cb9ecfe380a4657c509ff8af33",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-bliss030/meta.json": {
+    "mtime": 1795562565.8190866,
+    "seen": 1795562943.9908123,
+    "ast_hash": "318d4614c8f50a03b1aced8136c52480",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-bliss030/package.json": {
+    "mtime": 1795562565.8189254,
+    "seen": 1795562943.990814,
+    "ast_hash": "f853883e6db823fd63d51b311a907e85",
+    "semantic_hash": ""
+  },
+  "videos/raio-x/faixas/bliss030.json": {
+    "mtime": 1795562464.9088721,
+    "seen": 1795562943.990816,
+    "ast_hash": "e1666e47cf0c033244498bf12899a8b8",
+    "semantic_hash": ""
+  },
+  "videos/raio-x/tools/lote.py": {
+    "mtime": 1795562324.2644358,
+    "seen": 1795562943.9908266,
+    "ast_hash": "6e2b75b9a29a5435a95cecf91c4f13ea",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-bliss030/compositions/painel.html": {
+    "mtime": 1795562656.9189801,
+    "seen": 1795562943.9917114,
+    "ast_hash": "d271e1e4fa8a37276e60b961a314b8bd",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-bliss030/index.html": {
+    "mtime": 1795562656.9151142,
+    "seen": 1795562943.9917128,
+    "ast_hash": "fe441087200a7dfb7d257f3b288bcc87",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-bliss030/assets/bliss.png": {
+    "mtime": 1795562554.5759728,
+    "seen": 1795562943.9919012,
+    "ast_hash": "0e8e0a83d0357636de105644f4268fbc",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-bliss030/assets/bliss030.png": {
+    "mtime": 1795562554.5265892,
+    "seen": 1795562943.9919024,
+    "ast_hash": "ed2b1c7b4bf9f74a394ee67d401724d2",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-bliss030/assets/capa.png": {
+    "mtime": 1795562554.116567,
+    "seen": 1795562943.9919035,
+    "ast_hash": "1bbf8958d79fe52daebbc257edd521ec",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-bliss030/assets/cobra.png": {
+    "mtime": 1795562565.7849507,
+    "seen": 1795562943.9919047,
+    "ast_hash": "197a037c7bc5040801c510fbe919c6b1",
     "semantic_hash": ""
   }
 }
