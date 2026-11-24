@@ -293,6 +293,13 @@ As três variações:
 - **Script:** `docs/lhama/merch/adesivo-mpb/build_print_v2.py`.
 - **Regra do usuário:** coisa impressa tem que estar em altíssima qualidade, e a versão final sai sempre em PDF.
 
+**Versão final v3 (2026-11-24), após nova crítica de acabamento:**
+- **Forma da faca:** agora vem da faixa amarela grossa inteira da arte expandida (`caps.py`, `forma-full.npy`), e não mais do corte da arte do Instagram.
+- **Pontas dos braços:** as pontas bagunçadas da arte foram trocadas por **Us vetoriais aninhados**. As listras amarelo, menta, lavanda e as linhas finas fazem a curva limpa, e a coluna do corte é escolhida onde o braço é mais reto.
+- **@lhamabookings:** rosa, no braço esquerdo.
+- **Arquivo:** 12×9,4 cm, ~1000 dpi, PDF com faca CutContour.
+- **Lição:** o usuário é exigente com acabamento. Sempre inspecionar as bordas e as emendas a 100% antes de entregar.
+
 ## 8. Outras ideias e anotações soltas
 
 - O "COISAS PARA PENSAR" da planilha BOOKINGS: lugares em SP, agenda de dezembro, festas de fim de ano (inclusive de lojas), raves fora de SP no ano que vem.

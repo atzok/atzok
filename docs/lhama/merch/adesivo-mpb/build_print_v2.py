@@ -21,19 +21,20 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 FONT = os.path.join(HERE, "../../carrossel-onde-o-clube/Adca.ttf")
 os.makedirs(OUT, exist_ok=True)
 
-OFF = 660            # posição da arte 1080x1350 dentro da expandida
+OFF = 0              # a máscara já está nas coordenadas da arte expandida
 BORDER = 24          # borda branca entre arte e faca (px da arte base)
 BLEED = 26           # sangria branca além da faca
-SMOOTH = 14          # suavização da borda da arte (px base)
-RIM = 22             # faixa amarela uniforme na borda da arte (px base)
+SMOOTH = 22          # suavização da borda da arte (px base)
+RIM = 20             # faixa amarela uniforme na borda da arte (px base)
 SS = 2               # supersampling das máscaras
+PILL_X, PILL_Y, PILL_R = 700, 872, -2
 
 art_full = Image.open(SRC).convert("RGB")
-reg0 = np.load(os.path.join(HERE, "faca-mask.npy")).astype(np.uint8)
+reg0 = np.load(sys.argv[5] if len(sys.argv) > 5 else os.path.join(HERE, "forma-full.npy")).astype(np.uint8)
 # letras do anel que escapam da faixa entram inteiras na forma (com sombra)
 _a = np.asarray(art_full.crop((OFF, 0, OFF + reg0.shape[1], reg0.shape[0]))).astype(int)
 _pk = ((_a[..., 0] > 195) & (_a[..., 2] > 140) & (_a[..., 1] < 175)).astype(np.uint8)
-_near = cv2.dilate(reg0, np.ones((3, 3), np.uint8), iterations=60)
+_near = cv2.dilate(reg0, np.ones((3, 3), np.uint8), iterations=70)
 _txt = cv2.dilate(_pk & _near, np.ones((3, 3), np.uint8), iterations=7)
 _txt = cv2.morphologyEx(_txt, cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (41, 41)))
 reg0 = np.maximum(reg0, _txt)
@@ -49,7 +50,7 @@ su = np.linspace(0, s[-1], n, endpoint=False)
 x = np.interp(su, s, np.r_[c[:, 0], c[0, 0]]); y = np.interp(su, s, np.r_[c[:, 1], c[0, 1]])
 x = gaussian_filter1d(x, SMOOTH / 1.5, mode="wrap"); y = gaussian_filter1d(y, SMOOTH / 1.5, mode="wrap")
 art_poly = Polygon(np.c_[x, y]).buffer(0)
-cut_poly = art_poly.buffer(BORDER, quad_segs=32, join_style="round").buffer(-6, quad_segs=32).buffer(6, quad_segs=32)
+cut_poly = art_poly.buffer(BORDER + 30, quad_segs=48, join_style="round").buffer(-30, quad_segs=48, join_style="round")
 bleed_poly = cut_poly.buffer(BLEED, quad_segs=32, join_style="round")
 minx, miny, maxx, maxy = bleed_poly.bounds
 minx, miny = math.floor(minx), math.floor(miny)
@@ -95,7 +96,7 @@ def pill_layer(cx, cy, size, rot):
     return lay
 
 
-pill = pill_layer(235, 945, 33, -6)          # posição da opção A, cores da opção B
+pill = pill_layer(PILL_X, PILL_Y, 34, PILL_R)   # braço esquerdo (posição A), cores da opção B
 
 # ---------------------------------------------------------------- composição
 final = Image.new("RGBA", (Wf, Hf), (0, 0, 0, 0))
