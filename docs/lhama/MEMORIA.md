@@ -246,7 +246,32 @@ As três variações:
 - O login no HeyGen foi feito com o e-mail do usuário, mas a geração de imagem exige o plano HyperFrames Pro, que não está ativo.
 - Os prompts das 3 ilustrações (smoking, DJ e lounge) estão no histórico da conversa, caso o projeto seja retomado.
 
-## 7. Outras ideias e anotações soltas
+## 7. Adesivos Lhama Bookings (2026-11-24)
+
+**Os dois adesivos atuais:** `ADESIVO_LHAMABOOKINGS_1.pdf` e `_2.pdf`, ambos com 2500×2500 pt.
+1. **Adesivo 1, o amarelo:** logo LHAMA BOOKINGS com a lhama no arco. **Fica igual.**
+2. **Adesivo 2, o redondo verde:** texto "Música psicodélica brasileira" em volta. O usuário achou a leitura ruim, tanto do texto quanto do @lhamabookings. **Vai ser refeito.**
+
+**Pedido pro adesivo 2:**
+- Usar o centro da arte "Música psicodélica brasileira" (`referencias/15-adesivo-mpb-ref.jpg`) até a borda amarela grossa.
+- O corte de faca especial segue o formato da faixa amarela mais grossa.
+- O @lhamabookings precisa ficar legível.
+
+**Como foi feito:**
+- A faixa grossa foi isolada pela cor: limiar de amarelo e rosa, abertura com disco 10 e fechamento com disco 28.
+- Os braços que saem da arte foram fechados com tampas arredondadas.
+- A máscara da faca está em `docs/lhama/merch/adesivo-mpb/faca-mask.npy`, e o mockup em `mock.py`.
+- No mockup, o adesivo tem borda branca de 22 px e a linha de faca tracejada em magenta.
+
+**Duas opções do @lhamabookings:**
+- **A:** pílula creme no braço esquerdo.
+- **B:** pílula rosa no braço direito.
+
+**Atenção:**
+- A arte de referência diz "BRASILERA", sem o I. Avisar o usuário.
+- A referência tem só 1080 px. Pra imprimir, é preciso a arte original em alta.
+
+## 8. Outras ideias e anotações soltas
 
 - O "COISAS PARA PENSAR" da planilha BOOKINGS: lugares em SP, agenda de dezembro, festas de fim de ano (inclusive de lojas), raves fora de SP no ano que vem.
 - Conversas anteriores relacionadas ao Atzok, que são outras sessões: "DJ booking na cena underground", "Carrossel Instagram Ätzøk", "Agenda motion video", "Conteúdo de produção musical em cards".
