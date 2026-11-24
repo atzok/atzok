@@ -68,6 +68,19 @@ Mamba Negra, VOODOOHOP, Veludo Festival, Casa Torta, Virada Cultural, Universo P
 - SoundCloud: soundcloud.com/atzokdj · Bandcamp: djatzok.bandcamp.com
 - Plataformas: SoundCloud, Bandcamp, Spotify.
 
+## Ideias de conteúdo
+
+### Vídeos "raio-x da faixa" (ref.: reels do @flitsnl, série "Signal Notes")
+
+Referências recebidas em 2026-11-24 (dois reels, 30 s, 9:16). Como funcionam:
+- Um plano só, sem cortes: um painel de análise de áudio que reage à faixa em tempo real.
+- Topo: série / BPM, nome da faixa grande, uma frase curta que muda no momento-chave ("A forma de onda entrega o drop" → "O grave volta depois de oito compassos de break").
+- Módulos: espectro (curva ao vivo + "fantasma" de 2 s antes da virada), campo estéreo (pontos mid/side), forma de onda com playhead e marca do drop, régua de frequências (grave, médio-grave, médio, presença, ar), contador "compasso 12 / 16".
+- Cores mudam na virada (antes/depois do drop). Final: fade para o logo do Instagram + @.
+- O que faz funcionar: o espectador "vê" o drop chegando antes de ouvir; a frase dá a chave de leitura.
+
+Versão Ätzøk (proposta): mesma ideia, visual próprio (preto + ember `#BC6D21`, plum, Inter 900 + Space Mono, wordmark), série com nome próprio, dados tirados do áudio real das faixas, feito em HyperFrames como template reaproveitável (troca faixa, trecho, título e frase).
+
 ## Marca
 
 - Paleta: preto/branco como base; acento **ember `#BC6D21`** (cor do logo); plum `#7E406E`; dusk `#985359`. Site usa papel `#ECE7DC` e tinta `#111111`.
@@ -96,3 +109,4 @@ Mamba Negra, VOODOOHOP, Veludo Festival, Casa Torta, Virada Cultural, Universo P
 - Bio v4: sem "breakbeats" e "samples vocais picotados" no segundo parágrafo e na versão curta.
 - Bio v5: sem "desde 2013" (nem "12 anos"); a bio não cita tempo de carreira.
 - Bio v6: reescrita com o mesmo conteúdo, em tom mais fluido e menos "de IA" (sem "trajetória toma forma", "ora… ora", "versatilidade cabe em qualquer ocasião").
+- Referências de vídeo recebidas (reels estilo "Signal Notes" do @flitsnl). Formato analisado e anotado em "Ideias de conteúdo". Próximo passo: escolher faixa, trecho de 30 s e nome da série.
