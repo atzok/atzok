@@ -271,6 +271,17 @@ As três variações:
 - A arte de referência diz "BRASILERA", sem o I. Avisar o usuário.
 - A referência tem só 1080 px. Pra imprimir, é preciso a arte original em alta.
 
+**Entregue pra gráfica (2026-11-24):**
+- **Arte-base:** `mpb-expandido.png` do Drive (2400×1350), que é maior e tem a faixa amarela fechada.
+- **Texto corrigido pra "BRASILEIRA"** (`fix_texto.py`): só o trecho "BRASILERA MÚSICA" foi apagado (inpaint) e redesenhado no mesmo arco elíptico, com o mesmo estilo (amarelo, contorno rosa e sombra preta). O resto do texto original ficou intacto.
+- **`build_print.py`** gera, pras opções A e B:
+  - um PDF com a arte e a faca vetorial em cor especial "CutContour" (magenta 100%, traço 0,25 pt);
+  - um PNG em alta, com 2282×2448 px, ~640 dpi a 9 cm;
+  - o SVG da faca.
+- Medidas: 9,0×9,7 cm, borda branca de ~0,9 mm até a faca e sangria de ~1 mm.
+- A arte está em RGB: recomendar prova de cor CMYK.
+- **O usuário ainda não escolheu entre A e B.** Mandou "1 sim", que confirmou a correção do BRASILEIRA e a exportação.
+
 ## 8. Outras ideias e anotações soltas
 
 - O "COISAS PARA PENSAR" da planilha BOOKINGS: lugares em SP, agenda de dezembro, festas de fim de ano (inclusive de lojas), raves fora de SP no ano que vem.
