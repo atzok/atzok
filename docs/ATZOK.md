@@ -79,7 +79,7 @@ Referências recebidas em 2026-11-24 (dois reels, 30 s, 9:16). Como funcionam:
 - Cores mudam na virada (antes/depois do drop). Final: fade para o logo do Instagram + @.
 - O que faz funcionar: o espectador "vê" o drop chegando antes de ouvir; a frase dá a chave de leitura.
 
-Versão Ätzøk (proposta): mesma ideia, visual próprio (preto + ember `#BC6D21`, plum, Inter 900 + Space Mono, wordmark), série com nome próprio, dados tirados do áudio real das faixas, feito em HyperFrames como template reaproveitável (troca faixa, trecho, título e frase).
+Versão Ätzøk (em construção, `videos/raio-x/`, série **ÄTZØK / RAIO-X**): mesma ideia, visual próprio (preto + ember `#BC6D21`, plum, Inter 900 + Space Mono, wordmark), série com nome próprio, dados tirados do áudio real das faixas, feito em HyperFrames como template reaproveitável (troca faixa, trecho, título e frase).
 
 ## Marca
 
@@ -110,3 +110,4 @@ Versão Ätzøk (proposta): mesma ideia, visual próprio (preto + ember `#BC6D21
 - Bio v5: sem "desde 2013" (nem "12 anos"); a bio não cita tempo de carreira.
 - Bio v6: reescrita com o mesmo conteúdo, em tom mais fluido e menos "de IA" (sem "trajetória toma forma", "ora… ora", "versatilidade cabe em qualquer ocasião").
 - Referências de vídeo recebidas (reels estilo "Signal Notes" do @flitsnl). Formato analisado e anotado em "Ideias de conteúdo". Próximo passo: escolher faixa, trecho de 30 s e nome da série.
+- RAIO-X: modelo montado em `videos/raio-x/` (análise automática de BPM/drop + painel em HyperFrames, cores da marca, fim com wordmark e @_atzok). Testado com áudio sintético. Primeira faixa escolhida: "Atzok goes dub". Falta o arquivo de áudio para gerar o vídeo de verdade.
