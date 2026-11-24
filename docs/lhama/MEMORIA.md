@@ -282,6 +282,17 @@ As três variações:
 - A arte está em RGB: recomendar prova de cor CMYK.
 - **O usuário ainda não escolheu entre A e B.** Mandou "1 sim", que confirmou a correção do BRASILEIRA e a exportação.
 
+**Versão final (v2, 2026-11-24):**
+- **@lhamabookings:** na posição da opção A (braço esquerdo), com as cores da opção B (pílula rosa e letra creme).
+- **Contorno refeito:** o usuário achou o acabamento da v1 ruim. Agora:
+  - a borda da arte é uma curva suavizada;
+  - tem uma faixa amarela de espessura uniforme, com o texto do anel por cima;
+  - as letras que escapam da faixa entram inteiras na forma;
+  - a borda branca e a faca são offsets geométricos com cantos redondos.
+- **Arquivos:** render em 4592×4920 px (~1300 dpi a 9 cm) e PDF com a faca vetorial "CutContour".
+- **Script:** `docs/lhama/merch/adesivo-mpb/build_print_v2.py`.
+- **Regra do usuário:** coisa impressa tem que estar em altíssima qualidade, e a versão final sai sempre em PDF.
+
 ## 8. Outras ideias e anotações soltas
 
 - O "COISAS PARA PENSAR" da planilha BOOKINGS: lugares em SP, agenda de dezembro, festas de fim de ano (inclusive de lojas), raves fora de SP no ano que vem.
