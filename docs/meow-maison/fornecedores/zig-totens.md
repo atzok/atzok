@@ -20,6 +20,7 @@
 | 23/11 | Vinicius | **Nega a isenção**: segundo ele, parte dos chamados foi resolvida e validada pela operação, outros pararam sem retorno da operação, e os totens registraram transações o período todo. Orienta abrir o cancelamento na Central de Atendimento e mandar o número do ticket para ele. |
 | 24/11 | Caio | Abre o ticket **#488226** (retirada e cancelamento). |
 | 24/11 | ZIG Logística | Confirma a retirada dos 3 totens no endereço cadastrado. |
+| 24/11 | Caio → Vinicius | (rascunho) Informa o ticket #488226 e contesta a negativa: o TEF voltava a falhar logo depois de cada chamado, e no pico não dava para abrir chamado sem travar a operação. Pede retorno sobre os estornos. |
 
 ## Regras que a ZIG informou
 - Se a retirada for pelos Correios, o **código de logística reversa** chega por e-mail e **tem prazo**.
@@ -27,8 +28,8 @@
 - O aluguel só é cancelado **depois que a retirada for confirmada**.
 
 ## Pendências
-- [ ] Enviar o número do ticket (#488226) para o Vinicius acompanhar.
+- [ ] Enviar o rascunho de resposta ao Vinicius (ticket #488226 + contestação da isenção) — está nos rascunhos do Gmail.
 - [ ] Ficar de olho no e-mail esperando o código de reversa ou o agendamento da retirada.
 - [ ] Antes da retirada, fotografar os 3 totens (prova de estado, contra cobrança de avaria).
 - [ ] Conferir se o aluguel parou de ser cobrado depois da retirada.
-- [ ] Decidir se vale contestar a negativa da isenção das mensalidades.
+- [x] Decidido: contestar a negativa da isenção (argumento na resposta de 24/11).
