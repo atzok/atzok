@@ -15,6 +15,8 @@ As operações administrativas e financeiras passam pela Matuzza (adm/financeiro
 ## Assuntos em aberto
 - **ZIG — cancelamento dos totens**: retirada em andamento (ticket #488226), isenção negada → [fornecedores/zig-totens.md](fornecedores/zig-totens.md)
 
+- **Parcerias com hostels**: organizar com a Maria Alice e pedir ao time de design os gráficos para impressão → [parcerias/hostels.md](parcerias/hostels.md)
+
 ## Agenda
 | Data | Evento | Lembretes |
 |------|--------|-----------|
