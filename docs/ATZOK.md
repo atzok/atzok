@@ -78,15 +78,19 @@ Próximas faixas em fase de master (não mencionar na bio).
 
 Mamba Negra, VOODOOHOP, Veludo Festival, Casa Torta, Virada Cultural, Universo Paralelo (Chillout Stage). Do kit de 2023: Metanol FM, Caldo, SP na Rua, Na Manteiga, Galpão Quina.
 
-## Agenda (dez 2026 / jan 2027)
+## Agenda (atualizada em 2026-11-25)
 
-| Data | Local | Formato |
+| Data | Evento | Formato |
 |---|---|---|
-| 4 dez | A anunciar | Hanky Panky |
+| 9 dez | Rádio Veneno Live | |
 | 9 dez | Luci Bar | Long set |
-| 18 dez | Lhama Takeover | Hanky Panky |
-| 27 dez | Universo Paralelo, Chillout Stage | (destaque) |
-| 11 jan | Bahia, local a anunciar | |
+| 18 dez | Lhama Takeover no Carmem | Hanky Panky |
+| 27 dez | Universo Paralelo | Chillout Stage |
+| 11 jan | Festa no Barco, Lhama Bookings | |
+
+**Agenda aberta no sul da Bahia de 2 a 14 de janeiro.**
+
+Saíram da agenda anterior: 4 dez (Hanky Panky, local a anunciar) e "11 jan Bahia, local a anunciar" (virou a Festa no Barco).
 
 ## Contato e links
 
@@ -213,3 +217,4 @@ Estilo aprovado para posts (v2): foto real, cards brancos, caixa alta condensada
 - RUMO AO UP v2 aprovado ("gosto") e produzido: 4 carrosséis × 6 cards em `posts/rumo-ao-up/out-v2/` (fonte `cards-v2.html`, exportar com `node posts/rumo-ao-up/exportar.js cards-v2.html out-v2`). Ordem dos cards: capa com foto + tarja, card branco com foto pequena e ondas, foto + texto, frase grande, player (capa da faixa), fim (27.12 + wordmark). Fotos: UP no post do chillout; retratos analógicos do Augusto Maravilha nos estilos (03 jungle, 10 drum'n'bossa, 08 dub). Sem a frase do psytrance.
 - RUMO AO UP: o Caio trocou "jungle" por "drum'n'bass" nos posts. Post 1 virou drum'n'bass (Londres, anos 90; nasceu do jungle; ~170 BPM, grave profundo; lado atmosférico). Card 4 do chillout e card 4 do dub ajustados. Pasta `out-v2/1-drum-n-bass/`.
 - Tudo de conteúdo guardado no "Brainstorm de conteúdo" para retomar depois.
+- Agenda nova enviada pelo Caio (9.12 Rádio Veneno Live e Luci Bar, 18.12 Lhama Takeover no Carmem, 27.12 UP Chillout, 11.1 Festa no Barco Lhama) e agenda aberta no sul da Bahia de 2 a 14.1. O site (`site/index.html`) ainda mostra a agenda antiga.
