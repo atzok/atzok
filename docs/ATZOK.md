@@ -62,6 +62,8 @@ Drive: pasta "Ätzøk - L4 : AMARELA" (compartilhada pela DSRPTV: artwork, fotos
 
 Terceiro release da DSRPTV. Faixas: Jazzy · Kitchen · Jazzy (Akin Deckard Legato Acid Remix) · Kitchen (DSRPTV Remix). Release (por Brune): "bebop jazz amarrado por um foco experimental"; Jazzy cresce "como uma bola de neve", batidas quebradas, vocais e melodias texturizadas; Kitchen "cozinha" acordes circulares com glitches.
 Identidade: preto e branco, foto de rua em filme, "jazzy" em itálico serifado de alto contraste (Playfair Display Italic no vídeo), grotesca pesada "THA_GUTS // ATZOK", rabiscos à mão em laço, teclado de piano desenhado, logo em grade "d/s rpt v rec".
+Curiosidades da Kitchen (contadas pelo Caio): o sample de vocal vem de "Claws", da Charli XCX; e a melodia da faixa foi construída a partir do arranjo desse vocal.
+Estrutura da Kitchen (análise): 5:29; cortes secos em ~0:55 e ~2:44; breakdown sem grave ~2:28–2:44; o groove volta inteiro em ~2:44. BPM em dúvida entre 70 e 105.
 Drive: zip "Tha_Guts, Atzok - Jazzy [DSRPTV003]" em ALBUNS, EPS & SINGLES (AIFF + artwork + release .docx).
 
 Próximas faixas em fase de master (não mencionar na bio).
@@ -166,3 +168,4 @@ Para produzir o resto: precisa do BPM confirmado de cada faixa (a análise erra 
 - RAIO-X L4 / Amarela: layout criado em `videos/raio-x-l4/` (mesmo modelo das referências, identidade do álbum: título vazado em camadas, grão, selo 4 + @_atzok no topo, cubo DSRPTV, linha de metrô com estações sob a forma de onda, final com a capa). Testado com C3ntr0 (96 BPM, trecho 0:50–1:50, virada em 1:20).
 - Jazzy EP: layout RAIO-X criado com a identidade da capa (`videos/raio-x-jazzy/`), testado com "Jazzy" (110 BPM pela análise, a confirmar; trecho 0:26–1:23, groove entra em 0:55). Ideias do L4 e do Jazzy guardadas no "Banco de ideias RAIO-X".
 - Caio pediu para guardar todo o trabalho do RAIO-X (EP Desejos Gelados, L4 / Amarela, Jazzy) para os conteúdos futuros. Pendências registradas em "Para retomar".
+- Kitchen escolhida como próximo RAIO-X (layout Jazzy). Duas curiosidades para entrar no vídeo: vocal sampleado de "Claws" (Charli XCX) e a melodia construída a partir do arranjo desse vocal.
