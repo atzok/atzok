@@ -13,33 +13,50 @@ FPS = 30
 im = np.asarray(Image.open(SRC).convert("RGB")).astype(np.float32)
 H, W, _ = im.shape
 m = np.load(MASK).astype(np.uint8)
-m = cv2.dilate(m, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (25, 25))) > 0
+m = cv2.dilate(m, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (37, 37))) > 0
 
-# ---- placa limpa: cada pixel mascarado recebe o pixel do primeiro deslocamento que cai em água
+# ---- placa limpa por "quilting": cobre a área mascarada com blocos de água tirados das partes limpas,
+# escolhendo em cada posição o bloco que melhor casa com o que já está ao redor; emendas misturadas em degradê.
+rng = np.random.default_rng(11)
+P, OV = 72, 24                       # bloco e sobreposição
+STEP = P - OV
+clean = ~cv2.dilate(m.astype(np.uint8), np.ones((P, P), np.uint8)).astype(bool)
+cy, cx = np.nonzero(clean[: H - P, : W - P])
+pick = rng.choice(len(cy), 900, replace=False)
+cands = np.stack([im[cy[i]:cy[i] + P, cx[i]:cx[i] + P] for i in pick])          # (N,P,P,3)
+small = cands[:, ::4, ::4]
 plate = im.copy()
-todo = m.copy()
-pid = np.zeros((H, W), np.int16)
-offs = [(170, 230), (-190, 250), (0, 260), (0, -260), (240, 0), (-240, 0), (0, 420), (0, -420), (300, 300), (-300, -300), (380, 0), (-380, 0),
-        (0, 560), (0, -560), (520, 200), (-520, -200)]
-for k, (dx, dy) in enumerate(offs, 1):
-    if not todo.any():
-        break
-    sh = np.roll(np.roll(im, dy, 0), dx, 1)
-    ok = ~np.roll(np.roll(m, dy, 0), dx, 1)
-    take = todo & ok
-    plate[take] = sh[take]
-    pid[take] = k
-    todo &= ~take
-# suaviza só as emendas entre remendos diferentes
-edge = np.zeros((H, W), bool)
-edge[:, 1:] |= (pid[:, 1:] != pid[:, :-1]) & m[:, 1:]
-edge[1:, :] |= (pid[1:, :] != pid[:-1, :]) & m[1:, :]
-band = np.clip(cv2.GaussianBlur(edge.astype(np.float32), (0, 0), 10) * 12, 0, 1)[..., None]
-plate = plate * (1 - band) + cv2.GaussianBlur(plate, (0, 0), 7) * band
-if todo.any():
-    plate = cv2.inpaint(plate.astype(np.uint8), todo.astype(np.uint8) * 255, 9, cv2.INPAINT_TELEA).astype(np.float32)
-# costura suave entre placa e original
-feather = np.clip(cv2.GaussianBlur(m.astype(np.float32), (0, 0), 18)[..., None] * 1.6, 0, 1)
+known = ~m
+ramp = np.linspace(0, 1, OV, dtype=np.float32)
+ys_, xs_ = np.nonzero(m)
+y0, y1, x0, x1 = max(ys_.min() - OV, 0), min(ys_.max() + P, H - P + 1), max(xs_.min() - OV, 0), min(xs_.max() + P, W - P + 1)
+ylist = list(range(y0, y1, STEP)) + [H - P]
+xlist = list(range(x0, x1, STEP)) + [W - P]
+for y in sorted(set(min(v, H - P) for v in ylist)):
+    for x in sorted(set(min(v, W - P) for v in xlist)):
+        if not m[y:y + P, x:x + P].any():
+            continue
+        tgt = plate[y:y + P, x:x + P]
+        kn = known[y:y + P, x:x + P]
+        if kn.sum() > 40:
+            w = kn[::4, ::4][None, ..., None]
+            err = (((small - tgt[::4, ::4][None]) ** 2) * w).sum((1, 2, 3))
+            best = np.argsort(err)[:8][rng.integers(0, 8)]
+        else:
+            best = rng.integers(0, len(cands))
+        blk = cands[best]
+        # peso: entra cheio onde é desconhecido; nas bordas já conhecidas, degradê
+        wgt = np.ones((P, P), np.float32)
+        if known[y:y + P, x:x + OV].any():
+            wgt[:, :OV] = np.minimum(wgt[:, :OV], ramp[None, :])
+        if known[y:y + OV, x:x + P].any():
+            wgt[:OV, :] = np.minimum(wgt[:OV, :], ramp[:, None])
+        wgt = np.where(kn, wgt * 0.0 + np.where(m[y:y + P, x:x + P], wgt, 0), wgt)
+        wgt = np.where(~m[y:y + P, x:x + P] & kn, 0, wgt)
+        plate[y:y + P, x:x + P] = tgt * (1 - wgt[..., None]) + blk * wgt[..., None]
+        known[y:y + P, x:x + P] |= m[y:y + P, x:x + P]
+# costura suave entre a placa e o original
+feather = np.clip(cv2.GaussianBlur(m.astype(np.float32), (0, 0), 10)[..., None] * 1.5, 0, 1)
 plate = im * (1 - feather) + plate * feather
 
 # ---- animação em loop
