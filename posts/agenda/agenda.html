@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Ätzøk · agenda dez/jan</title>
+<style>
+  @font-face { font-family: "Black"; src: url("fonts/archivo-black.woff2"); }
+  @font-face { font-family: "Narrow"; font-weight: 700; src: url("fonts/archivo-narrow-700.woff2"); }
+  :root { --fundo: #f6e25a; --tinta: #2f4bd6; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #333; padding: 30px; width: max-content; }
+  .card { position: relative; width: 1080px; height: 1350px; overflow: hidden; background: var(--fundo); color: var(--tinta); }
+  .grao { position: absolute; inset: 0; z-index: 9; pointer-events: none; mix-blend-mode: multiply; opacity: 0.55; }
+  .estrelas { position: absolute; left: 60px; right: 60px; display: flex; justify-content: space-between; font-family: Black; font-size: 30px; }
+  .logo { position: absolute; left: 395px; top: 92px; width: 290px; }
+  .sub { position: absolute; left: 0; right: 0; top: 340px; text-align: center; font-family: Narrow; font-weight: 700; font-size: 34px; letter-spacing: 0.14em; }
+  .coqueiro { position: absolute; left: 270px; top: 392px; width: 540px; height: 440px; }
+  .titulo { position: absolute; left: 0; right: 0; top: 600px; text-align: center; font-family: Black; font-size: 196px; line-height: 0.9;
+    letter-spacing: -0.02em; color: var(--tinta); text-shadow: 0 0 0 var(--fundo); -webkit-text-stroke: 10px var(--fundo); paint-order: stroke fill; }
+  .datas { position: absolute; left: 80px; right: 80px; top: 846px; border-top: 4px solid var(--tinta); }
+  .linha { display: flex; gap: 28px; align-items: baseline; padding: 9px 0 6px; border-bottom: 2px solid var(--tinta); font-family: Narrow; font-weight: 700; text-transform: uppercase; }
+  .linha b { font-family: Black; font-weight: 400; font-size: 40px; width: 150px; flex: none; }
+  .linha span { font-size: 36px; }
+  .linha i { font-style: normal; font-size: 28px; margin-left: auto; letter-spacing: 0.06em; white-space: nowrap; }
+  .aberta { position: absolute; left: 80px; right: 80px; top: 1196px; white-space: nowrap; background: var(--tinta); color: var(--fundo); text-align: center;
+    font-family: Black; font-size: 33px; padding: 12px 0 10px; }
+  .rodape { position: absolute; left: 80px; right: 80px; top: 1272px; display: flex; justify-content: space-between; font-family: Narrow; font-weight: 700; font-size: 28px; letter-spacing: 0.08em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<section class="card" id="agenda">
+  <div class="estrelas" style="top: 40px"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+  <img class="logo" src="wordmark-azul.png" alt="Ätzøk" />
+  <div class="sub">DEZ ✶ JAN</div>
+
+  <!-- coqueiro desenhado à mão: tronco e folhas em traço grosso -->
+  <svg class="coqueiro" viewBox="0 0 540 440" fill="none" stroke="#2f4bd6" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M262 150 C 256 240, 266 330, 256 440 M290 152 C 286 240, 294 330, 286 440" />
+    <path d="M268 140 C 210 70, 110 60, 40 120 C 70 150, 100 140, 130 130 C 170 120, 220 130, 262 150" />
+    <path d="M270 136 C 240 60, 180 10, 100 10 C 110 50, 140 60, 170 70 C 210 85, 240 110, 268 140" />
+    <path d="M280 132 C 290 60, 330 15, 400 5 C 400 45, 370 60, 350 75 C 320 95, 300 115, 284 134" />
+    <path d="M288 140 C 340 80, 430 70, 505 115 C 480 145, 450 140, 420 135 C 370 128, 330 135, 292 150" />
+    <path d="M292 150 C 370 150, 450 190, 490 260 C 450 270, 430 245, 410 230 C 370 200, 330 180, 296 162" />
+    <path d="M262 156 C 190 160, 110 200, 60 270 C 100 280, 125 255, 145 238 C 180 210, 220 185, 258 168" />
+  </svg>
+  <div class="titulo">AGENDA</div>
+
+  <div class="datas">
+    <div class="linha"><b>09.12</b><span>Rádio Veneno</span><i>Live</i></div>
+    <div class="linha"><b>09.12</b><span>Luci Bar</span><i>Long set</i></div>
+    <div class="linha"><b>18.12</b><span>Lhama Takeover no Carmem</span><i>Hanky Panky</i></div>
+    <div class="linha"><b>27.12</b><span>Universo Paralelo</span><i>Chillout stage</i></div>
+    <div class="linha"><b>11.01</b><span>Festa no Barco</span><i>Lhama Bookings</i></div>
+  </div>
+
+  <div class="aberta">AGENDA ABERTA · SUL DA BAHIA · 02 A 14.01</div>
+  <div class="rodape"><span>Booking: Lhama Bookings</span><span>@_atzok</span></div>
+
+  <svg class="grao" width="1080" height="1350">
+    <filter id="g"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" /><feColorMatrix values="0 0 0 0 0.3  0 0 0 0 0.28  0 0 0 0 0.2  0 0 0 -1.1 0.85" /></filter>
+    <rect width="1080" height="1350" filter="url(#g)" />
+  </svg>
+</section>
+</body>
+</html>
