@@ -8,12 +8,13 @@
     .sx-rule { position: absolute; left: 90px; width: 900px; height: 2px; background: #4a423c; }
     .sx-cap { font-family: Inter, sans-serif; font-weight: 700; font-size: 28px; color: #b9aec6; white-space: nowrap; }
 
-    #sx-serie { left: 90px; top: 150px; color: #bda8df; }
-    #sx-bpm { right: 90px; top: 150px; text-align: right; color: #b9aec6; }
-    #sx-titulo { left: 90px; top: 238px; width: 900px; font-family: "Archivo Black", sans-serif; font-size: 84px;
+    #sx-perfil { left: 90px; top: 112px; height: 84px; display: flex; align-items: center; gap: 16px; }
+    #sx-perfil img { display: block; height: 84px; width: auto; }
+    #sx-perfil div { font-family: "Space Mono", monospace; font-weight: 700; font-size: 32px; color: #efe9df; letter-spacing: 0.04em; }
+    #sx-bliss { right: 90px; top: 118px; height: 72px; width: auto; }
+    #sx-sub { left: 90px; top: 346px; color: #bda8df; }
+    #sx-titulo { left: 90px; top: 236px; width: 900px; font-family: "Archivo Black", sans-serif; font-size: 84px;
       line-height: 1; text-transform: uppercase; color: #efe9df; white-space: nowrap; }
-    .sx-frase { left: 90px; top: 342px; width: 900px; font-family: Inter, sans-serif; font-weight: 700; font-size: 34px;
-      line-height: 1.2; color: #b9aec6; }
 
     #sx-l-esp { left: 90px; top: 436px; }
     #sx-l-esp2 { left: 90px; top: 484px; }
@@ -35,25 +36,25 @@
     #sx-estado { left: 90px; top: 1722px; }
     #sx-comp { right: 90px; top: 1722px; text-align: right; color: #bda8df; }
 
-    #sx-marca { left: 0; top: 0; width: 170px; text-align: center; }
-    #sx-marca img { display: block; width: 104px; height: auto; margin: 0 auto 4px; }
-    #sx-marca div { font-family: "Space Mono", monospace; font-weight: 700; font-size: 28px; color: #efe9df; }
 
     #sx-fim { left: 0; top: 0; width: 1080px; height: 1920px; background: #1f1b18; }
     #sx-fim-cobra { left: 335px; top: 640px; width: 410px; height: auto; }
     #sx-fim-handle { left: 0; top: 1080px; width: 1080px; text-align: center; font-family: "Space Mono", monospace;
       font-weight: 700; font-size: 44px; color: #efe9df; letter-spacing: 0.06em; }
     #sx-fim-cred { left: 0; top: 1150px; width: 1080px; text-align: center; color: #bda8df; }
+    #sx-fim-bliss { left: 476px; top: 1214px; width: 128px; height: auto; }
   </style>
 
   <div id="root" data-composition-id="painel" data-width="1080" data-height="1920">
-    <div id="sx-serie" class="sx sx-mono">Ätzøk&nbsp; /&nbsp; Raio-X</div>
-    <div id="sx-bpm" class="sx sx-mono">— BPM</div>
+    <div id="sx-perfil" class="sx">
+      <img src="assets/cobra.png" alt="" />
+      <div data-var-text="handle">@_atzok</div>
+    </div>
+    <img id="sx-bliss" class="sx" src="assets/bliss-lilas.png" alt="Bliss Records" />
     <div id="sx-versao" data-var-text="versao" style="display: none"></div>
     <div class="sx-rule" style="top: 204px"></div>
     <div id="sx-titulo" class="sx" data-var-text="titulo">Desejos Gelados</div>
-    <div id="sx-frase1" class="sx sx-frase" data-var-text="frase1" data-layout-allow-overlap>16 compassos de agudo fechado.</div>
-    <div id="sx-frase2" class="sx sx-frase" data-var-text="frase2" data-layout-allow-overlap>Compasso 17: abre agudo e grave.</div>
+    <div id="sx-sub" class="sx sx-mono">Ätzøk&nbsp; /&nbsp; Raio-X&nbsp; ·&nbsp; — BPM</div>
     <div class="sx-rule" style="top: 404px"></div>
 
     <div id="sx-l-esp" class="sx sx-mono">Espectro</div>
@@ -79,15 +80,11 @@
     <div id="sx-estado" class="sx sx-mono">Break até o drop</div>
     <div id="sx-comp" class="sx sx-mono">Compasso 01 / 32</div>
 
-    <div id="sx-marca" class="sx" data-layout-allow-overlap>
-      <img src="assets/cobra.png" alt="" />
-      <div data-var-text="handle">@_atzok</div>
-    </div>
-
     <div id="sx-fim" class="sx" data-layout-allow-occlusion>
       <img id="sx-fim-cobra" class="sx" src="assets/cobra.png" alt="Cobra do EP Desejos Gelados" />
       <div id="sx-fim-handle" class="sx" data-var-text="handle">@_atzok</div>
       <div id="sx-fim-cred" class="sx sx-mono sx-mini" data-var-text="credito">Desejos Gelados EP · Bliss Records</div>
+      <img id="sx-fim-bliss" class="sx" src="assets/bliss-lilas.png" alt="Bliss Records" />
     </div>
   </div>
 
@@ -191,8 +188,6 @@
         c.fillStyle = MENTA; c.fillRect(xd - 2, 0, 4, h);
       }
 
-      // marca d'água que muda de lugar a cada 8 compassos
-      const POS = [[858, 556], [90, 1060], [858, 1060], [858, 690]];
 
       function desenhar(t) {
         const tt = Math.min(t, D.duracao - 1 / D.fps);
@@ -204,24 +199,18 @@
         $("sx-estado").textContent = depois ? "Drop" : "Break até o drop";
         $("sx-estado").style.color = depois ? MENTA : PAPEL;
         const ver = ($("sx-versao").textContent || "").trim();
-        $("sx-bpm").textContent = (ver ? ver + " · " : "") + D.bpm + " BPM";
-        const p = POS[Math.floor((comp - 1) / 8) % POS.length];
-        $("sx-marca").style.left = (p[0] - 20) + "px"; $("sx-marca").style.top = p[1] + "px";
+        $("sx-sub").textContent = (ver ? ver : "Ätzøk  /  Raio-X") + "  ·  " + D.bpm + " BPM";
       }
       window.addEventListener("hf-seek", (e) => desenhar(e.detail.time));
       desenhar(0);
 
       const tl = gsap.timeline({ paused: true });
-      tl.fromTo("#sx-frase1", { opacity: 1, y: 0 }, { opacity: 1, y: 0, duration: 0.01 }, 0);
-      tl.fromTo("#sx-frase2", { opacity: 0, y: 12, color: "#a0f0c0" }, { opacity: 0, y: 12, duration: 0.01 }, 0);
-      tl.to("#sx-frase1", { opacity: 0, y: -12, duration: 0.25, ease: "power2.in" }, Math.max(0, D.drop - 0.25));
-      tl.to("#sx-frase2", { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, D.drop);
-      tl.to("#sx-frase2", { color: "#efe9df", duration: 1.2, ease: "power1.out" }, D.drop + 1.5);
       tl.fromTo("#sx-fim", { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
       tl.to("#sx-fim", { opacity: 1, duration: 0.8, ease: "power2.inOut" }, D.duracao);
       tl.fromTo("#sx-fim-cobra", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.7, ease: "expo.out" }, D.duracao + 0.4);
       tl.fromTo("#sx-fim-handle", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, D.duracao + 0.7);
-      tl.fromTo("#sx-fim-cred", { opacity: 0 }, { opacity: 1, duration: 0.5 }, D.duracao + 0.9);
+      tl.fromTo("#sx-fim-cred", { opacity: 0 }, { opacity: 1, duration: 0.5 }, D.duracao + 0.6);
+      tl.fromTo("#sx-fim-bliss", { opacity: 0 }, { opacity: 1, duration: 0.5 }, D.duracao + 0.7);
       window.__timelines["painel"] = tl;
     })();
   </script>
