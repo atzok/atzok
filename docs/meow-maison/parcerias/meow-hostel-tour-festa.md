@@ -59,6 +59,15 @@ Conferir na cotação: motorista, DJ e som incluídos, licença de fretamento, s
 
 Premissas a validar: cotação real do ônibus para quinta, e se a empresa permite duas voltas com paradas.
 
+### Cenário pedido pelo Caio: ingresso a R$ 150 (26/11)
+O ingresso dá direito a R$ 80 consumíveis na festa, e o resto tem que pagar o ônibus inteiro.
+- Sobra por pessoa para o ônibus: 150 − 80 − 6 (caipirinha) = **R$ 64** (taxa da ticketeira paga pelo cliente).
+- 2 voltas na quinta (R$ 4.570): **72 pessoas** para empatar; com drink a bordo patrocinado (R$ 3.850): **61**.
+- 1 volta só (50 lugares): precisaria de 62 pessoas, não cabe.
+- Sexta/sábado (ônibus ~R$ 3.800 → custo ~R$ 5.520): 87 pessoas.
+- Se a ticketeira sair do bolso do Meow (10%): sobra R$ 49 → 94 pessoas na quinta.
+- **Ideal: 80 pessoas** (40 por volta), ou seja, 72 para empatar + folga. Com 6 hostels: ~13 por hostel por semana.
+
 ## Campanha curta (o gringo fica poucos dias)
 Hóspede de hostel fica de 2 a 5 dias, então não dá para vender em lotes nem com semanas de antecedência.
 - **Frequência:** semanal (toda quinta) ou, no mínimo, quinzenal. Mensal ou bimestral não funciona, porque a maioria dos hóspedes não estaria na cidade na data.
