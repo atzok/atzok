@@ -300,7 +300,20 @@ As três variações:
 - **Arquivo:** 12×9,4 cm, ~1000 dpi, PDF com faca CutContour.
 - **Lição:** o usuário é exigente com acabamento. Sempre inspecionar as bordas e as emendas a 100% antes de entregar.
 
-## 8. Outras ideias e anotações soltas
+## 8. Reels "Lhama Nurio" (festa no barco, 11/1, Itacaré-BA), 2026-11-25
+- O flyer pronto do usuário (`docs/lhama/flyers/lhama-nurio/flyer-original.png`) foi animado.
+- Cada elemento foi recortado da arte por cor (`videos/lhama-nurio/assets/layers/`).
+- A água foi limpa e virou um vídeo em loop que ondula (`docs/lhama/flyers/lhama-nurio/agua.py`).
+- Animação no HyperFrames (`videos/lhama-nurio/index.html`), 12 s:
+  - os títulos entram;
+  - LHAMA e NURIO deslizam;
+  - o barco atravessa e balança;
+  - a lhama e o golfinho chegam boiando e batem o high five, com faísca e brilho;
+  - a palmeira brota e a data e o local entram;
+  - tudo fica boiando até o fim.
+- Saiu sem som.
+
+## 9. Outras ideias e anotações soltas
 
 - O "COISAS PARA PENSAR" da planilha BOOKINGS: lugares em SP, agenda de dezembro, festas de fim de ano (inclusive de lojas), raves fora de SP no ano que vem.
 - Conversas anteriores relacionadas ao Atzok, que são outras sessões: "DJ booking na cena underground", "Carrossel Instagram Ätzøk", "Agenda motion video", "Conteúdo de produção musical em cards".
