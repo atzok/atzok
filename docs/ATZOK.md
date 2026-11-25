@@ -118,6 +118,8 @@ Mesmo formato para todo lançamento: layout das referências (espectro com fanta
 | L4 / Amarela (DSRPTV041) | `videos/raio-x-l4/` | layout aprovado, testado com C3ntr0 | amarelo Linha 4 + preto oliva, grão, título vazado em camadas, selo "4", cubo DSRPTV, linha de metrô com estações sob a forma de onda |
 | Jazzy EP (DSRPTV003) | `videos/raio-x-jazzy/` | layout criado, testado com Jazzy | papel claro + tinta preta, "jazzy" em itálico serifado, rabisco à mão desenhado no drop, teclado de piano que vai escurecendo com o progresso, logo dsrptv rec |
 
+Regras de texto (pedido do Caio, valem para todos os próximos, inclusive outros álbuns): nada de legendas explicativas nos painéis. Sem "ao vivo / 2 s antes da virada", sem "claro = agora / fantasma = antes", sem "frequência (Hz)", sem "cima/baixo = sinal em comum…". Ficam só os títulos dos painéis (ESPECTRO, CAMPO ESTÉREO, FORMA DE ONDA), os eixos e os contadores. Notas/curiosidades: texto curto e corrido, em tom de conversa (ex.: "o vocal vem de Claws, da Charli XCX" → "e a melodia nasceu do arranjo desse vocal" → "perceba!").
+
 Para produzir o resto: precisa do BPM confirmado de cada faixa (a análise erra em faixas quebradas) e, se quiser, o minuto da virada.
 
 ### Para retomar (pendências de conteúdo)
@@ -171,3 +173,4 @@ Para produzir o resto: precisa do BPM confirmado de cada faixa (a análise erra 
 - Kitchen escolhida como próximo RAIO-X (layout Jazzy). Duas curiosidades para entrar no vídeo: vocal sampleado de "Claws" (Charli XCX) e a melodia construída a partir do arranjo desse vocal.
 - RAIO-X Kitchen pronto: 105 BPM, trecho 2:15–3:14, virada em 2:44. O layout do Jazzy ganhou "notas" numeradas (variáveis nota1/nota2): a 01 entra no drop, a 02 seis compassos depois; cada uma marca um ponto na forma de onda e aparece em itálico acima dela. Notas: "sample de vocal: Claws, da Charli XCX" / "a melodia nasce do arranjo desse vocal". Recurso reutilizável para outras curiosidades.
 - Kitchen v2: notas reordenadas a pedido do Caio. 01 (sample de Claws) logo no começo, 02 (melodia nasce do arranjo do vocal) na virada, 03 nova "arranjo final: Tha_Guts" seis compassos depois. O layout do Jazzy agora aceita até 3 notas (nota1/nota2/nota3).
+- Kitchen v3: sem a nota do Tha_Guts; notas mais fluidas: 01 "o vocal vem de Claws, da Charli XCX" (começo), 02 "e a melodia nasceu do arranjo desse vocal" (virada), 03 "perceba!" (quando vocal e melodia entram juntos, 6 compassos depois). Legendas explicativas removidas dos três modelos (Bliss, L4, Jazzy).

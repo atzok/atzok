@@ -6438,9 +6438,9 @@
     "semantic_hash": ""
   },
   "docs/ATZOK.md": {
-    "mtime": 1795581116.0044835,
-    "seen": 1795581119.4066541,
-    "ast_hash": "075c4ca7342a29a3b9ab636cc391a997",
+    "mtime": 1795581924.28919,
+    "seen": 1795581929.1130478,
+    "ast_hash": "e62d623c6cdbfeafc21b1a207a44a049",
     "semantic_hash": ""
   },
   "docs/figma-design-system-rules.md": {
@@ -7938,9 +7938,9 @@
     "semantic_hash": ""
   },
   "videos/raio-x-bliss030/compositions/painel.html": {
-    "mtime": 1795566331.6381989,
-    "seen": 1795566553.4338913,
-    "ast_hash": "eea35e06a41fb7266fb3a192cb5df6ef",
+    "mtime": 1795581643.5617957,
+    "seen": 1795581929.1131413,
+    "ast_hash": "c4d7e9b37435eee8a064e0e4b7183a6c",
     "semantic_hash": ""
   },
   "videos/raio-x-bliss030/index.html": {
@@ -8004,9 +8004,9 @@
     "semantic_hash": ""
   },
   "videos/raio-x-l4/compositions/painel.html": {
-    "mtime": 1795567012.2511606,
-    "seen": 1795567328.039603,
-    "ast_hash": "13f5021bec6db9c3b3acac413d6753e1",
+    "mtime": 1795581643.5996184,
+    "seen": 1795581929.113147,
+    "ast_hash": "bd01bdf11f4573a320f3c75c79228add",
     "semantic_hash": ""
   },
   "videos/raio-x-l4/index.html": {
@@ -8064,15 +8064,15 @@
     "semantic_hash": ""
   },
   "videos/raio-x-jazzy/compositions/painel.html": {
-    "mtime": 1795580864.1075096,
-    "seen": 1795581119.4068263,
-    "ast_hash": "902204b5649c2d37c4dcf17e3a4b6e5e",
+    "mtime": 1795581667.57384,
+    "seen": 1795581929.1131442,
+    "ast_hash": "a490054f089c22a8b9eddd2cd2f510b6",
     "semantic_hash": ""
   },
   "videos/raio-x-jazzy/index.html": {
-    "mtime": 1795580864.108576,
-    "seen": 1795581119.4068284,
-    "ast_hash": "1c23c0fedb6a9c98f6b2d502801a14af",
+    "mtime": 1795581667.5752456,
+    "seen": 1795581929.1131454,
+    "ast_hash": "0514bf334a73ed8d758894291cc40b6c",
     "semantic_hash": ""
   },
   "videos/raio-x-jazzy/assets/capa.jpg": {
@@ -8100,9 +8100,9 @@
     "semantic_hash": ""
   },
   "videos/raio-x-jazzy/faixas/jazzy.json": {
-    "mtime": 1795580838.1786392,
-    "seen": 1795581119.4050534,
-    "ast_hash": "131afa36e55e03ce413ca4793b4f6131",
+    "mtime": 1795581643.6774673,
+    "seen": 1795581929.1121552,
+    "ast_hash": "079b0c6e5fb1efbbf8e7eee58f27629f",
     "semantic_hash": ""
   }
 }

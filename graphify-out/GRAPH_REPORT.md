@@ -1,7 +1,7 @@
 # Graph Report - atzok  (2026-11-25)
 
 ## Corpus Check
-- 1015 files · ~1,124,817 words
+- 1015 files · ~1,124,918 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 167 file(s) not represented in the graph (top: .ttf 54, .css 48, .csv 37)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `498a8189`
+- Built from commit: `4825364d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -682,14 +682,14 @@
 ## Surprising Connections (you probably didn't know these)
 - `Custom effects` --references--> `resolve()`  [INFERRED]
   .agents/skills/remotion-best-practices/remotion-markup/effects.md → .claude/skills/ui-ux-pro-max/scripts/tests/test_skill_script_paths.py
+- `Available effects` --references--> `contrast()`  [INFERRED]
+  .agents/skills/remotion-best-practices/remotion-markup/effects.md → .claude/skills/hallmark/scripts/sloplint-render.mjs
 - `Available effects` --references--> `outline()`  [INFERRED]
   .agents/skills/remotion-best-practices/remotion-markup/effects.md → site/assets/diagrams/diagram.js
 - `Available effects` --references--> `outline()`  [INFERRED]
   .agents/skills/remotion-best-practices/remotion-markup/REFERENCE.md → site/assets/diagrams/diagram.js
 - `Available effects` --references--> `outline()`  [INFERRED]
   .claude/skills/remotion-best-practices/remotion-markup/effects.md → site/assets/diagrams/diagram.js
-- `Available effects` --references--> `outline()`  [INFERRED]
-  .claude/skills/remotion-best-practices/remotion-markup/REFERENCE.md → site/assets/diagrams/diagram.js
 
 ## Import Cycles
 - None detected.
@@ -3163,16 +3163,16 @@ Nodes (3): Content Pillars Framework, Example for a SaaS Founder, Pillar Develop
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `contrast()` connect `contrast` to `Color correction`, `Color correction`, `Color correction`, `sloplint-render.mjs`?**
-  _High betweenness centrality (0.087) - this node is a cross-community bridge._
+  _High betweenness centrality (0.099) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `shader()` (e.g. with `fx.js` and `draw()`) actually correct?**
   _`shader()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **Should `ref_node_fs` be split into smaller, more focused modules?**
   _Cohesion score 0.03853397073736057 - nodes in this community are weakly interconnected._
 - **Why does `resolve()` connect `Color correction` to `Color correction`?**
-  _High betweenness centrality (0.060) - this node is a cross-community bridge._
+  _High betweenness centrality (0.068) - this node is a cross-community bridge._
 - **Should `core.py` be split into smaller, more focused modules?**
   _Cohesion score 0.040602655771195095 - nodes in this community are weakly interconnected._
 - **Why does `outline()` connect `outline` to `diagram.js`, `Color correction`, `Color correction`, `contrast`, `.render`, `Color correction`?**
-  _High betweenness centrality (0.051) - this node is a cross-community bridge._
+  _High betweenness centrality (0.065) - this node is a cross-community bridge._
 - **Should `preview.py` be split into smaller, more focused modules?**
   _Cohesion score 0.04050632911392405 - nodes in this community are weakly interconnected._
