@@ -13,6 +13,8 @@ Projeto de parcerias do Meow com hostels e colivings da região, mais uma festa 
 Pulseira · flyer · cartaz · cartão com QR code · display de mesa (a Maria Alice pede aos designers)
 
 ## Festa temática (mensal ou bimestral)
+**Conceito definido (25/11):** bus party pelos hostels parceiros terminando no Meow → [meow-hostel-tour-festa.md](meow-hostel-tour-festa.md)
+
 Ideias para desenvolver:
 - Cada edição com um tema ou país (os hostels recebem gente do mundo todo).
 - Um hostel ou coliving "anfitrião" por edição, que ganha destaque e convites.
