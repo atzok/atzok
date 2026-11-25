@@ -62,7 +62,7 @@ Drive: pasta "Ätzøk - L4 : AMARELA" (compartilhada pela DSRPTV: artwork, fotos
 
 Terceiro release da DSRPTV. Faixas: Jazzy · Kitchen · Jazzy (Akin Deckard Legato Acid Remix) · Kitchen (DSRPTV Remix). Release (por Brune): "bebop jazz amarrado por um foco experimental"; Jazzy cresce "como uma bola de neve", batidas quebradas, vocais e melodias texturizadas; Kitchen "cozinha" acordes circulares com glitches.
 Identidade: preto e branco, foto de rua em filme, "jazzy" em itálico serifado de alto contraste (Playfair Display Italic no vídeo), grotesca pesada "THA_GUTS // ATZOK", rabiscos à mão em laço, teclado de piano desenhado, logo em grade "d/s rpt v rec".
-Curiosidades da Kitchen (contadas pelo Caio): o sample de vocal vem de "Claws", da Charli XCX; e a melodia da faixa foi construída a partir do arranjo desse vocal.
+Curiosidades da Kitchen (contadas pelo Caio): o sample de vocal vem de "Claws", da Charli XCX; a melodia da faixa foi construída a partir do arranjo desse vocal; o arranjo final é do Tha_Guts.
 Estrutura da Kitchen (análise): 5:29; cortes secos em ~0:55 e ~2:44; breakdown sem grave ~2:28–2:44; o groove volta inteiro em ~2:44. 105 BPM (confirmado pelo Caio). O vocal de "Claws" aparece mais claro na volta de 2:44.
 Drive: zip "Tha_Guts, Atzok - Jazzy [DSRPTV003]" em ALBUNS, EPS & SINGLES (AIFF + artwork + release .docx).
 
@@ -170,3 +170,4 @@ Para produzir o resto: precisa do BPM confirmado de cada faixa (a análise erra 
 - Caio pediu para guardar todo o trabalho do RAIO-X (EP Desejos Gelados, L4 / Amarela, Jazzy) para os conteúdos futuros. Pendências registradas em "Para retomar".
 - Kitchen escolhida como próximo RAIO-X (layout Jazzy). Duas curiosidades para entrar no vídeo: vocal sampleado de "Claws" (Charli XCX) e a melodia construída a partir do arranjo desse vocal.
 - RAIO-X Kitchen pronto: 105 BPM, trecho 2:15–3:14, virada em 2:44. O layout do Jazzy ganhou "notas" numeradas (variáveis nota1/nota2): a 01 entra no drop, a 02 seis compassos depois; cada uma marca um ponto na forma de onda e aparece em itálico acima dela. Notas: "sample de vocal: Claws, da Charli XCX" / "a melodia nasce do arranjo desse vocal". Recurso reutilizável para outras curiosidades.
+- Kitchen v2: notas reordenadas a pedido do Caio. 01 (sample de Claws) logo no começo, 02 (melodia nasce do arranjo do vocal) na virada, 03 nova "arranjo final: Tha_Guts" seis compassos depois. O layout do Jazzy agora aceita até 3 notas (nota1/nota2/nota3).

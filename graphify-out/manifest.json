@@ -6438,9 +6438,9 @@
     "semantic_hash": ""
   },
   "docs/ATZOK.md": {
-    "mtime": 1795580540.346061,
-    "seen": 1795580551.1866949,
-    "ast_hash": "7696634401b3c558556ead35b31baccc",
+    "mtime": 1795581116.0044835,
+    "seen": 1795581119.4066541,
+    "ast_hash": "075c4ca7342a29a3b9ab636cc391a997",
     "semantic_hash": ""
   },
   "docs/figma-design-system-rules.md": {
@@ -8064,15 +8064,15 @@
     "semantic_hash": ""
   },
   "videos/raio-x-jazzy/compositions/painel.html": {
-    "mtime": 1795580283.4819,
-    "seen": 1795580551.1867917,
-    "ast_hash": "c09ff7fa56d990321c905786006064f3",
+    "mtime": 1795580864.1075096,
+    "seen": 1795581119.4068263,
+    "ast_hash": "902204b5649c2d37c4dcf17e3a4b6e5e",
     "semantic_hash": ""
   },
   "videos/raio-x-jazzy/index.html": {
-    "mtime": 1795580283.4831955,
-    "seen": 1795580551.1867929,
-    "ast_hash": "b0d6e5db67a91ff28aa7ab64fac4d63a",
+    "mtime": 1795580864.108576,
+    "seen": 1795581119.4068284,
+    "ast_hash": "1c23c0fedb6a9c98f6b2d502801a14af",
     "semantic_hash": ""
   },
   "videos/raio-x-jazzy/assets/capa.jpg": {
@@ -8100,9 +8100,9 @@
     "semantic_hash": ""
   },
   "videos/raio-x-jazzy/faixas/jazzy.json": {
-    "mtime": 1795580229.978404,
-    "seen": 1795580551.1858222,
-    "ast_hash": "6e9e4f1df678fc518c58abc62bc1a02b",
+    "mtime": 1795580838.1786392,
+    "seen": 1795581119.4050534,
+    "ast_hash": "131afa36e55e03ce413ca4793b4f6131",
     "semantic_hash": ""
   }
 }

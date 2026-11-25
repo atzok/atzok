@@ -3,10 +3,26 @@
   "projeto": "..",
   "max": 60,
   "previa": true,
-  "variaveis": ["titulo", "handle", "versao", "credito", "nota1", "nota2"],
+  "variaveis": [
+    "titulo",
+    "handle",
+    "versao",
+    "credito",
+    "nota1",
+    "nota2",
+    "nota3"
+  ],
   "faixas": [
-    {"audio": "02-kitchen.aif", "saida": "raio-x-jazzy-02-kitchen", "titulo": "Kitchen", "bpm": 105, "drop": 164.5,
-     "nota1": "sample de vocal: Claws, da Charli XCX", "nota2": "a melodia nasce do arranjo desse vocal",
-     "credito": "Jazzy EP · DSRPTV recs · DSRPTV003"}
+    {
+      "audio": "02-kitchen.aif",
+      "saida": "raio-x-jazzy-02-kitchen",
+      "titulo": "Kitchen",
+      "bpm": 105,
+      "drop": 164.5,
+      "nota1": "sample de vocal: Claws, da Charli XCX",
+      "nota2": "a melodia nasce do arranjo desse vocal",
+      "credito": "Jazzy EP · DSRPTV recs · DSRPTV003",
+      "nota3": "arranjo final: Tha_Guts"
+    }
   ]
 }
