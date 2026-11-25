@@ -15,6 +15,11 @@ As operações administrativas e financeiras passam pela Matuzza (adm/financeiro
 ## Assuntos em aberto
 - **ZIG — cancelamento dos totens**: retirada em andamento (ticket #488226), isenção negada → [fornecedores/zig-totens.md](fornecedores/zig-totens.md)
 
+## Agenda
+| Data | Evento | Lembretes |
+|------|--------|-----------|
+| 16/12/2026, 17h → 17/12, 3h | Operação | Montar equipe compatível; pontos de limpeza (vide grupo) |
+
 ## Ideias e notas
 - 2026-11-23 — Pasta criada para concentrar o projeto Meow Maison.
 
