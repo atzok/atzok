@@ -1,9 +1,9 @@
 # Graph Report - atzok  (2026-11-25)
 
 ## Corpus Check
-- 1023 files · ~1,129,941 words
+- 1023 files · ~1,133,071 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 174 file(s) not represented in the graph (top: .ttf 54, .css 48, .csv 37)
+- Unclassified: 175 file(s) not represented in the graph (top: .ttf 54, .css 48, .csv 37)
 
 ## Summary
 - 8573 nodes · 11969 edges · 657 communities (599 shown, 58 thin omitted)
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ed4bd355`
+- Built from commit: `d501f047`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -3085,16 +3085,16 @@ Nodes (6): Contrarian Hooks, Curiosity Hooks, Hook Formulas, No AI Tells, Story 
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `contrast()` connect `contrast` to `Color correction`, `Color correction`, `Color correction`, `sloplint-render.mjs`?**
-  _High betweenness centrality (0.081) - this node is a cross-community bridge._
+  _High betweenness centrality (0.080) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `shader()` (e.g. with `fx.js` and `draw()`) actually correct?**
   _`shader()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **Should `ref_node_fs` be split into smaller, more focused modules?**
   _Cohesion score 0.0429202608878603 - nodes in this community are weakly interconnected._
-- **Why does `resolve()` connect `test_skill_script_paths.py` to `Color correction`, `Color correction`?**
-  _High betweenness centrality (0.055) - this node is a cross-community bridge._
+- **Why does `outline()` connect `diagram.js` to `Color correction`, `Color correction`, `.render`, `contrast`, `Color correction`?**
+  _High betweenness centrality (0.054) - this node is a cross-community bridge._
 - **Should `core.py` be split into smaller, more focused modules?**
   _Cohesion score 0.04417670682730924 - nodes in this community are weakly interconnected._
-- **Why does `outline()` connect `diagram.js` to `Color correction`, `Color correction`, `.render`, `contrast`, `Color correction`?**
-  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+- **Why does `resolve()` connect `test_skill_script_paths.py` to `Color correction`, `Color correction`?**
+  _High betweenness centrality (0.052) - this node is a cross-community bridge._
 - **Should `preview.py` be split into smaller, more focused modules?**
   _Cohesion score 0.03907203907203907 - nodes in this community are weakly interconnected._

@@ -1746,9 +1746,9 @@
     "semantic_hash": ""
   },
   ".impeccable/config.json": {
-    "mtime": 1795447655.1063716,
-    "seen": 1795452788.0004907,
-    "ast_hash": "1fb37e2d1f41b44d16a3992ea17b274a",
+    "mtime": 1795631438.0392683,
+    "seen": 1795632027.9466052,
+    "ast_hash": "b8993e155877f3ff60acb696eaecc377",
     "semantic_hash": ""
   },
   "site/.taste-skill/history.json": {
@@ -6438,9 +6438,9 @@
     "semantic_hash": ""
   },
   "docs/ATZOK.md": {
-    "mtime": 1795630819.506628,
-    "seen": 1795630824.8933368,
-    "ast_hash": "bb7442a10d5c8737c1863f4ab32e6f6a",
+    "mtime": 1795632021.7082517,
+    "seen": 1795632027.9480429,
+    "ast_hash": "dee6c3c538fb7dade5e97cdc97e2dedb",
     "semantic_hash": ""
   },
   "docs/figma-design-system-rules.md": {
@@ -8184,9 +8184,9 @@
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/exportar.js": {
-    "mtime": 1795630761.287383,
-    "seen": 1795630824.8904953,
-    "ast_hash": "8a572af56f2a50c6a7b10fa363789b34",
+    "mtime": 1795631997.7005723,
+    "seen": 1795632027.9466095,
+    "ast_hash": "e79893a30d29f69fb0490e59597daa82",
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/cards.html": {
@@ -8367,6 +8367,240 @@
     "mtime": 1795630681.496116,
     "seen": 1795630824.8940423,
     "ast_hash": "720f21b88b33fe368c57ce2a0f850bc9",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/cards-v2.html": {
+    "mtime": 1795631986.6817641,
+    "seen": 1795632027.9480467,
+    "ast_hash": "4e5c192ab26c7cfc47d83e7fc2e7226c",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/previa-v2.html": {
+    "mtime": 1795631510.1260638,
+    "seen": 1795632027.9480505,
+    "ast_hash": "7f12cfee7d737804556e5f5e15b3f154",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/fotos/caio-01.jpg": {
+    "mtime": 1795631936.2210023,
+    "seen": 1795632027.948304,
+    "ast_hash": "c7c712e8bba62f286670583da5d0117a",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/fotos/caio-02.jpg": {
+    "mtime": 1795631936.4170964,
+    "seen": 1795632027.9483051,
+    "ast_hash": "68e2dd3af26e16735203ecabbf169250",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/fotos/caio-03.jpg": {
+    "mtime": 1795631936.5942545,
+    "seen": 1795632027.9483063,
+    "ast_hash": "97cc9a89f7ef2dcae1bc8673970f7cbf",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/fotos/caio-05.jpg": {
+    "mtime": 1795631936.8216639,
+    "seen": 1795632027.9483075,
+    "ast_hash": "1a225ed4a7ef50b1656f0a95c71b72f9",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/fotos/caio-07.jpg": {
+    "mtime": 1795631937.008002,
+    "seen": 1795632027.9483085,
+    "ast_hash": "48ca6ea9529b0ece0bd58b299de924f5",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/fotos/caio-08.jpg": {
+    "mtime": 1795631937.1878886,
+    "seen": 1795632027.9483097,
+    "ast_hash": "e4c5ffaec3223ac125c2ec1e3658e489",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/fotos/caio-09.jpg": {
+    "mtime": 1795631937.4244566,
+    "seen": 1795632027.948311,
+    "ast_hash": "75669813f5202d1976d4300d68b417a7",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/fotos/caio-10.jpg": {
+    "mtime": 1795631937.5305843,
+    "seen": 1795632027.948312,
+    "ast_hash": "88c230024b3dc93de48334a6cf7ca77f",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/fotos/caio-11.jpg": {
+    "mtime": 1795631937.6519778,
+    "seen": 1795632027.948313,
+    "ast_hash": "4fcbe0ec2cf72f3135615e4e54992269",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/fotos/up-domo.jpg": {
+    "mtime": 1795631362.2040548,
+    "seen": 1795632027.9483144,
+    "ast_hash": "c16a16be02a50933c037f638406de591",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/fotos/up-mandala.jpg": {
+    "mtime": 1795631362.2070975,
+    "seen": 1795632027.9483154,
+    "ast_hash": "dc66b69983186d223683ee3429523174",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/fotos/up-noite.jpg": {
+    "mtime": 1795631362.2024791,
+    "seen": 1795632027.9483166,
+    "ast_hash": "74658755c40e9a45ecedea2519393ec6",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/fotos/up-tecido.jpg": {
+    "mtime": 1795631362.2055125,
+    "seen": 1795632027.9483178,
+    "ast_hash": "1f29b98212425871f2f5e5ad517697f7",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/0-chillout/01.png": {
+    "mtime": 1795631998.8617647,
+    "seen": 1795632027.948319,
+    "ast_hash": "403b9039a4514c511e8197e4c3542855",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/0-chillout/02.png": {
+    "mtime": 1795631998.970584,
+    "seen": 1795632027.9483202,
+    "ast_hash": "711325bbb133500795c1ad37e1e6c59e",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/0-chillout/03.png": {
+    "mtime": 1795631999.1154716,
+    "seen": 1795632027.9483213,
+    "ast_hash": "fca5fbab68fe371ccdd7ccf106ae56d9",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/0-chillout/04.png": {
+    "mtime": 1795631999.2191074,
+    "seen": 1795632027.9483225,
+    "ast_hash": "3f4ee0c0e37560be908f3bc2e630ccc2",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/0-chillout/05.png": {
+    "mtime": 1795631999.3203187,
+    "seen": 1795632027.9483232,
+    "ast_hash": "ecace9744846532f1a024898347cb70b",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/0-chillout/06.png": {
+    "mtime": 1795631999.4867609,
+    "seen": 1795632027.9483244,
+    "ast_hash": "13057cf31335361e6b232baab668ca0a",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/1-jungle/01.png": {
+    "mtime": 1795631999.6417649,
+    "seen": 1795632027.9483674,
+    "ast_hash": "cd3521d2fdaaba74ee6e17a8e8fd81ef",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/1-jungle/02.png": {
+    "mtime": 1795631999.7331235,
+    "seen": 1795632027.948371,
+    "ast_hash": "b2961f13d9ab7ff22312812548d6beb4",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/1-jungle/03.png": {
+    "mtime": 1795631999.9045556,
+    "seen": 1795632027.9483736,
+    "ast_hash": "c486324ffff42c20b8b8584571cc0880",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/1-jungle/04.png": {
+    "mtime": 1795631999.98627,
+    "seen": 1795632027.9483755,
+    "ast_hash": "eae56415ef7ecc8a531b56328ce4f1cf",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/1-jungle/05.png": {
+    "mtime": 1795632000.0897648,
+    "seen": 1795632027.9483774,
+    "ast_hash": "74469cbabe45ac2766fef06a06e93b2d",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/1-jungle/06.png": {
+    "mtime": 1795632000.2377648,
+    "seen": 1795632027.9483788,
+    "ast_hash": "a2b7530d64c63c84241f583beefb880f",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/2-drum-n-bossa/01.png": {
+    "mtime": 1795632000.361765,
+    "seen": 1795632027.9483805,
+    "ast_hash": "b213586c5f08487de07ea18a87f54edc",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/2-drum-n-bossa/02.png": {
+    "mtime": 1795632000.453765,
+    "seen": 1795632027.9483821,
+    "ast_hash": "126cd72e72926ead9358f0d9bdb0be99",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/2-drum-n-bossa/03.png": {
+    "mtime": 1795632000.5985208,
+    "seen": 1795632027.9483833,
+    "ast_hash": "1ef1a23e611a445d6d16c584abc53833",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/2-drum-n-bossa/04.png": {
+    "mtime": 1795632000.677765,
+    "seen": 1795632027.9483848,
+    "ast_hash": "50f15b4617bfa7997d2e3fc3b50512b4",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/2-drum-n-bossa/05.png": {
+    "mtime": 1795632000.7871227,
+    "seen": 1795632027.9483862,
+    "ast_hash": "7d8df87c1b364122f94102821af78b31",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/2-drum-n-bossa/06.png": {
+    "mtime": 1795632000.9303727,
+    "seen": 1795632027.948388,
+    "ast_hash": "2e202e0d199c7cd17023dd9abe12d0ec",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/3-dub/01.png": {
+    "mtime": 1795632001.074329,
+    "seen": 1795632027.9483895,
+    "ast_hash": "2cc9e71fb6f512627345daf9d068249a",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/3-dub/02.png": {
+    "mtime": 1795632001.157765,
+    "seen": 1795632027.948391,
+    "ast_hash": "f1525b0e8eec7d1ce887af17f05b7544",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/3-dub/03.png": {
+    "mtime": 1795632001.28607,
+    "seen": 1795632027.9483922,
+    "ast_hash": "013b7b1bec24b76feed305a678124f6a",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/3-dub/04.png": {
+    "mtime": 1795632001.3657649,
+    "seen": 1795632027.9483938,
+    "ast_hash": "033ad05bf23a0d09410ebba1f6432560",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/3-dub/05.png": {
+    "mtime": 1795632001.453765,
+    "seen": 1795632027.948395,
+    "ast_hash": "8f9da708919e1c2efafa7d752a88ac20",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/3-dub/06.png": {
+    "mtime": 1795632001.6113598,
+    "seen": 1795632027.9483962,
+    "ast_hash": "954e66953c18e62fbd752491f6900e50",
     "semantic_hash": ""
   }
 }
