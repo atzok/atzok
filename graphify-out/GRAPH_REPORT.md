@@ -1,17 +1,17 @@
 # Graph Report - atzok  (2026-11-25)
 
 ## Corpus Check
-- 1011 files · ~1,121,960 words
+- 1014 files · ~1,124,161 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 166 file(s) not represented in the graph (top: .ttf 54, .css 48, .csv 37)
+- Unclassified: 167 file(s) not represented in the graph (top: .ttf 54, .css 48, .csv 37)
 
 ## Summary
-- 8507 nodes · 11908 edges · 664 communities (605 shown, 59 thin omitted)
+- 8528 nodes · 11927 edges · 658 communities (600 shown, 58 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 304 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3195d13a`
+- Built from commit: `320feb81`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -37,10 +37,10 @@
 - search
 - remotion-markup/SKILL.md
 - search_stack
-- design_system.py
+- test_design_system_mode.py
 - Lambda rendering on AWS
 - audio-carve.mjs
-- bgm.mjs
+- ref_node_child_process
 - report
 - tts.mjs
 - manifest.mjs
@@ -90,7 +90,7 @@
 - Creative Mode — Frame (video / frame layer)
 - Daisy Days — Frame (video / frame layer)
 - Editorial Forest — Frame (video / frame layer)
-- imagegen.mjs
+- windows-exe-search.test.mjs
 - .agents/skills/remotion-best-practices/SKILL.md
 - .claude/skills/remotion-best-practices/SKILL.md
 - lib.js
@@ -133,7 +133,7 @@
 - soft-light-bars/effect.js
 - Natural Transitions
 - .agents/skills/remotion-best-practices/remotion-maps/techniques/cesium/scripts/prep-cesium-path.mjs
-- contrast
+- format_ascii_box
 - .agents/skills/remotion-best-practices/remotion-markup/remotion-maps/techniques/cesium/scripts/prep-cesium-path.mjs
 - Using audio in Remotion
 - skills/remotion-markup/remotion-maps/techniques/cesium/scripts/prep-cesium-path.mjs
@@ -150,7 +150,7 @@
 - skills/remotion-maps/techniques/cesium/scripts/prep-cesium-path.mjs
 - Delaying, trimming
 - skills/remotion-saas/rendering.md
-- Voice & Audio Generation
+- Generative AI Tools for Ad Creative
 - Motion-Style Video Ads (Faceless, Fully Generated)
 - Copy Frameworks Reference
 - cutlist.mjs
@@ -162,7 +162,7 @@
 - Data viz: charts that read as set, not generated
 - install.mjs
 - .claude/skills/remotion-best-practices/remotion-maps/techniques/cesium/assets/CesiumFlythrough.tsx
-- .build
+- read_rows
 - .claude/skills/remotion-best-practices/remotion-markup/remotion-maps/techniques/cesium/assets/CesiumFlythrough.tsx
 - skills/remotion-maps/techniques/cesium/assets/CesiumFlythrough.tsx
 - skills/remotion-markup/remotion-maps/techniques/cesium/assets/CesiumFlythrough.tsx
@@ -181,7 +181,7 @@
 - transcript-cut.mjs
 - tier-1-title-card/remotion-src/package.json
 - tier-2-multi-scene/remotion-src/package.json
-- picture.mjs
+- bakeDraw
 - Disney's 12 Principles — UI Adapted
 - .claude/skills/remotion-best-practices/remotion-create/REFERENCE.md
 - skills/remotion-markup/compositions.md
@@ -190,7 +190,7 @@
 - Structural Patterns
 - Find Skills
 - pick.mjs
-- ascii-shade/effect.js
+- openverse.mjs
 - Meta Creative Format Taxonomy — Which Format to Make Next
 - AI Tells: The Copy Blacklist
 - Component quality bar
@@ -363,7 +363,7 @@
 - Films from a source: measured facts
 - Explainers, tutorials and "how it works"
 - Steps
-- .render
+- init
 - interface
 - interface
 - interface
@@ -461,7 +461,7 @@
 - Using Three.js and React Three Fiber in Remotion
 - Using `<HtmlInCanvas>` in Remotion
 - Measuring text in Remotion
-- Content Repurposing System
+- Voice & Audio Generation
 - .claude/skills/remotion-best-practices/remotion-markup/timing.md
 - remotion-maps/SKILL.md
 - CesiumJS — 3D flyovers in Remotion
@@ -502,8 +502,8 @@
 - Adaptive Silence Detection
 - Tier 2 — title-image-outro
 - Transitions translation: @remotion/transitions → HF crossfades / shader-transitions
-- Video matting
-- Engagement Strategy
+- index-gen.mjs
+- raio-x-jazzy/hyperframes.json
 - ÄTZØK / RAIO-X
 - Spacing and sizing
 - Genre: atmospheric
@@ -516,7 +516,7 @@
 - Map element data sources
 - Moving Map Render Stability
 - .claude/skills/remotion-best-practices/remotion-markup/local-fonts.md
-- normalise
+- Background music (BGM)
 - build-index.mjs
 - Map element data sources
 - Moving Map Render Stability
@@ -526,15 +526,15 @@
 - Map element data sources
 - Moving Map Render Stability
 - skills/remotion-markup/local-fonts.md
-- load
 - scripts
-- Before Starting
+- scripts
+- edge-glow/effect.js
 - Map element data sources
 - Moving Map Render Stability
 - Changelog
-- film-light-leak/effect.js
-- TokenCliTest
-- Output Formats
+- prism-dispersion/effect.js
+- Video Generation
+- transcript-cut.test.mjs
 - Platform Comparison
 - Integration with Marketing Skills
 - Before Planning
@@ -585,7 +585,7 @@
 - 3D Flyover — troubleshooting
 - skills/remotion-markup/remotion-maps/techniques/maptiler/assets/MapTilerVectorElement.ts
 - TestStackFlagWithDesignSystem
-- TestThresholdGate
+- CatalogSummaryLineEndingsTest
 - picture-develops/moment.js
 - Content Modeling for Marketing
 - Output Format
@@ -618,7 +618,7 @@
 - interface
 - CSS cheat sheet
 - Using fonts in Remotion
-- Platform Specs
+- contour-lines/effect.js
 - Video matting
 - remotion-docs/SKILL.md
 - skills/remotion-markup/images.md
@@ -646,19 +646,13 @@
 - remotion-upgrade/SKILL.md
 - word-highlight/moment.js
 - walk
-- caustics/effect.js
+- TestTextLayoutDataContracts
 - chat/fragment.js
-- pipeline-board/fragment.js
-- Per-Platform Notes
+- skills/remotion-markup/measuring-dom-nodes.md
 - Video Hook Library
 - X (Twitter) Algorithm Playbook
 - Hook Formulas
-- Generating Ad Copy
-- Analytics & Optimization
-- Scheduling Best Practices
 - .claude/skills/remotion-best-practices/remotion-markup/images.md
-- Content Ideas by Situation
-- Content Pillars Framework
 
 ## God Nodes (most connected - your core abstractions)
 1. `report()` - 90 edges
@@ -673,37 +667,37 @@
 10. `The Templates` - 34 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Custom effects` --references--> `resolve()`  [INFERRED]
-  .agents/skills/remotion-best-practices/remotion-markup/effects.md → .claude/skills/ui-ux-pro-max/scripts/tests/test_skill_script_paths.py
 - `Available effects` --references--> `contrast()`  [INFERRED]
   .agents/skills/remotion-best-practices/remotion-markup/effects.md → .claude/skills/hallmark/scripts/sloplint-render.mjs
+- `Available effects` --references--> `contrast()`  [INFERRED]
+  .agents/skills/remotion-best-practices/remotion-markup/REFERENCE.md → .claude/skills/hallmark/scripts/sloplint-render.mjs
+- `Custom effects` --references--> `resolve()`  [INFERRED]
+  .agents/skills/remotion-best-practices/remotion-markup/effects.md → .claude/skills/ui-ux-pro-max/scripts/tests/test_skill_script_paths.py
 - `Available effects` --references--> `outline()`  [INFERRED]
   .agents/skills/remotion-best-practices/remotion-markup/effects.md → site/assets/diagrams/diagram.js
-- `Available effects` --references--> `outline()`  [INFERRED]
-  .agents/skills/remotion-best-practices/remotion-markup/REFERENCE.md → site/assets/diagrams/diagram.js
 - `Available effects` --references--> `outline()`  [INFERRED]
   .claude/skills/remotion-best-practices/remotion-markup/effects.md → site/assets/diagrams/diagram.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (664 total, 59 thin omitted)
+## Communities (658 total, 58 thin omitted)
 
 ### Community 0 - "ref_node_fs"
 Cohesion: 0.04
-Nodes (41): CLI_MEDIA_USE, SKILLS, skillScripts(), guards, here, readdirTree(), scripts(), skillsRoot (+33 more)
+Nodes (32): CLI_MEDIA_USE, SKILLS, skillScripts(), LOCATE, HERE, sfxLibDir, SCRIPTS_DIR, script (+24 more)
 
 ### Community 1 - "core.py"
-Cohesion: 0.04
-Nodes (30): BM25, _contains_phrase(), detect_domain(), _domain_keywords(), _exact_match_diagnostic(), _exact_row_identity(), _file_signature(), _get_bm25() (+22 more)
+Cohesion: 0.05
+Nodes (18): BM25, _contains_phrase(), detect_domain(), _domain_keywords(), _file_signature(), _get_bm25(), _load_csv(), _load_csv_snapshot() (+10 more)
 
 ### Community 2 - "preview.py"
-Cohesion: 0.04
-Nodes (29): _button_outline_text_color(), _contrast_ratio(), _derive_dark_palette(), format_master_md(), _palette_is_dark(), _relative_luminance(), _select_palette_for_mode(), _attr() (+21 more)
+Cohesion: 0.06
+Nodes (22): _button_outline_text_color(), _contrast_ratio(), format_master_md(), _attr(), _css_color(), _css_font(), format_preview_html(), _format_ratio() (+14 more)
 
 ### Community 3 - "validate_data.py"
-Cohesion: 0.06
-Nodes (44): read_rows(), TestAccessibilityGuidance, TestChartsTypographyAndIcons, TestCurrentReactGuidance, TestSemanticColors, TestGeneratedCatalogContract, _catalog_date(), _check_app_interface_contract() (+36 more)
+Cohesion: 0.05
+Nodes (41): authenticate(), read_rows(), read_rows(), _catalog_date(), _check_app_interface_contract(), _check_catalog_contract(), _check_catalog_summary(), _check_chart_contract() (+33 more)
 
 ### Community 4 - "sloplint.mjs"
 Cohesion: 0.03
@@ -711,27 +705,27 @@ Nodes (72): ANSWERED, APP_SKIP, args, BUILD_DIRS, check25(), check62(), check76(
 
 ### Community 5 - "DesignSystemGenerator"
 Cohesion: 0.05
-Nodes (14): DesignSystemGenerator, _resolve_dial(), apply_decision_rules(), _object_without_duplicates(), parse_decision_rules(), _validate_action(), TestReasoningMatch, read_rows() (+6 more)
+Nodes (15): DesignSystemGenerator, _resolve_dial(), apply_decision_rules(), _object_without_duplicates(), parse_decision_rules(), _validate_action(), TestReasoningMatch, read_rows() (+7 more)
 
 ### Community 6 - "dotted-globe/effect.js"
-Cohesion: 0.08
-Nodes (56): CITIES, earthSampler(), easeInOut(), easeOut(), fib(), hueIn(), LAKES, LAND (+48 more)
+Cohesion: 0.06
+Nodes (71): BAYER4, fallbackCSS(), hash2(), makeNoise(), mountAscii(), buildAtlas(), draw(), layout() (+63 more)
 
 ### Community 8 - "generate_design_system"
-Cohesion: 0.05
-Nodes (24): build_design_tokens(), _css_font_family(), _detect_page_type(), _flatten_tokens(), format_page_override_md(), format_tokens_css(), format_tokens_dtcg(), generate_design_system() (+16 more)
+Cohesion: 0.04
+Nodes (26): build_design_tokens(), _css_font_family(), _detect_page_type(), _flatten_tokens(), format_page_override_md(), format_tokens_css(), format_tokens_dtcg(), generate_design_system() (+18 more)
 
 ### Community 9 - "heygen.mjs"
-Cohesion: 0.06
-Nodes (54): argv, die(), dur, output, positional, clone(), list(), main() (+46 more)
+Cohesion: 0.07
+Nodes (46): Cloned voices — `scripts/heygen-voice.mjs`, clone(), list(), main(), MEDIA_TYPES, run(), savedEnv, billingRefusal() (+38 more)
 
 ### Community 10 - ".agents/skills/remotion-best-practices/remotion-markup/REFERENCE.md"
 Cohesion: 0.04
-Nodes (44): Dynamic image paths, Getting image dimensions, Sizing and positioning, Measuring DOM nodes in Remotion, Measuring element dimensions, Color picker, 3D content, Advanced Images (+36 more)
+Nodes (47): Dynamic image paths, Getting image dimensions, Sizing and positioning, Measuring DOM nodes in Remotion, Measuring element dimensions, Color picker, 3D content, Advanced Images (+39 more)
 
 ### Community 11 - "audio.mjs"
 Cohesion: 0.06
-Nodes (38): anomalies, argv, bgmFields, bgmModeOverride, HERE, hyperframesDir, langOverride, lyriaRecipe (+30 more)
+Nodes (34): anomalies, argv, bgmFields, bgmModeOverride, HERE, hyperframesDir, langOverride, lyriaRecipe (+26 more)
 
 ### Community 12 - "refcheck.mjs"
 Cohesion: 0.04
@@ -750,28 +744,28 @@ Cohesion: 0.09
 Nodes (51): addLog(), ADJUST, args, ASK, BASE_CUSTOM, buildIndex(), check(), contrastOf() (+43 more)
 
 ### Community 16 - "Ad Creative"
-Cohesion: 0.08
-Nodes (26): 1. Break into sub-tasks, 2. Generate in waves, 3. Quality filter, Ad Creative, Batch Generation Workflow, Common Mistakes, Descriptions That Convert, Generating Ad Visuals (+18 more)
+Cohesion: 0.04
+Nodes (49): 1. Break into sub-tasks, 1. Platform & Format, 2. Generate in waves, 2. Product & Offer, 3. Audience & Intent, 3. Quality filter, 4. Performance Data (if iterating), 5. Constraints (+41 more)
 
 ### Community 17 - ".claude/skills/remotion-best-practices/remotion-markup/REFERENCE.md"
 Cohesion: 0.04
 Nodes (41): Measuring DOM nodes in Remotion, Measuring element dimensions, Color picker, 3D content, Advanced Images, Advanced sequencing, Arabic and right-to-left text, Assets (+33 more)
 
 ### Community 18 - "search"
-Cohesion: 0.05
-Nodes (11): _normalize_rtl_level(), _rtl_row_filter(), search(), _style_search_destination(), TestSearchDomains, TestFormErrorHandling, ux_rows(), TestImeGuidance (+3 more)
+Cohesion: 0.04
+Nodes (16): _exact_row_identity(), _normalize_rtl_level(), _row_identities(), _rtl_row_filter(), search(), _style_identity(), _style_search_destination(), TestSearchDomains (+8 more)
 
 ### Community 19 - "remotion-markup/SKILL.md"
 Cohesion: 0.04
-Nodes (43): Cropping, Measuring DOM nodes in Remotion, Measuring element dimensions, Color picker, 3D content, Advanced Images, Advanced sequencing, Arabic and right-to-left text (+35 more)
+Nodes (41): Cropping, Color picker, 3D content, Advanced Images, Advanced sequencing, Arabic and right-to-left text, Assets, Audio visualization (+33 more)
 
 ### Community 20 - "search_stack"
 Cohesion: 0.06
-Nodes (10): _exact_stack_identifier(), search_stack(), TestDiagnosticsContracts, _rows(), TestNativeDesktopStackFreshness, read_rows(), TestTextLayoutDataContracts, TestTextLayoutRetrieval (+2 more)
+Nodes (17): _exact_match_diagnostic(), _exact_stack_identifier(), _legacy_successor_guidance(), _normalize(), _passes_threshold(), _project_row(), _query_coverage(), search_stack() (+9 more)
 
-### Community 21 - "design_system.py"
+### Community 21 - "test_design_system_mode.py"
 Cohesion: 0.07
-Nodes (15): ansi_ljust(), _filter_anti_patterns_for_mode(), format_ascii_box(), add_wrapped(), wrap_text(), format_markdown(), hex_to_ansi(), _mode_support_labels() (+7 more)
+Nodes (13): _derive_dark_palette(), _filter_anti_patterns_for_mode(), _palette_is_dark(), _query_wants_dark(), _relative_luminance(), _resolve_color_mode(), _select_palette_for_mode(), _style_is_dark_primary() (+5 more)
 
 ### Community 22 - "Lambda rendering on AWS"
 Cohesion: 0.05
@@ -781,9 +775,9 @@ Nodes (38): Archive size and `.hyperframesignore`, Authentication, cloud — Hey
 Cohesion: 0.12
 Nodes (36): attrOf(), carveSources(), decode(), DEFAULT_STRENGTH, detectTracks(), escapeAttr(), fail(), groupSourceRefusal() (+28 more)
 
-### Community 24 - "bgm.mjs"
-Cohesion: 0.13
-Nodes (21): Background music (BGM), Driving it from the request, Failure modes, HeyGen retrieval (default), Local generation (fallback) — Lyria → MusicGen, Lyria knobs (direct recipe use), Mood inference (the generate prompt), BGM_PY_DEPS (+13 more)
+### Community 24 - "ref_node_child_process"
+Cohesion: 0.11
+Nodes (24): BGM_PY_DEPS, generateBgmDetached(), LYRIA_PY_DEPS, lyriaKey(), musicgenScript(), pipInstall(), pyOk(), r3() (+16 more)
 
 ### Community 25 - "report"
 Cohesion: 0.08
@@ -791,11 +785,11 @@ Nodes (40): applyWaivers(), appSkip(), baseGate(), check10(), check10Motion(), c
 
 ### Community 26 - "tts.mjs"
 Cohesion: 0.07
-Nodes (43): geminiAuth(), geminiConfigured(), GEMINI_TTS_MODEL, GEMINI_TTS_MODELS, pcmToWav(), synthesizeGemini(), withCause(), noteProjectElevenLabsKey() (+35 more)
+Nodes (42): argv, die(), dur, output, positional, GEMINI_TTS_MODEL, GEMINI_TTS_MODELS, pcmToWav() (+34 more)
 
 ### Community 27 - "manifest.mjs"
-Cohesion: 0.10
-Nodes (38): isPlainFileName(), recordInManifest(), SFX_SOURCES, noBgm, voicePaths(), writtenAssets(), cell(), formatDims() (+30 more)
+Cohesion: 0.20
+Nodes (22): allocateId(), appendRecord(), findByPrompt(), manifestPath(), mediaDir(), nextFreeId(), nextId(), normalizePrompt() (+14 more)
 
 ### Community 28 - "resolveVars"
 Cohesion: 0.11
@@ -826,16 +820,16 @@ Cohesion: 0.06
 Nodes (30): Caption Exit Guarantee, Captions, Constraints, Further References, Per-Word Styling, Positioning, Pre-Built Caption Components, Script-to-Style Mapping (+22 more)
 
 ### Community 35 - "sfx.mjs"
-Cohesion: 0.12
-Nodes (24): downloadTo(), agentWritePath(), httpsUrl(), oneLine(), OPENVERSE_SFX_LICENSES, OpenverseUnavailableError, penalty(), pickOpenverseSfx() (+16 more)
+Cohesion: 0.11
+Nodes (20): agentWritePath(), isPlainFileName(), recordInManifest(), SFX_SOURCES, noBgm, voicePaths(), writtenAssets(), BUNDLED_SFX_DIR (+12 more)
 
 ### Community 36 - "Media treatment recipes"
 Cohesion: 0.06
 Nodes (33): 8mm Home Movie, Base payload, Base payload, Bounded tuning, Bounded tuning, Cached Error Diffusion, Creator Camcorder, Crosshatched Sketch (+25 more)
 
 ### Community 37 - ".agents/skills/remotion-best-practices/remotion-markup/transitions.md"
-Cohesion: 0.10
-Nodes (19): `<HtmlInCanvasMotionBlur>`, Motion blur, Motion blur on transitions, `shutterAngle` and `samples`, Available transition types, Calculating total composition duration, Custom presentation, Duration calculation (+11 more)
+Cohesion: 0.06
+Nodes (29): Choose how items share time, Complete example, Editable timeline structure, Give substantial groups their own timelines, Connected compositions, Create the connection, Extract an existing group, Make the component independent of its parent (+21 more)
 
 ### Community 38 - "ref_react"
 Cohesion: 0.06
@@ -846,52 +840,52 @@ Cohesion: 0.10
 Nodes (26): api, auto(), CAPS, cleanName(), fallbackList(), h(), iconCache, iconMeta (+18 more)
 
 ### Community 40 - "Diagram"
-Cohesion: 0.17
-Nodes (4): Contract, Diagram, kindOther(), Mount
+Cohesion: 0.09
+Nodes (14): Contract, axesOf(), clamp(), Diagram, ease(), geo(), kindOf(), kindOther() (+6 more)
 
 ### Community 41 - "ui.js"
 Cohesion: 0.09
-Nodes (35): addPause(), AGAIN, bakeDpr(), bakeDraw(), bakeOne(), bakeQueue, BASE, boxes (+27 more)
+Nodes (30): addPause(), AGAIN, bakeQueue, BASE, boxes, boxOf(), cache, css (+22 more)
 
 ### Community 42 - "ref_remotion"
 Cohesion: 0.12
 Nodes (19): RemotionRoot(), TitleCard(), AnimatedNumber(), Props, Props, StatCard(), Props, UnderlinedText() (+11 more)
 
 ### Community 43 - "Social Content"
-Cohesion: 0.25
-Nodes (8): Batching Strategy (2-3 hours weekly), Content Calendar Structure, Platform Quick Reference, Related Skills, Reverse Engineering Viral Content, Social Content, Task-Specific Questions, Weekly Planning Template
+Cohesion: 0.06
+Nodes (32): Analytics & Optimization, Batching Strategy (2-3 hours weekly), Blog Post → Social Content, Building Relationships, Content Calendar Structure, Content Ideas by Situation, Content Pillars Framework, Content Repurposing System (+24 more)
 
 ### Community 44 - "loop"
-Cohesion: 0.08
-Nodes (18): init(), init(), init(), init(), init(), init(), init(), init() (+10 more)
+Cohesion: 0.10
+Nodes (17): init(), init(), init(), init(), init(), init(), secs(), init() (+9 more)
 
 ### Community 45 - ".claude/skills/remotion-best-practices/remotion-markup/compositions.md"
-Cohesion: 0.09
-Nodes (20): Matching dimensions of a video, Return value, Setting a default outName, Setting duration based on a video, Setting duration based on multiple videos, Transforming props, Using calculateMetadata, Getting video dimensions (+12 more)
+Cohesion: 0.07
+Nodes (26): Matching dimensions of a video, Return value, Setting a default outName, Setting duration based on a video, Setting duration based on multiple videos, Transforming props, Using calculateMetadata, Default Props and scaffold metadata (+18 more)
 
 ### Community 46 - "wait-bgm.mjs"
-Cohesion: 0.10
-Nodes (17): die(), argv, audioMetaPath, base, die(), hyperframesDir, intervalMs, outPath (+9 more)
+Cohesion: 0.13
+Nodes (9): argv, audioMetaPath, base, hyperframesDir, intervalMs, outPath, started, status (+1 more)
 
 ### Community 47 - "parseColor"
 Cohesion: 0.11
 Nodes (30): bannedGradient(), check2(), check29Glow(), check48(), check65(), check7(), firstFamily(), gradientHues() (+22 more)
 
 ### Community 48 - "grainCSS"
-Cohesion: 0.17
-Nodes (19): at(), L(), mount(), params, tones(), uniforms(), mount(), params (+11 more)
+Cohesion: 0.13
+Nodes (26): at(), L(), mount(), params, tones(), uniforms(), mount(), params (+18 more)
 
 ### Community 49 - ".agents/skills/remotion-best-practices/remotion-captions/REFERENCE.md"
-Cohesion: 0.13
-Nodes (13): Importing .srt subtitles into Remotion, Prerequisites, Reading an .srt file, Using imported captions, Displaying captions, Generating captions, Importing captions, Post-creation (+5 more)
+Cohesion: 0.07
+Nodes (24): Adding the Basic Captions element, Displaying captions alongside video content, Displaying captions in Remotion, Prerequisites, White-space preservation, Importing .srt subtitles into Remotion, Prerequisites, Reading an .srt file (+16 more)
 
 ### Community 50 - ".agents/skills/remotion-best-practices/remotion-maps/REFERENCE.md"
 Cohesion: 0.07
 Nodes (25): [CesiumJS](techniques/cesium/TECHNIQUE.md), [Mapbox](techniques/mapbox/TECHNIQUE.md), [MapLibre](techniques/maplibre/TECHNIQUE.md), [MapTiler](techniques/maptiler/TECHNIQUE.md), Remotion Maps, [Static map](techniques/static-map/TECHNIQUE.md), Build the flight, Camera behavior (+17 more)
 
 ### Community 51 - ".claude/skills/remotion-best-practices/remotion-captions/REFERENCE.md"
-Cohesion: 0.13
-Nodes (13): Importing .srt subtitles into Remotion, Prerequisites, Reading an .srt file, Using imported captions, Displaying captions, Generating captions, Importing captions, Post-creation (+5 more)
+Cohesion: 0.10
+Nodes (18): Adding the Basic Captions element, Displaying captions alongside video content, Displaying captions in Remotion, Prerequisites, White-space preservation, Importing .srt subtitles into Remotion, Prerequisites, Reading an .srt file (+10 more)
 
 ### Community 52 - "backgrounds/check.mjs"
 Cohesion: 0.08
@@ -899,7 +893,7 @@ Nodes (21): allIds, args, boxIds, by, child, defaultProfile(), fails, guard (+13
 
 ### Community 53 - "shader"
 Cohesion: 0.14
-Nodes (26): lit(), mount(), params, tones(), uniforms(), compile(), fallbackCSS(), HAS_WEBGL() (+18 more)
+Nodes (26): mount(), params, tones(), uniforms(), violet(), lit(), mount(), params (+18 more)
 
 ### Community 54 - "Placeholder material"
 Cohesion: 0.07
@@ -915,15 +909,15 @@ Nodes (15): Delaying, Importing Audio, Looping, Muting, Pitch, Prerequisites, Sp
 
 ### Community 57 - "Ätzøk: caderno central"
 Cohesion: 0.06
-Nodes (32): 2026-11-23, Agenda (dez 2026 / jan 2027), Bio, Bio antiga (Press Kit 2023, PDF no Drive, pasta "ÄTZØK - PRESS KIT"), Bio atual (2026-11-23, v6, reescrita em tom mais natural; formato do press kit de 2023), Contato e links, Desejos Gelados EP (Bliss Records, BLISS030), Discografia (+24 more)
+Nodes (34): 2026-11-23, Agenda (dez 2026 / jan 2027), Banco de ideias RAIO-X (guardadas, prontas para produzir), Bio, Bio antiga (Press Kit 2023, PDF no Drive, pasta "ÄTZØK - PRESS KIT"), Bio atual (2026-11-23, v6, reescrita em tom mais natural; formato do press kit de 2023), Contato e links, Desejos Gelados EP (Bliss Records, BLISS030) (+26 more)
 
 ### Community 58 - "system.js"
 Cohesion: 0.14
 Nodes (26): actionbar(), DAY_NAMES, DAYS, daySet(), faq(), forms(), glowOnHover(), GROUNDS (+18 more)
 
 ### Community 59 - "extract-audio-data.py"
-Cohesion: 0.05
-Nodes (25): compute_band_edges(), compute_fft_bands(), decode_audio(), extract(), main(), authenticate(), generate_bgm(), main() (+17 more)
+Cohesion: 0.08
+Nodes (20): compute_band_edges(), compute_fft_bands(), decode_audio(), extract(), main(), generate_bgm(), main(), parse_args() (+12 more)
 
 ### Community 60 - "Short-Form Video: Hooks, Scripts & Strategy"
 Cohesion: 0.08
@@ -981,13 +975,13 @@ Nodes (24): 1 · Cover (identity · move: ornament wreath · saturated · center
 Cohesion: 0.08
 Nodes (24): 1 · Cover (identity · move: oversized serif · green · left), 2 · Topic Tiles (catalog · move: rotating-fill grid · cream · the dense frame), 3 · KPI Stat (data · move: oversized figure · green), 4 · Statement (quote · move: display serif · cream · left), 5 · Step Framework (process · move: 8px step tiles · cream/green), 6 · Chart (data · move: bars + meta · green), Approved Real Entities, Aspect-Ratio Behavior (+16 more)
 
-### Community 74 - "imagegen.mjs"
-Cohesion: 0.17
-Nodes (7): args, hash, n, prompt, stem, steps, [w, h]
+### Community 74 - "windows-exe-search.test.mjs"
+Cohesion: 0.08
+Nodes (14): guards, here, readdirTree(), scripts(), skillsRoot, png, script, args (+6 more)
 
 ### Community 75 - ".agents/skills/remotion-best-practices/SKILL.md"
-Cohesion: 0.07
-Nodes (23): Fetching a page as Markdown, Searching the docs, Workflow, Useful flags, Upgrade Remotion, Captions, Creating a SaaS, automation or application, Creating a video (+15 more)
+Cohesion: 0.08
+Nodes (22): Fetching a page as Markdown, Searching the docs, Workflow, Upgrade Remotion, Captions, Creating a SaaS, automation or application, Creating a video, If you are using another agent client with an in-app browser (+14 more)
 
 ### Community 76 - ".claude/skills/remotion-best-practices/SKILL.md"
 Cohesion: 0.08
@@ -1002,16 +996,16 @@ Cohesion: 0.09
 Nodes (11): CENTER, COUNTRIES, framesDir, MARGIN, N, [cmd, ...rest], FONT_FILES, fontOption() (+3 more)
 
 ### Community 79 - ".agents/skills/remotion-best-practices/remotion-interactivity/REFERENCE.md"
-Cohesion: 0.05
-Nodes (30): Effects should be inline too, Animate using `interpolate()`, Choose schema fields, Effects should be inline too, Give interactive elements a descriptive name, Keep all CSS styles inline, Keep composition metadata inline, Keep SVG paths editable with `Interactive.Path` (+22 more)
+Cohesion: 0.08
+Nodes (19): Effects should be inline too, Animate using `interpolate()`, Choose schema fields, Effects should be inline too, Give interactive elements a descriptive name, Keep all CSS styles inline, Keep composition metadata inline, Keep SVG paths editable with `Interactive.Path` (+11 more)
 
 ### Community 80 - "Using calculateMetadata"
-Cohesion: 0.07
-Nodes (25): Matching dimensions of a video, Return value, Setting a default outName, Setting duration based on a video, Setting duration based on multiple videos, Transforming props, Using calculateMetadata, Getting audio duration (+17 more)
+Cohesion: 0.09
+Nodes (20): Matching dimensions of a video, Return value, Setting a default outName, Setting duration based on a video, Setting duration based on multiple videos, Transforming props, Using calculateMetadata, Getting video dimensions (+12 more)
 
 ### Community 81 - "Social Listening & Engagement Triage"
-Cohesion: 0.11
-Nodes (18): Bluesky (free, public API), Comment Quality Tiers, Common Workflows, Contents, "Find people complaining about [competitor]", "Find target-account posts I missed", "Give me my top 10 posts to comment on today", Hacker News (Algolia search) (+10 more)
+Cohesion: 0.08
+Nodes (24): Bluesky, Bluesky (free, public API), Comment Quality Tiers, Common Workflows, Contents, "Find people complaining about [competitor]", "Find target-account posts I missed", "Give me my top 10 posts to comment on today" (+16 more)
 
 ### Community 82 - "Typography"
 Cohesion: 0.08
@@ -1054,20 +1048,20 @@ Cohesion: 0.18
 Nodes (13): countAssetFiles(), walk(), escapeHtml(), evalBlock(), generateReport(), outPath, REPO_ROOT, report (+5 more)
 
 ### Community 92 - "prefs-store.mjs"
-Cohesion: 0.21
-Nodes (18): withFileLock(), dedupe(), emptyFile(), isRecord(), mergedPreferences(), PREFERENCE_KEYS, preferenceKeyFor(), projectPrefsPath() (+10 more)
+Cohesion: 0.20
+Nodes (19): withFileLock(), globalMediaDir(), mediaHome(), dedupe(), emptyFile(), isRecord(), mergedPreferences(), PREFERENCE_KEYS (+11 more)
 
 ### Community 93 - ".agents/skills/remotion-best-practices/remotion-create/REFERENCE.md"
-Cohesion: 0.06
-Nodes (27): Adding the Basic Captions element, Displaying captions alongside video content, Displaying captions in Remotion, Prerequisites, White-space preservation, Designing a video, Empty folder, Follow-up (+19 more)
+Cohesion: 0.09
+Nodes (17): Designing a video, Empty folder, Follow-up, Interactivity Best Practices, Is this a multi-scene video?, Is this a timeline of clips?, Non-empty folder, Open the preview before building the video (+9 more)
 
 ### Community 94 - "Listening Sources — Template"
 Cohesion: 0.09
 Nodes (22): Blogs / Newsletters (RSS), Bluesky, Brand mentions, Competitor mentions (monitor for switching language), Do Not Engage, High-intent (someone shopping or switching), ICP (for scoring), Keywords (intent signals) (+14 more)
 
 ### Community 95 - "sloplint-render.mjs"
-Cohesion: 0.19
-Nodes (20): CHROMES, focusRing(), frames(), hideStyles(), inventory(), isUrl(), lineBreaks(), observe() (+12 more)
+Cohesion: 0.18
+Nodes (21): CHROMES, contrast(), focusRing(), frames(), hideStyles(), inventory(), isUrl(), lineBreaks() (+13 more)
 
 ### Community 96 - "Motion Design Skill"
 Cohesion: 0.09
@@ -1090,8 +1084,8 @@ Cohesion: 0.33
 Nodes (5): Animation runtimes, dotLottie browser setup, GSAP facts that bite, Other runtimes, The seek protocol
 
 ### Community 101 - "capture.mjs"
-Cohesion: 0.10
-Nodes (16): argv, chrome, CHROMES, globalRoot(), HERE, isUrl, made, out (+8 more)
+Cohesion: 0.06
+Nodes (27): argv, chrome, CHROMES, globalRoot(), HERE, isUrl, made, out (+19 more)
 
 ### Community 102 - ".claude/skills/remotion-best-practices/remotion-markup/transitions.md"
 Cohesion: 0.10
@@ -1106,12 +1100,12 @@ Cohesion: 0.10
 Nodes (19): `<HtmlInCanvasMotionBlur>`, Motion blur, Motion blur on transitions, `shutterAngle` and `samples`, Available transition types, Calculating total composition duration, Custom presentation, Duration calculation (+11 more)
 
 ### Community 105 - "color"
-Cohesion: 0.15
-Nodes (20): fallback(), mount(), params, tones(), uniforms(), clearOfViolet(), crossesViolet(), mount() (+12 more)
+Cohesion: 0.17
+Nodes (18): fallback(), mount(), params, tones(), uniforms(), color, aim(), fits() (+10 more)
 
 ### Community 106 - "telemetry.mjs"
-Cohesion: 0.19
-Nodes (19): globalMediaDir(), mediaHome(), anonymousId(), __anonymousIdForTest(), heygenAccount(), heygenUserId(), identifyAccount(), isTestOrCiContext() (+11 more)
+Cohesion: 0.22
+Nodes (17): anonymousId(), __anonymousIdForTest(), heygenAccount(), heygenUserId(), identifyAccount(), isTestOrCiContext(), legacyMediaAnonId(), optedOut() (+9 more)
 
 ### Community 107 - ".agents/skills/remotion-best-practices/remotion-saas/REFERENCE.md"
 Cohesion: 0.11
@@ -1153,9 +1147,9 @@ Nodes (19): Best Practice Guidelines, Concluding Content, Contents, Emphasising 
 Cohesion: 0.12
 Nodes (15): A, AB, B, clip, __dir, even, havKm(), hs (+7 more)
 
-### Community 117 - "contrast"
-Cohesion: 0.29
-Nodes (7): Available effects, Visual and pixel effects, contrast(), Available effects, Visual and pixel effects, Available effects, Visual and pixel effects
+### Community 117 - "format_ascii_box"
+Cohesion: 0.13
+Nodes (9): ansi_ljust(), format_ascii_box(), add_wrapped(), wrap_text(), format_markdown(), hex_to_ansi(), _mode_support_labels(), section_header() (+1 more)
 
 ### Community 118 - ".agents/skills/remotion-best-practices/remotion-markup/remotion-maps/techniques/cesium/scripts/prep-cesium-path.mjs"
 Cohesion: 0.12
@@ -1186,8 +1180,8 @@ Cohesion: 0.11
 Nodes (16): 1. The one thing, 2. Three storylines, then one, 3. The hook, 4. Beats, 5. Worlds, 6. Copy and voice, 7. The brand, 8. Tells of a generated film (+8 more)
 
 ### Community 125 - "Text To Speech"
-Cohesion: 0.11
-Nodes (16): Available routes, Cloned voices — `scripts/heygen-voice.mjs`, ffmpeg requirement, Gemini narration, HeyGen word-timestamp shape, Long scripts, Multilingual (Kokoro voice prefix → language), Narrating a HyperFrames docs video (+8 more)
+Cohesion: 0.12
+Nodes (15): Available routes, ffmpeg requirement, Gemini narration, HeyGen word-timestamp shape, Long scripts, Multilingual (Kokoro voice prefix → language), Narrating a HyperFrames docs video, Self-contained HeyGen (no CLI) — `scripts/heygen-tts.mjs` (+7 more)
 
 ### Community 126 - "Chinese Social Platforms: Search, Metrics, and Disclosure"
 Cohesion: 0.11
@@ -1221,9 +1215,9 @@ Nodes (15): Choose the timing boundary, Delaying, trimming, `durationInFrames`, 
 Cohesion: 0.12
 Nodes (14): Azure Container Apps, Cloudflare Containers, Comparison of SSR methods, GitHub Actions, Plain Node.js APIs, Remotion Lambda, Steps to set up Lambda, Vercel (+6 more)
 
-### Community 134 - "Voice & Audio Generation"
-Cohesion: 0.06
-Nodes (34): Ad Creative Use Cases, Cartesia Sonic, Choosing the Right Tool, Code-Based Video, Code-Based Workflow for Ad Creative, Cost Comparison for 100 Ad Variations, ElevenLabs, Flux (Black Forest Labs) (+26 more)
+### Community 134 - "Generative AI Tools for Ad Creative"
+Cohesion: 0.12
+Nodes (17): Ad Creative Use Cases, Choosing the Right Tool, Code-Based Video, Code-Based Workflow for Ad Creative, Cost Comparison for 100 Ad Variations, Flux (Black Forest Labs), Gemini Image ("Nano Banana", Google), Generative AI Tools for Ad Creative (+9 more)
 
 ### Community 135 - "Motion-Style Video Ads (Faceless, Fully Generated)"
 Cohesion: 0.12
@@ -1243,7 +1237,7 @@ Nodes (11): bearing(), CesiumFlythrough(), CesiumFlythroughProps, clamp(), Flyov
 
 ### Community 139 - "recipe-store.mjs"
 Cohesion: 0.16
-Nodes (26): nextId(), replaceFile(), BRIEF_CONTENT_KEYS, briefWorkflow(), FRAME_CONTENT_KEYS, frameTitle(), freezeRecipe(), FRONTMATTER_CONTENT_KEYS (+18 more)
+Nodes (26): writeStatus(), replaceFile(), BRIEF_CONTENT_KEYS, briefWorkflow(), FRAME_CONTENT_KEYS, frameTitle(), freezeRecipe(), FRONTMATTER_CONTENT_KEYS (+18 more)
 
 ### Community 140 - ".agents/skills/remotion-best-practices/remotion-markup/remotion-maps/techniques/cesium/assets/CesiumFlythrough.tsx"
 Cohesion: 0.20
@@ -1262,16 +1256,16 @@ Cohesion: 0.12
 Nodes (14): Dark discipline (the rules that change), Dark mode: parity, never inversion, Emission, The stance, Token re-derivation (per token, from the light value), Verification, Colour, Construction (inline SVG written for the data, no chart library) (+6 more)
 
 ### Community 144 - "install.mjs"
-Cohesion: 0.12
+Cohesion: 0.13
 Nodes (14): args, copyDir(), DRY, explicit, FLAGS, has(), HERE, HOME (+6 more)
 
 ### Community 145 - ".claude/skills/remotion-best-practices/remotion-maps/techniques/cesium/assets/CesiumFlythrough.tsx"
 Cohesion: 0.20
 Nodes (11): bearing(), CesiumFlythrough(), CesiumFlythroughProps, clamp(), FlyoverMode, havKm(), lerp(), loadCesium() (+3 more)
 
-### Community 146 - ".build"
-Cohesion: 0.20
-Nodes (5): axesOf(), geo(), kindOf(), Program(), s()
+### Community 146 - "read_rows"
+Cohesion: 0.19
+Nodes (5): read_rows(), TestAccessibilityGuidance, TestChartsTypographyAndIcons, TestCurrentReactGuidance, TestSemanticColors
 
 ### Community 147 - ".claude/skills/remotion-best-practices/remotion-markup/remotion-maps/techniques/cesium/assets/CesiumFlythrough.tsx"
 Cohesion: 0.20
@@ -1345,9 +1339,9 @@ Nodes (14): dependencies, react@^18.3.1, react-dom@^18.3.1, remotion@^4.0.0, @re
 Cohesion: 0.17
 Nodes (14): dependencies, react@^18.3.1, react-dom@^18.3.1, remotion@^4.0.0, @remotion/cli@^4.0.0, react, react-dom, remotion (+6 more)
 
-### Community 165 - "picture.mjs"
-Cohesion: 0.14
-Nodes (11): chrome, CHROMES, cssPath, HERE, out, page, roots, [slug, pageArg, yArg] (+3 more)
+### Community 165 - "bakeDraw"
+Cohesion: 0.22
+Nodes (14): bakeDpr(), bakeDraw(), bakeOne(), grounds(), groundSpec(), liveOn(), mountAt(), nextBake() (+6 more)
 
 ### Community 166 - "Disney's 12 Principles — UI Adapted"
 Cohesion: 0.13
@@ -1377,9 +1371,9 @@ Nodes (13): Common Skill Categories, Find Skills, How to Help Users Find Skills,
 Cohesion: 0.19
 Nodes (11): DARK, deal(), FLAT_TYPES, HERE, OWN_LOUD, random(), roleOf(), strHash() (+3 more)
 
-### Community 174 - "ascii-shade/effect.js"
-Cohesion: 0.16
-Nodes (20): BAYER4, fallbackCSS(), hash2(), makeNoise(), mountAscii(), buildAtlas(), draw(), layout() (+12 more)
+### Community 174 - "openverse.mjs"
+Cohesion: 0.27
+Nodes (11): httpsUrl(), oneLine(), OPENVERSE_SFX_LICENSES, OpenverseUnavailableError, penalty(), pickOpenverseSfx(), PLAYABLE_FILETYPES, searchOpenverseSfx() (+3 more)
 
 ### Community 175 - "Meta Creative Format Taxonomy — Which Format to Make Next"
 Cohesion: 0.15
@@ -1422,8 +1416,8 @@ Cohesion: 0.15
 Nodes (12): Distance-Duration Scaling, Duration by Element Type, Duration by Personality, Easing: Directional Rules, Easing: Industry Standards, Enter vs. Exit, Interactive Feedback, Material-Based Easing (+4 more)
 
 ### Community 185 - ".claude/skills/remotion-best-practices/remotion-markup/compositions.md"
-Cohesion: 0.06
-Nodes (28): Adding the Basic Captions element, Displaying captions alongside video content, Displaying captions in Remotion, Prerequisites, White-space preservation, Choose how items share time, Complete example, Editable timeline structure (+20 more)
+Cohesion: 0.10
+Nodes (17): Choose how items share time, Complete example, Editable timeline structure, Give substantial groups their own timelines, Connected compositions, Create the connection, Extract an existing group, Make the component independent of its parent (+9 more)
 
 ### Community 186 - "remotion-create/SKILL.md"
 Cohesion: 0.15
@@ -1502,12 +1496,12 @@ Cohesion: 0.17
 Nodes (11): Feels Cheap / Flat, Feels Too Fast / Jarring, Feels Too Slow, Inconsistent Feel, Looks Robotic, No Personality, Performance (Dropped Frames), Personality Mistakes (+3 more)
 
 ### Community 205 - "Color correction"
-Cohesion: 0.17
-Nodes (10): Color correction, Levels and Curves, LUTs and combining effects, Primary adjustments, See also, Studio workflow, Supported format and limitations, Available effects (+2 more)
+Cohesion: 0.18
+Nodes (9): Color correction, Levels and Curves, LUTs and combining effects, Primary adjustments, See also, Studio workflow, Supported format and limitations, Available effects (+1 more)
 
 ### Community 206 - "transcribe.mjs"
-Cohesion: 0.15
-Nodes (14): launchingCliInvocation(), resolveNpxCliPath(), resolveNpxInvocation(), mergeTokensToWords(), dist, root, atomicWrite(), inputPath (+6 more)
+Cohesion: 0.11
+Nodes (22): die(), die(), launchingCliInvocation(), resolveNpxCliPath(), resolveNpxInvocation(), mergeTokensToWords(), isControlCode(), terminalLines() (+14 more)
 
 ### Community 207 - "The Creative Review Page"
 Cohesion: 0.18
@@ -1530,8 +1524,8 @@ Cohesion: 0.18
 Nodes (10): Adopt existing projects, Cross-project reuse, Examples, Flags, How it works, Reading the inventory, Resolve — command, flags, reuse, adopt, inventory, Reuse before you resolve (+2 more)
 
 ### Community 212 - "Delaying, trimming"
-Cohesion: 0.25
-Nodes (8): Delaying, trimming, `durationInFrames`, Fallback, `from`, `loop`, Order of operations, `playbackRate`, `trimBefore`
+Cohesion: 0.18
+Nodes (9): Choose the timing boundary, Delaying, trimming, `durationInFrames`, Fallback, `from`, `loop`, Order of operations, `playbackRate` (+1 more)
 
 ### Community 213 - "Sequencing translation: Sequence, Series, Composition root"
 Cohesion: 0.18
@@ -1778,16 +1772,16 @@ Cohesion: 0.18
 Nodes (9): Animate words, not letters, Arabic and right-to-left text, Fonts, Per-letter animation, if it is needed, Set the base direction, Google Fonts with @remotion/google-fonts, Prerequisites, Using fonts in Remotion (+1 more)
 
 ### Community 275 - "Color correction"
-Cohesion: 0.12
-Nodes (13): Color correction, Levels and Curves, LUTs and combining effects, Primary adjustments, See also, Studio workflow, Supported format and limitations, Available effects (+5 more)
+Cohesion: 0.17
+Nodes (10): Color correction, Levels and Curves, LUTs and combining effects, Primary adjustments, See also, Studio workflow, Supported format and limitations, Available effects (+2 more)
 
 ### Community 276 - "halftone-screen/effect.js"
 Cohesion: 0.38
 Nodes (10): clamp(), f1(), fallback(), inks(), layout(), lin(), mount(), params (+2 more)
 
 ### Community 277 - "orb-sphere/effect.js"
-Cohesion: 0.19
-Nodes (17): clamp(), fallback(), lc(), lin(), mount(), noLavender(), params, placeOrb() (+9 more)
+Cohesion: 0.38
+Nodes (10): clamp(), fallback(), lc(), lin(), mount(), noLavender(), params, placeOrb() (+2 more)
 
 ### Community 278 - "ruled-grounds/effect.js"
 Cohesion: 0.38
@@ -2042,7 +2036,7 @@ Cohesion: 0.22
 Nodes (8): Author, License, Quick start, Scoring, Skill Structure, Stop Slop, What it catches, What this is
 
 ### Community 344 - "Delaying, trimming"
-Cohesion: 0.25
+Cohesion: 0.22
 Nodes (8): Delaying, trimming, `durationInFrames`, Fallback, `from`, `loop`, Order of operations, `playbackRate`, `trimBefore`
 
 ### Community 345 - "scripts"
@@ -2065,9 +2059,9 @@ Nodes (7): Devices that explain, Explainers, tutorials and "how it works", Getti
 Cohesion: 0.25
 Nodes (7): 1. Install the block, 2. Wire into index.html, 3. Lint and preview, 4. Customize (optional), Scenario, Steps, Worked Example: Adding a Block
 
-### Community 350 - ".render"
-Cohesion: 0.24
-Nodes (7): clamp(), ease(), spread(), unease(), init(), done(), reset()
+### Community 350 - "init"
+Cohesion: 0.18
+Nodes (5): init(), init(), reset(), init(), POINTER_SVG
 
 ### Community 351 - "interface"
 Cohesion: 0.25
@@ -2286,12 +2280,12 @@ Cohesion: 0.25
 Nodes (7): interface, brand_color, default_prompt, display_name, icon_large, icon_small, short_description
 
 ### Community 405 - "plugin-cli.mjs"
-Cohesion: 0.22
-Nodes (13): isMainModule(), invocation(), isBelowFloor(), isExactRelease(), isOutside(), isPluginBundle(), manifests, npmFolder() (+5 more)
+Cohesion: 0.18
+Nodes (15): isMainModule(), invocation(), isBelowFloor(), isExactRelease(), isOutside(), isPluginBundle(), manifests, npmFolder() (+7 more)
 
 ### Community 406 - "Using audio in Remotion"
-Cohesion: 0.20
-Nodes (10): Delaying, Importing Audio, Looping, Muting, Pitch, Prerequisites, Speed, Trimming (+2 more)
+Cohesion: 0.12
+Nodes (15): Delaying, Importing Audio, Looping, Muting, Pitch, Prerequisites, Speed, Trimming (+7 more)
 
 ### Community 407 - "HyperFrames Composition Project"
 Cohesion: 0.25
@@ -2378,8 +2372,8 @@ Cohesion: 0.29
 Nodes (6): Animate using `useCurrentFrame()`, No animations not driven by `useCurrentFrame()`, Prerequisites, Using `<Sequence>` inside `<ThreeCanvas>`, Using Three.js and React Three Fiber in Remotion, Using ThreeCanvas
 
 ### Community 428 - "Color correction"
-Cohesion: 0.17
-Nodes (10): Color correction, Levels and Curves, LUTs and combining effects, Primary adjustments, See also, Studio workflow, Supported format and limitations, Available effects (+2 more)
+Cohesion: 0.11
+Nodes (14): Color correction, Levels and Curves, LUTs and combining effects, Primary adjustments, See also, Studio workflow, Supported format and limitations, Available effects (+6 more)
 
 ### Community 429 - "Using `<HtmlInCanvas>` in Remotion"
 Cohesion: 0.29
@@ -2457,9 +2451,9 @@ Nodes (6): 2D effect with `onPaint`, Async `onPaint`, Basic usage, Enabling WebG
 Cohesion: 0.29
 Nodes (6): Best practices, Checking text overflow, Fitting text to a width, Measuring text dimensions, Measuring text in Remotion, Prerequisites
 
-### Community 448 - "Content Repurposing System"
-Cohesion: 0.33
-Nodes (6): Blog Post → Social Content, Content Repurposing System, Newsletter → Social Content, Podcast / Video → Social Content, Repurposing Workflow, Webinar / Live Event → Social Content
+### Community 448 - "Voice & Audio Generation"
+Cohesion: 0.20
+Nodes (10): Cartesia Sonic, ElevenLabs, OpenAI TTS, Other Voice Tools, Voice & Audio Generation, Voice Tool Comparison, Voice Tool Options by Need, Voicebox (Open Source) (+2 more)
 
 ### Community 449 - ".claude/skills/remotion-best-practices/remotion-markup/timing.md"
 Cohesion: 0.29
@@ -2574,8 +2568,8 @@ Cohesion: 0.33
 Nodes (5): Dashboard tiles, Event catalog (verified present in-project), Identity (see `scripts/lib/telemetry.mjs`), media-use usage dashboard, Recreate in an analytics dashboard
 
 ### Community 477 - "Effects"
-Cohesion: 0.33
-Nodes (5): Adding an effect, Commands, Effects, Random pick, The list
+Cohesion: 0.29
+Nodes (6): Adding an effect, Commands, Effects, Mount, Random pick, The list
 
 ### Community 478 - "Media in HyperFrames"
 Cohesion: 0.33
@@ -2621,13 +2615,13 @@ Nodes (5): How to render and evaluate, Tier 2 — title-image-outro, Translation
 Cohesion: 0.33
 Nodes (6): Pattern: `<TransitionSeries>` is `<Series>` with overlap, Presentation table, Timing translations, Transitions translation: @remotion/transitions → HF crossfades / shader-transitions, When the source uses a custom Presentation, When to use HF shader-transitions
 
-### Community 489 - "Video matting"
-Cohesion: 0.50
-Nodes (3): Compose the result, Generate the layers, Video matting
+### Community 489 - "index-gen.mjs"
+Cohesion: 0.38
+Nodes (9): cell(), formatDims(), formatDur(), generateIndexContent(), pad(), regenerateIndex(), currentRecords(), findByEntity() (+1 more)
 
-### Community 490 - "Engagement Strategy"
-Cohesion: 0.50
-Nodes (4): Building Relationships, Daily Engagement Routine (30 min), Engagement Strategy, Quality Comments
+### Community 490 - "raio-x-jazzy/hyperframes.json"
+Cohesion: 0.20
+Nodes (9): authoringSkill, media, autoProxy, paths, assets, blocks, components, registry (+1 more)
 
 ### Community 492 - "Spacing and sizing"
 Cohesion: 0.33
@@ -2673,6 +2667,10 @@ Nodes (5): Moving Map Render Stability, Plate sizing and sharpness, Required pat
 Cohesion: 0.33
 Nodes (5): Available options, Loading a font URL from props, Loading a local font, Loading multiple weights, Prerequisites
 
+### Community 503 - "Background music (BGM)"
+Cohesion: 0.22
+Nodes (8): Background music (BGM), Driving it from the request, Failure modes, HeyGen retrieval (default), Local generation (fallback) — Lyria → MusicGen, Lyria knobs (direct recipe use), Mood inference (the generate prompt), inferBgmPrompt()
+
 ### Community 504 - "build-index.mjs"
 Cohesion: 0.22
 Nodes (7): fragments, index, LAST, names, ORDER, prev, UI
@@ -2709,17 +2707,17 @@ Nodes (5): Moving Map Render Stability, Plate sizing and sharpness, Required pat
 Cohesion: 0.33
 Nodes (5): Available options, Loading a font URL from props, Loading a local font, Loading multiple weights, Prerequisites
 
-### Community 513 - "load"
-Cohesion: 0.28
-Nodes (9): fetchText(), link(), load(), loadAll(), plan(), script(), start(), startAll() (+1 more)
+### Community 513 - "scripts"
+Cohesion: 0.22
+Nodes (8): name, private, scripts, check, dev, publish, render, type
 
 ### Community 514 - "scripts"
 Cohesion: 0.22
 Nodes (8): name, private, scripts, check, dev, publish, render, type
 
-### Community 515 - "Before Starting"
-Cohesion: 0.33
-Nodes (6): 1. Platform & Format, 2. Product & Offer, 3. Audience & Intent, 4. Performance Data (if iterating), 5. Constraints, Before Starting
+### Community 515 - "edge-glow/effect.js"
+Cohesion: 0.46
+Nodes (7): clearOfViolet(), crossesViolet(), mount(), neighbour(), params, tones(), uniforms()
 
 ### Community 516 - "Map element data sources"
 Cohesion: 0.33
@@ -2733,13 +2731,17 @@ Nodes (5): Moving Map Render Stability, Plate sizing and sharpness, Required pat
 Cohesion: 0.33
 Nodes (5): 2025-01-12, 2026-01-12, 2026-01-13, Added, Changelog
 
-### Community 519 - "film-light-leak/effect.js"
+### Community 519 - "prism-dispersion/effect.js"
 Cohesion: 0.50
-Nodes (7): guard(), isWarm(), mount(), params, pickEdge(), tones(), uniforms()
+Nodes (7): hd(), layout(), mount(), params, spectrumCentre(), tones(), uniforms()
 
-### Community 521 - "Output Formats"
-Cohesion: 0.33
-Nodes (6): Bulk CSV Output, Creative Review Page (client / stakeholder approval), Iteration Report, Output Formats, Standard Output, Static Batch Output (Mode 3)
+### Community 520 - "Video Generation"
+Cohesion: 0.29
+Nodes (7): Google Veo, Higgsfield, Kling (Kuaishou), Runway, Seedance (ByteDance), Video Generation, Video Tool Comparison
+
+### Community 521 - "transcript-cut.test.mjs"
+Cohesion: 0.38
+Nodes (4): cutVideo(), fixture(), run(), SCRIPT
 
 ### Community 522 - "Platform Comparison"
 Cohesion: 0.40
@@ -3037,9 +3039,9 @@ Nodes (3): Arbitrary values only, CSS cheat sheet, One utility, several declarat
 Cohesion: 0.50
 Nodes (4): Google Fonts with @remotion/google-fonts, Prerequisites, Using fonts in Remotion, Using in components
 
-### Community 607 - "Platform Specs"
-Cohesion: 0.33
-Nodes (6): Google Ads (Responsive Search Ads), LinkedIn Ads, Meta Ads (Facebook/Instagram), Platform Specs, TikTok Ads, Twitter/X Ads
+### Community 607 - "contour-lines/effect.js"
+Cohesion: 0.60
+Nodes (5): fallback(), mount(), params, tones(), uniforms()
 
 ### Community 608 - "Video matting"
 Cohesion: 0.50
@@ -3059,19 +3061,11 @@ Nodes (3): Compose the result, Generate the layers, Video matting
 
 ### Community 612 - "test_relevance_evaluator.py"
 Cohesion: 0.12
-Nodes (4): CatalogSummaryLineEndingsTest, _load_generator(), TestFixtureValidation, TestMetricMath
+Nodes (3): TestFixtureValidation, TestMetricMath, TestThresholdGate
 
 ### Community 615 - "outline"
-Cohesion: 0.62
-Nodes (7): joint(), outline(), P(), pCurve(), pElbow(), pLine(), r1()
-
-### Community 651 - "caustics/effect.js"
-Cohesion: 0.60
-Nodes (5): mount(), params, tones(), uniforms(), violet()
-
-### Community 654 - "Per-Platform Notes"
-Cohesion: 0.33
-Nodes (6): Bluesky, Hacker News, LinkedIn, Per-Platform Notes, Reddit, Twitter/X
+Cohesion: 0.24
+Nodes (13): Available effects, Visual and pixel effects, Available effects, Visual and pixel effects, Available effects, Visual and pixel effects, joint(), outline() (+5 more)
 
 ### Community 655 - "Video Hook Library"
 Cohesion: 0.33
@@ -3085,47 +3079,27 @@ Nodes (6): Caveats, How ranking works (60-second version), The 10 rules, The sig
 Cohesion: 0.33
 Nodes (6): Contrarian Hooks, Curiosity Hooks, Hook Formulas, No AI Tells, Story Hooks, Value Hooks
 
-### Community 659 - "Generating Ad Copy"
-Cohesion: 0.40
-Nodes (5): Generating Ad Copy, Step 1: Define Your Angles, Step 2: Generate Variations per Angle, Step 3: Validate Against Specs, Step 4: Organize for Upload
-
-### Community 661 - "Analytics & Optimization"
-Cohesion: 0.50
-Nodes (4): Analytics & Optimization, Metrics That Matter, Optimization Actions, Weekly Review
-
-### Community 662 - "Scheduling Best Practices"
-Cohesion: 0.50
-Nodes (4): Publishing From Your Agent, Queue Management, Scheduling Best Practices, When to Schedule vs. Post Live
-
 ### Community 663 - ".claude/skills/remotion-best-practices/remotion-markup/images.md"
 Cohesion: 0.50
 Nodes (3): Dynamic image paths, Getting image dimensions, Sizing and positioning
 
-### Community 665 - "Content Ideas by Situation"
-Cohesion: 0.67
-Nodes (3): Content Ideas by Situation, When You're Starting Out, When You're Stuck
-
-### Community 666 - "Content Pillars Framework"
-Cohesion: 0.67
-Nodes (3): Content Pillars Framework, Example for a SaaS Founder, Pillar Development Questions
-
 ## Knowledge Gaps
-- **59 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **58 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `contrast()` connect `contrast` to `Color correction`, `Color correction`, `Color correction`, `sloplint-render.mjs`?**
-  _High betweenness centrality (0.089) - this node is a cross-community bridge._
+- **Why does `contrast()` connect `sloplint-render.mjs` to `Color correction`, `Color correction`, `Color correction`, `outline`?**
+  _High betweenness centrality (0.100) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `shader()` (e.g. with `fx.js` and `draw()`) actually correct?**
   _`shader()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **Should `ref_node_fs` be split into smaller, more focused modules?**
-  _Cohesion score 0.03911342894393742 - nodes in this community are weakly interconnected._
-- **Why does `resolve()` connect `Color correction` to `Color correction`, `Color correction`?**
-  _High betweenness centrality (0.072) - this node is a cross-community bridge._
+  _Cohesion score 0.04188129899216125 - nodes in this community are weakly interconnected._
+- **Why does `resolve()` connect `Color correction` to `Color correction`?**
+  _High betweenness centrality (0.081) - this node is a cross-community bridge._
 - **Should `core.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.0426812585499316 - nodes in this community are weakly interconnected._
-- **Why does `outline()` connect `outline` to `diagram.js`, `Color correction`, `Color correction`, `Color correction`, `contrast`, `.render`?**
-  _High betweenness centrality (0.044) - this node is a cross-community bridge._
+  _Cohesion score 0.05273937532002048 - nodes in this community are weakly interconnected._
+- **Why does `outline()` connect `outline` to `diagram.js`, `Diagram`, `Color correction`, `Color correction`, `Color correction`?**
+  _High betweenness centrality (0.051) - this node is a cross-community bridge._
 - **Should `preview.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.04057124310288867 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.059506531204644414 - nodes in this community are weakly interconnected._

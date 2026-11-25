@@ -6438,9 +6438,9 @@
     "semantic_hash": ""
   },
   "docs/ATZOK.md": {
-    "mtime": 1795567316.6048634,
-    "seen": 1795567328.039512,
-    "ast_hash": "a1fe129a7cba66717535677680d3fbc7",
+    "mtime": 1795568044.9729757,
+    "seen": 1795568056.8486054,
+    "ast_hash": "7e9ca06dee78a88c667378606a6bf470",
     "semantic_hash": ""
   },
   "docs/figma-design-system-rules.md": {
@@ -8043,6 +8043,60 @@
     "mtime": 1795566867.446454,
     "seen": 1795567328.039805,
     "ast_hash": "a8a70e134c19000e84fb2092b590605f",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-jazzy/hyperframes.json": {
+    "mtime": 1795567556.3742476,
+    "seen": 1795568056.847118,
+    "ast_hash": "7b33c6cb9ecfe380a4657c509ff8af33",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-jazzy/meta.json": {
+    "mtime": 1795567556.3768861,
+    "seen": 1795568056.8471217,
+    "ast_hash": "acb66680ee86b1257a2277816a7cf3c2",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-jazzy/package.json": {
+    "mtime": 1795567556.3768861,
+    "seen": 1795568056.8471234,
+    "ast_hash": "a21dcfe3251e3d51a9ff41c7db332a70",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-jazzy/compositions/painel.html": {
+    "mtime": 1795567790.3185089,
+    "seen": 1795568056.848797,
+    "ast_hash": "70a41b1d47b33818821c34dc2c60ad5d",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-jazzy/index.html": {
+    "mtime": 1795567687.220708,
+    "seen": 1795568056.848799,
+    "ast_hash": "486a6677ca8518c6e2d4c8e5aefb5172",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-jazzy/assets/capa.jpg": {
+    "mtime": 1795567599.4672735,
+    "seen": 1795568056.8491478,
+    "ast_hash": "07702d7f5a202b68c524ddf2c39e3a1e",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-jazzy/assets/grao.png": {
+    "mtime": 1795567600.535907,
+    "seen": 1795568056.8491504,
+    "ast_hash": "9377bb554ab75c35648676d4e32b6d85",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-jazzy/assets/logo.png": {
+    "mtime": 1795567600.11123,
+    "seen": 1795568056.8491518,
+    "ast_hash": "b4b2e20fa6bf976e502e3b99d0e45943",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-jazzy/assets/piano.png": {
+    "mtime": 1795567600.2043078,
+    "seen": 1795568056.8491533,
+    "ast_hash": "13fdc318e94d7d5a4ff03e176713c7ac",
     "semantic_hash": ""
   }
 }

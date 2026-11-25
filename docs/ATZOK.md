@@ -58,6 +58,12 @@ Masters em AIFF + capa: zip "Bliss Records - BLISS030- Ätzøk – Desejos Gelad
 Identidade: amarelo da Linha 4 do metrô (#e5c21e / #d3b321) sobre preto oliva (#1a170a), fotos de túnel e vagão em retícula granulada, tipografia 3D vazada em camadas, selo "4" e o cubo da DSRPTV.
 Drive: pasta "Ätzøk - L4 : AMARELA" (compartilhada pela DSRPTV: artwork, fotos, tracks em WAV) e o zip do álbum em ALBUNS, EPS & SINGLES.
 
+### Jazzy EP (Tha_Guts & Ätzøk, DSRPTV recs, DSRPTV003)
+
+Terceiro release da DSRPTV. Faixas: Jazzy · Kitchen · Jazzy (Akin Deckard Legato Acid Remix) · Kitchen (DSRPTV Remix). Release (por Brune): "bebop jazz amarrado por um foco experimental"; Jazzy cresce "como uma bola de neve", batidas quebradas, vocais e melodias texturizadas; Kitchen "cozinha" acordes circulares com glitches.
+Identidade: preto e branco, foto de rua em filme, "jazzy" em itálico serifado de alto contraste (Playfair Display Italic no vídeo), grotesca pesada "THA_GUTS // ATZOK", rabiscos à mão em laço, teclado de piano desenhado, logo em grade "d/s rpt v rec".
+Drive: zip "Tha_Guts, Atzok - Jazzy [DSRPTV003]" em ALBUNS, EPS & SINGLES (AIFF + artwork + release .docx).
+
 Próximas faixas em fase de master (não mencionar na bio).
 
 ## Formatos de show
@@ -100,6 +106,18 @@ Referências recebidas em 2026-11-24 (dois reels, 30 s, 9:16). Como funcionam:
 
 Versão Ätzøk (em construção, `videos/raio-x/`, série **ÄTZØK / RAIO-X**): mesma ideia, visual próprio (preto + ember `#BC6D21`, plum, Inter 900 + Space Mono, wordmark), série com nome próprio, dados tirados do áudio real das faixas, feito em HyperFrames como template reaproveitável (troca faixa, trecho, título e frase).
 
+### Banco de ideias RAIO-X (guardadas, prontas para produzir)
+
+Mesmo formato para todo lançamento: layout das referências (espectro com fantasma, campo estéreo, forma de onda, contador de compassos), sem frases, topo fixo com @_atzok + logo do selo, ~1 min em volta da virada, final com a capa + @_atzok + crédito + logo. Muda só a identidade de cada capa.
+
+| Lançamento | Projeto | Estado | Identidade aplicada |
+|---|---|---|---|
+| Desejos Gelados EP (Bliss) | `videos/raio-x-bliss030/` | 6 vídeos prontos | grafite + lilás/menta, cobra no topo, logo Bliss |
+| L4 / Amarela (DSRPTV041) | `videos/raio-x-l4/` | layout aprovado, testado com C3ntr0 | amarelo Linha 4 + preto oliva, grão, título vazado em camadas, selo "4", cubo DSRPTV, linha de metrô com estações sob a forma de onda |
+| Jazzy EP (DSRPTV003) | `videos/raio-x-jazzy/` | layout criado, testado com Jazzy | papel claro + tinta preta, "jazzy" em itálico serifado, rabisco à mão desenhado no drop, teclado de piano que vai escurecendo com o progresso, logo dsrptv rec |
+
+Para produzir o resto: precisa do BPM confirmado de cada faixa (a análise erra em faixas quebradas) e, se quiser, o minuto da virada.
+
 ## Marca
 
 - Paleta: preto/branco como base; acento **ember `#BC6D21`** (cor do logo); plum `#7E406E`; dusk `#985359`. Site usa papel `#ECE7DC` e tinta `#111111`.
@@ -138,3 +156,4 @@ Versão Ätzøk (em construção, `videos/raio-x/`, série **ÄTZØK / RAIO-X**)
 - RAIO-X EP v3 (aprovado com ajustes): sem frases; cabeçalho fixo com a cobra + @_atzok à esquerda e logo da Bliss (lilás) à direita; linha "ÄTZØK / RAIO-X · BPM" (nos remixes, nome do remix no lugar de ÄTZØK / RAIO-X); final com cobra, @_atzok, crédito e logo Bliss. Lote das 6 faixas em `videos/raio-x-bliss030/faixas/bliss030.json`.
 - RAIO-X EP: os 6 vídeos (~1 min, 1080×1920) renderizados em `videos/raio-x-bliss030/renders/` (fora do git) + prévias 720p. Trechos: 01 0:00–1:00 · 02 4:00–5:00 · 03 3:39–4:39 (128 BPM) · 04 2:05–3:03 (124 BPM, a confirmar) · 05 6:00–7:00 · 06 2:34–3:34. Upload direto ao Drive daqui não passa (limite ~3 MB).
 - RAIO-X L4 / Amarela: layout criado em `videos/raio-x-l4/` (mesmo modelo das referências, identidade do álbum: título vazado em camadas, grão, selo 4 + @_atzok no topo, cubo DSRPTV, linha de metrô com estações sob a forma de onda, final com a capa). Testado com C3ntr0 (96 BPM, trecho 0:50–1:50, virada em 1:20).
+- Jazzy EP: layout RAIO-X criado com a identidade da capa (`videos/raio-x-jazzy/`), testado com "Jazzy" (110 BPM pela análise, a confirmar; trecho 0:26–1:23, groove entra em 0:55). Ideias do L4 e do Jazzy guardadas no "Banco de ideias RAIO-X".
