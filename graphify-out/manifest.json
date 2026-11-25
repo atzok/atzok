@@ -6438,9 +6438,9 @@
     "semantic_hash": ""
   },
   "docs/ATZOK.md": {
-    "mtime": 1795562932.215452,
-    "seen": 1795562943.99162,
-    "ast_hash": "a11c078f1f25c662c9ea7edb9c7d7d3b",
+    "mtime": 1795564869.0319896,
+    "seen": 1795564873.3836305,
+    "ast_hash": "38ddf289be9bb1ff0cc074483a5d40a2",
     "semantic_hash": ""
   },
   "docs/figma-design-system-rules.md": {
@@ -7938,14 +7938,14 @@
     "semantic_hash": ""
   },
   "videos/raio-x-bliss030/compositions/painel.html": {
-    "mtime": 1795562656.9189801,
-    "seen": 1795562943.9917114,
-    "ast_hash": "d271e1e4fa8a37276e60b961a314b8bd",
+    "mtime": 1795564628.3146083,
+    "seen": 1795564873.383731,
+    "ast_hash": "b438d72f0a2855015b342dcc53f2ce50",
     "semantic_hash": ""
   },
   "videos/raio-x-bliss030/index.html": {
-    "mtime": 1795562656.9151142,
-    "seen": 1795562943.9917128,
+    "mtime": 1795564628.3184237,
+    "seen": 1795564873.3837323,
     "ast_hash": "fe441087200a7dfb7d257f3b288bcc87",
     "semantic_hash": ""
   },
@@ -7968,9 +7968,9 @@
     "semantic_hash": ""
   },
   "videos/raio-x-bliss030/assets/cobra.png": {
-    "mtime": 1795562565.7849507,
-    "seen": 1795562943.9919047,
-    "ast_hash": "197a037c7bc5040801c510fbe919c6b1",
+    "mtime": 1795564656.3840213,
+    "seen": 1795564873.383952,
+    "ast_hash": "ecc7299669ceaeb68b3cd2c9ab8d086a",
     "semantic_hash": ""
   }
 }
