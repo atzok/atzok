@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Rumo ao UP · cards</title>
+<style>
+  @font-face { font-family: "Inter"; font-weight: 400; src: url("fonts/Inter-Regular.otf"); }
+  @font-face { font-family: "Inter"; font-weight: 700; src: url("fonts/Inter-Bold.otf"); }
+  @font-face { font-family: "Inter"; font-weight: 900; src: url("fonts/Inter-Black.otf"); }
+  @font-face { font-family: "Space Mono"; font-weight: 400; src: url("fonts/space-mono-400.woff2"); }
+  @font-face { font-family: "Space Mono"; font-weight: 700; src: url("fonts/space-mono-700.woff2"); }
+  :root { --ink: #fff; --muted: #9a9a9a; --ember: #bc6d21; --dusk: #985359; --plum: #7e406e; --raised: #141414; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #222; display: flex; flex-wrap: wrap; gap: 40px; padding: 40px; }
+  .card { position: relative; width: 1080px; height: 1350px; background: #000; color: var(--ink); overflow: hidden;
+    font-family: Inter, sans-serif; }
+  .topo { position: absolute; left: 96px; right: 96px; top: 84px; display: flex; justify-content: space-between;
+    font-family: "Space Mono", monospace; font-weight: 700; font-size: 26px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+  .topo:after { content: ""; position: absolute; left: 0; right: 0; top: 52px; height: 2px; background: #262626; }
+  .kicker { font-family: "Space Mono", monospace; font-weight: 700; font-size: 30px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ember); }
+  em { font-style: normal; color: var(--ember); }
+
+  /* capa */
+  .capa .miolo { position: absolute; left: 96px; right: 96px; top: 250px; }
+  .capa h1 { margin-top: 36px; font-weight: 900; font-size: 210px; line-height: 0.84; letter-spacing: -0.05em; text-transform: uppercase; }
+  .capa h1.menor { font-size: 168px; }
+  .capa .sub { margin-top: 44px; font-size: 46px; line-height: 1.2; color: #cfcfcf; max-width: 820px; }
+  .barras { position: absolute; left: 96px; right: 96px; bottom: 96px; height: 200px; display: flex; align-items: flex-end; gap: 8px; }
+  .barras i { flex: 1; display: block; }
+
+  /* texto */
+  .texto .miolo { position: absolute; left: 96px; right: 96px; top: 300px; }
+  .texto .num { font-family: "Space Mono", monospace; font-weight: 700; font-size: 30px; letter-spacing: 0.16em; color: var(--muted); }
+  .texto h2 { margin-top: 40px; font-weight: 900; font-size: 84px; line-height: 1.0; letter-spacing: -0.035em; }
+  .texto p { margin-top: 48px; font-size: 44px; line-height: 1.3; color: #cfcfcf; max-width: 860px; }
+  .texto .rodape { position: absolute; left: 96px; right: 96px; bottom: 96px; height: 10px; display: flex; gap: 8px; }
+  .texto .rodape i { flex: 1; display: block; background: #1c1c1c; }
+
+  /* player */
+  .player .rot { position: absolute; left: 96px; top: 190px; }
+  .player .capa-img { position: absolute; left: 190px; top: 250px; width: 700px; height: 700px; object-fit: cover;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6); }
+  .player .info { position: absolute; left: 96px; right: 96px; top: 990px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .player .info h3 { font-weight: 900; font-size: 50px; line-height: 1.05; letter-spacing: -0.03em; max-width: 760px; }
+  .player .info div p { margin-top: 8px; font-size: 34px; color: var(--muted); }
+  .player .info svg { flex: none; }
+  .player .prog { position: absolute; left: 96px; right: 96px; top: 1110px; }
+  .player .trilho { height: 8px; border-radius: 4px; background: #333; position: relative; }
+  .player .trilho b { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; background: var(--ink); }
+  .player .trilho s { position: absolute; top: -8px; width: 24px; height: 24px; border-radius: 50%; background: var(--ink); margin-left: -12px; }
+  .player .tempos { display: flex; justify-content: space-between; margin-top: 14px; font-family: "Space Mono", monospace; font-size: 24px; color: var(--muted); }
+  .player .ctrl { position: absolute; left: 96px; right: 96px; top: 1166px; display: flex; justify-content: space-between; align-items: center; }
+
+  /* fim */
+  .fim .logo { position: absolute; left: 300px; top: 380px; width: 480px; }
+  .fim .data { position: absolute; left: 0; right: 0; top: 840px; text-align: center; font-weight: 900; font-size: 170px; letter-spacing: -0.05em; color: var(--ember); line-height: 1; }
+  .fim .onde { position: absolute; left: 0; right: 0; top: 1040px; text-align: center; font-family: "Space Mono", monospace; font-weight: 700;
+    font-size: 30px; letter-spacing: 0.16em; text-transform: uppercase; }
+  .fim .arroba { position: absolute; left: 0; right: 0; top: 1100px; text-align: center; font-weight: 700; font-size: 38px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div id="cards"></div>
+<script>
+const POSTS = [
+  { id: "0-chillout", cor: ["#bc6d21", "#985359", "#7e406e"], cards: [
+    { t: "capa", kicker: "Universo Paralelo · Bahia", titulo: "Chillout<br>stage", menor: true, sub: "O que é, o que toca e o que eu vou levar no dia 27.12." },
+    { t: "texto", h: "No Universo Paralelo, a pista principal é <em>psytrance</em>.", p: "O chillout é o outro lado do festival." },
+    { t: "texto", h: "É o palco pra <em>desacelerar</em>.", p: "Deitar na areia, fechar o olho e ouvir com calma. Downtempo, dub, ambient e música do mundo, tudo com grave e espaço." },
+    { t: "texto", h: "O que eu levo: <em>jungle, drum'n'bossa e dub</em>.", p: "Nos próximos posts eu conto de onde vem cada um e por que eles se encontram ali." },
+    { t: "player", capa: "capas/palafita.jpg", faixa: "Palafita Sunrise", artista: "Marcelinho Da Lua", dur: 264 },
+    { t: "fim" } ] },
+  { id: "1-jungle", cor: ["#bc6d21"], cards: [
+    { t: "capa", kicker: "Os estilos do meu set · 1/3", titulo: "Jungle", sub: "Londres, começo dos anos 90." },
+    { t: "texto", h: "Nasceu nas raves e nos <em>sound systems</em> de Londres.", p: "É a cultura jamaicana do sound system encontrando o breakbeat das raves inglesas." },
+    { t: "texto", h: "Breakbeat picotado e acelerado em cima de um <em>grave de reggae</em>.", p: "A bateria passa dos 160 BPM. O baixo anda na metade desse tempo, e é por isso que o corpo não corre junto." },
+    { t: "texto", h: "No chillout eu levo o lado <em>atmosférico</em>.", p: "Pads, jazz e espaço. Photek, Peshay, Wax Doctor e Roni Size estão no set." },
+    { t: "player", capa: "capas/nile.jpg", faixa: "On The Nile", artista: "Peshay", dur: 502 },
+    { t: "fim" } ] },
+  { id: "2-drum-n-bossa", cor: ["#985359"], cards: [
+    { t: "capa", kicker: "Os estilos do meu set · 2/3", titulo: "Drum'n'<br>bossa", menor: true, sub: "São Paulo, fim dos anos 90." },
+    { t: "texto", h: "Os DJs de São Paulo pegaram o drum'n'bass inglês e colocaram o <em>Brasil</em> dentro.", p: "" },
+    { t: "texto", h: "A bateria continua rápida. Por cima vêm <em>samba, bossa e MPB</em>.", p: "Violão, voz e percussão no meio do breakbeat." },
+    { t: "texto", h: "No set tem <em>DJ Patife</em> com Jair Oliveira, Drumagick, Marcelinho Da Lua e Bossacucanova.", p: "" },
+    { t: "player", capa: "capas/grooves.jpg", faixa: "Grooves, Rítmos, Sons e Vinhetas", artista: "DJ Patife, Jair Oliveira", dur: 207 },
+    { t: "fim" } ] },
+  { id: "3-dub", cor: ["#7e406e"], cards: [
+    { t: "capa", kicker: "Os estilos do meu set · 3/3", titulo: "Dub", sub: "Jamaica, anos 70." },
+    { t: "texto", h: "Nasceu quando os produtores jamaicanos começaram a remixar o reggae <em>na mesa de som</em>.", p: "King Tubby e Lee Perry estão nessa origem." },
+    { t: "texto", h: "Tira a voz, sobe o baixo e a bateria, joga <em>eco e reverb</em>.", p: "A mesa vira instrumento." },
+    { t: "texto", h: "É a <em>raiz</em> dos outros dois.", p: "O grave do sound system que depois virou jungle e drum'n'bass." },
+    { t: "player", capa: "capas/cornerdub.jpg", faixa: "Corner Dub (Blue & Red Mix)", artista: "RSD", dur: 340 },
+    { t: "fim" } ] },
+];
+
+function rng(seed) { return () => { seed |= 0; seed = (seed + 0x6d2b79f5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+const mmss = (s) => Math.floor(s / 60) + ":" + String(Math.round(s % 60)).padStart(2, "0");
+const ICON = {
+  shuffle: '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#9a9a9a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>',
+  prev: '<svg width="56" height="56" viewBox="0 0 24 24" fill="#fff"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg>',
+  pause: '<svg width="120" height="120" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#fff"/><rect x="16" y="14" width="5" height="20" rx="1" fill="#000"/><rect x="27" y="14" width="5" height="20" rx="1" fill="#000"/></svg>',
+  next: '<svg width="56" height="56" viewBox="0 0 24 24" fill="#fff"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg>',
+  repeat: '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#9a9a9a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>',
+  plus: '<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#9a9a9a" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 7v10M7 12h10"/></svg>',
+};
+
+const root = document.getElementById("cards");
+POSTS.forEach((post, pi) => {
+  const N = post.cards.length;
+  post.cards.forEach((c, ci) => {
+    const el = document.createElement("section");
+    el.className = "card " + c.t;
+    el.id = post.id + "-" + String(ci + 1).padStart(2, "0");
+    const topo = `<div class="topo"><span>Ätzøk · Rumo ao UP</span><span>${String(ci + 1).padStart(2, "0")} / ${String(N).padStart(2, "0")}</span></div>`;
+    let h = topo;
+    if (c.t === "capa") {
+      const r = rng(pi * 97 + 11); let bars = "";
+      for (let i = 0; i < 44; i++) { const v = 0.15 + 0.85 * Math.pow(r(), 1.6); bars += `<i style="height:${Math.round(v * 100)}%;background:${post.cor[i % post.cor.length]}"></i>`; }
+      h += `<div class="miolo"><div class="kicker">${c.kicker}</div><h1 class="${c.menor ? "menor" : ""}">${c.titulo}</h1><div class="sub">${c.sub}</div></div><div class="barras">${bars}</div>`;
+    } else if (c.t === "texto") {
+      let rod = ""; for (let i = 0; i < N; i++) rod += `<i style="${i === ci ? "background:" + post.cor[0] : ""}"></i>`;
+      h += `<div class="miolo"><div class="num">${String(ci).padStart(2, "0")}</div><h2>${c.h}</h2>${c.p ? `<p>${c.p}</p>` : ""}</div><div class="rodape">${rod}</div>`;
+    } else if (c.t === "player") {
+      const pos = 0.38;
+      h += `<div class="rot kicker">Tocando no set do UP</div>
+        <img class="capa-img" src="${c.capa}" alt="Capa de ${c.faixa}">
+        <div class="info"><div><h3 style="white-space:nowrap;font-size:${c.faixa.length > 22 ? 40 : 50}px">${c.faixa}</h3><p>${c.artista}</p></div>${ICON.plus}</div>
+        <div class="prog"><div class="trilho"><b style="width:${pos * 100}%"></b><s style="left:${pos * 100}%"></s></div>
+          <div class="tempos"><span>${mmss(c.dur * pos)}</span><span>-${mmss(c.dur * (1 - pos))}</span></div></div>
+        <div class="ctrl">${ICON.shuffle}${ICON.prev}${ICON.pause}${ICON.next}${ICON.repeat}</div>`;
+    } else {
+      h += `<img class="logo" src="wordmark-branco.png" alt="Ätzøk"><div class="data">27.12</div>
+        <div class="onde">Chillout stage · Universo Paralelo</div><div class="arroba">@_atzok</div>`;
+    }
+    el.innerHTML = h;
+    root.appendChild(el);
+  });
+});
+</script>
+</body>
+</html>
