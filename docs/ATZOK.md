@@ -141,6 +141,20 @@ Formatos:
 3. **Brasil no drum'n'bass** (ideia): os pioneiros brasileiros que estão no set.
 4. **Véspera e depois** (ideia): tracklist revelada no dia 26; pós-show com trecho gravado.
 
+## Brainstorm de conteúdo (resumo para retomar)
+
+| Ideia | Estado | Onde |
+|---|---|---|
+| RAIO-X Desejos Gelados (6 faixas) | prontos (prévias 720p) | `videos/raio-x-bliss030/` |
+| RAIO-X L4 / Amarela | layout aprovado, falta BPM das faixas | `videos/raio-x-l4/` |
+| RAIO-X Jazzy EP | Kitchen pronta (notas Claws/Charli XCX); falta Jazzy e remixes | `videos/raio-x-jazzy/` |
+| Rumo ao UP · carrosséis (chillout, drum'n'bass, drum'n'bossa, dub) | prontos e aprovados, guardados | `posts/rumo-ao-up/out-v2/` |
+| Rumo ao UP · "Da mala" (contagem + faixa do set) | modelo pronto, no estilo antigo; refazer no estilo v2 se for usar | `videos/rumo-ao-up/` |
+| Rumo ao UP · vídeo "Três caminhos" | reprovado, não usar | `videos/up-caminhos/` |
+| Brasil no drum'n'bass / véspera e pós-show | só ideia | — |
+
+Estilo aprovado para posts (v2): foto real, cards brancos, caixa alta condensada com tarja vermelha, cabeçalho "ÄTZØK:* / *rumo ao chillout do UP", rabiscos à mão. Trabalhar com prévia estática antes de produzir.
+
 ## Marca
 
 - Paleta: preto/branco como base; acento **ember `#BC6D21`** (cor do logo); plum `#7E406E`; dusk `#985359`. Site usa papel `#ECE7DC` e tinta `#111111`.
@@ -198,3 +212,4 @@ Formatos:
 - Referências novas do Caio (grade PULSE:* de escola de DJ, cards SYNK., fotos de festa com flash e rabisco branco, fotos do UP: tecidos, cúpula, noite com coqueiros): editorial com foto real, cards brancos com muito respiro, caixa alta condensada com tarja vermelha, cabeçalho pequeno tipo "ÄTZØK:* / *rumo ao chillout do UP", rabiscos à mão (estrela, ondas). Prévia v2 em `posts/rumo-ao-up/previa-v2.html` (3 cards do post Chillout stage), aguardando aprovação. Fotos do UP em `posts/rumo-ao-up/fotos/`.
 - RUMO AO UP v2 aprovado ("gosto") e produzido: 4 carrosséis × 6 cards em `posts/rumo-ao-up/out-v2/` (fonte `cards-v2.html`, exportar com `node posts/rumo-ao-up/exportar.js cards-v2.html out-v2`). Ordem dos cards: capa com foto + tarja, card branco com foto pequena e ondas, foto + texto, frase grande, player (capa da faixa), fim (27.12 + wordmark). Fotos: UP no post do chillout; retratos analógicos do Augusto Maravilha nos estilos (03 jungle, 10 drum'n'bossa, 08 dub). Sem a frase do psytrance.
 - RUMO AO UP: o Caio trocou "jungle" por "drum'n'bass" nos posts. Post 1 virou drum'n'bass (Londres, anos 90; nasceu do jungle; ~170 BPM, grave profundo; lado atmosférico). Card 4 do chillout e card 4 do dub ajustados. Pasta `out-v2/1-drum-n-bass/`.
+- Tudo de conteúdo guardado no "Brainstorm de conteúdo" para retomar depois.
