@@ -194,3 +194,4 @@ Formatos:
 - Nova série "ÄTZØK / RUMO AO UP" para o Chillout Stage do Universo Paralelo (27.12), a partir da playlist do set. Formato "Da mala" criado e testado com a faixa 01 (Numa Nice Numa Boa, DJ LK). Outros formatos guardados como ideia.
 - Série RUMO AO UP: vídeo "Três caminhos" (estilos do set, onde se conectam e por que funcionam no chillout) criado.
 - RUMO AO UP: vídeo "Três caminhos" reprovado (achou horrível). Feitos 4 carrosséis editoriais (chillout stage, jungle, drum'n'bossa, dub) com card de player e capa da faixa.
+- Feedback do Caio: o conteúdo feito até aqui (série RUMO AO UP: vídeo e carrosséis) não agradou. Ele vai mandar referências novas. Combinado: trabalhar econômico (ler a referência, propor em 1 prévia estática, só renderizar depois do ok).
