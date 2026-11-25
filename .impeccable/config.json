@@ -20,6 +20,12 @@
         ],
         "createdAt": "2026-11-21T03:46:59.344Z",
         "reason": "assistant triage: page ground is light #ece7dc, the hex is not in the source and the rendered scans do not flag it; comes from unused kit CSS"
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-11-25T18:30:38.040Z",
+        "reason": "Ätzøk brand system (docs/figma-design-system-rules.md) specifies Inter for display/body"
       }
     ]
   }
