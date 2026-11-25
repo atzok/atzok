@@ -1,0 +1,12 @@
+{
+  "nota": "Jazzy EP (Tha_Guts & Ätzøk, DSRPTV003). Áudios: zip do Drive 'Tha_Guts, Atzok - Jazzy [DSRPTV003]', renomeados 01-jazzy.aif, 02-kitchen.aif, 03-jazzy-akin-deckard.aif, 04-kitchen-dsrptv.aif.",
+  "projeto": "..",
+  "max": 60,
+  "previa": true,
+  "variaveis": ["titulo", "handle", "versao", "credito", "nota1", "nota2"],
+  "faixas": [
+    {"audio": "02-kitchen.aif", "saida": "raio-x-jazzy-02-kitchen", "titulo": "Kitchen", "bpm": 105, "drop": 164.5,
+     "nota1": "sample de vocal: Claws, da Charli XCX", "nota2": "a melodia nasce do arranjo desse vocal",
+     "credito": "Jazzy EP · DSRPTV recs · DSRPTV003"}
+  ]
+}
