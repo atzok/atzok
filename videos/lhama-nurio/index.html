@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #2b4f9a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; }
+      #agua { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      .lay { position: absolute; }
+      .lay img { display: block; width: 100%; height: 100%; will-change: transform; }
+      /* posições = exatamente as do flyer (camadas recortadas da arte) */
+      #l-titulo   { left: 150px; top: 215px;  width: 780px; height: 95px; }
+      #l-sub      { left: 150px; top: 315px;  width: 780px; height: 70px; }
+      #l-lhama    { left: 40px;  top: 515px;  width: 580px; height: 153px; }
+      #l-nurio    { left: 360px; top: 655px;  width: 625px; height: 160px; }
+      #l-barco    { left: 85px;  top: 605px;  width: 275px; height: 220px; }
+      #l-lhamaChar{ left: 285px; top: 840px;  width: 288px; height: 450px; }
+      #l-golfinho { left: 455px; top: 930px;  width: 405px; height: 540px; }
+      #l-spark    { left: 530px; top: 975px;  width: 75px;  height: 65px; }
+      #l-palmeira { left: 0px;   top: 1485px; width: 150px; height: 205px; }
+      #l-data     { left: 130px; top: 1555px; width: 220px; height: 110px; }
+      #l-local    { left: 570px; top: 1570px; width: 505px; height: 90px; }
+      #flash { position: absolute; left: 567px; top: 1007px; width: 10px; height: 10px; margin: -5px 0 0 -5px;
+        border-radius: 50%; border: 6px solid #f6e96b; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="12" data-width="1080" data-height="1920">
+      <video id="agua" class="clip" src="assets/agua.mp4" muted playsinline data-start="0" data-duration="12" data-track-index="0"></video>
+
+      <div id="l-palmeira"  class="lay clip" data-start="0" data-duration="12" data-track-index="1" style="z-index:2"><img id="i-palmeira"  src="assets/layers/palmeira.png" alt=""></div>
+      <div id="l-golfinho"  class="lay clip" data-start="0" data-duration="12" data-track-index="1" style="z-index:3"><img id="i-golfinho"  src="assets/layers/golfinho.png" alt="Golfinho"></div>
+      <div id="l-lhamaChar" class="lay clip" data-start="0" data-duration="12" data-track-index="1" style="z-index:4"><img id="i-lhamaChar" src="assets/layers/lhamaChar.png" alt="Lhama"></div>
+      <div id="l-spark"     class="lay clip" data-start="0" data-duration="12" data-track-index="1" style="z-index:5"><img id="i-spark"     src="assets/layers/spark.png" alt=""></div>
+      <div id="l-nurio"     class="lay clip" data-start="0" data-duration="12" data-track-index="1" style="z-index:6"><img id="i-nurio"     src="assets/layers/nurio.png" alt="Nurio"></div>
+      <div id="l-lhama"     class="lay clip" data-start="0" data-duration="12" data-track-index="1" style="z-index:7"><img id="i-lhama"     src="assets/layers/lhama.png" alt="Lhama"></div>
+      <div id="l-barco"     class="lay clip" data-start="0" data-duration="12" data-track-index="1" style="z-index:8"><img id="i-barco"     src="assets/layers/barco.png" alt="Barco"></div>
+      <div id="l-titulo"    class="lay clip" data-start="0" data-duration="12" data-track-index="1" style="z-index:9"><img id="i-titulo"    src="assets/layers/titulo.png" alt="Festa no barco!"></div>
+      <div id="l-sub"       class="lay clip" data-start="0" data-duration="12" data-track-index="1" style="z-index:9"><img id="i-sub"       src="assets/layers/sub.png" alt="é techno. é trance. é rave. é pista!"></div>
+      <div id="l-data"      class="lay clip" data-start="0" data-duration="12" data-track-index="1" style="z-index:9"><img id="i-data"      src="assets/layers/data.png" alt="11/1"></div>
+      <div id="l-local"     class="lay clip" data-start="0" data-duration="12" data-track-index="1" style="z-index:9"><img id="i-local"     src="assets/layers/local.png" alt="Itacaré - Bahia"></div>
+      <div id="fx" class="clip" data-start="0" data-duration="12" data-track-index="2" style="position:absolute;inset:0;z-index:10;pointer-events:none"><div id="flash"></div></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const bob = (sel, t, amp, dur, rot = 0) => {
+        const n = Math.floor((12 - t) / dur);
+        tl.fromTo(sel, { y: 0, rotation: 0 }, { y: -amp, rotation: rot, duration: dur, yoyo: true, repeat: n, ease: "sine.inOut" }, t);
+      };
+
+      // estado inicial: quem entra depois começa fora de cena
+      tl.set("#i-lhama", { x: -720, rotation: -6 }, 0);
+      tl.set("#i-nurio", { x: 760, rotation: 6 }, 0);
+      tl.set("#i-barco", { x: -420, rotation: -6 }, 0);
+      tl.set("#i-lhamaChar", { x: -820, y: 60, rotation: -8 }, 0);
+      tl.set("#i-golfinho", { x: 860, y: 120, rotation: 14 }, 0);
+      tl.set("#i-spark", { scale: 0, opacity: 0 }, 0);
+      tl.set("#flash", { scale: 0, opacity: 0 }, 0);
+      tl.set("#i-palmeira", { scale: 0, transformOrigin: "50% 100%" }, 0);
+      tl.set("#i-data", { scale: 0.3, opacity: 0 }, 0);
+      tl.set("#i-local", { x: 560 }, 0);
+      tl.set("#i-sub", { clipPath: "inset(0 100% 0 0)" }, 0);
+      // 1 · FESTA NO BARCO! (já visível no 1º quadro, pra capa) + subtítulo
+      tl.fromTo("#i-titulo", { scale: 0.7, opacity: 0.35, filter: "blur(4px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.55, ease: "back.out(2.2)" }, 0);
+      tl.fromTo("#i-sub", { clipPath: "inset(0 100% 0 0)", opacity: 1 }, { clipPath: "inset(0 0% 0 0)", duration: 0.7, ease: "power2.out" }, 0.45);
+
+      // 2 · LHAMA entra da esquerda, NURIO da direita
+      tl.fromTo("#i-lhama", { x: -720, rotation: -6 }, { x: 0, rotation: 0, duration: 0.75, ease: "back.out(1.4)" }, 1.0);
+      tl.fromTo("#i-nurio", { x: 760, rotation: 6 }, { x: 0, rotation: 0, duration: 0.75, ease: "back.out(1.4)" }, 1.2);
+
+      // 3 · o barquinho atravessa e ancora no lugar, balançando
+      tl.fromTo("#i-barco", { x: -420, opacity: 1 }, { x: 0, duration: 1.8, ease: "power2.out" }, 1.4);
+      tl.fromTo("#i-barco", { rotation: -6 }, { rotation: 5, duration: 0.45, yoyo: true, repeat: 3, ease: "sine.inOut" }, 1.4);
+      bob("#i-barco", 3.3, 7, 0.9, 3);
+
+      // 4 · lhama e golfinho chegam boiando e se encontram no high five
+      tl.fromTo("#i-lhamaChar", { x: -820, y: 60, rotation: -8 }, { x: 0, y: 0, rotation: 0, duration: 1.3, ease: "power3.out" }, 2.3);
+      tl.fromTo("#i-golfinho", { x: 860, y: 120, rotation: 14 }, { x: 0, y: 0, rotation: 0, duration: 1.3, ease: "power3.out" }, 2.35);
+      tl.fromTo("#i-golfinho", { scaleY: 1 }, { scaleY: 0.96, duration: 0.18, yoyo: true, repeat: 5, ease: "sine.inOut", transformOrigin: "50% 100%" }, 2.35);
+      // toque!
+      tl.fromTo("#i-spark", { scale: 0, opacity: 0 }, { scale: 1.25, opacity: 1, duration: 0.25, ease: "back.out(3)" }, 3.55);
+      tl.to("#i-spark", { scale: 1, duration: 0.2, ease: "power2.out" }, 3.8);
+      tl.fromTo("#flash", { scale: 0, opacity: 1 }, { scale: 14, opacity: 0, duration: 0.55, ease: "power2.out" }, 3.55);
+      tl.fromTo("#i-lhamaChar", { x: 0 }, { x: -10, duration: 0.12, yoyo: true, repeat: 1, ease: "power1.out" }, 3.66);
+      tl.fromTo("#i-golfinho", { x: 0 }, { x: 10, duration: 0.12, yoyo: true, repeat: 1, ease: "power1.out" }, 3.66);
+      // boiando depois
+      bob("#i-lhamaChar", 4.0, 10, 1.1, -2);
+      bob("#i-golfinho", 4.3, 12, 1.25, 2.5);
+      tl.fromTo("#i-spark", { rotation: 0 }, { rotation: 10, duration: 0.6, yoyo: true, repeat: 12, ease: "sine.inOut" }, 4.0);
+
+      // 5 · palmeira brota, data e local entram
+      tl.fromTo("#i-palmeira", { scale: 0, transformOrigin: "50% 100%" }, { scale: 1, duration: 0.7, ease: "back.out(1.8)", transformOrigin: "50% 100%" }, 4.1);
+      tl.fromTo("#i-palmeira", { rotation: -3 }, { rotation: 3, duration: 1.4, yoyo: true, repeat: 4, ease: "sine.inOut", transformOrigin: "50% 100%" }, 4.8);
+      tl.fromTo("#i-data", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(2.4)" }, 4.4);
+      tl.fromTo("#i-local", { x: 560, opacity: 1 }, { x: 0, duration: 0.7, ease: "expo.out" }, 4.6);
+      // títulos respiram de leve no final, sem andar
+      tl.fromTo("#i-titulo", { scale: 1 }, { scale: 1.04, duration: 0.5, yoyo: true, repeat: 1, ease: "sine.inOut" }, 6.0);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

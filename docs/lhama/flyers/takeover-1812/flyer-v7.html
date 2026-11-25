@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Lhama Takeover 18.12 · v7</title>
+<!-- Rodada 7: menos literal. A textura é a imagem; a taça vira forma (recorte, letra).
+     Tipografia em dupla: Adca (marca) + Instrument Serif itálico (voz de convite).
+     Sobreimpressão de risografia com mix-blend-mode: multiply. F/ = pasta das texturas. -->
+<style>
+@font-face{font-family:Adca;src:url(../../carrossel-onde-o-clube/Adca.ttf)}
+@font-face{font-family:Mono;src:url(../../carrossel-onde-o-clube/DMMono-Regular.ttf)}
+@font-face{font-family:Serif;src:url(../fonts/InstrumentSerif-Italic.ttf)}
+@font-face{font-family:SerifR;src:url(../fonts/InstrumentSerif-Regular.ttf)}
+:root{--lav:#6E78E8;--lavd:#4E57C2;--pink:#E679D3;--yel:#EEE27A;--mint:#B6D4A6;--cream:#F2EAD8;--ink:#151515;--wine:#82004E}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#666;display:flex;gap:40px;padding:40px;align-items:flex-start}
+.f{width:1080px;height:1350px;position:relative;overflow:hidden;font-family:Adca;isolation:isolate}
+.f::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:90;opacity:.35;mix-blend-mode:multiply;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .47  0 0 0 0 .42  0 0 0 .6 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>")}
+.a{position:absolute}
+.mono{font-family:Mono;text-transform:uppercase;letter-spacing:.16em}
+.serif{font-family:Serif;font-weight:400;letter-spacing:-.02em}
+.mul{mix-blend-mode:multiply}
+</style></head><body>
+
+<!-- 1 · RECORTE: a água ocupa tudo; a taça é um vazio de papel -->
+<section class="f" id="h1" style="background:var(--cream)">
+  <svg class="a" width="1080" height="1350" viewBox="0 0 1080 1350" style="left:0;top:0">
+    <defs>
+      <mask id="cut1">
+        <rect width="1080" height="1350" fill="#fff"/>
+        <path d="M250 330 L830 330 L560 650 L560 1010 L700 1050 L380 1050 L520 1010 L520 650 Z" fill="#000"/>
+      </mask>
+    </defs>
+    <image href="F/rc-agua.png" x="-160" y="-40" width="1300" height="1950" preserveAspectRatio="xMidYMid slice" mask="url(#cut1)"/>
+    <!-- registro rosa deslocado só no contorno do recorte -->
+    <path d="M250 330 L830 330 L560 650 L560 1010 L700 1050 L380 1050 L520 1010 L520 650 Z" fill="none" stroke="#E679D3" stroke-width="7" transform="translate(12 10)" style="mix-blend-mode:multiply"/>
+    <circle cx="655" cy="420" r="34" fill="#E679D3"/><circle cx="655" cy="420" r="12" fill="#EEE27A"/>
+    <line x1="655" y1="420" x2="760" y2="260" stroke="#151515" stroke-width="6"/>
+  </svg>
+  <div class="a serif" style="left:56px;top:40px;font-size:170px;line-height:.9;color:var(--cream);text-shadow:6px 6px 0 var(--ink)">a saideira</div>
+  <div class="a" style="left:0;right:0;bottom:0;height:200px;background:var(--cream)"></div>
+  <div class="a" style="left:56px;right:56px;bottom:64px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:20px;align-items:end;color:var(--ink)">
+    <div style="font-size:52px;line-height:.95;text-transform:uppercase">Lhama<br>Takeover</div>
+    <div><div class="mono" style="font-size:16px;color:var(--lavd)">sex · 18.12 · 22h</div><div class="serif" style="font-size:46px;line-height:1">última do ano</div></div>
+    <div style="text-align:right"><div class="mono" style="font-size:16px;color:var(--lavd)">Rua Silva Pinto, 429</div><div class="serif" style="font-size:46px;line-height:1">Carmem Bar</div></div>
+  </div>
+</section>
+
+<!-- 2 · CHAMA: as velas em close, abstratas; título gigante sangrando -->
+<section class="f" id="h2" style="background:var(--ink)">
+  <img class="a" src="F/rc-velas-noite.png" style="left:-380px;top:-260px;width:1840px">
+  <div class="a" style="left:-20px;top:620px;font-size:300px;line-height:.8;color:var(--yel);text-transform:uppercase;letter-spacing:-.03em;mix-blend-mode:screen;transform:rotate(-90deg);transform-origin:left top;white-space:nowrap;top:1330px;left:20px">Saideira</div>
+  <div class="a serif" style="left:400px;top:70px;width:620px;font-size:96px;line-height:.92;color:var(--cream);text-align:right">a última<br>do ano,<br>com quem<br>ficou até<br>o fim.</div>
+  <div class="a" style="left:360px;right:0;bottom:0;padding:34px 56px 60px;color:var(--cream);text-align:right;background:linear-gradient(transparent,rgba(21,21,21,.85) 40%)">
+    <div style="font-size:60px;text-transform:uppercase;line-height:.95">Lhama Takeover</div>
+    <div style="font-size:44px;margin-top:14px;color:var(--yel)">18.12 · 22h · Carmem Bar</div>
+    <div class="mono" style="font-size:20px;margin-top:10px;color:var(--cream)">Rua Silva Pinto, 429 · Bom Retiro</div>
+  </div>
+</section>
+
+<!-- 3 · O A INVERTIDO: o A triangular da Adca virado é a taça -->
+<section class="f" id="h3" style="background:var(--pink)">
+  <img class="a mul" src="F/rc-agua.png" style="left:-200px;top:520px;width:1480px;opacity:.85">
+  <div class="a" style="left:0;right:0;top:470px;height:880px;background:linear-gradient(var(--pink),transparent 30%);"></div>
+  <div class="a mono" style="left:56px;right:56px;top:56px;display:flex;justify-content:space-between;font-size:20px;color:var(--wine)"><span>Lhama Bookings</span><span>18 · 12 · 26</span></div>
+  <div class="a" style="left:40px;top:120px;font-size:236px;line-height:.8;color:var(--ink);text-transform:uppercase;letter-spacing:-.02em">Saideir<span id="invA" style="display:inline-block;transform:rotate(180deg) translateY(-6px);color:var(--yel);-webkit-text-stroke:8px var(--ink);paint-order:stroke fill">A</span></div>
+  <div class="a" id="stem" style="width:14px;height:150px;background:var(--ink)"></div>
+  <div class="a" id="foot" style="width:132px;height:16px;background:var(--ink);border-radius:8px"></div>
+  <script>document.fonts.ready.then(()=>{const r=document.getElementById("invA").getBoundingClientRect(),f=document.getElementById("h3").getBoundingClientRect();const cx=r.left+r.width/2-f.left,by=r.bottom-f.top-18;const st=document.getElementById("stem"),ft=document.getElementById("foot");st.style.left=(cx-7)+"px";st.style.top=by+"px";ft.style.left=(cx-66)+"px";ft.style.top=(by+144)+"px";});</script>
+  <div class="a serif" style="left:56px;top:360px;font-size:84px;line-height:.95;color:var(--wine)">a última dose<br>do ano</div>
+  <div class="a" style="left:56px;right:56px;bottom:64px;display:flex;justify-content:space-between;align-items:flex-end;background:var(--cream);padding:30px 34px;border-radius:26px;box-shadow:10px 10px 0 var(--ink)">
+    <div style="font-size:56px;line-height:.92;text-transform:uppercase;color:var(--ink)">Lhama<br>Takeover</div>
+    <div style="text-align:right;color:var(--ink)"><div class="serif" style="font-size:64px;line-height:1">18.12, 22h</div><div class="mono" style="font-size:18px;margin-top:6px">Carmem Bar · Silva Pinto, 429</div></div>
+  </div>
+</section>
+</body></html>

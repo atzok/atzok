@@ -1,0 +1,83 @@
+<template>
+  <style>
+    @font-face { font-family: Adca; src: url('assets/fonts/Adca.ttf'); }
+    @font-face { font-family: LhMono; src: url('assets/fonts/DMMono-Regular.ttf'); }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #F4EFE2; color: #151515; font-family: Adca; }
+    #root .grain { position: absolute; inset: 0; z-index: 40; pointer-events: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .45  0 0 0 0 .4  0 0 0 .55 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>");
+      opacity: .22; mix-blend-mode: multiply; }
+    #root .mono { font-family: LhMono; text-transform: uppercase; letter-spacing: .16em; font-size: 24px; }
+    #root .abs { position: absolute; }
+    #root .hd { position: absolute; left: 120px; width: 780px; top: 300px; height: 40px; display: flex;
+      justify-content: space-between; align-items: center; z-index: 6; }
+    #root .hd .t { display: flex; align-items: center; gap: 14px; }
+    #root .hd .dot { width: 18px; height: 18px; border-radius: 50%; background: #EE69DA; border: 3px solid currentColor; }
+    #root .cnt { display: flex; gap: .5em; }
+    #root .roll { display: inline-block; height: 1.25em; overflow: hidden; vertical-align: top; }
+    #root .roll span { display: block; line-height: 1.25em; }
+    #root .rule { position: absolute; left: 120px; width: 780px; top: 352px; height: 4px; background: currentColor; transform-origin: 0 50%; z-index: 6; }
+    #root .big { position: absolute; left: 120px; white-space: nowrap; text-transform: uppercase; line-height: .86; }
+    #root .reg { color: #6A75F2; text-shadow: .045em .045em 0 #EE69DA; }
+    #root .w { display: inline-block; }
+    #root .band { position: absolute; left: 0; width: 1080px; background-size: auto 100%; background-repeat: repeat-x; }
+    #root .b-azul { background-image: url('assets/img/fundo-azul.jpg'); }
+    #root .b-amar { background-image: url('assets/img/fundo-amarelo.jpg'); }
+    #root .wipe { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; z-index: 30; }
+    
+    #s1-kick { left: 120px; top: 404px; font-size: 64px; color: #6A75F2; }
+    #s1-l1 { top: 488px; font-size: 112px; }
+    #s1-l2 { top: 596px; font-size: 148px; }
+    #s1-l3 { top: 736px; font-size: 226px; }
+    #s1-route { left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
+    #root .lbl { position: absolute; top: 1019px; width: 230px; }
+    #s1-arco { left: 210px; top: 1060px; width: 660px; z-index: 2; }
+    #s1-band { top: 1590px; height: 330px; z-index: 3; border-top: 7px solid #151515; background-position: 0 0; }
+    #s1-iris { background: #6A75F2; clip-path: circle(0px at 612px 1218px); }
+
+  </style>
+  <div id="root" data-composition-id="s1" data-width="1080" data-height="1920">
+    <div id="s1-stage" class="clip" data-start="0" data-duration="4.6" data-track-index="1" data-layout-allow-overflow data-layout-allow-overlap style="position:absolute;inset:0">
+
+    <div id="s1-hd" class="hd mono">
+      <span id="s1-hdt" class="t"><i id="s1-hdd" class="dot"></i>Onde o clube encontra a rave</span>
+      <span class="cnt"><span class="roll"><span id="s1-roll"><span>0</span><span>1</span></span></span><span>/ 6</span></span>
+    </div>
+    <div id="s1-rule" class="rule"></div>
+      <div id="s1-kick" class="abs">um mapa de</div>
+      <div id="s1-l1" class="big"><span class="w">Onde</span> <span class="w">o</span> <span class="w">clube</span></div>
+      <div id="s1-l2" class="big"><span class="w">Encontra</span></div>
+      <div id="s1-l3" class="big reg">A rave</div>
+      <svg id="s1-route" class="abs" viewBox="0 0 1080 1920">
+        <line id="s1-rl" x1="134.0" y1="985" x2="886.0" y2="985" stroke="#151515" stroke-width="4" stroke-dasharray="2 14" stroke-linecap="round"/>
+        <circle id="s1-d0" cx="134.0" cy="985" r="13" fill="#EE69DA" stroke="#151515" stroke-width="5"/><circle id="s1-d1" cx="384.66666666666663" cy="985" r="13" fill="#6A75F2" stroke="#151515" stroke-width="5"/><circle id="s1-d2" cx="635.3333333333333" cy="985" r="13" fill="#6A75F2" stroke="#151515" stroke-width="5"/><circle id="s1-d3" cx="886.0" cy="985" r="13" fill="#EE69DA" stroke="#151515" stroke-width="5"/>
+      </svg>
+      <div id="s1-lb0" class="lbl mono abs" style="left:120px;text-align:left">Houghton</div><div id="s1-lb1" class="lbl mono abs" style="left:270px;text-align:center">MoDem</div><div id="s1-lb2" class="lbl mono abs" style="left:520px;text-align:center">Pulsar</div><div id="s1-lb3" class="lbl mono abs" style="left:670px;text-align:right">Veludo</div>
+      <img id="s1-arco" class="abs" src="assets/img/arco.png" alt="Lhama">
+      <div id="s1-band" class="band b-azul"></div>
+      <div id="s1-iris" class="wipe"></div>
+      <div class="grain" data-layout-ignore></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+
+      tl.fromTo("#s1-rule", {scaleX: 0}, {scaleX: 1, duration: 0.7, ease: "expo.out"}, 0.0);
+      tl.fromTo("#s1-hdt", {opacity: 0, x: -24}, {opacity: 1, x: 0, duration: 0.5, ease: "expo.out"}, 0.05);
+      tl.fromTo("#s1-hdd", {scale: 0}, {scale: 1, duration: 0.45, ease: "back.out(2.2)"}, 0.15);
+      tl.fromTo("#s1-roll", {yPercent: 0}, {yPercent: -50, duration: 0.55, ease: "expo.inOut"}, 0.25);
+      // frame 0 already shows the title (thumbnail); registration shadow snaps in
+      tl.fromTo("#s1-l3", {textShadow: "0em 0em 0 #EE69DA", scale: 1.06, transformOrigin: "0% 100%"}, {textShadow: ".045em .045em 0 #EE69DA", scale: 1, duration: 0.6, ease: "back.out(2)"}, 0.1);
+      tl.fromTo("#s1-kick", {opacity: 0, filter: "blur(8px)"}, {opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power4.out"}, 0.3);
+      // the route draws and its stops pop
+      tl.fromTo("#s1-rl", {attr: {x2: 134.0}}, {attr: {x2: 886.0}, duration: 0.9, ease: "power2.inOut"}, 0.55);
+      tl.fromTo("#s1-d0", {scale: 0, transformOrigin: "50% 50%"}, {scale: 1, duration: 0.4, ease: "back.out(2.6)"}, 0.55);tl.fromTo("#s1-d1", {scale: 0, transformOrigin: "50% 50%"}, {scale: 1, duration: 0.4, ease: "back.out(2.6)"}, 0.82);tl.fromTo("#s1-d2", {scale: 0, transformOrigin: "50% 50%"}, {scale: 1, duration: 0.4, ease: "back.out(2.6)"}, 1.09);tl.fromTo("#s1-d3", {scale: 0, transformOrigin: "50% 50%"}, {scale: 1, duration: 0.4, ease: "back.out(2.6)"}, 1.36);
+      tl.fromTo("#s1-lb0", {opacity: 0, y: 14}, {opacity: 1, y: 0, duration: 0.35, ease: "expo.out"}, 0.62);tl.fromTo("#s1-lb1", {opacity: 0, y: 14}, {opacity: 1, y: 0, duration: 0.35, ease: "expo.out"}, 0.89);tl.fromTo("#s1-lb2", {opacity: 0, y: 14}, {opacity: 1, y: 0, duration: 0.35, ease: "expo.out"}, 1.16);tl.fromTo("#s1-lb3", {opacity: 0, y: 14}, {opacity: 1, y: 0, duration: 0.35, ease: "expo.out"}, 1.43);
+      // the llama rises out of the waves
+      tl.fromTo("#s1-arco", {y: 560}, {y: 0, duration: 1.1, ease: "expo.out"}, 0.9);
+      tl.fromTo("#s1-band", {backgroundPositionX: 0}, {backgroundPositionX: -260, duration: 4.6, ease: "none"}, 0);
+      // exit: lavender iris opens from the headphone
+      tl.fromTo("#s1-iris", {clipPath: "circle(0px at 612px 1218px)"}, {clipPath: "circle(2300px at 612px 1218px)", duration: 0.62, ease: "power3.in"}, 3.95);
+      window.__timelines["s1"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Lhama Takeover 18.12 · v3 retícula</title>
+<!-- Rodada 3: imagens em retícula (halftone.py) + tipografia enxuta. H/ = pasta das imagens -->
+<style>
+@font-face{font-family:Adca;src:url(../../carrossel-onde-o-clube/Adca.ttf)}
+@font-face{font-family:Mono;src:url(../../carrossel-onde-o-clube/DMMono-Regular.ttf)}
+:root{--blue:#4038C8;--lime:#C4EE6E;--pink:#EC80DE;--ink:#0A120A;--paper:#F0EEE8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#666;display:flex;gap:40px;padding:40px;align-items:flex-start}
+.f{width:1080px;height:1350px;position:relative;overflow:hidden;font-family:Adca;background-size:cover}
+.a{position:absolute}
+.up{text-transform:uppercase;line-height:.86}
+.mono{font-family:Mono;text-transform:uppercase;letter-spacing:.16em}
+.tag{display:inline-block;padding:12px 22px 10px;font-family:Mono;text-transform:uppercase;letter-spacing:.14em;font-size:24px}
+</style></head><body>
+
+<!-- A · VELAS: acender a última do ano -->
+<section class="f" id="c1" style="background-image:url(H/ht-velas.png)">
+  <div class="a mono" style="left:64px;right:64px;top:60px;display:flex;justify-content:space-between;font-size:22px;color:var(--ink)"><span>Lhama Bookings</span><span>18 · 12 · 2026</span></div>
+  <div class="a up" style="left:60px;top:120px;font-size:150px;color:var(--ink)">Lhama<br>Takeover</div>
+  <div class="a" style="right:64px;top:150px;width:330px;text-align:right;font-size:44px;line-height:1.05;color:var(--blue)">a última<br>do ano.<br>vem<br>brindar.</div>
+  <div class="a" style="left:0;right:0;bottom:0;height:270px;background:var(--ink)"></div>
+  <div class="a" style="left:64px;bottom:150px;color:var(--lime);font-size:118px;line-height:1">18.12<span style="font-size:62px;color:var(--pink)"> 22h</span></div>
+  <div class="a" style="right:64px;bottom:162px;text-align:right;color:var(--paper)"><div style="font-size:54px;line-height:1">Carmem Bar</div><div class="mono" style="font-size:20px;margin-top:10px;color:#cfc9ff">Rua Silva Pinto, 429 · Bom Retiro</div></div>
+  <div class="a mono" style="left:64px;right:64px;bottom:58px;display:flex;justify-content:space-between;font-size:20px;color:#cfc9ff;border-top:2px solid #3a3a50;padding-top:22px"><span>confra de fim de ano</span><span>line-up em breve</span></div>
+</section>
+
+<!-- B · ÁGUA: mergulho de fim de ano, sombra preta segura o texto -->
+<section class="f" id="c2" style="background-image:url(H/ht-agua.png)">
+  <div class="a" style="left:0;top:0;width:1080px;height:1350px;background:linear-gradient(90deg,transparent 54%,var(--ink) 54%);opacity:0"></div>
+  <div class="a" style="left:60px;top:60px"><span class="tag" style="background:var(--ink);color:var(--lime)">a última do ano</span></div>
+  <div class="a up" style="left:56px;top:150px;font-size:190px;color:var(--paper);-webkit-text-stroke:3px var(--ink);paint-order:stroke fill">Lhama<br>Take<br>over</div>
+  <div class="a" style="left:60px;top:1010px;display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+    <span class="tag" style="background:var(--ink);color:var(--paper);font-family:Adca;font-size:96px;letter-spacing:0;padding:16px 30px 8px">18.12 · 22h</span>
+    <span class="tag" style="background:var(--lime);color:var(--ink);font-family:Adca;font-size:52px;letter-spacing:0">Carmem Bar</span>
+    <span class="tag" style="background:var(--paper);color:var(--ink);font-size:20px">Rua Silva Pinto, 429 · Bom Retiro</span>
+  </div>
+  <div class="a mono" style="right:60px;bottom:60px;color:var(--lime);font-size:20px;text-align:right">confra<br>de fim de ano</div>
+</section>
+
+<!-- C · BOLA: pista de fim de ano -->
+<section class="f" id="c3" style="background-image:url(H/ht-bola.png)">
+  <div class="a mono" style="left:64px;right:64px;top:60px;display:flex;justify-content:space-between;font-size:22px;color:var(--lime)"><span>Lhama Takeover</span><span>a última do ano</span></div>
+  <div class="a up" style="left:0;right:0;top:820px;text-align:center;font-size:128px;color:var(--paper)">Confra<br>na pista</div>
+  <div class="a" style="left:0;right:0;top:1080px;display:flex;justify-content:center;gap:16px">
+    <span class="tag" style="background:var(--lime);color:var(--ink);font-family:Adca;font-size:60px;letter-spacing:0">18.12</span>
+    <span class="tag" style="background:var(--pink);color:var(--ink);font-family:Adca;font-size:60px;letter-spacing:0">22h</span>
+    <span class="tag" style="background:var(--paper);color:var(--ink);font-family:Adca;font-size:60px;letter-spacing:0">Carmem Bar</span>
+  </div>
+  <div class="a" style="left:0;right:0;top:1190px;text-align:center"><span class="tag" style="background:var(--ink);color:#e6e2ff;font-size:20px">Rua Silva Pinto, 429 · Bom Retiro · SP</span></div>
+  <img class="a" src="../../carrossel-onde-o-clube/img/nome-pb.png" style="left:470px;top:1262px;width:140px;filter:invert(1)">
+</section>
+</body></html>

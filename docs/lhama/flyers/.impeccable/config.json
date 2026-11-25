@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "docs/lhama/flyers/takeover-1812/flyer.html"
+        ],
+        "createdAt": "2026-11-23T19:15:12.649Z",
+        "reason": "Títulos com contorno e pílulas seguem as artes de referência da Lhama enviadas pelo usuário; o contorno garante a leitura"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "docs/lhama/flyers/takeover-1812/flyer-v2.html"
+        ],
+        "createdAt": "2026-11-23T19:21:01.272Z",
+        "reason": "Títulos com contorno grosso e rótulos mono sobre cor saturada seguem as artes de referência da Lhama; legíveis no tamanho do feed"
+      }
+    ]
+  }
+}
