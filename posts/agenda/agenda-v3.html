@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Ätzøk · agenda dez/jan v3</title>
+<style>
+  @font-face { font-family: "Black"; src: url("fonts/archivo-black.woff2"); }
+  @font-face { font-family: "Narrow"; font-weight: 700; src: url("fonts/archivo-narrow-700.woff2"); }
+  :root { --papel: #f1e7d3; --tinta: #c4451c; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #333; padding: 30px; width: max-content; }
+  .card { position: relative; width: 1080px; height: 1350px; overflow: hidden; background: var(--papel); color: var(--tinta); }
+  .abs { position: absolute; }
+  .grao { inset: 0; z-index: 20; pointer-events: none; mix-blend-mode: multiply; opacity: 0.5; }
+  .logo { left: 72px; top: 76px; width: 230px; }
+  .titulo { left: 66px; top: 300px; font-family: Black; font-size: 168px; line-height: 0.86; letter-spacing: -0.04em; }
+  .quando { left: 72px; top: 452px; font-family: Narrow; font-weight: 700; font-size: 40px; letter-spacing: 0.12em; }
+  .coqueiro { left: 560px; top: 60px; width: 560px; height: 900px; }
+  .datas { left: 72px; top: 584px; width: 600px; }
+  .linha { display: grid; grid-template-columns: 170px 1fr; padding: 16px 0 12px; border-top: 3px solid var(--tinta); }
+  .linha b { font-family: Black; font-weight: 400; font-size: 46px; line-height: 1; }
+  .linha span { font-family: Narrow; font-weight: 700; font-size: 34px; line-height: 1.1; text-transform: uppercase; }
+  .linha span i { display: block; font-style: normal; font-size: 26px; letter-spacing: 0.08em; opacity: 0.8; margin-top: 4px; }
+  .bahia { left: 72px; right: 72px; top: 1158px; border-top: 3px solid var(--tinta); border-bottom: 3px solid var(--tinta); padding: 18px 0 14px;
+    display: flex; justify-content: space-between; align-items: baseline; font-family: Black; font-size: 40px; }
+  .bahia span { font-family: Narrow; font-weight: 700; font-size: 32px; letter-spacing: 0.08em; }
+  .rodape { left: 72px; right: 72px; top: 1276px; display: flex; justify-content: space-between; font-family: Narrow; font-weight: 700; font-size: 26px;
+    letter-spacing: 0.1em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<section class="card" id="agenda-v3">
+  <img class="abs logo" src="wordmark-vermelho.png" alt="Ätzøk" />
+
+  <!-- coqueiro em traço: folhas em laço, tronco curvo com marcas -->
+  <svg class="abs coqueiro" viewBox="0 0 560 900" fill="none" stroke="#c4451c" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M300 250 C 280 420, 300 600, 250 900" />
+    <path d="M336 252 C 318 420, 338 600, 292 900" />
+    <path d="M300 330 l34 6 M296 430 l36 4 M292 530 l38 2 M284 630 l38 0 M274 730 l36 -2 M262 830 l36 -4" stroke-width="7" />
+    <path d="M318 240 C 250 150, 130 140, 40 210 C 90 240, 140 220, 190 215 C 240 212, 280 225, 312 248" />
+    <path d="M318 236 C 300 130, 230 60, 140 50 C 150 100, 190 120, 225 140 C 270 168, 295 200, 316 236" />
+    <path d="M324 232 C 340 140, 390 80, 470 60 C 470 110, 430 130, 400 150 C 370 172, 345 200, 326 232" />
+    <path d="M330 240 C 400 170, 490 170, 560 220 C 520 255, 480 245, 445 245 C 400 245, 365 245, 332 252" />
+    <path d="M330 252 C 410 270, 480 330, 510 410 C 465 410, 440 380, 418 355 C 390 320, 360 285, 332 262" />
+    <path d="M310 256 C 240 280, 170 340, 140 420 C 185 418, 210 388, 232 360 C 260 322, 285 290, 312 264" />
+    <circle cx="300" cy="262" r="14" /><circle cx="330" cy="268" r="14" />
+  </svg>
+
+  <div class="abs titulo">AGENDA</div>
+  <div class="abs quando">DEZEMBRO → JANEIRO</div>
+
+  <div class="abs datas">
+    <div class="linha"><b>09.12</b><span>Rádio Veneno<i>live</i></span></div>
+    <div class="linha"><b>09.12</b><span>Luci Bar<i>long set</i></span></div>
+    <div class="linha"><b>18.12</b><span>Lhama Takeover no Carmem<i>Hanky Panky</i></span></div>
+    <div class="linha"><b>27.12</b><span>Universo Paralelo<i>chillout stage</i></span></div>
+    <div class="linha"><b>11.01</b><span>Festa no Barco<i>Lhama Bookings</i></span></div>
+  </div>
+
+  <div class="abs bahia">AGENDA ABERTA <span>SUL DA BAHIA · 02 A 14.01</span></div>
+  <div class="abs rodape"><span>Booking · Lhama Bookings</span><span>@_atzok</span></div>
+
+  <svg class="abs grao" width="1080" height="1350">
+    <filter id="g"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="5" /><feColorMatrix values="0 0 0 0 0.3  0 0 0 0 0.24  0 0 0 0 0.18  0 0 0 -1.15 0.85" /></filter>
+    <rect width="1080" height="1350" filter="url(#g)" />
+  </svg>
+</section>
+</body>
+</html>
