@@ -3,6 +3,8 @@
 **Status (25/11/2026):** levantamento feito; falta alinhar com a Maria Alice e pedir as artes.
 **Responsáveis:** Caio Costa e Maria Alice · **Material gráfico:** time de design
 
+**Planilha de acompanhamento:** [Google Sheets — Meow - Parcerias Hostels e Colivings](https://docs.google.com/spreadsheets/d/1bBUvmzwDHCZmH_9KuetJJikwLu64UMnWDvtOnYCm5sI/edit)
+
 ## Oferta para os hóspedes / moradores
 - Desconto (percentual a definir)
 - Entrada sem fila
@@ -66,3 +68,4 @@ Flyer · cartaz · cartão com QR code · display de mesa
 |------|-----------------|
 | 25/11/2026 | Tema aberto: organizar parcerias com a Maria Alice e pedir os gráficos ao design. |
 | 25/11/2026 | Oferta definida (desconto, entrada sem fila, welcome caipirinha) e peças (flyer, cartaz, cartão QR, display de mesa). Levantamento de 17 hostels e 8 colivings. |
+| 25/11/2026 | Lista exportada para o Google Sheets (planilha vira a fonte para acompanhar contatos). |
