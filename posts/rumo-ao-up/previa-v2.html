@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Rumo ao UP · prévia v2</title>
+<style>
+  @font-face { font-family: "Narrow"; font-weight: 700; src: url("fonts/archivo-narrow-700.woff2"); }
+  @font-face { font-family: "Inter"; font-weight: 400; src: url("fonts/Inter-Regular.otf"); }
+  @font-face { font-family: "Inter"; font-weight: 700; src: url("fonts/Inter-Bold.otf"); }
+  :root { --verm: #d8401f; --papel: #f4f1ea; --tinta: #111; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #444; display: flex; gap: 30px; padding: 30px; width: max-content; }
+  .card { position: relative; width: 1080px; height: 1350px; overflow: hidden; background: var(--papel); color: var(--tinta); font-family: Inter, sans-serif; }
+  .cab { position: absolute; left: 56px; right: 56px; top: 44px; display: flex; justify-content: space-between; font-size: 26px; z-index: 5; }
+  .cab b { font-weight: 700; letter-spacing: 0.02em; }
+  .escuro .cab { color: #fff; }
+  .tarja { display: inline; background: var(--verm); color: #fff; font-family: Narrow, sans-serif; font-weight: 700; text-transform: uppercase;
+    line-height: 1.08; padding: 0 14px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .titulo { font-family: Narrow, sans-serif; font-weight: 700; text-transform: uppercase; line-height: 0.98; letter-spacing: -0.01em; }
+  .foto { position: absolute; object-fit: cover; }
+  svg.rab { position: absolute; left: 0; top: 0; pointer-events: none; z-index: 4; }
+
+  /* 1 · capa */
+  #c1 .foto { inset: 0; width: 100%; height: 100%; }
+  .sombra { position: absolute; left: 0; right: 0; top: 0; height: 200px; background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0)); z-index: 3; }
+  #c1 .bloco { position: absolute; left: 56px; bottom: 120px; z-index: 5; font-size: 150px; }
+  #c1 .sub { position: absolute; left: 56px; bottom: 64px; z-index: 5; color: #fff; font-size: 30px; font-weight: 700; }
+  #c1 .sub i { font-style: normal; color: #fff; background: #111; padding: 2px 10px; }
+
+  /* 2 · texto + foto pequena com rabisco */
+  #c2 .titulo { position: absolute; left: 56px; right: 56px; top: 150px; font-size: 88px; }
+  #c2 .foto { left: 330px; top: 700px; width: 420px; height: 315px; }
+  #c2 .corpo { position: absolute; left: 56px; bottom: 70px; width: 560px; font-size: 30px; line-height: 1.3; }
+  #c2 .corpo b { font-weight: 700; }
+
+  /* 3 · foto grande + texto pequeno */
+  #c3 .foto { left: 0; top: 0; width: 100%; height: 860px; }
+  #c3 .titulo { position: absolute; left: 56px; top: 900px; font-size: 70px; width: 820px; }
+  #c3 .corpo { position: absolute; left: 56px; bottom: 70px; width: 600px; font-size: 30px; line-height: 1.3; }
+  #c3 .assin { position: absolute; right: 56px; bottom: 70px; font-size: 26px; text-align: right; }
+</style>
+</head>
+<body>
+  <section class="card escuro" id="c1">
+    <img class="foto" src="fotos/up-tecido.jpg" alt="Tecidos do Universo Paralelo"><div class="sombra"></div>
+    <div class="cab"><b>ÄTZØK:*</b><span>*rumo ao chillout do UP</span></div>
+    <div class="bloco"><span class="tarja">Chillout<br>stage</span></div>
+    <div class="sub"><i>27.12</i>&nbsp; Universo Paralelo, Bahia</div>
+    <svg class="rab" width="1080" height="1350" data-rab="estrela" data-cor="#fff" data-x="830" data-y="300" data-r="150" data-seed="3"></svg>
+  </section>
+
+  <section class="card" id="c2">
+    <div class="cab"><b>ÄTZØK:*</b><span>*rumo ao chillout do UP</span></div>
+    <div class="titulo">Na pista principal é <span class="tarja">psytrance.</span> No chillout a pista respira.</div>
+    <img class="foto" src="fotos/up-domo.jpg" alt="Pista do chillout">
+    <svg class="rab" width="1080" height="1350" data-rab="ondas" data-cor="#d8401f" data-x="540" data-y="858" data-r="225" data-seed="7"></svg>
+    <div class="corpo">Downtempo, dub, ambient e música do mundo. <b>Pra deitar na areia, fechar o olho e ouvir com calma.</b></div>
+  </section>
+
+  <section class="card" id="c3">
+    <img class="foto" src="fotos/up-noite.jpg" alt="Noite no Universo Paralelo"><div class="sombra"></div>
+    <div class="cab" style="color:#fff"><b>ÄTZØK:*</b><span>*rumo ao chillout do UP</span></div>
+    <svg class="rab" width="1080" height="1350" data-rab="estrela" data-cor="#fff" data-x="250" data-y="250" data-r="110" data-seed="11"></svg>
+    <div class="titulo">Eu levo <span class="tarja">jungle, drum'n'bossa e dub</span></div>
+    <div class="corpo">Nos próximos posts eu conto de onde vem cada um e por que eles se encontram no chillout.</div>
+    <div class="assin">*desliza →</div>
+  </section>
+
+<script>
+  function rng(s) { return () => { s |= 0; s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s ^ (s >>> 15), 1 | s); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+  // traço "à mão": pontos com tremida leve
+  const linha = (pts, r, j) => "M" + pts.map(([x, y]) => (x + (r() - 0.5) * j).toFixed(1) + " " + (y + (r() - 0.5) * j).toFixed(1)).join(" L");
+  document.querySelectorAll("svg.rab").forEach((svg) => {
+    const d = svg.dataset, r = rng(+d.seed), cx = +d.x, cy = +d.y, R = +d.r, cor = d.cor;
+    let paths = [];
+    if (d.rab === "estrela") {
+      // explosão de pontas irregulares + riscos de dentro, como na referência
+      for (let k = 0; k < 2; k++) {
+        const pts = [], n = 11 + k * 2, rr = R * (1 - k * 0.38);
+        for (let i = 0; i <= n * 2; i++) {
+          const a = (i / (n * 2)) * Math.PI * 2 + k * 0.3, m = i % 2 ? 0.42 + r() * 0.15 : 0.8 + r() * 0.45;
+          pts.push([cx + Math.cos(a) * rr * m, cy + Math.sin(a) * rr * m]);
+        }
+        paths.push(linha(pts, r, 6));
+      }
+      for (let i = 0; i < 16; i++) {
+        const a = r() * Math.PI * 2, a0 = R * (0.12 + r() * 0.2), a1 = a0 + R * (0.08 + r() * 0.12);
+        paths.push(linha([[cx + Math.cos(a) * a0, cy + Math.sin(a) * a0], [cx + Math.cos(a) * a1, cy + Math.sin(a) * a1]], r, 2));
+      }
+    } else {
+      // ondas concêntricas tortas em volta da foto
+      for (let k = 0; k < 6; k++) {
+        const pts = [], rx = R * (0.95 + k * 0.13), ry = R * (0.78 + k * 0.12);
+        for (let i = 0; i <= 90; i++) {
+          const a = (i / 90) * Math.PI * 2, w = 1 + 0.07 * Math.sin(a * 3 + k) + 0.05 * Math.sin(a * 5 - k * 2);
+          pts.push([cx + Math.cos(a) * rx * w, cy + Math.sin(a) * ry * w]);
+        }
+        paths.push(linha(pts, r, 5));
+      }
+    }
+    svg.innerHTML = paths.map((p) => `<path d="${p}" fill="none" stroke="${cor}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>`).join("");
+  });
+</script>
+</body>
+</html>
