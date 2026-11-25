@@ -52,6 +52,12 @@ Outros dados do kit de 2023: gigs VOODOOHOP, Mamba Negra, Metanol FM, Caldo, SP 
 
 Masters em AIFF + capa: zip "Bliss Records - BLISS030- Ätzøk – Desejos Gelados.zip" no Drive (pasta ALBUNS, EPS & SINGLES).
 
+### L4 / Amarela (DSRPTV recs, DSRPTV041)
+
+Álbum em fita K7. Faixas com nomes de estação/linha em "leet": C3ntr0 4:39 (96 BPM, confirmado), Fluxø 4:00, Paul!sta 6:24, Øscar 2:20, Av!s0s 0:36, Marg!nal 3:54, 0est3 8:13, Sønia 2:24.
+Identidade: amarelo da Linha 4 do metrô (#e5c21e / #d3b321) sobre preto oliva (#1a170a), fotos de túnel e vagão em retícula granulada, tipografia 3D vazada em camadas, selo "4" e o cubo da DSRPTV.
+Drive: pasta "Ätzøk - L4 : AMARELA" (compartilhada pela DSRPTV: artwork, fotos, tracks em WAV) e o zip do álbum em ALBUNS, EPS & SINGLES.
+
 Próximas faixas em fase de master (não mencionar na bio).
 
 ## Formatos de show
@@ -131,3 +137,4 @@ Versão Ätzøk (em construção, `videos/raio-x/`, série **ÄTZØK / RAIO-X**)
 - RAIO-X EP v2: o Caio achou que a v1 (disco/rótulo) perdeu a essência da referência. Refeito no layout das referências (espectro com fantasma, campo estéreo, forma de onda, rodapé com compasso) usando a identidade da capa: grafite #312b27, lilás #bda8df antes do drop, menta #a0f0c0 depois, Archivo Black no título, cobra como marca d'água que troca de lugar a cada 8 compassos e no final.
 - RAIO-X EP v3 (aprovado com ajustes): sem frases; cabeçalho fixo com a cobra + @_atzok à esquerda e logo da Bliss (lilás) à direita; linha "ÄTZØK / RAIO-X · BPM" (nos remixes, nome do remix no lugar de ÄTZØK / RAIO-X); final com cobra, @_atzok, crédito e logo Bliss. Lote das 6 faixas em `videos/raio-x-bliss030/faixas/bliss030.json`.
 - RAIO-X EP: os 6 vídeos (~1 min, 1080×1920) renderizados em `videos/raio-x-bliss030/renders/` (fora do git) + prévias 720p. Trechos: 01 0:00–1:00 · 02 4:00–5:00 · 03 3:39–4:39 (128 BPM) · 04 2:05–3:03 (124 BPM, a confirmar) · 05 6:00–7:00 · 06 2:34–3:34. Upload direto ao Drive daqui não passa (limite ~3 MB).
+- RAIO-X L4 / Amarela: layout criado em `videos/raio-x-l4/` (mesmo modelo das referências, identidade do álbum: título vazado em camadas, grão, selo 4 + @_atzok no topo, cubo DSRPTV, linha de metrô com estações sob a forma de onda, final com a capa). Testado com C3ntr0 (96 BPM, trecho 0:50–1:50, virada em 1:20).

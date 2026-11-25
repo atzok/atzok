@@ -6438,9 +6438,9 @@
     "semantic_hash": ""
   },
   "docs/ATZOK.md": {
-    "mtime": 1795566548.3077545,
-    "seen": 1795566553.4337997,
-    "ast_hash": "a8ba9a66782a010302f32309589a7bd2",
+    "mtime": 1795567316.6048634,
+    "seen": 1795567328.039512,
+    "ast_hash": "a1fe129a7cba66717535677680d3fbc7",
     "semantic_hash": ""
   },
   "docs/figma-design-system-rules.md": {
@@ -7983,6 +7983,66 @@
     "mtime": 1795565061.8336365,
     "seen": 1795566553.4340634,
     "ast_hash": "55d69bd14c9f3a90c35dbf9427bf795c",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-l4/hyperframes.json": {
+    "mtime": 1795566866.4749973,
+    "seen": 1795567328.038696,
+    "ast_hash": "7b33c6cb9ecfe380a4657c509ff8af33",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-l4/meta.json": {
+    "mtime": 1795566866.4774437,
+    "seen": 1795567328.038698,
+    "ast_hash": "8090475ad2cde70632b92f61f48cec36",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-l4/package.json": {
+    "mtime": 1795566866.4774437,
+    "seen": 1795567328.0386996,
+    "ast_hash": "586b02c7e5f696cbf0c44feb1ba8ca1d",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-l4/compositions/painel.html": {
+    "mtime": 1795567012.2511606,
+    "seen": 1795567328.039603,
+    "ast_hash": "13f5021bec6db9c3b3acac413d6753e1",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-l4/index.html": {
+    "mtime": 1795566977.3473692,
+    "seen": 1795567328.0396042,
+    "ast_hash": "4d281f3102006faca169300de1a73d1b",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-l4/assets/badge4.png": {
+    "mtime": 1795566867.501473,
+    "seen": 1795567328.039801,
+    "ast_hash": "8be3dfdf4fda283870bd07566610b711",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-l4/assets/capa.jpg": {
+    "mtime": 1795566866.8241496,
+    "seen": 1795567328.0398018,
+    "ast_hash": "1e3ee5087e87633582c35857958c2b19",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-l4/assets/cubo.png": {
+    "mtime": 1795566867.5506673,
+    "seen": 1795567328.0398028,
+    "ast_hash": "b0096ecf2c7d12c7fcda5d0e35a9af5d",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-l4/assets/grao.png": {
+    "mtime": 1795566867.8997602,
+    "seen": 1795567328.039804,
+    "ast_hash": "425088eaf08fcb8a795b5f4d22ff4758",
+    "semantic_hash": ""
+  },
+  "videos/raio-x-l4/assets/wordmark.png": {
+    "mtime": 1795566867.446454,
+    "seen": 1795567328.039805,
+    "ast_hash": "a8a70e134c19000e84fb2092b590605f",
     "semantic_hash": ""
   }
 }

@@ -1,0 +1,56 @@
+<!doctype html>
+<html
+  lang="pt-BR"
+  data-composition-variables='[
+    {"id":"titulo","type":"string","label":"Nome da faixa","default":"C3ntr0","maxLength":18},
+    {"id":"handle","type":"string","label":"Instagram","default":"@_atzok","maxLength":24},
+    {"id":"versao","type":"string","label":"Versão (remix), no lugar do BPM","default":"","maxLength":24},
+    {"id":"credito","type":"string","label":"Crédito no final","default":"L4 / Amarela · DSRPTV recs","maxLength":40}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #1a170a; }
+      #root { position: relative; width: 100%; height: 100%; background: #1a170a; }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="63.000"
+      data-width="1080"
+      data-height="1920"
+    >
+      <div
+        id="painel"
+        data-composition-id="painel"
+        data-composition-src="compositions/painel.html"
+        data-start="0"
+        data-duration="63.000"
+        data-track-index="1"
+        data-track-kind="graphics"
+        data-width="1080"
+        data-height="1920"
+      ></div>
+      <audio
+        id="trecho"
+        class="clip"
+        src="assets/trecho.wav"
+        data-start="0"
+        data-duration="63.000"
+        data-track-index="2"
+        data-volume="1"
+      ></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>
