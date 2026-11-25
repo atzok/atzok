@@ -174,3 +174,9 @@ Para produzir o resto: precisa do BPM confirmado de cada faixa (a análise erra 
 - RAIO-X Kitchen pronto: 105 BPM, trecho 2:15–3:14, virada em 2:44. O layout do Jazzy ganhou "notas" numeradas (variáveis nota1/nota2): a 01 entra no drop, a 02 seis compassos depois; cada uma marca um ponto na forma de onda e aparece em itálico acima dela. Notas: "sample de vocal: Claws, da Charli XCX" / "a melodia nasce do arranjo desse vocal". Recurso reutilizável para outras curiosidades.
 - Kitchen v2: notas reordenadas a pedido do Caio. 01 (sample de Claws) logo no começo, 02 (melodia nasce do arranjo do vocal) na virada, 03 nova "arranjo final: Tha_Guts" seis compassos depois. O layout do Jazzy agora aceita até 3 notas (nota1/nota2/nota3).
 - Kitchen v3: sem a nota do Tha_Guts; notas mais fluidas: 01 "o vocal vem de Claws, da Charli XCX" (começo), 02 "e a melodia nasceu do arranjo desse vocal" (virada), 03 "perceba!" (quando vocal e melodia entram juntos, 6 compassos depois). Legendas explicativas removidas dos três modelos (Bliss, L4, Jazzy).
+- Kitchen v3 exportada em alta (1080×1920, 10,7 MB, `videos/raio-x-jazzy/renders/raio-x-kitchen-1080.mp4`, fora do git). Legenda do Reels:
+  > Kitchen por dentro. O vocal que você ouve é um sample de "Claws", da Charli XCX, e a melodia inteira nasceu do arranjo desse vocal. Presta atenção na virada, é ali que os dois se encontram.
+  >
+  > Kitchen faz parte do Jazzy, EP que eu fiz com o Tha_Guts pela DSRPTV recs. Ouve inteiro pelo link na bio.
+  >
+  > #atzok #thaguts #dsrptvrecs #charlixcx #producaomusical
