@@ -6,18 +6,19 @@
 **Planilha de acompanhamento:** [Google Sheets — Meow - Parcerias Hostels e Colivings](https://docs.google.com/spreadsheets/d/1bBUvmzwDHCZmH_9KuetJJikwLu64UMnWDvtOnYCm5sI/edit)
 
 ## Oferta para os hóspedes / moradores
-- Desconto (percentual a definir)
-- Entrada sem fila
+- Entrada sempre R$ 80 consumíveis
+- Fila preferencial (entrada sem fila)
 - Welcome caipirinha
+- Pulseira exclusiva "Meow Hostel Tour" — ver [meow-hostel-tour.md](meow-hostel-tour.md)
 
 ## Pendências
 - [ ] Mandar a mensagem para a Maria Alice (texto abaixo).
 - [ ] Mandar o pedido para o time de design (texto abaixo).
-- [ ] Definir o percentual de desconto, as regras de uso e o prazo das artes.
+- [ ] Definir as regras de uso e o prazo das artes.
 - [ ] Confirmar endereços e contatos (marcados com ⚠️) antes das visitas.
 
 ## Peças gráficas
-Flyer · cartaz · cartão com QR code · display de mesa
+Pulseira Meow Hostel Tour · flyer · cartaz · cartão com QR code · display de mesa
 
 ## Hostels
 > Levantamento de 25/11/2026 em sites de reserva e cadastros. ⚠️ = endereço com divergência ou fonte única.
@@ -68,4 +69,5 @@ Flyer · cartaz · cartão com QR code · display de mesa
 |------|-----------------|
 | 25/11/2026 | Tema aberto: organizar parcerias com a Maria Alice e pedir os gráficos ao design. |
 | 25/11/2026 | Oferta definida (desconto, entrada sem fila, welcome caipirinha) e peças (flyer, cartaz, cartão QR, display de mesa). Levantamento de 17 hostels e 8 colivings. |
+| 25/11/2026 | Oferta fechada (R$ 80 consumíveis, fila preferencial, welcome caipirinha). Nasce a ideia do Meow Hostel Tour: pulseira exclusiva e festa temática mensal/bimestral, meta 2027. |
 | 25/11/2026 | Lista exportada para o Google Sheets (planilha vira a fonte para acompanhar contatos). |

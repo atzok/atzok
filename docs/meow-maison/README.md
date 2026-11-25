@@ -15,6 +15,7 @@ As operações administrativas e financeiras passam pela Matuzza (adm/financeiro
 ## Assuntos em aberto
 - **ZIG — cancelamento dos totens**: retirada em andamento (ticket #488226), isenção negada → [fornecedores/zig-totens.md](fornecedores/zig-totens.md)
 
+- **Meow Hostel Tour** (parcerias com hostels e colivings + festa temática, meta 2027) → [parcerias/meow-hostel-tour.md](parcerias/meow-hostel-tour.md)
 - **Parcerias com hostels e colivings**: oferta definida, 17 hostels e 8 colivings levantados → [parcerias/hostels.md](parcerias/hostels.md) · mensagens prontas → [parcerias/mensagens.md](parcerias/mensagens.md)
 
 ## Agenda
