@@ -1,7 +1,7 @@
-# Graph Report - atzok  (2026-11-24)
+# Graph Report - atzok  (2026-11-25)
 
 ## Corpus Check
-- 1007 files · ~1,119,598 words
+- 1008 files · ~1,119,840 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 165 file(s) not represented in the graph (top: .ttf 54, .css 48, .csv 37)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `34f2722a`
+- Built from commit: `03e0ac52`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -3123,16 +3123,16 @@ Nodes (3): Content Pillars Framework, Example for a SaaS Founder, Pillar Develop
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `contrast()` connect `contrast` to `Color correction`, `Color correction`, `Color correction`, `sloplint-render.mjs`?**
-  _High betweenness centrality (0.094) - this node is a cross-community bridge._
+  _High betweenness centrality (0.090) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `shader()` (e.g. with `fx.js` and `draw()`) actually correct?**
   _`shader()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **Should `ref_node_fs` be split into smaller, more focused modules?**
   _Cohesion score 0.03311118163545964 - nodes in this community are weakly interconnected._
 - **Why does `resolve()` connect `Color correction` to `Color correction`, `Color correction`?**
-  _High betweenness centrality (0.075) - this node is a cross-community bridge._
+  _High betweenness centrality (0.062) - this node is a cross-community bridge._
 - **Should `core.py` be split into smaller, more focused modules?**
   _Cohesion score 0.040602655771195095 - nodes in this community are weakly interconnected._
 - **Why does `outline()` connect `diagram.js` to `Color correction`, `Color correction`, `Color correction`, `contrast`, `.render`?**
-  _High betweenness centrality (0.044) - this node is a cross-community bridge._
+  _High betweenness centrality (0.038) - this node is a cross-community bridge._
 - **Should `preview.py` be split into smaller, more focused modules?**
   _Cohesion score 0.04050632911392405 - nodes in this community are weakly interconnected._
