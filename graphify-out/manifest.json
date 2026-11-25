@@ -6438,9 +6438,9 @@
     "semantic_hash": ""
   },
   "docs/ATZOK.md": {
-    "mtime": 1795629830.273411,
-    "seen": 1795629846.9537723,
-    "ast_hash": "b98f3c349d082bb09cebc43e6e54d25c",
+    "mtime": 1795630328.6479301,
+    "seen": 1795630339.6882334,
+    "ast_hash": "46ed78b14801b2b3778a87954d81484c",
     "semantic_hash": ""
   },
   "docs/figma-design-system-rules.md": {
@@ -8144,6 +8144,42 @@
   "videos/rumo-ao-up/assets/wordmark-branco.png": {
     "mtime": 1795629693.3071647,
     "seen": 1795629846.9540396,
+    "ast_hash": "720f21b88b33fe368c57ce2a0f850bc9",
+    "semantic_hash": ""
+  },
+  "videos/up-caminhos/hyperframes.json": {
+    "mtime": 1795630198.0139577,
+    "seen": 1795630339.6875765,
+    "ast_hash": "7b33c6cb9ecfe380a4657c509ff8af33",
+    "semantic_hash": ""
+  },
+  "videos/up-caminhos/meta.json": {
+    "mtime": 1795630198.0160918,
+    "seen": 1795630339.6875787,
+    "ast_hash": "b8bb401bf1a953a65a44fa9f93f01e66",
+    "semantic_hash": ""
+  },
+  "videos/up-caminhos/package.json": {
+    "mtime": 1795630198.015971,
+    "seen": 1795630339.6875799,
+    "ast_hash": "d6373d8fe26a15cf7bfbc9ecb43120a4",
+    "semantic_hash": ""
+  },
+  "videos/up-caminhos/compositions/caminhos.html": {
+    "mtime": 1795630188.695194,
+    "seen": 1795630339.6883473,
+    "ast_hash": "04da9531271aad92eabeed5f94708e0c",
+    "semantic_hash": ""
+  },
+  "videos/up-caminhos/index.html": {
+    "mtime": 1795630198.0351946,
+    "seen": 1795630339.6883488,
+    "ast_hash": "eda7b9e3586544c725127233c5cc0216",
+    "semantic_hash": ""
+  },
+  "videos/up-caminhos/assets/wordmark-branco.png": {
+    "mtime": 1795630198.0179505,
+    "seen": 1795630339.6885545,
     "ast_hash": "720f21b88b33fe368c57ce2a0f850bc9",
     "semantic_hash": ""
   }

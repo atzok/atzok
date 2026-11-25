@@ -1,0 +1,161 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #000; overflow: hidden; color: #fff; }
+    .c { position: absolute; }
+    .c-mono { font-family: "Space Mono", monospace; font-weight: 700; font-size: 30px; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #9a9a9a; white-space: nowrap; }
+    .c-big { left: 120px; width: 840px; font-family: Inter, sans-serif; font-weight: 900; font-size: 96px; line-height: 0.94;
+      letter-spacing: -0.035em; text-transform: uppercase; color: #fff; }
+    .c-mid { left: 120px; width: 840px; font-family: Inter, sans-serif; font-weight: 900; font-size: 72px; line-height: 0.96;
+      letter-spacing: -0.03em; text-transform: uppercase; color: #fff; }
+    .c-body { left: 120px; width: 840px; font-family: Inter, sans-serif; font-weight: 400; font-size: 40px; line-height: 1.25; color: #cfcfcf; }
+    .c-em { color: #bc6d21; }
+
+    #c-serie { left: 120px; top: 300px; }
+
+    /* bolhas */
+    .bolha { left: 0; top: 0; width: 440px; height: 440px; border-radius: 50%; mix-blend-mode: screen; }
+    #b-jungle { background: #bc6d21; }
+    #b-bossa { background: #985359; }
+    #b-dub { background: #7e406e; }
+    .rot { width: 440px; text-align: center; }
+    .rot b { display: block; font-family: Inter, sans-serif; font-weight: 900; font-size: 50px; letter-spacing: -0.03em;
+      text-transform: uppercase; color: #fff; line-height: 1; }
+    .rot span { display: block; margin-top: 10px; font-family: "Space Mono", monospace; font-weight: 700; font-size: 28px;
+      letter-spacing: 0.06em; color: #fff; line-height: 1.25; }
+    #c-centro { left: 340px; top: 1010px; width: 400px; text-align: center; font-family: Inter, sans-serif; font-weight: 900;
+      font-size: 64px; letter-spacing: -0.03em; text-transform: uppercase; color: #000; }
+
+    /* pulsos */
+    .pulso { width: 220px; height: 220px; border-radius: 50%; }
+    #p-bat { left: 190px; top: 760px; background: #fff; }
+    #p-grave { left: 670px; top: 760px; background: #bc6d21; }
+    .p-rot { width: 400px; text-align: center; top: 1010px; }
+    .p-rot b { display: block; font-family: Inter, sans-serif; font-weight: 900; font-size: 110px; letter-spacing: -0.05em; line-height: 0.9; }
+    .p-rot span { display: block; font-family: "Space Mono", monospace; font-weight: 700; font-size: 30px; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #9a9a9a; margin-top: 8px; }
+    #p-bat-r { left: 100px; }
+    #p-grave-r { left: 580px; }
+    #p-grave-r b { color: #bc6d21; }
+
+    #c-logo { left: 300px; top: 560px; width: 480px; height: auto; }
+  </style>
+
+  <div id="root" data-composition-id="caminhos" data-width="1080" data-height="1920">
+    <div id="c-serie" class="c c-mono clip" data-start="0" data-duration="35" data-track-index="1">Ätzøk / Rumo ao UP</div>
+
+    <!-- 1. pergunta -->
+    <div id="c1" class="c c-big clip" style="top: 640px" data-start="0" data-duration="3.6" data-track-index="2">
+      Drum'n'bass<br />no <span class="c-em">chillout?</span>
+    </div>
+
+    <!-- 2. o palco -->
+    <div id="c2a" class="c c-mid clip" style="top: 560px" data-start="3.6" data-duration="6" data-track-index="2">
+      O chillout do UP é onde a pista <span class="c-em">respira</span>
+    </div>
+    <div id="c2b" class="c c-mono clip" style="left: 120px; top: 880px; color: #fff" data-start="3.6" data-duration="6" data-track-index="3">
+      Downtempo&nbsp; ·&nbsp; dub&nbsp; ·&nbsp; ambient
+    </div>
+    <div id="c2c" class="c c-body clip" style="top: 960px" data-start="3.6" data-duration="6" data-track-index="4">
+      Som pra deitar na areia, fechar o olho e viajar.
+    </div>
+
+    <!-- 3 e 4. os três caminhos -->
+    <div id="c3" class="c c-mid clip" style="top: 400px" data-start="9.6" data-duration="17.4" data-track-index="2" data-layout-allow-overlap>
+      <span id="c3a">No meu set,<br />três caminhos</span>
+    </div>
+    <div id="c4" class="c c-mid clip" style="top: 400px" data-start="18.6" data-duration="8.4" data-track-index="3" data-layout-allow-overlap>
+      que se cruzam<br />no <span class="c-em">grave</span>
+    </div>
+    <div id="bolhas" class="c clip" style="left: 0; top: 0; width: 1080px; height: 1920px" data-start="9.6" data-duration="17.4" data-track-index="5" data-layout-allow-overlap data-layout-allow-overflow>
+      <div id="b-jungle" class="c bolha"></div>
+      <div id="b-bossa" class="c bolha"></div>
+      <div id="b-dub" class="c bolha"></div>
+      <div id="r-jungle" class="c rot"><b>Jungle</b><span>breakbeat<br />e grave de<br />sound system</span></div>
+      <div id="r-bossa" class="c rot"><b>Drum'n'<br />bossa</b><span>samba e bossa<br />no breakbeat</span></div>
+      <div id="r-dub" class="c rot"><b>Dub</b><span>eco, espaço<br />e grave</span></div>
+      <div id="c-centro" class="c">Grave</div>
+    </div>
+    <div id="c4b" class="c c-body clip" style="top: 1560px" data-start="20.4" data-duration="6.6" data-track-index="4" data-layout-allow-overlap>
+      Tudo da mesma família: o sound system.
+    </div>
+
+    <!-- 5. por que flutua -->
+    <div id="c5" class="c c-mid clip" style="top: 400px" data-start="27" data-duration="8" data-track-index="2">
+      A bateria corre.<br />O grave anda <span class="c-em">devagar.</span>
+    </div>
+    <div id="pulsos" class="c clip" style="left: 0; top: 0; width: 1080px; height: 1920px" data-start="27" data-duration="8" data-track-index="5" data-layout-allow-overlap>
+      <div id="p-bat" class="c pulso"></div>
+      <div id="p-grave" class="c pulso"></div>
+      <div id="p-bat-r" class="c p-rot"><b>170</b><span>a bateria</span></div>
+      <div id="p-grave-r" class="c p-rot"><b>85</b><span>o grave</span></div>
+    </div>
+    <div id="c5b" class="c c-body clip" style="top: 1260px" data-start="29.5" data-duration="5.5" data-track-index="4">
+      Por isso o corpo flutua, mesmo com o breakbeat acelerado.
+    </div>
+
+    <!-- 6. fecho -->
+    <div id="fim" class="c clip" style="left: 0; top: 0; width: 1080px; height: 1920px" data-start="35" data-duration="5" data-track-index="2">
+      <img id="c-logo" class="c" src="assets/wordmark-branco.png" alt="Ätzøk" />
+      <div id="fim-a" class="c c-mid" style="top: 1000px; text-align: center; left: 120px">27.12</div>
+      <div id="fim-b" class="c c-mono" style="top: 1090px; left: 0; width: 1080px; text-align: center; color: #fff">Chillout stage&nbsp; ·&nbsp; Universo Paralelo</div>
+      <div id="fim-c" class="c c-mono" style="top: 1150px; left: 0; width: 1080px; text-align: center; color: #bc6d21; text-transform: none; letter-spacing: 0.08em">@_atzok</div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const entra = (sel, t, d) => tl.fromTo(sel, { opacity: 0, y: 30, filter: "blur(6px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: d || 0.45, ease: "expo.out" }, t);
+      const sai = (sel, t) => tl.to(sel, { opacity: 0, y: -20, filter: "blur(6px)", duration: 0.25, ease: "power2.in" }, t);
+
+      // 1
+      tl.fromTo("#c1", { opacity: 1, scale: 1, transformOrigin: "0% 50%" }, { opacity: 1, scale: 1.03, duration: 3.3, ease: "none" }, 0);
+      tl.fromTo("#c-serie", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 0.2);
+      sai("#c1", 3.3);
+      // 2
+      entra("#c2a", 3.7); entra("#c2b", 4.4); entra("#c2c", 5.2);
+      sai(["#c2a", "#c2b", "#c2c"], 9.3);
+
+      // 3: bolhas entram uma a uma, flutuando
+      entra("#c3a", 9.7);
+      const P = { jungle: [100, 760], bossa: [540, 760], dub: [320, 1130] };
+      const C = { jungle: [210, 820], bossa: [430, 820], dub: [320, 1010] };
+      [["jungle", 10.4], ["bossa", 12.4], ["dub", 14.4]].forEach(([k, t]) => {
+        tl.fromTo("#b-" + k, { x: P[k][0], y: P[k][1], scale: 0, opacity: 0.9 }, { x: P[k][0], y: P[k][1], scale: 1, duration: 0.7, ease: "back.out(1.8)" }, t);
+        tl.fromTo("#r-" + k, { x: P[k][0], y: P[k][1] + 130, opacity: 0 }, { x: P[k][0], y: P[k][1] + 110, opacity: 1, duration: 0.5, ease: "expo.out" }, t + 0.3);
+        // boia de leve até a hora de juntar
+        const fim = 18.4, ciclo = 1.6, rep = Math.max(0, Math.floor((fim - t - 0.7) / ciclo) - 1);
+        tl.to("#b-" + k, { y: P[k][1] - 16, duration: ciclo / 2, ease: "sine.inOut", yoyo: true, repeat: rep * 2 + 1 }, t + 0.7);
+      });
+      // 4: juntam no centro e aparece o grave
+      sai("#c3a", 18.4);
+      entra("#c4", 18.7);
+      ["jungle", "bossa", "dub"].forEach((k) => {
+        tl.to("#b-" + k, { x: C[k][0], y: C[k][1], duration: 1.2, ease: "expo.inOut" }, 18.6);
+        tl.to("#r-" + k, { opacity: 0, duration: 0.3 }, 18.6);
+      });
+      tl.fromTo("#c-centro", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.6, ease: "back.out(2)" }, 19.7);
+      entra("#c4b", 20.4);
+      sai(["#c4", "#c4b", "#c-centro", "#b-jungle", "#b-bossa", "#b-dub"], 26.6);
+
+      // 5: pulsos em 170 e 85 BPM
+      entra("#c5", 27.1);
+      entra(["#p-bat-r", "#p-grave-r"], 27.6);
+      const pulsa = (sel, bpm, t0, t1) => {
+        const meio = 60 / bpm / 2, n = Math.floor((t1 - t0) / (meio * 2));
+        tl.fromTo(sel, { scale: 1 }, { scale: 0.55, duration: meio, ease: "power2.in", yoyo: true, repeat: n * 2 - 1 }, t0);
+      };
+      tl.fromTo(["#p-bat", "#p-grave"], { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)" }, 27.4);
+      pulsa("#p-bat", 170, 28, 34.6);
+      pulsa("#p-grave", 85, 28, 34.6);
+      entra("#c5b", 29.6);
+
+      // 6
+      tl.fromTo("#c-logo", { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 0.7, ease: "expo.out" }, 35.1);
+      entra("#fim-a", 35.5); entra("#fim-b", 35.8); entra("#fim-c", 36.1);
+      tl.to({}, { duration: 0.01 }, 39.9);
+      window.__timelines["caminhos"] = tl;
+    })();
+  </script>
+</template>
