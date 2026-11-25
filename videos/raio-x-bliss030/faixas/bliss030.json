@@ -3,13 +3,45 @@
   "projeto": "..",
   "max": 60,
   "previa": true,
-  "variaveis": ["titulo", "handle", "versao", "credito"],
+  "variaveis": [
+    "titulo",
+    "handle",
+    "versao",
+    "credito"
+  ],
   "faixas": [
-    {"audio": "01.aiff", "saida": "raio-x-01-desejos-gelados", "titulo": "Desejos Gelados"},
-    {"audio": "02.aiff", "saida": "raio-x-02-thats-right", "titulo": "That's Right"},
-    {"audio": "03.aiff", "saida": "raio-x-03-spacial-keys", "titulo": "Spacial Keys"},
-    {"audio": "04.aiff", "saida": "raio-x-04-baile", "titulo": "Baile"},
-    {"audio": "05.aiff", "saida": "raio-x-05-desejos-gelados-dj-melted-remix", "titulo": "Desejos Gelados", "versao": "DJ Melted Remix"},
-    {"audio": "06.aiff", "saida": "raio-x-06-thats-right-dsrptv-remix", "titulo": "That's Right", "versao": "dsrptv soundsystem rmx"}
+    {
+      "audio": "01.aiff",
+      "saida": "raio-x-01-desejos-gelados",
+      "titulo": "Desejos Gelados"
+    },
+    {
+      "audio": "02.aiff",
+      "saida": "raio-x-02-thats-right",
+      "titulo": "That's Right"
+    },
+    {
+      "audio": "03.aiff",
+      "saida": "raio-x-03-spacial-keys",
+      "titulo": "Spacial Keys",
+      "bpm": 128
+    },
+    {
+      "audio": "04.aiff",
+      "saida": "raio-x-04-baile",
+      "titulo": "Baile"
+    },
+    {
+      "audio": "05.aiff",
+      "saida": "raio-x-05-desejos-gelados-dj-melted-remix",
+      "titulo": "Desejos Gelados",
+      "versao": "DJ Melted Remix"
+    },
+    {
+      "audio": "06.aiff",
+      "saida": "raio-x-06-thats-right-dsrptv-remix",
+      "titulo": "That's Right",
+      "versao": "dsrptv soundsystem rmx"
+    }
   ]
 }

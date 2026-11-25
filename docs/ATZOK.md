@@ -45,7 +45,7 @@ Outros dados do kit de 2023: gigs VOODOOHOP, Mamba Negra, Metanol FM, Caldo, SP 
 |---|---|---|
 | 01 | Desejos Gelados | 128 |
 | 02 | That's Right | 128 |
-| 03 | Spacial Keys | 85 |
+| 03 | Spacial Keys | 128 (confirmado pelo Caio; a análise automática dava 85) |
 | 04 | Baile | 124 |
 | 05 | Desejos Gelados (DJ Melted Remix) | 128 |
 | 06 | That's Right (dsrptv soundsystem Remix) | 128 |
