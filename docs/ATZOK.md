@@ -118,6 +118,14 @@ Mesmo formato para todo lançamento: layout das referências (espectro com fanta
 
 Para produzir o resto: precisa do BPM confirmado de cada faixa (a análise erra em faixas quebradas) e, se quiser, o minuto da virada.
 
+### Para retomar (pendências de conteúdo)
+
+- L4 / Amarela: produzir Fluxø, Paul!sta, Øscar, Av!s0s (0:36, vídeo curto), Marg!nal, 0est3, Sønia. Precisa do BPM de cada uma. Áudios na pasta "tracks" do Drive da DSRPTV.
+- Jazzy EP: confirmar BPM da Jazzy (110 ou 74) e produzir Kitchen e os dois remixes.
+- Baile (Desejos Gelados): confirmar se é 124 BPM.
+- Entrega no Drive: daqui só sobem arquivos de até ~3 MB; o Caio prefere as prévias 720p (não precisa da versão em alta).
+- Como gerar: `python3 videos/raio-x/tools/lote.py <projeto>/faixas/<config>.json <pasta-dos-audios>` (analisa, renderiza e cria a prévia 720p). Áudios do Drive compartilhados por link baixam direto.
+
 ## Marca
 
 - Paleta: preto/branco como base; acento **ember `#BC6D21`** (cor do logo); plum `#7E406E`; dusk `#985359`. Site usa papel `#ECE7DC` e tinta `#111111`.
@@ -157,3 +165,4 @@ Para produzir o resto: precisa do BPM confirmado de cada faixa (a análise erra 
 - RAIO-X EP: os 6 vídeos (~1 min, 1080×1920) renderizados em `videos/raio-x-bliss030/renders/` (fora do git) + prévias 720p. Trechos: 01 0:00–1:00 · 02 4:00–5:00 · 03 3:39–4:39 (128 BPM) · 04 2:05–3:03 (124 BPM, a confirmar) · 05 6:00–7:00 · 06 2:34–3:34. Upload direto ao Drive daqui não passa (limite ~3 MB).
 - RAIO-X L4 / Amarela: layout criado em `videos/raio-x-l4/` (mesmo modelo das referências, identidade do álbum: título vazado em camadas, grão, selo 4 + @_atzok no topo, cubo DSRPTV, linha de metrô com estações sob a forma de onda, final com a capa). Testado com C3ntr0 (96 BPM, trecho 0:50–1:50, virada em 1:20).
 - Jazzy EP: layout RAIO-X criado com a identidade da capa (`videos/raio-x-jazzy/`), testado com "Jazzy" (110 BPM pela análise, a confirmar; trecho 0:26–1:23, groove entra em 0:55). Ideias do L4 e do Jazzy guardadas no "Banco de ideias RAIO-X".
+- Caio pediu para guardar todo o trabalho do RAIO-X (EP Desejos Gelados, L4 / Amarela, Jazzy) para os conteúdos futuros. Pendências registradas em "Para retomar".
