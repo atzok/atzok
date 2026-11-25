@@ -6438,9 +6438,9 @@
     "semantic_hash": ""
   },
   "docs/ATZOK.md": {
-    "mtime": 1795581924.28919,
-    "seen": 1795581929.1130478,
-    "ast_hash": "e62d623c6cdbfeafc21b1a207a44a049",
+    "mtime": 1795629830.273411,
+    "seen": 1795629846.9537723,
+    "ast_hash": "b98f3c349d082bb09cebc43e6e54d25c",
     "semantic_hash": ""
   },
   "docs/figma-design-system-rules.md": {
@@ -8103,6 +8103,48 @@
     "mtime": 1795581643.6774673,
     "seen": 1795581929.1121552,
     "ast_hash": "079b0c6e5fb1efbbf8e7eee58f27629f",
+    "semantic_hash": ""
+  },
+  "videos/rumo-ao-up/faixas/set-up.json": {
+    "mtime": 1795629693.3295639,
+    "seen": 1795629846.9530258,
+    "ast_hash": "ed246e1ec07e746cbeb5108a71f06bb3",
+    "semantic_hash": ""
+  },
+  "videos/rumo-ao-up/hyperframes.json": {
+    "mtime": 1795629693.25495,
+    "seen": 1795629846.9530277,
+    "ast_hash": "7b33c6cb9ecfe380a4657c509ff8af33",
+    "semantic_hash": ""
+  },
+  "videos/rumo-ao-up/meta.json": {
+    "mtime": 1795629693.2566154,
+    "seen": 1795629846.9530292,
+    "ast_hash": "1c17f690ca6456e857607c4967fe518c",
+    "semantic_hash": ""
+  },
+  "videos/rumo-ao-up/package.json": {
+    "mtime": 1795629693.2566154,
+    "seen": 1795629846.9530308,
+    "ast_hash": "b156de0019debfb6a8f9336244b30505",
+    "semantic_hash": ""
+  },
+  "videos/rumo-ao-up/compositions/mala.html": {
+    "mtime": 1795629772.6724203,
+    "seen": 1795629846.9538708,
+    "ast_hash": "db72e539cc2852ba1885efba9182514e",
+    "semantic_hash": ""
+  },
+  "videos/rumo-ao-up/index.html": {
+    "mtime": 1795629713.2911658,
+    "seen": 1795629846.953872,
+    "ast_hash": "4777b5956b2a918e40cce8b54e0a7b16",
+    "semantic_hash": ""
+  },
+  "videos/rumo-ao-up/assets/wordmark-branco.png": {
+    "mtime": 1795629693.3071647,
+    "seen": 1795629846.9540396,
+    "ast_hash": "720f21b88b33fe368c57ce2a0f850bc9",
     "semantic_hash": ""
   }
 }

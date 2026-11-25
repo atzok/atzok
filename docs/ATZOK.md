@@ -130,6 +130,16 @@ Para produzir o resto: precisa do BPM confirmado de cada faixa (a análise erra 
 - Entrega no Drive: daqui só sobem arquivos de até ~3 MB; o Caio prefere as prévias 720p (não precisa da versão em alta).
 - Como gerar: `python3 videos/raio-x/tools/lote.py <projeto>/faixas/<config>.json <pasta-dos-audios>` (analisa, renderiza e cria a prévia 720p). Áudios do Drive compartilhados por link baixam direto.
 
+### Série "ÄTZØK / RUMO AO UP" (contagem até o Chillout Stage do Universo Paralelo, 27.12)
+
+Base: playlist do Spotify "ÄTZØK NO UNIVERSO PARALELO" (https://open.spotify.com/playlist/3IgOmVFI21LgF8Kl1Kdotj), 41 faixas, 3h50. Três linhas no set: jungle/drum'n'bass atmosférico (Photek, Peshay, Wax Doctor, Roni Size, DJ Hype, Congo Natty), drum'n'bossa brasileiro (Marcelinho Da Lua, Drumagick, DJ Patife & Jair Oliveira, DJ LK, Bossacucanova, Kas Dub) e dub (RSD, Sub Dub, M.B., Mtty & Oi Ocha). Tracklist completa em `videos/rumo-ao-up/faixas/set-up.json`. O Caio disse que tem mais coisas além da playlist (a levantar).
+
+Formatos:
+1. **Da mala** (modelo pronto em `videos/rumo-ao-up/`): um post por faixa do set, 15 s, identidade Ätzøk (preto, ember, Inter 900, Space Mono, wordmark). Contagem regressiva grande em ember ("32 dias pro chillout do UP"), "Da mala · 01 / 41", faixa e artista, e o mapa do set: 41 barras com a duração de cada faixa, a da vez acesa em ember e uma linha de "tocando". Sem áudio no arquivo: a faixa entra pela música do Instagram (licenciada), para não ser silenciada.
+2. **Três caminhos** (ideia): as três linhas do set (jungle, drum'n'bossa, dub) num carrossel ou reel.
+3. **Brasil no drum'n'bass** (ideia): os pioneiros brasileiros que estão no set.
+4. **Véspera e depois** (ideia): tracklist revelada no dia 26; pós-show com trecho gravado.
+
 ## Marca
 
 - Paleta: preto/branco como base; acento **ember `#BC6D21`** (cor do logo); plum `#7E406E`; dusk `#985359`. Site usa papel `#ECE7DC` e tinta `#111111`.
@@ -180,3 +190,4 @@ Para produzir o resto: precisa do BPM confirmado de cada faixa (a análise erra 
   > Kitchen faz parte do Jazzy, EP que eu fiz com o Tha_Guts pela DSRPTV recs. Ouve inteiro pelo link na bio.
   >
   > #atzok #thaguts #dsrptvrecs #charlixcx #producaomusical
+- Nova série "ÄTZØK / RUMO AO UP" para o Chillout Stage do Universo Paralelo (27.12), a partir da playlist do set. Formato "Da mala" criado e testado com a faixa 01 (Numa Nice Numa Boa, DJ LK). Outros formatos guardados como ideia.

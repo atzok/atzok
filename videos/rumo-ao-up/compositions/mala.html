@@ -1,0 +1,112 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #000; overflow: hidden; color: #fff; }
+    .m { position: absolute; }
+    .m-mono { font-family: "Space Mono", monospace; font-weight: 700; font-size: 30px; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #9a9a9a; white-space: nowrap; }
+    .m-rule { position: absolute; left: 120px; width: 840px; height: 2px; background: #262626; }
+
+    #m-serie { left: 120px; top: 300px; }
+    #m-data { right: 120px; top: 300px; text-align: right; color: #fff; }
+    #m-dias { left: 108px; top: 360px; font-family: Inter, sans-serif; font-weight: 900; font-size: 380px; line-height: 0.8;
+      letter-spacing: -0.06em; color: #bc6d21; font-variant-numeric: tabular-nums; }
+    #m-dias-l { left: 640px; top: 400px; font-family: Inter, sans-serif; font-weight: 900; font-size: 56px; line-height: 0.98;
+      letter-spacing: -0.03em; text-transform: uppercase; color: #fff; }
+
+    #m-faixa { left: 120px; top: 740px; width: 840px; display: flex; flex-direction: column; gap: 14px; }
+    #m-n { font-family: "Space Mono", monospace; font-weight: 700; font-size: 30px; letter-spacing: 0.16em; color: #9a9a9a;
+      text-transform: uppercase; }
+    #m-titulo { font-family: Inter, sans-serif; font-weight: 900; font-size: 92px; line-height: 0.94; letter-spacing: -0.035em;
+      text-transform: uppercase; color: #fff; }
+    #m-artista { font-family: Inter, sans-serif; font-weight: 400; font-size: 40px; color: #9a9a9a; }
+
+    #m-mapa { left: 120px; top: 1060px; }
+    #m-mapa-l { left: 120px; top: 1206px; }
+    #m-mapa-r { right: 120px; top: 1206px; text-align: right; }
+    #m-logo { left: 390px; top: 1420px; width: 300px; height: auto; opacity: 0.9; }
+  </style>
+
+  <div id="root" data-composition-id="mala" data-width="1080" data-height="1920">
+    <div id="m-serie" class="m m-mono">Ätzøk / Rumo ao UP</div>
+    <div id="m-data" class="m m-mono">27.12</div>
+    <div class="m-rule" style="top: 352px"></div>
+
+    <div id="m-dias" class="m" data-var-text="dias">32</div>
+    <div id="m-dias-l" class="m">dias pro<br />chillout<br />do UP</div>
+    <div class="m-rule" style="top: 708px"></div>
+
+    <div id="m-faixa" class="m">
+      <div id="m-n">Da mala&nbsp; ·&nbsp; <span id="m-n-num" data-var-text="n">01</span> / 41</div>
+      <div id="m-titulo" data-var-text="titulo">Numa Nice Numa Boa</div>
+      <div id="m-artista" data-var-text="artista">DJ LK</div>
+    </div>
+
+    <canvas id="m-mapa" class="m" width="1680" height="280" style="width: 840px; height: 140px" data-layout-ignore></canvas>
+    <div id="m-mapa-l" class="m m-mono" style="font-size: 28px">41 faixas&nbsp; ·&nbsp; 3h50</div>
+    <div id="m-mapa-r" class="m m-mono" style="font-size: 28px">O set do UP</div>
+
+    <img id="m-logo" class="m" src="assets/wordmark-branco.png" alt="Ätzøk" />
+  </div>
+
+  <script>
+    (function () {
+      // duração (s) de cada faixa do set, na ordem da playlist "ÄTZØK NO UNIVERSO PARALELO"
+      const DUR = [263,390,368,560,343,340,469,343,339,229,251,340,264,461,340,322,293,207,214,212,245,225,239,470,395,478,421,561,385,301,406,243,265,306,263,125,344,437,502,307,378];
+      const $ = (id) => document.getElementById(id);
+      const c = $("m-mapa").getContext("2d");
+      const W = 1680, H = 280, N = DUR.length, GAP = 8, BW = (W - GAP * (N - 1)) / N, MAX = Math.max(...DUR);
+      const ENTRA = 2.0, ESPALHA = 1.6;
+
+      function atual() {
+        const n = parseInt(($("m-n-num").textContent || "1").trim(), 10);
+        return Math.max(1, Math.min(N, isNaN(n) ? 1 : n)) - 1;
+      }
+
+      function mapa(t) {
+        c.clearRect(0, 0, W, H);
+        const k = atual();
+        for (let i = 0; i < N; i++) {
+          const ini = ENTRA + (i / N) * ESPALHA;
+          const p = Math.max(0, Math.min(1, (t - ini) / 0.35));
+          const e = 1 - Math.pow(1 - p, 3);
+          const h = (DUR[i] / MAX) * (H - 20) * e;
+          const x = i * (BW + GAP);
+          c.fillStyle = i === k ? "#bc6d21" : "#333333";
+          if (i === k && t > ENTRA + ESPALHA + 0.4) {
+            // a faixa da vez respira devagar
+            const r = 0.5 + 0.5 * Math.sin((t - ENTRA - ESPALHA) * Math.PI * 1.2);
+            c.fillStyle = r > 0.5 ? "#bc6d21" : "#d98a3c";
+          }
+          c.fillRect(x, H - 24 - h * (H - 24) / H, BW, h * (H - 24) / H);
+        }
+        // linha de "tocando": a faixa da vez avança devagar até o fim do vídeo
+        const p0 = ENTRA + ESPALHA + 0.4, p1 = 14.6;
+        const pr = Math.max(0, Math.min(1, (t - p0) / (p1 - p0)));
+        c.fillStyle = "#1c1c1c"; c.fillRect(0, H - 8, W, 8);
+        c.fillStyle = "#bc6d21"; c.fillRect(0, H - 8, W * pr, 8);
+      }
+      window.addEventListener("hf-seek", (e) => mapa(e.detail.time));
+      mapa(0);
+
+      // títulos longos: reduz até caber em duas linhas
+      try {
+        const t = $("m-titulo");
+        let s = 92;
+        while (t.scrollHeight > s * 0.94 * 2 + 4 && s > 56) { s -= 4; t.style.fontSize = s + "px"; }
+      } catch (e) {}
+
+      const tl = gsap.timeline({ paused: true });
+      const blur = (sel, t, d) => tl.fromTo(sel, { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: d || 0.3, ease: "power2.out" }, t);
+      tl.fromTo("#m-dias", { opacity: 1, scale: 1.04, transformOrigin: "0% 50%" }, { opacity: 1, scale: 1, duration: 0.8, ease: "expo.out" }, 0);
+      blur("#m-dias-l", 0.25);
+      blur(["#m-serie", "#m-data"], 0.1, 0.25);
+      blur("#m-n", 0.9);
+      tl.fromTo("#m-titulo", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, 1.1);
+      blur("#m-artista", 1.5);
+      blur(["#m-mapa-l", "#m-mapa-r"], ENTRA + ESPALHA);
+      tl.fromTo("#m-logo", { opacity: 0 }, { opacity: 0.9, duration: 0.6 }, 3.2);
+      tl.to({}, { duration: 0.01 }, 14.9);
+      window.__timelines["mala"] = tl;
+    })();
+  </script>
+</template>

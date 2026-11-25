@@ -1,0 +1,40 @@
+<!doctype html>
+<html
+  lang="pt-BR"
+  data-composition-variables='[
+    {"id":"dias","type":"string","label":"Dias até o show","default":"32","maxLength":3},
+    {"id":"n","type":"string","label":"Número da faixa no set","default":"01","maxLength":2},
+    {"id":"titulo","type":"string","label":"Faixa","default":"Numa Nice Numa Boa","maxLength":40},
+    {"id":"artista","type":"string","label":"Artista","default":"DJ LK","maxLength":48}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+      #root { position: relative; width: 100%; height: 100%; background: #000; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="15" data-width="1080" data-height="1920">
+      <div
+        id="mala"
+        data-composition-id="mala"
+        data-composition-src="compositions/mala.html"
+        data-start="0"
+        data-duration="15"
+        data-track-index="1"
+        data-track-kind="graphics"
+        data-width="1080"
+        data-height="1920"
+      ></div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>
