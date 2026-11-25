@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Ätzøk · agenda dez/jan v5</title>
+<style>
+  @font-face { font-family: "Black"; src: url("fonts/archivo-black.woff2"); }
+  @font-face { font-family: "Narrow"; font-weight: 700; src: url("fonts/archivo-narrow-700.woff2"); }
+  @font-face { font-family: "Script"; font-style: italic; font-weight: 700; src: url("fonts/playfair-italic.woff2"); }
+  :root { --verde: #1f5b2e; --creme: #fff1d6; --rosa: #ef6fb0; --amarelo: #f6c445; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #333; padding: 30px; width: max-content; }
+  .card { position: relative; width: 1080px; height: 1350px; overflow: hidden; color: var(--verde);
+    background: linear-gradient(180deg, var(--rosa) 0%, var(--rosa) 22%, #f39a7a 48%, var(--amarelo) 72%, var(--amarelo) 100%); }
+  .abs { position: absolute; }
+  .grao { inset: 0; z-index: 20; pointer-events: none; mix-blend-mode: multiply; opacity: 0.6; }
+
+  .estrelas { left: 60px; right: 60px; top: 40px; display: flex; justify-content: space-between; align-items: center; font-family: Black; font-size: 28px; z-index: 5; }
+  .logo { left: 60px; top: 104px; width: 190px; z-index: 5; }
+  .brilho { left: 850px; top: 70px; z-index: 6; }
+  .titulo { left: 0; right: 0; top: 268px; text-align: center; font-family: Black; font-size: 236px; line-height: 0.86; letter-spacing: -0.05em; z-index: 4; }
+  .script { right: 70px; top: 418px; font-family: Script; font-style: italic; font-weight: 700; font-size: 120px; color: var(--creme);
+    transform: rotate(-6deg); z-index: 6; -webkit-text-stroke: 6px var(--verde); paint-order: stroke fill; }
+  .palmeira { left: 300px; top: 470px; width: 860px; z-index: 2; opacity: 0.9;
+    -webkit-mask-image: radial-gradient(60% 55% at 55% 50%, #000 50%, transparent 80%); mask-image: radial-gradient(60% 55% at 55% 50%, #000 50%, transparent 80%); }
+
+  .datas { left: 60px; top: 610px; width: 720px; z-index: 7; display: flex; flex-direction: column; gap: 18px; }
+  .linha { display: grid; grid-template-columns: 238px 1fr; align-items: center; }
+  .linha b { font-family: Black; font-weight: 400; font-size: 66px; line-height: 1; color: var(--creme); -webkit-text-stroke: 12px var(--verde); paint-order: stroke fill; }
+  .linha span { justify-self: start; background: var(--creme); padding: 6px 14px 5px; font-family: Narrow; font-weight: 700; font-size: 30px; line-height: 1.05; text-transform: uppercase; }
+  .linha span i { display: block; font-style: normal; font-size: 22px; letter-spacing: 0.08em; opacity: 0.75; }
+
+  .flor { left: 760px; top: 930px; width: 270px; height: 270px; z-index: 8; }
+  .flor div { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+    font-family: Black; color: var(--verde); line-height: 1; }
+  .flor small { font-family: Narrow; font-weight: 700; font-size: 22px; letter-spacing: 0.08em; }
+  .flor strong { font-weight: 400; font-size: 46px; margin: 6px 0; }
+
+  .xadrez { left: 0; right: 0; top: 1218px; height: 26px; z-index: 6;
+    background: repeating-conic-gradient(var(--verde) 0 25%, transparent 0 50%) 0 0 / 26px 26px; }
+  .oval { left: 60px; top: 1268px; border: 4px solid var(--verde); border-radius: 50%; padding: 8px 30px 6px; font-family: Narrow; font-weight: 700;
+    font-size: 24px; letter-spacing: 0.08em; text-transform: uppercase; z-index: 7; }
+  .arroba { right: 60px; top: 1276px; font-family: Black; font-size: 32px; z-index: 7; }
+</style>
+</head>
+<body>
+<section class="card" id="agenda-v5">
+  <div class="abs estrelas"><span>★</span><span>★</span><span>★</span><span>★</span><span>DEZ · JAN</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+  <img class="abs logo" src="wordmark-verde.png" alt="Ätzøk" />
+  <svg class="abs brilho" width="230" height="230" viewBox="-115 -115 230 230" fill="none" stroke="#1f5b2e" stroke-width="5" stroke-linecap="round">
+    <g id="raios"></g>
+    <path d="M0 -38 L9 -9 L38 0 L9 9 L0 38 L-9 9 L-38 0 L-9 -9 Z" fill="#fff1d6" />
+  </svg>
+  <div class="abs titulo">AGENDA</div>
+  <div class="abs script">dez &amp; jan</div>
+  <img class="abs palmeira" src="palmeira-reticula.png" alt="" />
+
+  <div class="abs datas">
+    <div class="linha"><b>09.12</b><span>Rádio Veneno<i>live</i></span></div>
+    <div class="linha"><b>09.12</b><span>Luci Bar<i>long set</i></span></div>
+    <div class="linha"><b>18.12</b><span>Lhama Takeover no Carmem<i>Hanky Panky</i></span></div>
+    <div class="linha"><b>27.12</b><span>Universo Paralelo<i>chillout stage</i></span></div>
+    <div class="linha"><b>11.01</b><span>Festa no Barco<i>Lhama Bookings</i></span></div>
+  </div>
+
+  <svg class="abs flor" viewBox="-165 -165 330 330"><path id="petalas" fill="#fff1d6" stroke="#1f5b2e" stroke-width="7" stroke-linejoin="round" /></svg>
+  <div class="abs flor" style="z-index: 9"><div><small>AGENDA ABERTA</small><strong>BAHIA</strong><small>SUL · 02 A 14.01</small></div></div>
+
+  <div class="abs xadrez"></div>
+  <div class="abs oval">Booking · Lhama Bookings</div>
+  <div class="abs arroba">@_atzok</div>
+
+  <svg class="abs grao" width="1080" height="1350">
+    <filter id="g"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="9" /><feColorMatrix values="0 0 0 0 0.25  0 0 0 0 0.22  0 0 0 0 0.15  0 0 0 -1.2 0.9" /></filter>
+    <rect width="1080" height="1350" filter="url(#g)" />
+  </svg>
+</section>
+<script>
+  // raios da estrela de brilho
+  let r = ""; for (let i = 0; i < 16; i++) { const a = (i / 16) * Math.PI * 2, l = i % 2 ? 70 : 108;
+    r += `<line x1="${Math.cos(a) * 46}" y1="${Math.sin(a) * 46}" x2="${Math.cos(a) * l}" y2="${Math.sin(a) * l}" />`; }
+  document.getElementById("raios").innerHTML = r;
+  // flor de 8 pétalas (adesivo)
+  let d = ""; const n = 8;
+  for (let i = 0; i <= n; i++) { const a = (i / n) * Math.PI * 2, b = ((i + 0.5) / n) * Math.PI * 2;
+    const p = [Math.cos(a) * 112, Math.sin(a) * 112], c = [Math.cos(b) * 186, Math.sin(b) * 186];
+    d += (i === 0 ? `M${p[0]} ${p[1]}` : ` Q${cprev[0]} ${cprev[1]} ${p[0]} ${p[1]}`); var cprev = c; }
+  document.getElementById("petalas").setAttribute("d", d + " Z");
+</script>
+</body>
+</html>
