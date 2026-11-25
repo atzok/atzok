@@ -6438,9 +6438,9 @@
     "semantic_hash": ""
   },
   "docs/ATZOK.md": {
-    "mtime": 1795632021.7082517,
-    "seen": 1795632027.9480429,
-    "ast_hash": "dee6c3c538fb7dade5e97cdc97e2dedb",
+    "mtime": 1795648014.4832435,
+    "seen": 1795648037.6528163,
+    "ast_hash": "6e7c6c3c04545e75338d0e41561e9789",
     "semantic_hash": ""
   },
   "docs/figma-design-system-rules.md": {
@@ -8370,9 +8370,9 @@
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/cards-v2.html": {
-    "mtime": 1795631986.6817641,
-    "seen": 1795632027.9480467,
-    "ast_hash": "4e5c192ab26c7cfc47d83e7fc2e7226c",
+    "mtime": 1795632339.113522,
+    "seen": 1795648037.652826,
+    "ast_hash": "0b881951536f5cdc112b6cb5c5ed249f",
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/previa-v2.html": {
@@ -8460,147 +8460,279 @@
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/out-v2/0-chillout/01.png": {
-    "mtime": 1795631998.8617647,
-    "seen": 1795632027.948319,
+    "mtime": 1795632339.8822782,
+    "seen": 1795648037.653175,
     "ast_hash": "403b9039a4514c511e8197e4c3542855",
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/out-v2/0-chillout/02.png": {
-    "mtime": 1795631998.970584,
-    "seen": 1795632027.9483202,
+    "mtime": 1795632340.002781,
+    "seen": 1795648037.653177,
     "ast_hash": "711325bbb133500795c1ad37e1e6c59e",
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/out-v2/0-chillout/03.png": {
-    "mtime": 1795631999.1154716,
-    "seen": 1795632027.9483213,
+    "mtime": 1795632340.1510828,
+    "seen": 1795648037.6531785,
     "ast_hash": "fca5fbab68fe371ccdd7ccf106ae56d9",
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/out-v2/0-chillout/04.png": {
-    "mtime": 1795631999.2191074,
-    "seen": 1795632027.9483225,
-    "ast_hash": "3f4ee0c0e37560be908f3bc2e630ccc2",
+    "mtime": 1795632340.237785,
+    "seen": 1795648037.6531801,
+    "ast_hash": "3af1980cef3a7c5bd45a4c05c2d96dcc",
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/out-v2/0-chillout/05.png": {
-    "mtime": 1795631999.3203187,
-    "seen": 1795632027.9483232,
+    "mtime": 1795632340.335052,
+    "seen": 1795648037.6531816,
     "ast_hash": "ecace9744846532f1a024898347cb70b",
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/out-v2/0-chillout/06.png": {
-    "mtime": 1795631999.4867609,
-    "seen": 1795632027.9483244,
+    "mtime": 1795632340.454544,
+    "seen": 1795648037.653183,
     "ast_hash": "13057cf31335361e6b232baab668ca0a",
     "semantic_hash": ""
   },
-  "posts/rumo-ao-up/out-v2/1-jungle/01.png": {
-    "mtime": 1795631999.6417649,
-    "seen": 1795632027.9483674,
-    "ast_hash": "cd3521d2fdaaba74ee6e17a8e8fd81ef",
-    "semantic_hash": ""
-  },
-  "posts/rumo-ao-up/out-v2/1-jungle/02.png": {
-    "mtime": 1795631999.7331235,
-    "seen": 1795632027.948371,
-    "ast_hash": "b2961f13d9ab7ff22312812548d6beb4",
-    "semantic_hash": ""
-  },
-  "posts/rumo-ao-up/out-v2/1-jungle/03.png": {
-    "mtime": 1795631999.9045556,
-    "seen": 1795632027.9483736,
-    "ast_hash": "c486324ffff42c20b8b8584571cc0880",
-    "semantic_hash": ""
-  },
-  "posts/rumo-ao-up/out-v2/1-jungle/04.png": {
-    "mtime": 1795631999.98627,
-    "seen": 1795632027.9483755,
-    "ast_hash": "eae56415ef7ecc8a531b56328ce4f1cf",
-    "semantic_hash": ""
-  },
-  "posts/rumo-ao-up/out-v2/1-jungle/05.png": {
-    "mtime": 1795632000.0897648,
-    "seen": 1795632027.9483774,
-    "ast_hash": "74469cbabe45ac2766fef06a06e93b2d",
-    "semantic_hash": ""
-  },
-  "posts/rumo-ao-up/out-v2/1-jungle/06.png": {
-    "mtime": 1795632000.2377648,
-    "seen": 1795632027.9483788,
-    "ast_hash": "a2b7530d64c63c84241f583beefb880f",
-    "semantic_hash": ""
-  },
   "posts/rumo-ao-up/out-v2/2-drum-n-bossa/01.png": {
-    "mtime": 1795632000.361765,
-    "seen": 1795632027.9483805,
+    "mtime": 1795632341.2560446,
+    "seen": 1795648037.6531923,
     "ast_hash": "b213586c5f08487de07ea18a87f54edc",
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/out-v2/2-drum-n-bossa/02.png": {
-    "mtime": 1795632000.453765,
-    "seen": 1795632027.9483821,
+    "mtime": 1795632341.3457851,
+    "seen": 1795648037.653194,
     "ast_hash": "126cd72e72926ead9358f0d9bdb0be99",
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/out-v2/2-drum-n-bossa/03.png": {
-    "mtime": 1795632000.5985208,
-    "seen": 1795632027.9483833,
+    "mtime": 1795632341.4608412,
+    "seen": 1795648037.6531954,
     "ast_hash": "1ef1a23e611a445d6d16c584abc53833",
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/out-v2/2-drum-n-bossa/04.png": {
-    "mtime": 1795632000.677765,
-    "seen": 1795632027.9483848,
+    "mtime": 1795632341.553785,
+    "seen": 1795648037.6531963,
     "ast_hash": "50f15b4617bfa7997d2e3fc3b50512b4",
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/out-v2/2-drum-n-bossa/05.png": {
-    "mtime": 1795632000.7871227,
-    "seen": 1795632027.9483862,
+    "mtime": 1795632341.6862924,
+    "seen": 1795648037.6531975,
     "ast_hash": "7d8df87c1b364122f94102821af78b31",
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/out-v2/2-drum-n-bossa/06.png": {
-    "mtime": 1795632000.9303727,
-    "seen": 1795632027.948388,
+    "mtime": 1795632341.848242,
+    "seen": 1795648037.653199,
     "ast_hash": "2e202e0d199c7cd17023dd9abe12d0ec",
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/out-v2/3-dub/01.png": {
-    "mtime": 1795632001.074329,
-    "seen": 1795632027.9483895,
+    "mtime": 1795632341.9844327,
+    "seen": 1795648037.6532,
     "ast_hash": "2cc9e71fb6f512627345daf9d068249a",
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/out-v2/3-dub/02.png": {
-    "mtime": 1795632001.157765,
-    "seen": 1795632027.948391,
+    "mtime": 1795632342.0640187,
+    "seen": 1795648037.653201,
     "ast_hash": "f1525b0e8eec7d1ce887af17f05b7544",
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/out-v2/3-dub/03.png": {
-    "mtime": 1795632001.28607,
-    "seen": 1795632027.9483922,
+    "mtime": 1795632342.1868198,
+    "seen": 1795648037.653202,
     "ast_hash": "013b7b1bec24b76feed305a678124f6a",
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/out-v2/3-dub/04.png": {
-    "mtime": 1795632001.3657649,
-    "seen": 1795632027.9483938,
-    "ast_hash": "033ad05bf23a0d09410ebba1f6432560",
+    "mtime": 1795632342.2697852,
+    "seen": 1795648037.6532037,
+    "ast_hash": "df4e89475f9f7477245ea9438081900a",
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/out-v2/3-dub/05.png": {
-    "mtime": 1795632001.453765,
-    "seen": 1795632027.948395,
+    "mtime": 1795632342.3617852,
+    "seen": 1795648037.6532054,
     "ast_hash": "8f9da708919e1c2efafa7d752a88ac20",
     "semantic_hash": ""
   },
   "posts/rumo-ao-up/out-v2/3-dub/06.png": {
-    "mtime": 1795632001.6113598,
-    "seen": 1795632027.9483962,
+    "mtime": 1795632342.5256374,
+    "seen": 1795648037.6532073,
     "ast_hash": "954e66953c18e62fbd752491f6900e50",
+    "semantic_hash": ""
+  },
+  "videos/agenda-loop/hyperframes.json": {
+    "mtime": 1795647476.8251998,
+    "seen": 1795648037.651941,
+    "ast_hash": "7b33c6cb9ecfe380a4657c509ff8af33",
+    "semantic_hash": ""
+  },
+  "videos/agenda-loop/meta.json": {
+    "mtime": 1795647476.8279948,
+    "seen": 1795648037.6519437,
+    "ast_hash": "4fda3c86d7eabc19fbdd3595cc35825b",
+    "semantic_hash": ""
+  },
+  "videos/agenda-loop/package.json": {
+    "mtime": 1795647476.8279948,
+    "seen": 1795648037.6519449,
+    "ast_hash": "c935f9d385d8619f6127dc8087371ce9",
+    "semantic_hash": ""
+  },
+  "posts/agenda/agenda-v2.html": {
+    "mtime": 1795646931.6199625,
+    "seen": 1795648037.6528194,
+    "ast_hash": "8373a9d0e3a7cbf934a0b181aaddd118",
+    "semantic_hash": ""
+  },
+  "posts/agenda/agenda-v3.html": {
+    "mtime": 1795647028.156569,
+    "seen": 1795648037.652821,
+    "ast_hash": "b62f8e0ad9f304b637c10c5f4b1740d7",
+    "semantic_hash": ""
+  },
+  "posts/agenda/agenda-v4.html": {
+    "mtime": 1795647145.6805024,
+    "seen": 1795648037.652822,
+    "ast_hash": "bdb8a01756a42fdc10c575816c830625",
+    "semantic_hash": ""
+  },
+  "posts/agenda/agenda-v5.html": {
+    "mtime": 1795647285.846962,
+    "seen": 1795648037.652823,
+    "ast_hash": "2445818280aba43034b74ccb1a967f3e",
+    "semantic_hash": ""
+  },
+  "posts/agenda/agenda.html": {
+    "mtime": 1795646774.7091706,
+    "seen": 1795648037.6528244,
+    "ast_hash": "a8a303b31b5a3fa801da38733a420a1a",
+    "semantic_hash": ""
+  },
+  "videos/agenda-loop/compositions/agenda.html": {
+    "mtime": 1795647556.3106222,
+    "seen": 1795648037.6529126,
+    "ast_hash": "02f15255a304809881ac3ee8c08f1813",
+    "semantic_hash": ""
+  },
+  "videos/agenda-loop/index.html": {
+    "mtime": 1795647476.8289363,
+    "seen": 1795648037.6529138,
+    "ast_hash": "30c01a2a180c235b2d72db51f296e683",
+    "semantic_hash": ""
+  },
+  "posts/agenda/agenda-card.png": {
+    "mtime": 1795647766.8421772,
+    "seen": 1795648037.6530979,
+    "ast_hash": "3fd8acbcadf781bb18263f8886486108",
+    "semantic_hash": ""
+  },
+  "posts/agenda/agenda-v2.png": {
+    "mtime": 1795646932.335538,
+    "seen": 1795648037.6530998,
+    "ast_hash": "d5cdd8bf6da714da12a97c6ee0fa628c",
+    "semantic_hash": ""
+  },
+  "posts/agenda/agenda-v3.png": {
+    "mtime": 1795647028.7595434,
+    "seen": 1795648037.6531012,
+    "ast_hash": "24789ef4193df15d71693887b5bb4fa8",
+    "semantic_hash": ""
+  },
+  "posts/agenda/agenda-v4.png": {
+    "mtime": 1795647146.2915504,
+    "seen": 1795648037.653103,
+    "ast_hash": "a4e546cb4f62440e03bd134954b9a38a",
+    "semantic_hash": ""
+  },
+  "posts/agenda/agenda-v5.png": {
+    "mtime": 1795647286.519559,
+    "seen": 1795648037.6531045,
+    "ast_hash": "f0a714c0340b59680770d1c53f067af9",
+    "semantic_hash": ""
+  },
+  "posts/agenda/agenda.png": {
+    "mtime": 1795646775.4195285,
+    "seen": 1795648037.6531062,
+    "ast_hash": "b029a7cc023c0c6782d92db2cdce7f4d",
+    "semantic_hash": ""
+  },
+  "posts/agenda/palmeira-reticula.png": {
+    "mtime": 1795646862.7399657,
+    "seen": 1795648037.6531076,
+    "ast_hash": "050becb0c7ff649e514154751dcc1611",
+    "semantic_hash": ""
+  },
+  "posts/agenda/wordmark-azul.png": {
+    "mtime": 1795646712.142919,
+    "seen": 1795648037.6531093,
+    "ast_hash": "0c37dfb6059b25624ed3b53326233b0f",
+    "semantic_hash": ""
+  },
+  "posts/agenda/wordmark-verde.png": {
+    "mtime": 1795646903.6698935,
+    "seen": 1795648037.6531107,
+    "ast_hash": "8386bbbfa08f4a77229e2483079c3698",
+    "semantic_hash": ""
+  },
+  "posts/agenda/wordmark-vermelho.png": {
+    "mtime": 1795647020.4382768,
+    "seen": 1795648037.6531126,
+    "ast_hash": "dee02afa625d0c321a67fa3fed8a33cc",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/1-drum-n-bass/01.png": {
+    "mtime": 1795632340.5898361,
+    "seen": 1795648037.6531844,
+    "ast_hash": "72fb05b5c3b8ca24e89e39b4ac252ac7",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/1-drum-n-bass/02.png": {
+    "mtime": 1795632340.681785,
+    "seen": 1795648037.653186,
+    "ast_hash": "3509d6114423d5ed6a004dcc4ec5c442",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/1-drum-n-bass/03.png": {
+    "mtime": 1795632340.7899144,
+    "seen": 1795648037.6531873,
+    "ast_hash": "b2a54b89e602e1c44bd50a8aae436c5d",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/1-drum-n-bass/04.png": {
+    "mtime": 1795632340.885785,
+    "seen": 1795648037.6531887,
+    "ast_hash": "eae56415ef7ecc8a531b56328ce4f1cf",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/1-drum-n-bass/05.png": {
+    "mtime": 1795632340.9697852,
+    "seen": 1795648037.65319,
+    "ast_hash": "74469cbabe45ac2766fef06a06e93b2d",
+    "semantic_hash": ""
+  },
+  "posts/rumo-ao-up/out-v2/1-drum-n-bass/06.png": {
+    "mtime": 1795632341.1312711,
+    "seen": 1795648037.6531909,
+    "ast_hash": "a2b7530d64c63c84241f583beefb880f",
+    "semantic_hash": ""
+  },
+  "videos/agenda-loop/assets/palmeira-reticula.png": {
+    "mtime": 1795647476.8227968,
+    "seen": 1795648037.6533015,
+    "ast_hash": "050becb0c7ff649e514154751dcc1611",
+    "semantic_hash": ""
+  },
+  "videos/agenda-loop/assets/wordmark-verde.png": {
+    "mtime": 1795647476.822627,
+    "seen": 1795648037.6533027,
+    "ast_hash": "8386bbbfa08f4a77229e2483079c3698",
     "semantic_hash": ""
   }
 }
