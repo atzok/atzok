@@ -313,6 +313,9 @@ As três variações:
   - tudo fica boiando até o fim.
 - Saiu sem som.
 
+- **Revisão (2026-11-25):** o usuário reprovou a animação com recortes ("os cortes ficaram horríveis"). A versão aprovada pra envio anima **só a água**: `so_agua.py` ondula a imagem original com peso zero perto dos elementos, então nada é recortado. Saída: `videos/lhama-nurio/renders/lhama-nurio-reels-agua.mp4`.
+- **Lição:** quando a arte vem pronta e "chapada" (sem camadas), evitar recortar personagens; preferir animar o fundo ou pedir as camadas (PSD).
+
 ## 9. Outras ideias e anotações soltas
 
 - O "COISAS PARA PENSAR" da planilha BOOKINGS: lugares em SP, agenda de dezembro, festas de fim de ano (inclusive de lojas), raves fora de SP no ano que vem.
