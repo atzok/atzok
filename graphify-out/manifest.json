@@ -6438,9 +6438,9 @@
     "semantic_hash": ""
   },
   "docs/ATZOK.md": {
-    "mtime": 1795648014.4832435,
-    "seen": 1795648037.6528163,
-    "ast_hash": "6e7c6c3c04545e75338d0e41561e9789",
+    "mtime": 1795651512.8413231,
+    "seen": 1795651528.1886714,
+    "ast_hash": "b4c542b4d5237ce36758f3bfd638c42c",
     "semantic_hash": ""
   },
   "docs/figma-design-system-rules.md": {
@@ -8732,6 +8732,54 @@
   "videos/agenda-loop/assets/wordmark-verde.png": {
     "mtime": 1795647476.822627,
     "seen": 1795648037.6533027,
+    "ast_hash": "8386bbbfa08f4a77229e2483079c3698",
+    "semantic_hash": ""
+  },
+  "videos/agenda-reels/hyperframes.json": {
+    "mtime": 1795651081.0062163,
+    "seen": 1795651528.1877508,
+    "ast_hash": "7b33c6cb9ecfe380a4657c509ff8af33",
+    "semantic_hash": ""
+  },
+  "videos/agenda-reels/meta.json": {
+    "mtime": 1795651082.375434,
+    "seen": 1795651528.1877532,
+    "ast_hash": "0301a8fa469ab987469b7909351b52cf",
+    "semantic_hash": ""
+  },
+  "videos/agenda-reels/package.json": {
+    "mtime": 1795651082.3752003,
+    "seen": 1795651528.1877549,
+    "ast_hash": "c1f081de7cf47d30ccdccd67b1dc834f",
+    "semantic_hash": ""
+  },
+  "videos/agenda-reels/compositions/agenda.html": {
+    "mtime": 1795651082.3991168,
+    "seen": 1795651528.1887705,
+    "ast_hash": "4c565734fc12e08cfd14dd75ca73d985",
+    "semantic_hash": ""
+  },
+  "videos/agenda-reels/index.html": {
+    "mtime": 1795651082.3771622,
+    "seen": 1795651528.1887722,
+    "ast_hash": "c8160dcef3078c51e4b07940730e0d72",
+    "semantic_hash": ""
+  },
+  "posts/agenda/agenda-reels-card.png": {
+    "mtime": 1795651348.6487331,
+    "seen": 1795651528.1889617,
+    "ast_hash": "cc06dd34671e10aa2d0c539f082fd9ff",
+    "semantic_hash": ""
+  },
+  "videos/agenda-reels/assets/palmeira-reticula.png": {
+    "mtime": 1795651079.842024,
+    "seen": 1795651528.189175,
+    "ast_hash": "050becb0c7ff649e514154751dcc1611",
+    "semantic_hash": ""
+  },
+  "videos/agenda-reels/assets/wordmark-verde.png": {
+    "mtime": 1795651079.8418634,
+    "seen": 1795651528.1891763,
     "ast_hash": "8386bbbfa08f4a77229e2483079c3698",
     "semantic_hash": ""
   }

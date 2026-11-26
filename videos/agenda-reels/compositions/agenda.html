@@ -1,0 +1,126 @@
+<template>
+  <style>
+    @font-face { font-family: "Black"; src: url("assets/fonts/archivo-black.woff2"); }
+    @font-face { font-family: "Narrow"; font-weight: 700; src: url("assets/fonts/archivo-narrow-700.woff2"); }
+    @font-face { font-family: "Script"; font-style: italic; font-weight: 700; src: url("assets/fonts/playfair-italic.woff2"); }
+    #root { position: absolute; inset: 0; overflow: hidden; color: #1f5b2e;
+      background: linear-gradient(180deg, #ef6fb0 0%, #ef6fb0 26%, #f39a7a 50%, #f6c445 72%, #f6c445 100%); background-size: 100% 115%; background-repeat: no-repeat; background-color: #f6c445; }
+    .a { position: absolute; }
+    .grao { left: -80px; top: -80px; width: 1240px; height: 2080px; z-index: 20; pointer-events: none; mix-blend-mode: multiply; opacity: 0.6; }
+
+    .estrelas { left: 60px; right: 60px; top: 236px; display: flex; justify-content: space-between; align-items: center; font-family: Black; font-size: 28px; z-index: 5; }
+    .estrelas span { display: inline-block; }
+    .logo { left: 60px; top: 300px; width: 190px; z-index: 5; }
+    .brilho { left: 830px; top: 270px; width: 230px; height: 230px; z-index: 6; }
+    .titulo { left: 0; right: 0; top: 470px; text-align: center; font-family: Black; font-size: 236px; line-height: 0.86; letter-spacing: -0.05em; z-index: 4; }
+    .script { right: 70px; top: 622px; font-family: Script; font-style: italic; font-weight: 700; font-size: 120px; color: #fff1d6;
+      z-index: 6; -webkit-text-stroke: 6px #1f5b2e; paint-order: stroke fill; }
+    .palmeira { left: 260px; top: 720px; width: 960px; z-index: 2; opacity: 0.9; transform-origin: 55% 100%;
+      -webkit-mask-image: radial-gradient(60% 55% at 55% 50%, #000 50%, transparent 80%); mask-image: radial-gradient(60% 55% at 55% 50%, #000 50%, transparent 80%); }
+
+    .datas { left: 60px; top: 830px; width: 720px; z-index: 7; display: flex; flex-direction: column; gap: 18px; }
+    .linha { display: grid; grid-template-columns: 238px 1fr; align-items: center; }
+    .linha b { display: inline-block; font-family: Black; font-weight: 400; font-size: 66px; line-height: 1; color: #fff1d6; -webkit-text-stroke: 12px #1f5b2e; paint-order: stroke fill; }
+    .linha span { justify-self: start; background: #fff1d6; padding: 6px 14px 5px; font-family: Narrow; font-weight: 700; font-size: 30px; line-height: 1.05; text-transform: uppercase; }
+    .linha span i { display: block; font-style: normal; font-size: 22px; letter-spacing: 0.08em; opacity: 0.75; }
+
+    .flor { left: 760px; top: 1250px; width: 270px; height: 270px; z-index: 8; }
+    .flor-txt { left: 760px; top: 1250px; width: 270px; height: 270px; z-index: 9; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; font-family: Black; line-height: 1; }
+    .flor-txt small { font-family: Narrow; font-weight: 700; font-size: 24px; letter-spacing: 0.08em; }
+    .flor-txt strong { font-weight: 400; font-size: 52px; margin-top: 8px; }
+
+    .xadrez { left: 0; right: 0; top: 1556px; height: 26px; z-index: 6; background: repeating-conic-gradient(#1f5b2e 0 25%, transparent 0 50%) 0 0 / 26px 26px; }
+    .oval { left: 60px; top: 1604px; border: 4px solid #1f5b2e; border-radius: 50%; padding: 8px 30px 6px; font-family: Narrow; font-weight: 700;
+      font-size: 24px; letter-spacing: 0.08em; text-transform: uppercase; z-index: 7; }
+    .arroba { right: 60px; top: 1612px; font-family: Black; font-size: 32px; z-index: 7; }
+  </style>
+
+  <div id="root" data-composition-id="agenda" data-width="1080" data-height="1920" data-layout-allow-overlap>
+    <div class="a estrelas" id="ag-estrelas"><span>★</span><span>★</span><span>★</span><span>★</span><span>DEZ · JAN</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+    <img class="a logo" src="assets/wordmark-verde.png" alt="Ätzøk" />
+    <svg class="a brilho" id="ag-brilho" viewBox="-115 -115 230 230" fill="none" stroke="#1f5b2e" stroke-width="5" stroke-linecap="round" data-layout-ignore>
+      <g id="ag-raios"></g>
+      <path id="ag-nucleo" d="M0 -38 L9 -9 L38 0 L9 9 L0 38 L-9 9 L-38 0 L-9 -9 Z" fill="#fff1d6" />
+    </svg>
+    <div class="a titulo">AGENDA</div>
+    <div class="a script" id="ag-script">dez &amp; jan</div>
+    <img class="a palmeira" id="ag-palm" src="assets/palmeira-reticula.png" alt="" data-layout-ignore />
+
+    <div class="a datas">
+      <div class="linha"><b>09.12</b><span>Rádio Veneno<i>live</i></span></div>
+      <div class="linha"><b>09.12</b><span>Luci Bar<i>long set</i></span></div>
+      <div class="linha"><b>18.12</b><span>Lhama Takeover no Carmem<i>Hanky Panky</i></span></div>
+      <div class="linha"><b>27.12</b><span>Universo Paralelo<i>chillout stage</i></span></div>
+      <div class="linha"><b>11.01</b><span>Festa no Barco<i>Lhama Bookings</i></span></div>
+    </div>
+
+    <svg class="a flor" id="ag-flor" viewBox="-165 -165 330 330" data-layout-ignore><path id="ag-petalas" fill="#fff1d6" stroke="#1f5b2e" stroke-width="7" stroke-linejoin="round" /></svg>
+    <div class="a flor-txt"><small>AGENDA ABERTA</small><strong>BAHIA</strong></div>
+
+    <div class="a xadrez" id="ag-xadrez" data-layout-ignore></div>
+    <div class="a oval">Booking · Lhama Bookings</div>
+    <div class="a arroba">@_atzok</div>
+
+    <svg class="a grao" id="ag-grao" width="1240" height="2080" data-layout-ignore>
+      <filter id="ag-g"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="9" /><feColorMatrix values="0 0 0 0 0.25  0 0 0 0 0.22  0 0 0 0 0.15  0 0 0 -1.2 0.9" /></filter>
+      <rect width="1240" height="2080" filter="url(#ag-g)" />
+    </svg>
+  </div>
+
+  <script>
+    (function () {
+      const $ = (id) => document.getElementById(id);
+      // raios e pétalas
+      let r = ""; for (let i = 0; i < 16; i++) { const a = (i / 16) * Math.PI * 2, l = i % 2 ? 70 : 108;
+        r += `<line x1="${Math.cos(a) * 46}" y1="${Math.sin(a) * 46}" x2="${Math.cos(a) * l}" y2="${Math.sin(a) * l}" />`; }
+      $("ag-raios").innerHTML = r;
+      let d = "", prev; for (let i = 0; i <= 8; i++) { const a = (i / 8) * Math.PI * 2, b = ((i + 0.5) / 8) * Math.PI * 2;
+        const p = [Math.cos(a) * 112, Math.sin(a) * 112]; d += i === 0 ? `M${p[0]} ${p[1]}` : ` Q${prev[0]} ${prev[1]} ${p[0]} ${p[1]}`; prev = [Math.cos(b) * 186, Math.sin(b) * 186]; }
+      $("ag-petalas").setAttribute("d", d + " Z");
+
+      const L = 40, TAU = Math.PI * 2;
+      const onda = (t, P, fase) => Math.sin(TAU * (t / P + (fase || 0)));   // P divide 40 → loop perfeito
+      const suave = (x) => x * x * (3 - 2 * x);
+      const estrelas = [...$("ag-estrelas").children];
+      const datas = [...document.querySelectorAll(".linha b")];
+      const hash = (n) => { n = (n * 2654435761) >>> 0; return ((n ^ (n >>> 15)) % 1000) / 1000; };
+
+      function quadro(t) {
+        t = ((t % L) + L) % L;
+        // ambiente: degradê respira devagar
+        $("root").style.backgroundPosition = "0 " + (7.5 + 7.5 * onda(t, 20)).toFixed(2) + "%";
+        // coqueiro balança como vento leve
+        $("ag-palm").style.transform = `rotate(${(1.4 * onda(t, 10)).toFixed(3)}deg) translateX(${(6 * onda(t, 20, 0.25)).toFixed(2)}px)`;
+        // brilho: gira uma volta a cada 40 s e pisca a cada 4 s
+        const pisca = 1 + 0.08 * Math.pow(Math.max(0, onda(t, 4)), 6);
+        $("ag-brilho").style.transform = `rotate(${(360 * t / L).toFixed(2)}deg) scale(${pisca.toFixed(3)})`;
+        // flor gira devagar no sentido contrário
+        $("ag-flor").style.transform = `rotate(${(-90 * t / L).toFixed(2)}deg)`;
+        // itálico flutua
+        $("ag-script").style.transform = `translateY(${(5 * onda(t, 8)).toFixed(2)}px) rotate(${(-6 + 0.8 * onda(t, 8, 0.25)).toFixed(3)}deg)`;
+        // estrelas cintilam em cascata
+        estrelas.forEach((el, i) => { if (el.textContent !== "★") return;
+          const v = Math.max(0, onda(t, 4, -i * 0.11)); el.style.opacity = (0.55 + 0.45 * Math.pow(v, 3)).toFixed(3);
+          el.style.transform = `scale(${(1 + 0.15 * Math.pow(v, 6)).toFixed(3)})`; });
+        // datas: uma de cada vez sobe um pouco (ciclo de 10 s, 2 s por data)
+        datas.forEach((el, i) => {
+          const local = ((t % 10) - i * 2 + 10) % 10;          // 0..10
+          const k = local < 0.5 ? suave(local / 0.5) : local < 1.5 ? 1 : local < 2 ? 1 - suave((local - 1.5) / 0.5) : 0;
+          el.style.transform = `translateY(${(-8 * k).toFixed(2)}px)`;
+        });
+        // xadrez corre para a esquerda (520 px em 40 s = 20 casas)
+        $("ag-xadrez").style.backgroundPosition = `${(-520 * t / L).toFixed(2)}px 0`;
+        // grão muda 12 vezes por segundo, como filme
+        const f = Math.floor(t * 12) % 480;
+        $("ag-grao").style.transform = `translate(${Math.round(hash(f) * 40 - 20)}px, ${Math.round(hash(f + 999) * 40 - 20)}px)`;
+      }
+      window.addEventListener("hf-seek", (e) => quadro(e.detail.time));
+      quadro(0);
+
+      const tl = gsap.timeline({ paused: true });
+      tl.to({}, { duration: 0.01 }, 39.99);
+      window.__timelines["agenda"] = tl;
+    })();
+  </script>
+</template>
