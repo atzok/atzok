@@ -6438,9 +6438,9 @@
     "semantic_hash": ""
   },
   "docs/ATZOK.md": {
-    "mtime": 1795651512.8413231,
-    "seen": 1795651528.1886714,
-    "ast_hash": "b4c542b4d5237ce36758f3bfd638c42c",
+    "mtime": 1795716021.2824357,
+    "seen": 1795716036.015696,
+    "ast_hash": "278ddf25b866720e2d4e17d1992d82ba",
     "semantic_hash": ""
   },
   "docs/figma-design-system-rules.md": {
@@ -7938,15 +7938,15 @@
     "semantic_hash": ""
   },
   "videos/raio-x-bliss030/compositions/painel.html": {
-    "mtime": 1795581643.5617957,
-    "seen": 1795581929.1131413,
-    "ast_hash": "c4d7e9b37435eee8a064e0e4b7183a6c",
+    "mtime": 1795715523.4927952,
+    "seen": 1795716036.0158126,
+    "ast_hash": "54056270ffb002c040894e4942ab0854",
     "semantic_hash": ""
   },
   "videos/raio-x-bliss030/index.html": {
-    "mtime": 1795566331.6396513,
-    "seen": 1795566553.4338923,
-    "ast_hash": "faf2eb30f86fecf74a9574a1e8c6c2c5",
+    "mtime": 1795715523.4945903,
+    "seen": 1795716036.0158138,
+    "ast_hash": "5d20a658a6ef0294fce1c713ae0cb95f",
     "semantic_hash": ""
   },
   "videos/raio-x-bliss030/assets/bliss.png": {
@@ -7974,9 +7974,9 @@
     "semantic_hash": ""
   },
   "videos/raio-x-bliss030/faixas/bliss030.json": {
-    "mtime": 1795565873.8710628,
-    "seen": 1795566553.433007,
-    "ast_hash": "d381ff4e2581b15cfcf3004a0636b854",
+    "mtime": 1795715502.3734488,
+    "seen": 1795716036.0148501,
+    "ast_hash": "77f3c851cd134a6ecc2dc37e77b050a9",
     "semantic_hash": ""
   },
   "videos/raio-x-bliss030/assets/bliss-lilas.png": {
@@ -8781,6 +8781,18 @@
     "mtime": 1795651079.8418634,
     "seen": 1795651528.1891763,
     "ast_hash": "8386bbbfa08f4a77229e2483079c3698",
+    "semantic_hash": ""
+  },
+  "posts/agenda/agenda-cartaz.html": {
+    "mtime": 1795696349.5725477,
+    "seen": 1795716036.0156991,
+    "ast_hash": "659a7a7a979c3bf0e2d205401033eabf",
+    "semantic_hash": ""
+  },
+  "posts/agenda/agenda-cartaz-previa.jpg": {
+    "mtime": 1795696350.2662988,
+    "seen": 1795716036.0159316,
+    "ast_hash": "465dda1d84440155c93cc23aaee89353",
     "semantic_hash": ""
   }
 }

@@ -7,7 +7,10 @@
     "titulo",
     "handle",
     "versao",
-    "credito"
+    "credito",
+    "nota1",
+    "nota2",
+    "nota3"
   ],
   "faixas": [
     {
@@ -18,7 +21,10 @@
     {
       "audio": "02.aiff",
       "saida": "raio-x-02-thats-right",
-      "titulo": "That's Right"
+      "titulo": "That's Right",
+      "nota1": "o vocal veio de um vídeo maluco do youtube",
+      "nota2": "a melodia é um arpeggiator em notas aleatórias",
+      "nota3": "perceba!"
     },
     {
       "audio": "03.aiff",
