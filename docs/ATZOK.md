@@ -145,6 +145,15 @@ Formatos:
 3. **Brasil no drum'n'bass** (ideia): os pioneiros brasileiros que estão no set.
 4. **Véspera e depois** (ideia): tracklist revelada no dia 26; pós-show com trecho gravado.
 
+## Padrão RAIO-X (fixado a partir da Kitchen v3, vale para todo vídeo de faixa)
+
+- Formato: vertical 1080×1920, ~1 min em volta da virada, sem áudio no arquivo final só se for pro Instagram usar a música dele; caso contrário com o trecho da faixa.
+- Painéis: ESPECTRO (com linha "fantasma" de antes da virada), CAMPO ESTÉREO, FORMA DE ONDA com marcador da virada, contador "compasso N / total" e estado (break/drop). Só títulos, eixos e contadores. **Nenhuma legenda explicativa.**
+- Curiosidades da faixa: até 3 notas numeradas (01, 02, 03), texto curto e corrido em tom de conversa. 01 no começo, 02 na virada, 03 no momento que a gente quer que a pessoa repare (ex.: "perceba!"). Cada nota marca seu número na forma de onda e fica no lugar da legenda do estéreo.
+- Topo fixo: @_atzok + logo do selo do lançamento. Final: capa do lançamento + @_atzok + crédito + logo.
+- Identidade visual muda por lançamento (cores e elementos da capa); o padrão de motion e de notas não muda.
+- BPM e minuto da virada confirmados com o Caio antes de renderizar.
+
 ## Brainstorm de conteúdo (resumo para retomar)
 
 | Ideia | Estado | Onde |
@@ -225,3 +234,4 @@ Estilo aprovado para posts (v2): foto real, cards brancos, caixa alta condensada
 - Agenda final: card (`posts/agenda/agenda-card.png`) + loop animado de 40 s (`videos/agenda-loop/`, render 1080×1350 em `renders/agenda-loop-1080.mp4`, prévia 720p). Flor só "agenda aberta · Bahia" (sem "sul"). Movimento calmo e periódico, fecha o loop sem corte: coqueiro balança, brilho gira/pisca, estrelas cintilam, flor gira devagar, itálico flutua, datas sobem uma por vez, xadrez corre, grão de filme.
 - Agenda em tamanho de Reels (1080×1920): `videos/agenda-reels/` (loop 40 s, render em `renders/agenda-reels-1080.mp4` 25 MB + prévia 720p) e card `posts/agenda/agenda-reels-card.png`. Conteúdo dentro da área segura do Reels.
 - Agenda · teste no estilo do cartaz "Cuba Libre" (lambe-lambe magenta, texto preto, recorte com contorno amarelo): `posts/agenda/agenda-cartaz.html`, coqueiro recortado à mão no lugar do boneco, papel amassado. Prévia estática em baixa enviada, aguardando retorno.
+- Caio lembrou: manter o padrão de motion (espectros + curiosidades) da Kitchen em todos os vídeos de faixa. Registrado em "Padrão RAIO-X". Pendente: levar as notas 01–03 para os modelos do Desejos Gelados e do L4 (hoje só o modelo do Jazzy tem).
