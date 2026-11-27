@@ -6438,9 +6438,9 @@
     "semantic_hash": ""
   },
   "docs/ATZOK.md": {
-    "mtime": 1795716021.2824357,
-    "seen": 1795716036.015696,
-    "ast_hash": "278ddf25b866720e2d4e17d1992d82ba",
+    "mtime": 1795750067.1131291,
+    "seen": 1795750085.6550813,
+    "ast_hash": "e9dc0a193aa41dad929356929e68b7db",
     "semantic_hash": ""
   },
   "docs/figma-design-system-rules.md": {
@@ -8793,6 +8793,60 @@
     "mtime": 1795696350.2662988,
     "seen": 1795716036.0159316,
     "ast_hash": "465dda1d84440155c93cc23aaee89353",
+    "semantic_hash": ""
+  },
+  "videos/satelite-orbitas/hyperframes.json": {
+    "mtime": 1795749556.7373822,
+    "seen": 1795750085.654427,
+    "ast_hash": "7b33c6cb9ecfe380a4657c509ff8af33",
+    "semantic_hash": ""
+  },
+  "videos/satelite-orbitas/meta.json": {
+    "mtime": 1795749556.7391026,
+    "seen": 1795750085.6544294,
+    "ast_hash": "316880b2c31bc7af4c0468e30e59ed48",
+    "semantic_hash": ""
+  },
+  "videos/satelite-orbitas/package.json": {
+    "mtime": 1795749556.7391026,
+    "seen": 1795750085.6544304,
+    "ast_hash": "0513f29f7648aea7c681fdbca111ee11",
+    "semantic_hash": ""
+  },
+  "videos/satelite-orbitas/tools/orbitas.py": {
+    "mtime": 1795749556.7411437,
+    "seen": 1795750085.6544316,
+    "ast_hash": "57125e7bb3a4c2ab884dc226b733e3ce",
+    "semantic_hash": ""
+  },
+  "posts/satelite/previa.html": {
+    "mtime": 1795749455.5881863,
+    "seen": 1795750085.655094,
+    "ast_hash": "2edbd93fb524181bb06bd7b5a902bcd9",
+    "semantic_hash": ""
+  },
+  "videos/satelite-orbitas/compositions/orbitas.html": {
+    "mtime": 1795749640.203889,
+    "seen": 1795750085.655191,
+    "ast_hash": "997f08f1b4acfeb198ca884af601b1db",
+    "semantic_hash": ""
+  },
+  "videos/satelite-orbitas/index.html": {
+    "mtime": 1795749616.7003849,
+    "seen": 1795750085.655192,
+    "ast_hash": "da71413ae21647fb69bb3b6904c55b24",
+    "semantic_hash": ""
+  },
+  "posts/satelite/previa.jpg": {
+    "mtime": 1795749456.845898,
+    "seen": 1795750085.6553886,
+    "ast_hash": "9ef9f09b61614003238ec8d278977946",
+    "semantic_hash": ""
+  },
+  "videos/satelite-orbitas/assets/wordmark-branco.png": {
+    "mtime": 1795749614.5731456,
+    "seen": 1795750085.6554534,
+    "ast_hash": "720f21b88b33fe368c57ce2a0f850bc9",
     "semantic_hash": ""
   }
 }

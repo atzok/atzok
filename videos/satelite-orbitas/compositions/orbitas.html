@@ -1,0 +1,183 @@
+<template>
+  <style>
+    @font-face { font-family: "Mono"; font-weight: 400; src: url("assets/fonts/space-mono-400.woff2"); }
+    @font-face { font-family: "Mono"; font-weight: 700; src: url("assets/fonts/space-mono-700.woff2"); }
+    @font-face { font-family: "WinUI"; font-weight: 400; src: url("assets/fonts/Inter-Regular.otf"); }
+    @font-face { font-family: "WinUI"; font-weight: 700; src: url("assets/fonts/Inter-Bold.otf"); }
+    @font-face { font-family: "Black"; src: url("assets/fonts/archivo-black.woff2"); }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #02040a; color: #c9d0d8; font-family: Mono; }
+    .o { position: absolute; }
+    #or-ceu { left: 0; top: 0; }
+    .terra { left: -500px; top: 1560px; width: 2080px; height: 1200px; border-radius: 50%;
+      background: radial-gradient(60% 40% at 50% 8%, #e9f4ff 0%, #8cc4f5 18%, #2f6fb8 45%, #0b2a55 80%); }
+    .atmos { left: -500px; top: 1530px; width: 2080px; height: 1260px; border-radius: 50%;
+      background: radial-gradient(52% 50% at 50% 50%, rgba(140,196,245,0) 88%, rgba(140,196,245,0.35) 94%, rgba(140,196,245,0) 100%); }
+    .nuvens { left: -500px; top: 1560px; width: 2080px; height: 1200px; opacity: 0.55; mix-blend-mode: screen; }
+
+    .win { left: 70px; top: 200px; width: 940px; border: 3px solid; border-color: #fff #404040 #404040 #fff; background: #c0c0c0; box-shadow: 4px 4px 0 #000; }
+    .barra { height: 44px; background: linear-gradient(90deg, #0a246a, #3a6ea5); color: #fff; font-family: WinUI; font-weight: 700; font-size: 24px;
+      display: flex; align-items: center; justify-content: space-between; padding: 0 8px 0 12px; }
+    .botoes { display: flex; gap: 4px; }
+    .botoes i { width: 30px; height: 28px; background: #c0c0c0; border: 2px solid; border-color: #fff #404040 #404040 #fff; display: block; }
+    .console { background: #000; margin: 6px; padding: 14px 18px; height: 270px; font-size: 22px; line-height: 1.35; color: #cfcfcf; white-space: pre; overflow: hidden; }
+
+    .titulo { left: 70px; top: 560px; font-family: Black; font-size: 120px; line-height: 0.9; color: #fff; letter-spacing: -0.02em; }
+    .sub { left: 74px; top: 680px; font-size: 26px; letter-spacing: 0.12em; color: #9fd0ff; white-space: nowrap; }
+    .sub b { color: #f3d27a; }
+    #or-orb { left: 0; top: 740px; }
+    .onda { left: 70px; top: 1290px; width: 940px; }
+    .rot { font-size: 22px; letter-spacing: 0.12em; display: flex; justify-content: space-between; color: #c9d0d8; }
+    .rot b { color: #f3d27a; font-weight: 700; }
+    .rodape { left: 70px; right: 70px; top: 1446px; display: flex; justify-content: space-between; font-size: 24px; letter-spacing: 0.1em; color: #fff; }
+
+    .erro { left: 160px; top: 1100px; width: 760px; border: 3px solid; border-color: #fff #404040 #404040 #fff; background: #c0c0c0; box-shadow: 4px 4px 0 #000; color: #000; z-index: 8; }
+    .erro .barra { height: 40px; font-size: 21px; }
+    .erro .corpo { display: flex; gap: 22px; align-items: center; padding: 22px 26px 10px; font-family: WinUI; font-size: 28px; line-height: 1.3; }
+    .erro .x { flex: none; width: 54px; height: 54px; border-radius: 50%; background: #d3151a; color: #fff; display: grid; place-items: center; font-family: WinUI; font-weight: 700; font-size: 34px; }
+    .erro .ok { margin: 6px auto 18px; width: 130px; text-align: center; font-family: WinUI; font-size: 24px; padding: 6px 0; border: 2px solid #000; outline: 2px solid #fff; outline-offset: -5px; }
+
+    .fim { left: 0; top: 0; width: 1080px; height: 1920px; background: #02040a; z-index: 9; }
+    .fim img { position: absolute; left: 330px; top: 620px; width: 420px; }
+    .fim div { position: absolute; left: 0; right: 0; text-align: center; }
+    .scan { left: 0; top: 0; width: 1080px; height: 1920px; z-index: 20; pointer-events: none; background: repeating-linear-gradient(0deg, rgba(0,0,0,0.18) 0 2px, transparent 2px 5px); }
+    .grao { left: -60px; top: -60px; width: 1200px; height: 2040px; z-index: 21; pointer-events: none; mix-blend-mode: overlay; opacity: 0.45; }
+  </style>
+
+  <div id="root" data-composition-id="orbitas" data-width="1080" data-height="1920" data-layout-allow-overlap>
+    <canvas id="or-ceu" class="o" width="1080" height="1920" data-layout-ignore></canvas>
+    <div class="o terra" id="or-terra"></div>
+    <div class="o atmos"></div>
+    <svg class="o nuvens" id="or-nuvens" viewBox="0 0 2080 1200" data-layout-ignore>
+      <defs><clipPath id="or-cl"><ellipse cx="1040" cy="600" rx="1040" ry="600" /></clipPath>
+        <filter id="or-nv"><feTurbulence type="fractalNoise" baseFrequency="0.006 0.02" numOctaves="4" seed="3" /><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 3 -1.6" /></filter></defs>
+      <rect id="or-nv-rect" x="-400" y="0" width="2880" height="1200" filter="url(#or-nv)" clip-path="url(#or-cl)" />
+    </svg>
+
+    <div class="o win">
+      <div class="barra"><span>C:\atzok\satelite2\telemetria.exe</span><span class="botoes"><i></i><i></i><i></i></span></div>
+      <div class="console" id="or-console"></div>
+    </div>
+
+    <div class="o titulo">SATÉLITE 2</div>
+    <div class="o sub" id="or-sub">ÄTZØK · <b>85 BPM</b> · COMPASSO 01 / 21</div>
+    <canvas id="or-orb" class="o" width="1080" height="600" data-layout-ignore></canvas>
+
+    <div class="o onda">
+      <div class="rot"><span>SINAL</span><b id="or-rot">TRANSMITINDO</b><span id="or-t1">01:00</span></div>
+      <canvas id="or-onda" width="1880" height="160" style="width: 940px; height: 80px; margin-top: 10px" data-layout-ignore></canvas>
+    </div>
+    <div class="o rodape"><span>@_atzok</span><span>ÄTZØK · 2026</span></div>
+
+    <div class="o erro" id="or-erro">
+      <div class="barra"><span>satelite2.exe</span><span class="botoes"><i style="width:26px;height:24px"></i></span></div>
+      <div class="corpo"><div class="x">✕</div><div>Fim da transmissão.<br>O satélite saiu do alcance.</div></div>
+      <div class="ok">OK</div>
+    </div>
+
+    <div class="o fim" id="or-fim">
+      <img src="assets/wordmark-branco.png" alt="Ätzøk" />
+      <div style="top: 1150px; font-family: Black; font-size: 64px; color: #fff">SATÉLITE 2</div>
+      <div style="top: 1240px; font-size: 30px; letter-spacing: 0.12em; color: #f3d27a">@_atzok</div>
+    </div>
+
+    <div class="o scan" data-layout-ignore></div>
+    <svg class="o grao" id="or-grao" width="1200" height="2040" data-layout-ignore><filter id="or-g"><feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="2" seed="13" /><feColorMatrix type="saturate" values="0" /></filter><rect width="1200" height="2040" filter="url(#or-g)" /></svg>
+  </div>
+
+  <script>
+    (function () {
+      const D = /*DADOS*/{"bpm":85.0,"compasso":2.823529411764706,"compassos":21,"duracao":59.294117647058826,"fps":30,"camadas":["SUB","LASER","TEXTURA","HATS"],"grade":[[[21,32,81,80,47,95,34,78,72,22,13,11,19,54,84,97],[0,39,0,56,34,0,95,21,67,0,83,5,0,1,29,4],[0,26,0,43,24,0,91,10,56,0,79,4,19,77,94,8],[1,21,0,52,40,23,85,11,41,0,85,0,72,93,91,47]],[[86,31,0,0,0,0,0,0,0,0,25,39,92,59,28,5],[43,27,23,22,0,84,0,46,25,34,72,39,53,88,75,20],[58,47,37,49,5,89,0,41,39,63,73,66,54,89,65,12],[76,86,0,94,0,97,0,83,14,98,97,58,44,72,72,14]],[[24,98,49,4,12,12,15,34,38,100,54,25,6,0,0,0],[67,0,85,0,27,0,19,0,20,34,20,1,66,0,0,66],[61,0,82,0,69,3,39,1,18,32,29,2,54,41,0,47],[47,0,73,0,82,49,37,41,46,64,66,19,95,19,2,86]],[[0,100,57,33,38,51,95,46,94,68,49,88,32,23,9,13],[58,26,10,34,75,0,0,80,64,65,0,41,65,25,0,0],[79,0,3,59,81,23,33,88,76,86,20,16,85,96,14,30],[99,0,8,58,97,43,36,54,68,80,0,0,86,86,0,2]],[[12,100,89,90,48,16,9,0,0,0,3,2,9,32,20,75],[7,10,0,5,60,19,16,12,55,11,43,38,8,42,32,13],[71,55,0,38,85,17,45,1,79,0,78,0,64,28,61,63],[100,60,22,76,88,0,91,0,85,0,81,0,82,48,35,51]],[[76,42,4,0,82,74,13,14,15,29,37,33,89,79,30,8],[23,28,8,53,43,81,0,43,0,15,28,29,0,27,49,0],[72,31,24,85,62,81,0,100,0,35,25,19,0,15,41,0],[44,7,26,49,28,85,0,100,5,37,89,75,22,63,79,16]],[[17,2,0,0,77,77,31,35,32,92,63,62,83,41,97,49],[30,2,67,0,33,8,86,75,10,94,100,61,0,92,33,44],[28,16,46,0,59,0,91,74,35,84,100,61,0,82,5,61],[70,16,92,0,86,4,97,97,11,74,83,40,8,69,0,74]],[[15,4,11,28,89,76,99,66,35,0,0,0,0,0,0,5],[0,61,0,0,0,11,7,6,0,32,4,0,79,80,14,2],[0,93,11,32,35,81,36,52,5,57,3,0,98,88,0,11],[0,95,1,92,58,78,80,65,44,100,0,0,97,100,0,9]],[[24,43,58,93,51,16,9,46,87,14,13,10,10,24,27,64],[37,90,14,26,90,92,21,4,0,63,13,1,0,18,0,0],[50,95,50,30,82,85,76,2,0,63,46,0,0,43,0,0],[73,96,52,25,71,84,86,10,1,80,85,3,3,100,18,5]],[[84,38,10,9,0,0,0,40,91,42,33,30,81,75,50,92],[14,18,0,10,33,0,24,44,2,56,37,67,29,81,25,0],[1,13,0,0,21,0,13,34,0,54,15,44,13,67,9,0],[72,78,1,80,18,70,14,90,0,77,65,59,57,56,30,29]],[[34,83,66,1,1,6,4,45,90,94,82,18,5,20,2,0],[100,81,56,0,63,0,0,2,17,3,45,11,7,0,0,75],[100,63,72,0,69,0,24,69,79,3,50,38,31,25,1,93],[79,31,85,0,100,0,82,89,88,42,70,89,0,87,0,98]],[[0,0,0,5,28,46,96,68,20,1,17,100,55,7,7,0],[0,48,23,54,78,14,58,63,20,6,21,21,26,0,31,0],[0,53,31,60,76,48,52,58,24,0,11,31,6,0,14,22],[0,89,17,97,93,57,44,48,29,0,21,22,27,0,22,20]],[[21,31,42,100,63,28,2,0,0,1,3,100,59,24,32,50],[14,0,18,32,9,17,55,0,21,22,19,0,17,46,80,32],[0,0,8,34,20,2,33,0,13,16,13,0,0,49,70,30],[18,3,28,40,56,35,33,0,13,21,25,0,26,48,77,44]],[[91,56,93,71,63,88,24,8,0,11,7,100,83,90,39,28],[38,80,82,56,4,35,43,14,0,0,16,0,0,21,47,0],[23,65,64,64,2,30,32,0,5,3,21,15,14,0,0,0],[16,47,70,64,0,38,33,9,0,6,31,22,10,3,26,0]],[[6,0,0,0,0,0,6,30,33,79,85,34,0,0,80,72],[44,27,19,18,31,0,30,23,64,56,64,55,27,79,72,100],[8,14,0,4,4,0,28,10,65,33,62,62,23,82,58,99],[26,18,26,0,19,0,46,22,63,41,59,58,32,81,30,85]],[[10,0,5,26,30,29,90,74,25,2,0,0,0,0,76,78],[0,64,1,23,19,39,0,16,41,0,42,5,42,0,0,0],[0,100,9,0,25,3,0,2,18,0,32,3,21,0,0,0],[0,100,29,14,14,8,0,26,43,0,64,38,20,0,0,0]],[[21,30,39,97,69,65,84,39,99,47,10,11,8,5,72,72],[83,75,26,82,100,59,1,92,0,36,0,56,0,0,0,14],[45,52,36,55,97,70,0,72,0,56,0,70,12,19,32,59],[67,73,67,79,67,81,1,73,0,69,0,86,2,78,36,85]],[[100,68,25,3,0,0,0,0,0,3,18,33,52,94,53,6],[6,21,14,46,19,0,80,84,0,0,54,54,0,18,73,38],[35,59,38,68,0,0,91,92,6,4,74,98,42,14,100,82],[74,68,69,100,0,0,98,99,0,1,82,98,39,8,64,66]],[[0,37,88,17,9,11,19,27,45,60,82,44,5,2,0,0],[54,23,5,90,29,0,0,69,3,0,34,45,0,52,9,33],[69,25,0,82,60,0,0,86,11,2,49,52,2,45,47,39],[67,11,0,85,69,0,53,84,38,37,48,71,13,66,28,56]],[[0,67,81,40,23,29,95,70,71,87,28,100,54,0,5,3],[0,46,9,28,48,79,82,58,51,35,100,21,69,0,77,1],[0,54,17,50,49,80,75,58,43,27,94,0,85,0,100,31],[0,86,6,71,53,66,77,50,54,21,93,0,86,0,98,0]],[[21,74,73,24,44,14,0,0,2,0,0,0,0,12,38,20],[0,20,19,0,9,0,0,0,0,14,16,3,15,0,43,15],[29,83,98,9,0,0,36,16,0,28,9,0,16,26,0,33],[85,93,91,0,0,0,0,0,0,0,0,0,0,0,0,47]]],"kick":[0,16,11,7,22,15,11,2,2,31,21,15,10,29,37,25,18,12,0,0,0,0,0,0,0,0,63,43,30,21,4,0,0,0,0,0,0,0,13,95,65,45,31,0,0,0,0,0,0,0,0,0,0,0,6,4,3,2,2,9,6,4,3,14,9,6,4,10,24,17,11,8,62,43,30,20,11,0,9,6,4,0,39,27,19,0,0,0,0,0,0,0,0,0,2,1,1,0,4,9,6,4,0,46,32,22,0,20,14,10,6,4,18,12,8,6,2,14,10,7,5,20,14,9,45,31,21,15,9,6,0,19,13,9,1,5,8,16,11,7,5,26,18,12,8,7,5,3,8,42,29,20,14,2,9,6,4,3,13,9,6,4,15,10,7,5,0,0,16,11,8,13,9,6,66,46,31,22,14,0,0,0,0,0,0,0,0,0,0,3,2,1,16,11,8,4,3,2,2,11,8,5,4,3,0,21,15,10,0,0,23,16,11,8,2,21,15,26,34,23,16,11,0,0,0,0,0,0,0,2,19,13,9,0,19,13,9,0,13,9,6,4,3,14,10,7,5,3,15,10,7,25,17,12,8,8,6,0,17,47,65,45,31,21,0,0,0,0,0,0,0,0,36,25,17,12,0,0,24,16,11,0,0,13,9,73,50,35,24,0,0,0,0,0,0,6,4,40,28,19,13,14,0,0,0,0,0,0,0,0,0,72,49,34,1,1,0,0,0,0,0,0,0,1,1,0,11,7,20,14,9,7,5,3,2,0,8,5,4,0,0,13,9,6,18,71,49,34,23,0,0,0,0,23,16,11,8,1,17,12,8,6,0,0,0,0,8,5,4,3,4,2,3,12,28,19,13,9,19,13,9,6,22,15,11,7,5,16,11,7,5,14,9,7,5,60,41,29,20,0,0,10,13,9,6,0,24,17,12,13,9,23,16,11,7,7,5,3,2,2,41,28,40,28,19,0,3,2,2,0,0,0,0,0,0,0,18,12,9,6,5,0,6,8,6,4,19,79,55,38,0,0,0,0,0,0,0,0,0,0,13,9,6,4,16,11,7,5,0,18,12,9,6,5,0,18,25,17,12,8,9,6,4,3,0,25,17,12,8,66,45,31,22,0,0,0,0,0,0,0,2,2,1,0,11,8,5,0,8,12,37,25,18,12,14,10,7,14,9,6,4,3,0,0,9,6,20,14,10,7,3,0,71,49,34,0,0,0,0,0,0,0,0,0,0,0,12,9,6,4,2,15,10,7,17,12,8,39,27,19,5,4,11,8,5,4,2,2,1,1,81,56,39,27,0,0,0,0,0,0,0,1,43,30,20,13,9,0,0,0,0,0,0,0,1,1,1,0,6,4,3,0,0,21,14,10,7,3,21,14,10,7,48,33,23,16,39,27,19,13,2,0,0,0,0,0,35,24,17,16,11,8,5,0,0,0,0,3,2,8,6,4,0,3,2,1,0,28,20,14,0,9,6,4,4,3,8,19,13,17,12,8,6,4,3,20,14,10,7,4,15,10,7,5,22,15,10,7,3,0,42,29,20,0,13,9,6,4,3,1,10,7,5,56,39,27,18,0,0,0,0,1,0,0,5,4,3,0,0,17,12,8,0,28,19,13,10,7,87,60,41,29,0,0,0,0,0,0,0,0,0,19,13,9,6,52,36,25,17,0,0,18,12,8,2,1,26,18,12,8,17,12,8,9,6,0,22,15,11,7,69,47,33,23,4,0,6,4,3,0,13,9,6,0,16,11,7,0,0,15,10,7,29,20,14,14,9,6,19,13,9,6,4,0,17,12,8,5,20,14,9,4,1,75,52,36,11,7,0,0,0,0,0,0,0,0,16,11,8,5,8,6,4,13,9,6,7,5,25,45,31,22,15,10,7,5,3,0,0,0,0,58,40,28,19,1,0,0,0,0,0,0,0,15,91,63,43,30,0,0,0,0,0,0,0,0,0,0,14,10,7,0,4,17,11,8,5,26,18,12,3,2,32,22,15,10,4,79,55,38,26,12,0,0,0,0,0,53,36,25,0,0,0,0,0,0,0,0,0,0,9,11,8,5,4,18,13,9,29,20,14,10,3,2,0,14,10,7,8,5,16,11,7,0,18,12,9,1,3,59,41,28,19,13,9,6,4,4,26,18,12,8,13,9,6,13,9,6,4,13,30,21,14,10,48,33,23,16,7,0,0,0,0,0,0,0,0,0,0,0,28,19,13,9,33,23,16,11,8,74,51,35,24,18,0,0,0,0,0,0,0,0,0,0,6,4,3,25,17,12,0,0,12,18,13,9,6,26,18,12,8,12,8,13,9,6,4,4,18,12,8,0,31,45,31,21,15,0,0,0,0,0,0,0,0,10,7,5,3,4,3,0,9,6,4,0,12,8,6,2,1,16,11,8,0,10,28,19,13,9,6,4,2,2,68,47,33,23,20,0,0,0,0,0,0,0,0,17,12,8,6,6,4,3,13,9,6,0,0,14,9,54,37,26,0,0,0,0,0,0,0,0,22,15,35,24,17,0,0,0,0,0,0,0,0,0,59,41,28,1,1,0,0,0,0,0,0,0,0,5,3,2,1,34,24,16,0,0,25,17,12,8,7,18,12,8,6,2,1,20,77,53,37,25,0,0,0,0,19,13,9,6,3,1,1,1,0,0,0,0,0,10,7,13,9,6,0,4,3,57,40,27,19,0,7,5,3,2,9,6,4,3,18,13,9,6,6,4,3,8,55,38,26,18,28,19,13,9,4,5,18,12,8,0,37,26,18,0,0,21,15,10,0,0,20,37,26,34,23,16,0,0,0,0,0,0,0,0,0,5,3,9,6,4,3,10,7,5,3,1,0,20,77,53,37,25,0,0,0,0,0,0,0,0,0,0,0,0,23,16,11,8,6,27,19,13,9,25,17,12,8,19,13,9,6,4,2,2,6,4,3,0,0,14,64,44,31,21,0,0,0,0,0,0,0,0,0,0,0,0,13,9,6,4,4,63,44,30,21,0,0,17,11,8,0,7,5,9,6,4,3,4,3,2,25,17,12,72,50,34,0,0,0,0,0,0,0,0,0,0,20,14,10,0,26,18,12,2,1,0,18,12,31,21,15,7,5,0,0,0,0,0,0,0,0,72,50,34,24,0,0,0,0,0,0,0,0,50,35,24,17,12,0,0,0,0,0,2,1,1,1,5,4,4,15,10,7,5,5,3,0,4,3,2,0,0,1,20,14,9,7,92,64,44,30,2,0,8,6,4,0,32,22,15,0,0,0,0,0,0,0,0,0,0,4,3,2,1,1,0,14,9,6,4,2,1,21,14,10,0,3,20,14,9,26,18,12,0,0,15,11,7,5,27,19,13,0,0,17,12,8,6,5,26,18,12,9,6,1,25,17,12,0,0,10,12,8,6,63,43,30,21,0,0,0,0,0,0,0,1,1,0,0,11,7,5,4,3,17,26,18,12,8,88,61,42,29,3,0,0,0,0,0,0,0,0,21,15,10,7,66,45,31,22,0,0,11,8,5,5,3,22,15,10,7,8,26,18,12,8,5,0,30,21,14,0,52,36,25,6,0,11,8,5,0,0,0,0,0,0,0,7,5,3,2,9,6,12,8,6,10,7,5,4,3,11,8,5,0,14,9,7,4,3,17,12,8,0,79,54,37,8,5,0,0,0,0,0,0,0,0,25,17,12,8,7,5,0,12,8,6,3,2,42,29,20,14,14,0,0,0,0,0,0,0,5,39,27,19,13,5,0,0,0,0,0,0,0,0,98,68,47,32,0,0,0,0,0,0,0,0,0,0,12,18,12,9,6,9,6,1,1,15,10,7,5,4,25,17,12,8,7,3,37,25,18,16,0,3,2,2,0,0,21,15,10,30,21,14,4,15,10,7,0,0,10,7,5,3,30,20,14,10,5,15,10,7,5,12,9,6,4,19,13,9,6,3,0,1,2,2,1,0,12,8,6,0,12,15,10,7,5,26,18,13,9,3,27,19,13,9,16,11,8,5,5,0,0,17],"onda":[81,98,91,84,97,100,92,88,99,100,90,75,93,72,45,84,99,90,72,98,98,82,87,97,97,93,95,48,94,99,86,99,99,99,99,93,94,71,99,99,92,90,57,99,61,84,90,98,81,100,97,96,65,94,100,93,77,98,98,100,85,95,100,95,99,97,100,95,90,99,100,91,91,93,96,45,94,99,83,77,99,99,92,84,91,100,77,91,52,99,100,91,98,100,100,97,96,84,78,99,99,95,62,95,99,80,91,95,98,87,95,93,98,85,92,97,99,93,83,96,99,81,95,98,89,99,100,98,81,90,98,99,79,77,59,96,74,88,99,81,71,93,96,92,53,95,97,81,100,50,97,99,96,99,100,98,97,99,94,78,99,98,96,75,71,94,60,91,89,99,80,92,97,98,98,92,93,97,82,98,94,100,80,97,99,78,98,98,99,86,84,97,69,56,54,55,50,46,42,56],"inicioMusica":169.41176470588238}/*FIM*/;
+      const $ = (id) => document.getElementById(id);
+      const pad = (n) => String(n).padStart(2, "0");
+      const mmss = (s) => pad(Math.floor(s / 60)) + ":" + pad(Math.round(s % 60));
+      function rng(s) { return () => { s |= 0; s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s ^ (s >>> 15), 1 | s); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+      const hash = (n) => { n = (n * 2654435761) >>> 0; return ((n ^ (n >>> 15)) % 1000) / 1000; };
+
+      // céu fixo
+      const r = rng(5), ce = $("or-ceu").getContext("2d");
+      for (let i = 0; i < 520; i++) { const s = r() < 0.92 ? 1.2 : 2.6; ce.fillStyle = `rgba(255,255,255,${0.25 + r() * 0.6})`; ce.fillRect(r() * 1080, r() * 1560, s, s); }
+      $("or-t1").textContent = mmss(D.duracao);
+
+      // console: uma linha por camada no começo, depois o contador de compassos
+      const LINHAS = D.camadas.map((c) => `inflating: satelite2/orbit/${c.toLowerCase()}.wav`).concat(["inflating: satelite2/orbit/kick.wav"]);
+      function consoleEm(t) {
+        let txt = "", k = Math.min(LINHAS.length, Math.floor(t / 0.45));
+        for (let i = 0; i < k; i++) txt += LINHAS[i].padEnd(44, ".") + " ok\n";
+        if (k === LINHAS.length) {
+          const bar = Math.min(D.compassos, Math.floor(t / D.compasso) + 1);
+          txt += "[Abrindo Satélite 2...]\n";
+          txt += `uma volta = um compasso · ${pad(bar)}/${D.compassos}` + (Math.floor(t * 2) % 2 ? "_" : " ");
+        }
+        $("or-console").textContent = txt;
+      }
+
+      // órbitas
+      const oc = $("or-orb").getContext("2d"), cx = 540, cy = 250;
+      const ORB = [
+        { rx: 190, ry: 62, cor: "#d9a536" }, { rx: 285, ry: 96, cor: "#5aa9ff" },
+        { rx: 380, ry: 132, cor: "#9fd0ff" }, { rx: 470, ry: 168, cor: "#e8eef5" } ];
+      function orbitas(t, f) {
+        const c = oc; c.clearRect(0, 0, 1080, 600);
+        const pos = t / D.compasso, bar = Math.min(D.compassos - 1, Math.floor(pos)), frac = pos - Math.floor(pos);
+        const g = D.grade[bar] || [];
+        // fundo das órbitas atrás do núcleo
+        ORB.forEach((o, k) => {
+          const v = g[k] || [];
+          c.strokeStyle = "rgba(201,208,216,0.28)"; c.lineWidth = 2; c.beginPath(); c.ellipse(cx, cy, o.rx, o.ry, 0, 0, Math.PI * 2); c.stroke();
+          for (let s = 0; s < 16; s++) {
+            // gira uma volta por compasso; o passo atual fica na frente (embaixo)
+            const a = Math.PI / 2 + ((s - frac * 16) / 16) * Math.PI * 2;
+            const x = cx + Math.cos(a) * o.rx, y = cy + Math.sin(a) * o.ry, val = (v[s] || 0) / 100;
+            const atual = Math.abs(((s - frac * 16) % 16 + 16) % 16) < 1 || Math.abs(((s - frac * 16) % 16 + 16) % 16 - 16) < 1;
+            if (val > 0.25) {
+              const rr = 5 + val * 9 + (atual ? 6 : 0);
+              c.fillStyle = o.cor; c.globalAlpha = 0.45 + val * 0.55;
+              c.beginPath(); c.arc(x, y, rr, 0, Math.PI * 2); c.fill();
+              if (atual) { c.globalAlpha = 0.25; c.beginPath(); c.arc(x, y, rr + 12, 0, Math.PI * 2); c.fill(); }
+              c.globalAlpha = 1;
+            } else { c.fillStyle = "rgba(201,208,216,0.3)"; c.beginPath(); c.arc(x, y, 3.5, 0, Math.PI * 2); c.fill(); }
+          }
+          c.font = "700 20px Mono"; c.fillStyle = o.cor; c.textAlign = "left";
+          c.fillText(D.camadas[k], cx + o.rx * 0.72 + 10, cy - o.ry * 0.72 - 4);
+        });
+        // núcleo: kick
+        const kv = (D.kick[f] || 0) / 100, R = 58 + kv * 16;
+        const gr = c.createRadialGradient(cx - 18, cy - 18, 6, cx, cy, R + 6);
+        gr.addColorStop(0, "#fff3c4"); gr.addColorStop(0.35, "#f3d27a"); gr.addColorStop(0.75, "#c48a1c"); gr.addColorStop(1, "#7a4f0c");
+        c.fillStyle = "rgba(243,210,122," + (0.10 + kv * 0.25).toFixed(3) + ")"; c.beginPath(); c.arc(cx, cy, R + 34, 0, Math.PI * 2); c.fill();
+        c.fillStyle = gr; c.beginPath(); c.arc(cx, cy, R, 0, Math.PI * 2); c.fill();
+        c.strokeStyle = "rgba(243,210,122,0.55)"; c.lineWidth = 2; c.beginPath(); c.arc(cx, cy, 84 + kv * 10, 0, Math.PI * 2); c.stroke();
+        c.font = "700 22px Mono"; c.fillStyle = "#f3d27a"; c.textAlign = "center"; c.fillText("KICK", cx, cy + 116);
+        $("or-sub").innerHTML = `ÄTZØK · <b>${D.bpm} BPM</b> · COMPASSO ${pad(bar + 1)} / ${D.compassos}`;
+      }
+
+      const ow = $("or-onda").getContext("2d");
+      function onda(t) {
+        const c = ow, W = 1880, H = 160, n = D.onda.length; c.clearRect(0, 0, W, H); if (!n) return;
+        const px = (t / D.duracao) * W;
+        for (let i = 0; i < n; i++) { const x = (i / n) * W, a = Math.max(3, (D.onda[i] / 100) * 72);
+          c.fillStyle = x < px ? "#f3d27a" : "#5aa9ff"; c.globalAlpha = x < px ? 1 : 0.4; c.fillRect(x, H / 2 - a, W / n - 4, a * 2); }
+        c.globalAlpha = 1; c.fillStyle = "#fff"; c.fillRect(Math.min(W - 5, px), 0, 5, H);
+      }
+
+      function quadro(t) {
+        const tt = Math.min(t, D.duracao - 1 / D.fps), f = Math.max(0, Math.min(D.kick.length - 1, Math.floor(tt * D.fps)));
+        consoleEm(tt); orbitas(tt, f); onda(tt);
+        $("or-nv-rect").setAttribute("x", (-400 + t * 4).toFixed(1));
+        const g = Math.floor(t * 12);
+        $("or-grao").style.transform = `translate(${Math.round(hash(g) * 60 - 30)}px, ${Math.round(hash(g + 777) * 60 - 30)}px)`;
+      }
+      window.addEventListener("hf-seek", (e) => quadro(e.detail.time));
+      document.fonts.ready.then(() => quadro(0));
+      quadro(0);
+
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#or-erro", { opacity: 0, scale: 0.96 }, { opacity: 0, scale: 0.96, duration: 0.01 }, 0);
+      tl.to("#or-erro", { opacity: 1, scale: 1, duration: 0.12, ease: "power2.out" }, D.duracao - 1.6);
+      tl.fromTo("#or-fim", { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
+      tl.to("#or-fim", { opacity: 1, duration: 0.5, ease: "power2.inOut" }, D.duracao + 0.2);
+      tl.to({}, { duration: 0.01 }, D.duracao + 2.9);
+      window.__timelines["orbitas"] = tl;
+    })();
+  </script>
+</template>
