@@ -4,34 +4,32 @@
 <meta charset="UTF-8" />
 <title>UP · atração Ätzøk</title>
 <style>
-  @font-face { font-family: "Marcellus SC"; src: url("fonts/marcellus-sc-400-latin.woff2"); }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { background: #222; padding: 20px; display: flex; gap: 20px; align-items: flex-start; width: max-content; }
   .arte { position: relative; overflow: hidden; background: #1f2a1c; }
-  .foto { position: absolute; border-radius: 50%; object-fit: cover; }
-  .moldura { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
-  .nome { position: absolute; left: 0; right: 0; text-align: center; font-family: "Marcellus SC"; color: #ecf1cd; letter-spacing: 0.04em;
-    text-shadow: 0 0 18px rgba(0,0,0,0.85), 0 0 36px rgba(0,0,0,0.6), 0 2px 4px rgba(0,0,0,0.6); }
-  .logo { position: absolute; filter: drop-shadow(0 0 14px rgba(0,0,0,0.85)) drop-shadow(0 0 30px rgba(0,0,0,0.6)); }
-  #feed .logo { left: 300px; top: 900px; width: 480px; }
-  #story .logo { left: 300px; top: 1130px; width: 480px; }
+  .arte > img { position: absolute; }
+  .camada { left: 0; top: 0; width: 100%; height: 100%; }
+  .caio { filter: brightness(0.78) saturate(0.85) contrast(1.08); -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent 98%); mask-image: linear-gradient(180deg, #000 70%, transparent 98%); }
+  .logo { filter: drop-shadow(0 4px 10px rgba(0,0,0,0.75)) drop-shadow(0 0 28px rgba(0,0,0,0.55)); }
   #feed { width: 1080px; height: 1440px; }
-  #feed .foto { left: 259px; top: 532px; width: 568px; height: 568px; }
-  #feed .nome { top: 990px; font-size: 92px; }
+  #feed .caio { left: 292px; top: 525px; height: 900px; }
+  #feed .logo { left: 300px; top: 960px; width: 480px; }
   #story { width: 1080px; height: 1920px; }
-  #story .foto { left: 256px; top: 749px; width: 566px; height: 566px; }
-  #story .nome { top: 1288px; font-size: 92px; }
+  #story .caio { left: 262px; top: 735px; height: 1080px; }
+  #story .logo { left: 290px; top: 1235px; width: 500px; }
 </style>
 </head>
 <body>
   <section class="arte" id="feed">
-    <img class="foto" src="foto-circulo.jpg" alt="Ätzøk" />
-    <img class="moldura" src="feed-v2.png" alt="" />
+    <img class="camada" src="fundo-feed.png" alt="" />
+    <img class="caio" src="caio-recorte.png" alt="Ätzøk" />
+    <img class="camada" src="frente-feed.png" alt="" />
     <img class="logo" src="logo-creme.png" alt="Ätzøk" />
   </section>
   <section class="arte" id="story">
-    <img class="foto" src="foto-circulo.jpg" alt="Ätzøk" />
-    <img class="moldura" src="story-v2.png" alt="" />
+    <img class="camada" src="fundo-story.png" alt="" />
+    <img class="caio" src="caio-recorte.png" alt="Ätzøk" />
+    <img class="camada" src="frente-story.png" alt="" />
     <img class="logo" src="logo-creme.png" alt="Ätzøk" />
   </section>
 </body>
