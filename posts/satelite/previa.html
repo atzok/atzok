@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Satélite 2 · prévia</title>
+<style>
+  @font-face { font-family: "Mono"; font-weight: 400; src: url("fonts/space-mono-400.woff2"); }
+  @font-face { font-family: "Mono"; font-weight: 700; src: url("fonts/space-mono-700.woff2"); }
+  @font-face { font-family: "Inter"; font-weight: 400; src: url("fonts/Inter-Regular.otf"); }
+  @font-face { font-family: "Inter"; font-weight: 700; src: url("fonts/Inter-Bold.otf"); }
+  @font-face { font-family: "Black"; src: url("fonts/archivo-black.woff2"); }
+  :root { --ouro: #d9a536; --ouro2: #f3d27a; --prata: #c9d0d8; --azul: #5aa9ff; --ceu: #9fd0ff; --cinza98: #c0c0c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #222; padding: 20px; width: max-content; }
+  .tela { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #02040a; color: var(--prata); font-family: Mono; }
+  .a { position: absolute; }
+  #estrelas { inset: 0; }
+  .terra { left: -500px; top: 1560px; width: 2080px; height: 1200px; border-radius: 50%;
+    background: radial-gradient(60% 40% at 50% 8%, #e9f4ff 0%, #8cc4f5 18%, #2f6fb8 45%, #0b2a55 80%);
+    box-shadow: 0 -30px 90px 20px rgba(110,180,255,0.55); }
+  .nuvens { left: -500px; top: 1560px; width: 2080px; height: 1200px; border-radius: 50%; opacity: 0.55; mix-blend-mode: screen; }
+
+  /* janela win98 */
+  .win { left: 70px; top: 200px; width: 940px; border: 3px solid; border-color: #fff #404040 #404040 #fff; background: var(--cinza98); box-shadow: 4px 4px 0 #000; }
+  .win .barra { height: 44px; background: linear-gradient(90deg, #0a246a, #3a6ea5); color: #fff; font-family: Inter; font-weight: 700; font-size: 24px;
+    display: flex; align-items: center; justify-content: space-between; padding: 0 8px 0 12px; }
+  .win .botoes { display: flex; gap: 4px; }
+  .win .botoes i { width: 30px; height: 28px; background: var(--cinza98); border: 2px solid; border-color: #fff #404040 #404040 #fff; display: block; }
+  .console { background: #000; margin: 6px; padding: 14px 18px; height: 270px; font-size: 22px; line-height: 1.35; color: #cfcfcf; overflow: hidden; }
+  .console b { color: #fff; font-weight: 700; }
+  .console .ok { color: var(--ouro2); }
+
+  .titulo { left: 70px; top: 560px; font-family: Black; font-size: 120px; line-height: 0.9; color: #fff; letter-spacing: -0.02em; }
+  .sub { left: 74px; top: 680px; font-size: 26px; letter-spacing: 0.12em; color: var(--ceu); }
+  .sub b { color: var(--ouro2); }
+
+  #orbitas { left: 0; top: 720px; }
+
+  .onda { left: 70px; top: 1378px; width: 940px; }
+  .rot { font-size: 22px; letter-spacing: 0.12em; display: flex; justify-content: space-between; color: var(--prata); }
+  .rot b { color: var(--ouro2); }
+
+  /* erro como curiosidade */
+  .erro { left: 160px; top: 1150px; width: 760px; border: 3px solid; border-color: #fff #404040 #404040 #fff; background: var(--cinza98); box-shadow: 4px 4px 0 #000; color: #000; z-index: 5; }
+  .erro .barra { height: 40px; background: linear-gradient(90deg, #0a246a, #3a6ea5); color: #fff; font-family: Inter; font-weight: 700; font-size: 21px; display: flex; align-items: center; justify-content: space-between; padding: 0 8px 0 10px; }
+  .erro .corpo { display: flex; gap: 22px; align-items: center; padding: 22px 26px 10px; font-family: Inter; font-size: 28px; line-height: 1.3; }
+  .erro .x { flex: none; width: 54px; height: 54px; border-radius: 50%; background: #d3151a; color: #fff; display: grid; place-items: center; font-family: Inter; font-weight: 700; font-size: 34px; box-shadow: inset -3px -3px 0 rgba(0,0,0,0.25); }
+  .erro .ok { margin: 6px auto 18px; width: 130px; text-align: center; font-family: Inter; font-size: 24px; padding: 6px 0; border: 2px solid #000; outline: 2px solid; outline-color: #fff; outline-offset: -5px; }
+
+  .rodape { left: 70px; right: 70px; top: 1522px; display: flex; justify-content: space-between; font-size: 24px; letter-spacing: 0.1em; color: #fff; z-index: 3; }
+  .scan { inset: 0; z-index: 20; pointer-events: none; background: repeating-linear-gradient(0deg, rgba(0,0,0,0.18) 0 2px, transparent 2px 5px); mix-blend-mode: multiply; }
+  .grao { inset: 0; z-index: 21; pointer-events: none; mix-blend-mode: overlay; opacity: 0.45; }
+</style>
+</head>
+<body>
+<div class="tela" id="tela">
+  <canvas id="estrelas" class="a" width="1080" height="1920"></canvas>
+  <div class="a terra"></div>
+  <svg class="a nuvens" viewBox="0 0 2080 1200"><filter id="nv"><feTurbulence type="fractalNoise" baseFrequency="0.006 0.02" numOctaves="4" seed="3" /><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 3 -1.6" /></filter>
+    <ellipse cx="1040" cy="600" rx="1040" ry="600" filter="url(#nv)" /></svg>
+
+  <div class="a win">
+    <div class="barra"><span>C:\atzok\satelite2\telemetria.exe</span><span class="botoes"><i></i><i></i><i></i></span></div>
+    <div class="console">
+      inflating: satelite2/orbit/<b>kick</b>.wav ......... <span class="ok">ok</span><br>
+      inflating: satelite2/orbit/<b>sub</b>.wav .......... <span class="ok">ok</span><br>
+      inflating: satelite2/orbit/<b>hats</b>.wav ......... <span class="ok">ok</span><br>
+      inflating: satelite2/orbit/<b>laser</b>.wav ........ <span class="ok">ok</span><br>
+      inflating: satelite2/orbit/<b>acid</b>.wav ......... <span class="ok">ok</span><br>
+      [Abrindo Satélite 2...]<br>
+      uma volta = um compasso_
+    </div>
+  </div>
+
+  <div class="a titulo">SATÉLITE 2</div>
+  <div class="a sub">ÄTZØK · <b>128 BPM</b> · COMPASSO 15 / 32 · DROP</div>
+
+  <canvas id="orbitas" class="a" width="1080" height="600"></canvas>
+
+  <div class="a erro">
+    <div class="barra"><span>satelite2.exe</span><span class="botoes" style="display:flex"><i style="width:26px;height:24px;background:#c0c0c0;border:2px solid;border-color:#fff #404040 #404040 #fff;display:block"></i></span></div>
+    <div class="corpo"><div class="x">✕</div><div>[curiosidade 01 da faixa entra aqui, curta e corrida]</div></div>
+    <div class="ok">OK</div>
+  </div>
+
+  <div class="a onda">
+    <div class="rot"><span>BREAK</span><b>COMPASSO 17 · DROP</b><span>01:00</span></div>
+    <canvas id="onda" width="1880" height="160" style="width: 940px; height: 80px; margin-top: 10px"></canvas>
+  </div>
+  <div class="a rodape"><span>@_atzok</span><span>LINHA ÄTZØK · 2026</span></div>
+
+  <div class="a scan"></div>
+  <svg class="a grao" width="1080" height="1920"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="2" seed="13" /><feColorMatrix type="saturate" values="0" /></filter><rect width="1080" height="1920" filter="url(#g)" /></svg>
+</div>
+<script>
+document.fonts.ready.then(() => {
+  function rng(s) { return () => { s |= 0; s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s ^ (s >>> 15), 1 | s); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+  const r = rng(5);
+  const e = document.getElementById("estrelas").getContext("2d");
+  for (let i = 0; i < 520; i++) { const s = r() < 0.92 ? 1.2 : 2.6; e.fillStyle = `rgba(255,255,255,${0.25 + r() * 0.6})`; e.fillRect(r() * 1080, r() * 1600, s, s); }
+
+  // órbitas (dados de exemplo)
+  const c = document.getElementById("orbitas").getContext("2d"), cx = 540, cy = 250;
+  const ORB = [
+    { nome: "SUB", rx: 190, ry: 62, cor: "#d9a536", n: 16, on: [0,2,4,6,8,10,12,14] },
+    { nome: "HATS", rx: 285, ry: 96, cor: "#e8eef5", n: 16, on: [1,3,5,7,9,11,13,15] },
+    { nome: "LASER", rx: 380, ry: 132, cor: "#5aa9ff", n: 16, on: [2,6,10,11,14] },
+    { nome: "ACID", rx: 470, ry: 168, cor: "#9fd0ff", n: 16, on: [0,3,6,8,9,12] },
+  ];
+  const fase = 0.62;  // posição no compasso
+  ORB.forEach((o, k) => {
+    c.strokeStyle = "rgba(201,208,216,0.35)"; c.lineWidth = 2; c.beginPath(); c.ellipse(cx, cy, o.rx, o.ry, 0, 0, Math.PI * 2); c.stroke();
+    for (let i = 0; i < o.n; i++) {
+      const a = (i / o.n) * Math.PI * 2 + fase * Math.PI * 2 + k * 0.3, x = cx + Math.cos(a) * o.rx, y = cy + Math.sin(a) * o.ry;
+      const aceso = o.on.includes(i), rr = aceso ? 11 : 5;
+      if (aceso) { c.shadowColor = o.cor; c.shadowBlur = 22; }
+      c.fillStyle = aceso ? o.cor : "rgba(201,208,216,0.35)"; c.beginPath(); c.arc(x, y, rr, 0, Math.PI * 2); c.fill(); c.shadowBlur = 0;
+    }
+    c.font = "700 20px Mono"; c.fillStyle = o.cor; c.textAlign = "left";
+    c.fillText(o.nome, cx + o.rx * 0.72 + 10, cy - o.ry * 0.72 - 4);
+  });
+  // núcleo: kick em folha dourada
+  const g = c.createRadialGradient(cx - 20, cy - 20, 6, cx, cy, 70);
+  g.addColorStop(0, "#fff3c4"); g.addColorStop(0.35, "#f3d27a"); g.addColorStop(0.75, "#c48a1c"); g.addColorStop(1, "#7a4f0c");
+  c.shadowColor = "#f3d27a"; c.shadowBlur = 60; c.fillStyle = g; c.beginPath(); c.arc(cx, cy, 64, 0, Math.PI * 2); c.fill(); c.shadowBlur = 0;
+  c.strokeStyle = "rgba(243,210,122,0.6)"; c.lineWidth = 2; c.beginPath(); c.arc(cx, cy, 84, 0, Math.PI * 2); c.stroke();
+  c.font = "700 22px Mono"; c.fillStyle = "#f3d27a"; c.textAlign = "center"; c.fillText("KICK", cx, cy + 112);
+
+  // forma de onda de exemplo
+  const o = document.getElementById("onda").getContext("2d"), N = 160, W = 1880, H = 160, rw = rng(9);
+  for (let i = 0; i < N; i++) { const depois = i >= N / 2, v = (depois ? 0.6 : 0.3) + rw() * 0.4, a = v * 70, x = (i / N) * W;
+    o.fillStyle = depois ? "#f3d27a" : "#5aa9ff"; o.globalAlpha = i < N * 0.62 ? 1 : 0.35; o.fillRect(x, H / 2 - a, W / N - 4, a * 2); }
+  o.globalAlpha = 1; o.fillStyle = "#fff"; o.fillRect(W * 0.62, 0, 5, H);
+});
+</script>
+</body>
+</html>
