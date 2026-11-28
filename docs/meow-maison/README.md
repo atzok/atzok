@@ -24,6 +24,7 @@ As operações administrativas e financeiras passam pela Matuzza (adm/financeiro
 | 16/12/2026, 17h → 17/12, 3h | Operação | Montar equipe compatível; pontos de limpeza (vide grupo) |
 
 ## Ideias e notas
+- 28/11/2026 — Decoração de Natal para bares e caixas (orçamento R$ 600, Mercado Livre): fio de fada LED, bolas vermelhas/douradas, guirlandas e mini árvores. Lista na conversa; falta confirmar quantos bares e caixas.
 - 2026-11-23 — Pasta criada para concentrar o projeto Meow Maison.
 
 ## Materiais e links
